@@ -32,7 +32,11 @@ namespace Project.Class
         }
         public void GetAllVideo(DataGridView datagridView)
         {
-            HideVisibleID(datagridView, "GetAllVideo", new List<string> { "VideoID", "Director", "Rating", "ReleaseDate", "CopiesAvailable"});
+            HideVisibleID(datagridView, "GetAllVideo", new List<string> { "VideoID", "Director", "Rating", "ReleaseDate"});
+        }
+        public void GetAllRental(DataGridView dataGrid)
+        {
+            HideVisibleID(dataGrid, "GetAllRental", new List<string> { "RentalID", "CustomerID", "VideoID", });
         }
     }
 }

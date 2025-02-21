@@ -21,17 +21,12 @@ namespace Project.Class
                 VideoLibrary video = new VideoLibrary();
                 DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
 
-                video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value);
+                video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
                 video.Title = selectedRow.Cells["Title"].Value.ToString();
-                video.Genre = selectedRow.Cells["Genre"].Value.ToString();
                 video.Category = selectedRow.Cells["Category"].Value.ToString();
-                video.SerialNumber = selectedRow.Cells["SerialNumber"].Value.ToString();
-                video.Director = selectedRow.Cells["Director"].Value.ToString();
-                video.Rating = selectedRow.Cells["Rating"].Value.ToString();
-                video.ReleaseDate = Convert.ToDateTime(selectedRow.Cells["ReleaseDate"].Value);
                 video.CopiesAvailable = selectedRow.Cells["CopiesAvailable"].Value.ToString();
 
-                EditDVD_VCD Edit = new EditDVD_VCD(video);
+                EditDVD_VCD Edit = new EditDVD_VCD(dashboard);
                 FormManager form = new FormManager();
                 form.OpenForm(Edit, dashboard.Panel);
             }

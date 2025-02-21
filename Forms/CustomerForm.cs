@@ -42,5 +42,22 @@ namespace Project.Forms
             HiddenColumn hiddenColumn = new HiddenColumn();
             hiddenColumn.GetAllCustomer(guna2DataGridViewCustomer);
         }
+
+        private void guna2ButtonRent_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2ButtonRent_Click_1(object sender, EventArgs e)
+        {
+            CustomerProp customerProp = new CustomerProp();
+            CustomerClass customer = new CustomerClass(dashboard);
+            customer.FetchCustomerData(customerProp, guna2DataGridViewCustomer);
+        }
+
+        private void guna2DataGridViewCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

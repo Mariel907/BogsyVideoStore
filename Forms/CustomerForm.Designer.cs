@@ -34,6 +34,7 @@
             this.guna2ButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridViewCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2ButtonRent = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridViewCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.guna2ButtonEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonEdit.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonEdit.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonEdit.Location = new System.Drawing.Point(970, 430);
+            this.guna2ButtonEdit.Location = new System.Drawing.Point(841, 415);
             this.guna2ButtonEdit.Name = "guna2ButtonEdit";
             this.guna2ButtonEdit.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonEdit.TabIndex = 234;
@@ -66,7 +67,7 @@
             this.guna2ButtonAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAdd.Location = new System.Drawing.Point(841, 430);
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(712, 415);
             this.guna2ButtonAdd.Name = "guna2ButtonAdd";
             this.guna2ButtonAdd.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonAdd.TabIndex = 233;
@@ -131,6 +132,25 @@
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.Height = 22;
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.guna2DataGridViewCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridViewCustomer_CellContentClick);
+            // 
+            // guna2ButtonRent
+            // 
+            this.guna2ButtonRent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ButtonRent.BorderRadius = 15;
+            this.guna2ButtonRent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonRent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonRent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonRent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonRent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ButtonRent.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonRent.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonRent.Location = new System.Drawing.Point(970, 415);
+            this.guna2ButtonRent.Name = "guna2ButtonRent";
+            this.guna2ButtonRent.Size = new System.Drawing.Size(123, 46);
+            this.guna2ButtonRent.TabIndex = 237;
+            this.guna2ButtonRent.Text = "Rent";
+            this.guna2ButtonRent.Click += new System.EventHandler(this.guna2ButtonRent_Click_1);
             // 
             // CustomerForm
             // 
@@ -138,6 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1116, 488);
+            this.Controls.Add(this.guna2ButtonRent);
             this.Controls.Add(this.guna2ButtonEdit);
             this.Controls.Add(this.guna2ButtonAdd);
             this.Controls.Add(this.guna2DataGridViewCustomer);
@@ -155,5 +176,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2ButtonEdit;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdd;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridViewCustomer;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonRent;
     }
 }

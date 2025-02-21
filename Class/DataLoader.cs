@@ -35,6 +35,7 @@ namespace Project.Class
             string query = "GetAllCustomer";
             LoadData(query, dataGridView);
         }
+      
 
     }
 }

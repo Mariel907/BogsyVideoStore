@@ -1,20 +1,21 @@
-﻿using Project.Model;
+﻿using Project.Forms;
+using Project.Forms.ExtensionForms;
+using Project.Model;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Project.Class
 {
     public class Video
     {
+        private Dashboard dashboard;
+        public Video(Dashboard dashboard)
+        {
+            this.dashboard = dashboard;
+        }
         public bool Insert(VideoLibrary video)
         {
             try
@@ -26,14 +27,9 @@ namespace Project.Class
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Title", video.Title);
-                        cmd.Parameters.AddWithValue("@Genre", video.Genre);
                         cmd.Parameters.AddWithValue("@Category", video.Category);
-                        cmd.Parameters.AddWithValue("@SerialNumber", video.SerialNumber);
-                        cmd.Parameters.AddWithValue("@Rating", video.Rating);
-                        cmd.Parameters.AddWithValue("@ReleaseDate", video.ReleaseDate);
                         cmd.Parameters.AddWithValue("@In", video.CopiesAvailable);
                         cmd.Parameters.AddWithValue("@Out", video.CopiesAvailable);
-                        cmd.Parameters.AddWithValue("@Director", video.Director);
 
                         if (video.Category == "DVD")
                         {
@@ -50,10 +46,48 @@ namespace Project.Class
             }
             catch (Exception)
             {
-
+                MessageBox.Show("An eror occured during login");
             }
             return false;
+        }
+        public void InsertCustomer(CustomerProp Customer)
+        {
+
+            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("InsertCustomer", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@firstname", Customer.FirstName);
+                    cmd.Parameters.AddWithValue("@lastname", Customer.LastName);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Delete(DataGridView dataGridView, VideoLibrary video)
+        {
+            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("DeleteVideos", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public void FetchId(DataGridView datagridView)
+        {
+            VideoLibrary video = new VideoLibrary();
+            DataGridViewRow selectedRow = datagridView.SelectedRows[0];
+            video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
+
+            Delete(datagridView, video);
 
         }
+       
     }
 }

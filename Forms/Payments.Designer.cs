@@ -82,7 +82,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridViewPayments.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridViewPayments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridViewPayments.Location = new System.Drawing.Point(45, 36);
+            this.guna2DataGridViewPayments.Location = new System.Drawing.Point(60, 24);
             this.guna2DataGridViewPayments.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridViewPayments.Name = "guna2DataGridViewPayments";
             this.guna2DataGridViewPayments.ReadOnly = true;

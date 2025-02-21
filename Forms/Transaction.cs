@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,12 @@ namespace Project.Forms
         {
             InitializeComponent();
         }
-    }
+
+        private void Transaction_Load(object sender, EventArgs e)
+        {
+            HiddenColumn hide = new HiddenColumn();
+            hide.GetAllRental(guna2DataGridViewPending);
+
+        }
+}
 }

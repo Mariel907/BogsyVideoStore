@@ -1,4 +1,5 @@
-﻿using Project.Model;
+﻿using Project.Class;
+using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,17 +14,22 @@ namespace Project.Forms.ExtensionForms
 {
     public partial class EditDVD_VCD : Form
     {
-        public EditDVD_VCD(VideoLibrary video)
+        private Dashboard dashboard;
+        public EditDVD_VCD(Dashboard dashboard)
         {
             InitializeComponent();
-            guna2TextBoxTitle.Text = video.Title;
-            guna2TextBoxDirector.Text = video.Director;
-            rjDatePickerReleaseDate.Value = video.ReleaseDate;
-            guna2ComboBoxRating.Text = video.Rating;
-            guna2TextBoxSerialNumber.Text = video.SerialNumber;
-            guna2TextBoxGenre.Text = video.Genre;
-            guna2TextBoxCopiesAvailable.Text = video.CopiesAvailable;
-            guna2ComboBoxCategory.Text = video.Category;
+            this.dashboard = dashboard;
+        }
+
+        private void guna2ButtonSubmit_Click(object sender, EventArgs e)
+        {
+            VideoLibrary video = new VideoLibrary();
+            video.Title = guna2TextBoxTitle.Text;
+            video.CopiesAvailable = guna2TextBoxCopiesAvailable.Text;
+            video.Category = guna2ComboBoxCategory.Text;
+
+            Video vd = new Video(dashboard);
+            vd.Insert(video);
         }
     }
 }

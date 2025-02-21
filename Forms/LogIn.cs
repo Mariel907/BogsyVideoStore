@@ -14,7 +14,6 @@ namespace Project.Forms
 {
     public partial class LogIn : Form
     {
-        private Security _security = new Security();
         public LogIn()
         {
             InitializeComponent();
@@ -24,20 +23,18 @@ namespace Project.Forms
         {
             string email = guna2TextBoxUserName.Text;
             string password = guna2TextBoxPassword.Text;
-
-            _security.LogInClick(email, password);
-
-            if (email != UserLogin.Email || password != UserLogin.Password)
+            
+            if (email == "Bogsy@gmail.com" || password == "Admin123")
             {
-                MessageBox.Show("Invalid Username or Password");
-                guna2HtmlLabelHideError.Hide();
-                guna2HtmlLabelShowError.Show(); 
+                guna2HtmlLabelHideError.Show();
+                guna2HtmlLabelShowError.Hide();
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+                this.Hide();
             }
             else
             {
                 this.Hide();
-                _security.OpenForm(UserLogin.Role);
-
              }
         }
 

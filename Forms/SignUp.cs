@@ -26,12 +26,6 @@ namespace Project.Forms
             CustomerProp customer = new CustomerProp();
             customer.FirstName = FirstName;
             customer.LastName = LastName;
-            customer.Email = Email;
-            customer.Password = Password;
-            customer.Age = Age;
-            customer.ContactNmbr = ContactNmbr;
-            customer.Address = Address;
-            Validation();
 
             if (hasError)
                 return;
@@ -40,17 +34,7 @@ namespace Project.Forms
             signUpUser.InsertCustomer();
         }
 
-        private void Validation()
-        {
-            hasError |= Helper.ValidateField(FirstName, pictureBoxErrorFirstNameShow, pictureBoxErrorFirstNameHide, GLblFirstnameErrorShow, GLblFirstnameErrorHide);
-            hasError |= Helper.ValidateField(LastName, pictureBoxErrorLastNameShow, pictureBoxErrorLastNameHide, GLblLastnameErrorShow, GLblLastnameErrorHide);
-            hasError |= Helper.ValidateField(Email, pctrEmailshow, pctrEmailHide, gunaLBLEmailShow, gunaLBLEmailHide);
-            hasError |= Helper.ValidateField(Age, ptrAgeShow, ptrAgeHide, GunaLblShow, GunaLblAgeHide);
-            hasError |= Helper.ValidateField(ContactNmbr, pctrPhoneNumberShow, pctrPhoneNumberHide, GLblPhoneNumberErrorShow, GLblPhoneNumberErrorHide);
-            hasError |= Helper.ValidateField(Password, pctrPasswordShow, pctrPasswordHide, GLblPasswordErrorShow, GLblPasswordErrorHide);
-            hasError |= Helper.ValidateField(Address, pictureBoxErrorAddressShow, pictureBoxErrorAddressHide, GLblAddressErrorShow, GLblAddressErrorHide);
-            hasError |= Helper.ValidatePassword(Password, checkBoxLength, checkBoxNumber, checkBoxUpper, checkBoxLower, GLblPasswordErrorShow, GLblPasswordErrorHide, pctrPasswordShow, pctrPasswordHide);
-        }
+     
 
         private void SignUp_Load(object sender, System.EventArgs e)
         {
