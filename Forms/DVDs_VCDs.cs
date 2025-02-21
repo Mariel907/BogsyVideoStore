@@ -14,16 +14,17 @@ namespace Project.Forms
 {
     public partial class DVDs_VCDs : Form
     {
-        public DVDs_VCDs()
+        private Dashboard dashboard;
+        public DVDs_VCDs(Dashboard dashboard)
         {
             InitializeComponent();
+            this.dashboard = dashboard;
         }
 
         private void guna2ButtonAdd_Click(object sender, EventArgs e)
         {
             AddDVD_VCD add = new AddDVD_VCD();
             FormManager form = new FormManager();
-            Dashboard dashboard = new Dashboard();
 
             form.OpenForm(add, dashboard.Panel);
         }
@@ -32,6 +33,12 @@ namespace Project.Forms
         {
             HiddenColumn hide = new HiddenColumn();
             hide.GetAllVideo(dgvDVDs__VCDs);
+        }
+
+        private void guna2ButtonEdit_Click(object sender, EventArgs e)
+        {
+            EditVideoLibrary Edit = new EditVideoLibrary(dashboard);
+            Edit.FetchVideoLibrary(dgvDVDs__VCDs);
         }
     }
 }

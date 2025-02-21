@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditDVD_VCD));
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ComboBoxRating = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ComboBoxCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBoxGenre = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxPublisher = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxAuthor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBoxDirector = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxISBN = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBoxSerialNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxCopiesAvailable = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabelDescriptionErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -51,8 +50,6 @@
             this.guna2HtmlLabelGenreErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabelISBNErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabelISBNErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabelPublisherErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabelPublisherErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabelPublishedDateErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabelPublishedDateErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabelAuthorErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -65,8 +62,6 @@
             this.pictureBoxErrorDescriptionShow = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorGenreHide = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorGenreShow = new System.Windows.Forms.PictureBox();
-            this.pictureBoxErrorPublisherHide = new System.Windows.Forms.PictureBox();
-            this.pictureBoxErrorPublisherShow = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorPublishedDateHide = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorPublishedDateShow = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorISBNHide = new System.Windows.Forms.PictureBox();
@@ -85,8 +80,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rjDatePicker1 = new CustomControls.RJControls.RJDatePicker();
+            this.rjDatePickerReleaseDate = new CustomControls.RJControls.RJDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorCopiesAvailableHide)).BeginInit();
@@ -95,8 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorDescriptionShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorGenreHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorGenreShow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublisherHide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublisherShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublishedDateHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublishedDateShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorISBNHide)).BeginInit();
@@ -107,37 +99,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorTitleShow)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2ComboBox2
+            // guna2ComboBoxRating
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBox2.BorderThickness = 2;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownHeight = 150;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.IntegralHeight = false;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.guna2ComboBoxRating.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxRating.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxRating.BorderThickness = 2;
+            this.guna2ComboBoxRating.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxRating.DropDownHeight = 150;
+            this.guna2ComboBoxRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxRating.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxRating.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxRating.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBoxRating.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBoxRating.IntegralHeight = false;
+            this.guna2ComboBoxRating.ItemHeight = 30;
+            this.guna2ComboBoxRating.Items.AddRange(new object[] {
             "G (General Audience)",
             "PG (Parental Guidance)",
             "PG 13 (Parental Strongly Cautioned)",
             "R (Restricted)",
             "NC-17 (Adults Only) "});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(166, 439);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(353, 36);
-            this.guna2ComboBox2.TabIndex = 362;
+            this.guna2ComboBoxRating.Location = new System.Drawing.Point(166, 355);
+            this.guna2ComboBoxRating.Name = "guna2ComboBoxRating";
+            this.guna2ComboBoxRating.Size = new System.Drawing.Size(353, 36);
+            this.guna2ComboBoxRating.TabIndex = 362;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(197, 475);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(197, 391);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(320, 22);
             this.guna2HtmlLabel1.TabIndex = 361;
@@ -148,7 +140,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(461, 477);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(461, 393);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(53, 19);
             this.guna2HtmlLabel2.TabIndex = 360;
@@ -157,7 +149,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(223, 423);
+            this.pictureBox1.Location = new System.Drawing.Point(223, 339);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(18, 10);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,7 +159,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(223, 423);
+            this.pictureBox2.Location = new System.Drawing.Point(223, 339);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(18, 10);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,33 +170,33 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 415);
+            this.label1.Location = new System.Drawing.Point(167, 331);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 21);
             this.label1.TabIndex = 357;
             this.label1.Text = "Rating";
             // 
-            // guna2ComboBox1
+            // guna2ComboBoxCategory
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBox1.BorderThickness = 2;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownHeight = 150;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.IntegralHeight = false;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.guna2ComboBoxCategory.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxCategory.BorderThickness = 2;
+            this.guna2ComboBoxCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxCategory.DropDownHeight = 150;
+            this.guna2ComboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxCategory.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBoxCategory.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBoxCategory.IntegralHeight = false;
+            this.guna2ComboBoxCategory.ItemHeight = 30;
+            this.guna2ComboBoxCategory.Items.AddRange(new object[] {
             "DVD",
             "VCD"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(629, 348);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(353, 36);
-            this.guna2ComboBox1.TabIndex = 356;
+            this.guna2ComboBoxCategory.Location = new System.Drawing.Point(629, 348);
+            this.guna2ComboBoxCategory.Name = "guna2ComboBoxCategory";
+            this.guna2ComboBoxCategory.Size = new System.Drawing.Size(353, 36);
+            this.guna2ComboBoxCategory.TabIndex = 356;
             // 
             // guna2TextBoxGenre
             // 
@@ -230,53 +222,29 @@
             this.guna2TextBoxGenre.Size = new System.Drawing.Size(226, 36);
             this.guna2TextBoxGenre.TabIndex = 354;
             // 
-            // guna2TextBoxPublisher
+            // guna2TextBoxDirector
             // 
-            this.guna2TextBoxPublisher.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxPublisher.BorderThickness = 2;
-            this.guna2TextBoxPublisher.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxPublisher.DefaultText = "";
-            this.guna2TextBoxPublisher.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxPublisher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxPublisher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxPublisher.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxPublisher.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxPublisher.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxPublisher.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxPublisher.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxPublisher.Location = new System.Drawing.Point(166, 262);
-            this.guna2TextBoxPublisher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxPublisher.Name = "guna2TextBoxPublisher";
-            this.guna2TextBoxPublisher.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxPublisher.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxPublisher.PlaceholderText = "";
-            this.guna2TextBoxPublisher.SelectedText = "";
-            this.guna2TextBoxPublisher.Size = new System.Drawing.Size(353, 36);
-            this.guna2TextBoxPublisher.TabIndex = 353;
-            // 
-            // guna2TextBoxAuthor
-            // 
-            this.guna2TextBoxAuthor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxAuthor.BorderThickness = 2;
-            this.guna2TextBoxAuthor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxAuthor.DefaultText = "";
-            this.guna2TextBoxAuthor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxAuthor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxAuthor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAuthor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxAuthor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxAuthor.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxAuthor.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxAuthor.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxAuthor.Location = new System.Drawing.Point(166, 179);
-            this.guna2TextBoxAuthor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxAuthor.Name = "guna2TextBoxAuthor";
-            this.guna2TextBoxAuthor.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxAuthor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxAuthor.PlaceholderText = "";
-            this.guna2TextBoxAuthor.SelectedText = "";
-            this.guna2TextBoxAuthor.Size = new System.Drawing.Size(353, 36);
-            this.guna2TextBoxAuthor.TabIndex = 352;
+            this.guna2TextBoxDirector.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxDirector.BorderThickness = 2;
+            this.guna2TextBoxDirector.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxDirector.DefaultText = "";
+            this.guna2TextBoxDirector.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxDirector.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxDirector.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxDirector.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxDirector.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxDirector.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.guna2TextBoxDirector.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBoxDirector.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2TextBoxDirector.Location = new System.Drawing.Point(166, 179);
+            this.guna2TextBoxDirector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBoxDirector.Name = "guna2TextBoxDirector";
+            this.guna2TextBoxDirector.Padding = new System.Windows.Forms.Padding(7);
+            this.guna2TextBoxDirector.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxDirector.PlaceholderText = "";
+            this.guna2TextBoxDirector.SelectedText = "";
+            this.guna2TextBoxDirector.Size = new System.Drawing.Size(353, 36);
+            this.guna2TextBoxDirector.TabIndex = 352;
             // 
             // guna2TextBoxTitle
             // 
@@ -302,29 +270,29 @@
             this.guna2TextBoxTitle.Size = new System.Drawing.Size(353, 36);
             this.guna2TextBoxTitle.TabIndex = 351;
             // 
-            // guna2TextBoxISBN
+            // guna2TextBoxSerialNumber
             // 
-            this.guna2TextBoxISBN.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxISBN.BorderThickness = 2;
-            this.guna2TextBoxISBN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxISBN.DefaultText = "";
-            this.guna2TextBoxISBN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxISBN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxISBN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxISBN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxISBN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxISBN.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxISBN.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxISBN.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxISBN.Location = new System.Drawing.Point(627, 93);
-            this.guna2TextBoxISBN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxISBN.Name = "guna2TextBoxISBN";
-            this.guna2TextBoxISBN.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxISBN.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxISBN.PlaceholderText = "";
-            this.guna2TextBoxISBN.SelectedText = "";
-            this.guna2TextBoxISBN.Size = new System.Drawing.Size(353, 36);
-            this.guna2TextBoxISBN.TabIndex = 350;
+            this.guna2TextBoxSerialNumber.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxSerialNumber.BorderThickness = 2;
+            this.guna2TextBoxSerialNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxSerialNumber.DefaultText = "";
+            this.guna2TextBoxSerialNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxSerialNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxSerialNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxSerialNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxSerialNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxSerialNumber.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.guna2TextBoxSerialNumber.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBoxSerialNumber.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2TextBoxSerialNumber.Location = new System.Drawing.Point(627, 93);
+            this.guna2TextBoxSerialNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBoxSerialNumber.Name = "guna2TextBoxSerialNumber";
+            this.guna2TextBoxSerialNumber.Padding = new System.Windows.Forms.Padding(7);
+            this.guna2TextBoxSerialNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxSerialNumber.PlaceholderText = "";
+            this.guna2TextBoxSerialNumber.SelectedText = "";
+            this.guna2TextBoxSerialNumber.Size = new System.Drawing.Size(353, 36);
+            this.guna2TextBoxSerialNumber.TabIndex = 350;
             // 
             // guna2TextBoxCopiesAvailable
             // 
@@ -464,35 +432,12 @@
             this.guna2HtmlLabelISBNErrorShow.Text = "9780000000000";
             this.guna2HtmlLabelISBNErrorShow.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabelPublisherErrorHide
-            // 
-            this.guna2HtmlLabelPublisherErrorHide.BackColor = System.Drawing.Color.White;
-            this.guna2HtmlLabelPublisherErrorHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabelPublisherErrorHide.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabelPublisherErrorHide.Location = new System.Drawing.Point(197, 297);
-            this.guna2HtmlLabelPublisherErrorHide.Name = "guna2HtmlLabelPublisherErrorHide";
-            this.guna2HtmlLabelPublisherErrorHide.Size = new System.Drawing.Size(320, 22);
-            this.guna2HtmlLabelPublisherErrorHide.TabIndex = 339;
-            this.guna2HtmlLabelPublisherErrorHide.Text = "Invalid Member ID. Please enter a valid ID.";
-            // 
-            // guna2HtmlLabelPublisherErrorShow
-            // 
-            this.guna2HtmlLabelPublisherErrorShow.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabelPublisherErrorShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabelPublisherErrorShow.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabelPublisherErrorShow.Location = new System.Drawing.Point(462, 297);
-            this.guna2HtmlLabelPublisherErrorShow.Name = "guna2HtmlLabelPublisherErrorShow";
-            this.guna2HtmlLabelPublisherErrorShow.Size = new System.Drawing.Size(53, 19);
-            this.guna2HtmlLabelPublisherErrorShow.TabIndex = 338;
-            this.guna2HtmlLabelPublisherErrorShow.Text = "Required";
-            this.guna2HtmlLabelPublisherErrorShow.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // guna2HtmlLabelPublishedDateErrorHide
             // 
             this.guna2HtmlLabelPublishedDateErrorHide.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabelPublishedDateErrorHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabelPublishedDateErrorHide.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabelPublishedDateErrorHide.Location = new System.Drawing.Point(199, 388);
+            this.guna2HtmlLabelPublishedDateErrorHide.Location = new System.Drawing.Point(199, 304);
             this.guna2HtmlLabelPublishedDateErrorHide.Name = "guna2HtmlLabelPublishedDateErrorHide";
             this.guna2HtmlLabelPublishedDateErrorHide.Size = new System.Drawing.Size(320, 22);
             this.guna2HtmlLabelPublishedDateErrorHide.TabIndex = 337;
@@ -503,7 +448,7 @@
             this.guna2HtmlLabelPublishedDateErrorShow.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabelPublishedDateErrorShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabelPublishedDateErrorShow.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabelPublishedDateErrorShow.Location = new System.Drawing.Point(461, 384);
+            this.guna2HtmlLabelPublishedDateErrorShow.Location = new System.Drawing.Point(461, 300);
             this.guna2HtmlLabelPublishedDateErrorShow.Name = "guna2HtmlLabelPublishedDateErrorShow";
             this.guna2HtmlLabelPublishedDateErrorShow.Size = new System.Drawing.Size(53, 19);
             this.guna2HtmlLabelPublishedDateErrorShow.TabIndex = 336;
@@ -613,28 +558,9 @@
             this.pictureBoxErrorGenreShow.TabIndex = 326;
             this.pictureBoxErrorGenreShow.TabStop = false;
             // 
-            // pictureBoxErrorPublisherHide
-            // 
-            this.pictureBoxErrorPublisherHide.Location = new System.Drawing.Point(244, 244);
-            this.pictureBoxErrorPublisherHide.Name = "pictureBoxErrorPublisherHide";
-            this.pictureBoxErrorPublisherHide.Size = new System.Drawing.Size(18, 10);
-            this.pictureBoxErrorPublisherHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxErrorPublisherHide.TabIndex = 325;
-            this.pictureBoxErrorPublisherHide.TabStop = false;
-            // 
-            // pictureBoxErrorPublisherShow
-            // 
-            this.pictureBoxErrorPublisherShow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxErrorPublisherShow.Image")));
-            this.pictureBoxErrorPublisherShow.Location = new System.Drawing.Point(244, 244);
-            this.pictureBoxErrorPublisherShow.Name = "pictureBoxErrorPublisherShow";
-            this.pictureBoxErrorPublisherShow.Size = new System.Drawing.Size(18, 10);
-            this.pictureBoxErrorPublisherShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxErrorPublisherShow.TabIndex = 324;
-            this.pictureBoxErrorPublisherShow.TabStop = false;
-            // 
             // pictureBoxErrorPublishedDateHide
             // 
-            this.pictureBoxErrorPublishedDateHide.Location = new System.Drawing.Point(282, 332);
+            this.pictureBoxErrorPublishedDateHide.Location = new System.Drawing.Point(282, 248);
             this.pictureBoxErrorPublishedDateHide.Name = "pictureBoxErrorPublishedDateHide";
             this.pictureBoxErrorPublishedDateHide.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorPublishedDateHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -644,7 +570,7 @@
             // pictureBoxErrorPublishedDateShow
             // 
             this.pictureBoxErrorPublishedDateShow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxErrorPublishedDateShow.Image")));
-            this.pictureBoxErrorPublishedDateShow.Location = new System.Drawing.Point(282, 332);
+            this.pictureBoxErrorPublishedDateShow.Location = new System.Drawing.Point(282, 248);
             this.pictureBoxErrorPublishedDateShow.Name = "pictureBoxErrorPublishedDateShow";
             this.pictureBoxErrorPublishedDateShow.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorPublishedDateShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -844,34 +770,24 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(169, 325);
+            this.label7.Location = new System.Drawing.Point(169, 241);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 21);
             this.label7.TabIndex = 309;
             this.label7.Text = "Release Date";
             // 
-            // label3
+            // rjDatePickerReleaseDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(169, 237);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 21);
-            this.label3.TabIndex = 307;
-            this.label3.Text = "Runtime";
-            // 
-            // rjDatePicker1
-            // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.rjDatePicker1.BorderSize = 2;
-            this.rjDatePicker1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.rjDatePicker1.Location = new System.Drawing.Point(166, 349);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(353, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.White;
-            this.rjDatePicker1.TabIndex = 363;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.Black;
+            this.rjDatePickerReleaseDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.rjDatePickerReleaseDate.BorderSize = 2;
+            this.rjDatePickerReleaseDate.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.rjDatePickerReleaseDate.Location = new System.Drawing.Point(166, 265);
+            this.rjDatePickerReleaseDate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.rjDatePickerReleaseDate.Name = "rjDatePickerReleaseDate";
+            this.rjDatePickerReleaseDate.Size = new System.Drawing.Size(353, 35);
+            this.rjDatePickerReleaseDate.SkinColor = System.Drawing.Color.White;
+            this.rjDatePickerReleaseDate.TabIndex = 363;
+            this.rjDatePickerReleaseDate.TextColor = System.Drawing.Color.Black;
             // 
             // EditDVD_VCD
             // 
@@ -879,19 +795,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1144, 567);
-            this.Controls.Add(this.rjDatePicker1);
-            this.Controls.Add(this.guna2ComboBox2);
+            this.Controls.Add(this.rjDatePickerReleaseDate);
+            this.Controls.Add(this.guna2ComboBoxRating);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.guna2ComboBoxCategory);
             this.Controls.Add(this.guna2TextBoxGenre);
-            this.Controls.Add(this.guna2TextBoxPublisher);
-            this.Controls.Add(this.guna2TextBoxAuthor);
+            this.Controls.Add(this.guna2TextBoxDirector);
             this.Controls.Add(this.guna2TextBoxTitle);
-            this.Controls.Add(this.guna2TextBoxISBN);
+            this.Controls.Add(this.guna2TextBoxSerialNumber);
             this.Controls.Add(this.guna2TextBoxCopiesAvailable);
             this.Controls.Add(this.guna2TextBoxCountryCode);
             this.Controls.Add(this.guna2HtmlLabelDescriptionErrorHide);
@@ -902,8 +817,6 @@
             this.Controls.Add(this.guna2HtmlLabelGenreErrorShow);
             this.Controls.Add(this.guna2HtmlLabelISBNErrorHide);
             this.Controls.Add(this.guna2HtmlLabelISBNErrorShow);
-            this.Controls.Add(this.guna2HtmlLabelPublisherErrorHide);
-            this.Controls.Add(this.guna2HtmlLabelPublisherErrorShow);
             this.Controls.Add(this.guna2HtmlLabelPublishedDateErrorHide);
             this.Controls.Add(this.guna2HtmlLabelPublishedDateErrorShow);
             this.Controls.Add(this.guna2HtmlLabelAuthorErrorHide);
@@ -916,8 +829,6 @@
             this.Controls.Add(this.pictureBoxErrorDescriptionShow);
             this.Controls.Add(this.pictureBoxErrorGenreHide);
             this.Controls.Add(this.pictureBoxErrorGenreShow);
-            this.Controls.Add(this.pictureBoxErrorPublisherHide);
-            this.Controls.Add(this.pictureBoxErrorPublisherShow);
             this.Controls.Add(this.pictureBoxErrorPublishedDateHide);
             this.Controls.Add(this.pictureBoxErrorPublishedDateShow);
             this.Controls.Add(this.pictureBoxErrorISBNHide);
@@ -936,7 +847,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditDVD_VCD";
             this.Text = "EditDVD_VCD";
@@ -948,8 +858,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorDescriptionShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorGenreHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorGenreShow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublisherHide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublisherShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublishedDateHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPublishedDateShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorISBNHide)).EndInit();
@@ -965,18 +873,17 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxRating;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxCategory;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxGenre;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxPublisher;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxAuthor;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxDirector;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTitle;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxISBN;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSerialNumber;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCopiesAvailable;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCountryCode;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelDescriptionErrorHide;
@@ -987,8 +894,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelGenreErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelISBNErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelISBNErrorShow;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelPublisherErrorHide;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelPublisherErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelPublishedDateErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelPublishedDateErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelAuthorErrorHide;
@@ -1001,8 +906,6 @@
         private System.Windows.Forms.PictureBox pictureBoxErrorDescriptionShow;
         private System.Windows.Forms.PictureBox pictureBoxErrorGenreHide;
         private System.Windows.Forms.PictureBox pictureBoxErrorGenreShow;
-        private System.Windows.Forms.PictureBox pictureBoxErrorPublisherHide;
-        private System.Windows.Forms.PictureBox pictureBoxErrorPublisherShow;
         private System.Windows.Forms.PictureBox pictureBoxErrorPublishedDateHide;
         private System.Windows.Forms.PictureBox pictureBoxErrorPublishedDateShow;
         private System.Windows.Forms.PictureBox pictureBoxErrorISBNHide;
@@ -1021,7 +924,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
-        private CustomControls.RJControls.RJDatePicker rjDatePicker1;
+        private CustomControls.RJControls.RJDatePicker rjDatePickerReleaseDate;
     }
 }

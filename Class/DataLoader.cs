@@ -1,11 +1,6 @@
 ﻿using Project.Model;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project.Class
@@ -24,19 +19,22 @@ namespace Project.Class
                     if (parameters != null)
                         cmd.Parameters.AddRange(parameters);
 
-                    SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
-                    DataTable dataTable = new DataTable();
-                    Adapter.Fill(dataTable);
-
-                    if (datagridView != null) datagridView.DataSource = dataTable;
+                        SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
+                        DataTable dataTable = new DataTable();
+                        Adapter.Fill(dataTable);
+                    if (datagridView != null)
+                    {
+                        datagridView.DataSource = dataTable; 
+                    }
                 }
             }
         }
-
+       
         public void GetAllCustomer(DataGridView dataGridView)
         {
             string query = "GetAllCustomer";
             LoadData(query, dataGridView);
         }
+
     }
 }

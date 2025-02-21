@@ -55,7 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\CustomerClass.cs" />
     <Compile Include="Class\DataLoader.cs" />
+    <Compile Include="Class\EditVideoLibrary.cs" />
     <Compile Include="Class\FormManager.cs" />
     <Compile Include="Class\Helper.cs" />
     <Compile Include="Class\HiddenColumn.cs" />

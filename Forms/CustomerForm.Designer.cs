@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ButtonEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonApproved = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridViewCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridViewCustomer)).BeginInit();
             this.SuspendLayout();
@@ -55,23 +55,23 @@
             this.guna2ButtonEdit.Text = "Edit";
             this.guna2ButtonEdit.Click += new System.EventHandler(this.guna2ButtonEdit_Click);
             // 
-            // guna2ButtonApproved
+            // guna2ButtonAdd
             // 
-            this.guna2ButtonApproved.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ButtonApproved.BorderRadius = 15;
-            this.guna2ButtonApproved.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonApproved.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonApproved.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonApproved.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonApproved.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonApproved.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonApproved.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonApproved.Location = new System.Drawing.Point(841, 430);
-            this.guna2ButtonApproved.Name = "guna2ButtonApproved";
-            this.guna2ButtonApproved.Size = new System.Drawing.Size(123, 46);
-            this.guna2ButtonApproved.TabIndex = 233;
-            this.guna2ButtonApproved.Text = "Add";
-            this.guna2ButtonApproved.Click += new System.EventHandler(this.guna2ButtonApproved_Click);
+            this.guna2ButtonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ButtonAdd.BorderRadius = 15;
+            this.guna2ButtonAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ButtonAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(841, 430);
+            this.guna2ButtonAdd.Name = "guna2ButtonAdd";
+            this.guna2ButtonAdd.Size = new System.Drawing.Size(123, 46);
+            this.guna2ButtonAdd.TabIndex = 233;
+            this.guna2ButtonAdd.Text = "Add";
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonApproved_Click);
             // 
             // guna2DataGridViewCustomer
             // 
@@ -139,7 +139,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1116, 488);
             this.Controls.Add(this.guna2ButtonEdit);
-            this.Controls.Add(this.guna2ButtonApproved);
+            this.Controls.Add(this.guna2ButtonAdd);
             this.Controls.Add(this.guna2DataGridViewCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerForm";
@@ -153,7 +153,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button guna2ButtonEdit;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonApproved;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonAdd;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridViewCustomer;
     }
 }

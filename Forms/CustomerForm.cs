@@ -1,5 +1,6 @@
 ﻿using Project.Class;
 using Project.Forms.ExtensionForms;
+using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,8 +32,9 @@ namespace Project.Forms
 
         private void guna2ButtonEdit_Click(object sender, EventArgs e)
         {
-            EditCustomer edit = new EditCustomer();
-            form.OpenForm(edit, dashboard.Panel);
+            CustomerProp customerProp = new CustomerProp();
+            CustomerClass customer = new CustomerClass(dashboard);
+            customer.FetchCustomerData(customerProp, guna2DataGridViewCustomer);
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)

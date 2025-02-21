@@ -28,24 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvDVDs__VCDs = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ButtonBorrow = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvDVDs__VCDs = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVDs__VCDs)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvDVDs__VCDs
-            // 
-            this.dgvDVDs__VCDs.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDVDs__VCDs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDVDs__VCDs.Location = new System.Drawing.Point(27, 40);
-            this.dgvDVDs__VCDs.Name = "dgvDVDs__VCDs";
-            this.dgvDVDs__VCDs.Size = new System.Drawing.Size(1059, 398);
-            this.dgvDVDs__VCDs.TabIndex = 1;
             // 
             // guna2ButtonBorrow
             // 
@@ -81,6 +75,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(123, 46);
             this.guna2Button1.TabIndex = 214;
             this.guna2Button1.Text = "Edit";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2ButtonEdit_Click);
             // 
             // guna2Button2
             // 
@@ -144,19 +139,78 @@
             this.label1.TabIndex = 231;
             this.label1.Text = "Table";
             // 
+            // dgvDVDs__VCDs
+            // 
+            this.dgvDVDs__VCDs.AllowUserToAddRows = false;
+            this.dgvDVDs__VCDs.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDVDs__VCDs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDVDs__VCDs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDVDs__VCDs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDVDs__VCDs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDVDs__VCDs.ColumnHeadersHeight = 35;
+            this.dgvDVDs__VCDs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDVDs__VCDs.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDVDs__VCDs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvDVDs__VCDs.Location = new System.Drawing.Point(27, 12);
+            this.dgvDVDs__VCDs.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDVDs__VCDs.Name = "dgvDVDs__VCDs";
+            this.dgvDVDs__VCDs.ReadOnly = true;
+            this.dgvDVDs__VCDs.RowHeadersVisible = false;
+            this.dgvDVDs__VCDs.Size = new System.Drawing.Size(1046, 425);
+            this.dgvDVDs__VCDs.TabIndex = 232;
+            this.dgvDVDs__VCDs.Tag = "book_id";
+            this.dgvDVDs__VCDs.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDVDs__VCDs.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvDVDs__VCDs.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvDVDs__VCDs.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvDVDs__VCDs.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvDVDs__VCDs.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDVDs__VCDs.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvDVDs__VCDs.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.dgvDVDs__VCDs.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDVDs__VCDs.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDVDs__VCDs.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvDVDs__VCDs.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvDVDs__VCDs.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvDVDs__VCDs.ThemeStyle.ReadOnly = true;
+            this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            // 
             // DVDs_VCDs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1119, 526);
+            this.Controls.Add(this.dgvDVDs__VCDs);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2ButtonBorrow);
-            this.Controls.Add(this.dgvDVDs__VCDs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DVDs_VCDs";
             this.Text = "DVDs_VCDs";
@@ -168,13 +222,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvDVDs__VCDs;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonBorrow;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvDVDs__VCDs;
     }
 }

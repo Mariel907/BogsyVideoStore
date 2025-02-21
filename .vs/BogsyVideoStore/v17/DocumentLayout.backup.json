@@ -3,127 +3,124 @@
   "WorkspaceRootPath": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\editvideolibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\editvideolibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\class\\signupuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\class\\signupuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\class\\hiddencolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\class\\hiddencolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\customerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\customerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\extensionforms\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\payments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\payments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\dvds_vcds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\hiddencolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\hiddencolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\class\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\class\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\extensionforms\\editdvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\payments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\payments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\payments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\payments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\forms\\extensionforms\\adddvd_vcd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\model\\videolibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:model\\videolibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\class\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\class\\formmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\forms\\extensionforms\\adddvd_vcd.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:forms\\extensionforms\\adddvd_vcd.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\userform\\userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\userform\\userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\class\\signupuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:class\\signupuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\class\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\class\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\project\\model\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|Project\\BogsyVideoStore.csproj|solutionrelative:project\\model\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|c:\\users\\mariel\\source\\repos\\bogsyvideostore\\userform\\userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A00E5A7-3A08-4EB4-BBDA-9FAF6C909B52}|BogsyVideoStore.csproj|solutionrelative:userform\\userdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -133,36 +130,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SignUp.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\SignUp.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\SignUp.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\SignUp.cs*",
-              "RelativeToolTip": "Project\\Forms\\SignUp.cs*",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAQwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:08:30.793Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LogIn.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\LogIn.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\LogIn.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\LogIn.cs",
-              "RelativeToolTip": "Project\\Forms\\LogIn.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T08:14:03.705Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -172,357 +141,354 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LogIn.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\LogIn.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\LogIn.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\LogIn.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\LogIn.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T08:14:00.114Z",
-              "EditorCaption": " [Design]"
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EditCustomer.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditCustomer.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\ExtensionForms\\EditCustomer.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditCustomer.cs",
-              "RelativeToolTip": "Project\\Forms\\ExtensionForms\\EditCustomer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FormManager.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\FormManager.cs",
+              "RelativeDocumentMoniker": "Class\\FormManager.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\FormManager.cs",
+              "RelativeToolTip": "Class\\FormManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:45:31.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HiddenColumn.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\HiddenColumn.cs",
-              "RelativeDocumentMoniker": "Project\\Class\\HiddenColumn.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\HiddenColumn.cs",
-              "RelativeToolTip": "Project\\Class\\HiddenColumn.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAgwCQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:22:45.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Dashboard.cs",
-              "RelativeToolTip": "Project\\Forms\\Dashboard.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:32:17.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CustomerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\CustomerForm.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\CustomerForm.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\CustomerForm.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\CustomerForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:01:20.864Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CustomerForm.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\CustomerForm.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\CustomerForm.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\CustomerForm.cs",
-              "RelativeToolTip": "Project\\Forms\\CustomerForm.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwBsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:47:22.087Z",
+              "WhenOpened": "2025-02-21T13:57:14.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SignUpUser.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\SignUpUser.cs",
-              "RelativeDocumentMoniker": "Project\\Class\\SignUpUser.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\SignUpUser.cs",
-              "RelativeToolTip": "Project\\Class\\SignUpUser.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwAwAAAAUAAAAAAAAAA==",
+              "Title": "EditCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditCustomer.cs",
+              "RelativeDocumentMoniker": "Forms\\ExtensionForms\\EditCustomer.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditCustomer.cs",
+              "RelativeToolTip": "Forms\\ExtensionForms\\EditCustomer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAIA6wB0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:04:07.406Z",
+              "WhenOpened": "2025-02-21T10:51:03.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EditCustomer.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditCustomer.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\ExtensionForms\\EditCustomer.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditCustomer.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\ExtensionForms\\EditCustomer.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "CustomerForm.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\CustomerForm.cs",
+              "RelativeDocumentMoniker": "Forms\\CustomerForm.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\CustomerForm.cs",
+              "RelativeToolTip": "Forms\\CustomerForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:40:34.359Z",
+              "WhenOpened": "2025-02-21T09:09:23.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditVideoLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\EditVideoLibrary.cs",
+              "RelativeDocumentMoniker": "Class\\EditVideoLibrary.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\EditVideoLibrary.cs",
+              "RelativeToolTip": "Class\\EditVideoLibrary.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwBsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T10:53:13.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\CustomerForm.cs",
+              "RelativeDocumentMoniker": "Forms\\CustomerForm.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\CustomerForm.cs [Design]",
+              "RelativeToolTip": "Forms\\CustomerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T09:09:00.151Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Model\\Customer.cs",
+              "RelativeDocumentMoniker": "Model\\Customer.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Model\\Customer.cs",
+              "RelativeToolTip": "Model\\Customer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T12:20:23.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerClass.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\CustomerClass.cs",
+              "RelativeDocumentMoniker": "Class\\CustomerClass.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\CustomerClass.cs",
+              "RelativeToolTip": "Class\\CustomerClass.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwC8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T13:26:56.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Video.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\Video.cs",
+              "RelativeDocumentMoniker": "Class\\Video.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\Video.cs",
+              "RelativeToolTip": "Class\\Video.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwDYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:36:50.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditCustomer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditCustomer.cs",
+              "RelativeDocumentMoniker": "Forms\\ExtensionForms\\EditCustomer.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditCustomer.cs [Design]",
+              "RelativeToolTip": "Forms\\ExtensionForms\\EditCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T10:47:09.477Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EditDVD_VCD.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
+              "RelativeDocumentMoniker": "Forms\\ExtensionForms\\EditDVD_VCD.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
+              "RelativeToolTip": "Forms\\ExtensionForms\\EditDVD_VCD.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAWwBAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:06:29.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DVDs_VCDs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\DVDs_VCDs.cs",
+              "RelativeDocumentMoniker": "Forms\\DVDs_VCDs.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\DVDs_VCDs.cs [Design]",
+              "RelativeToolTip": "Forms\\DVDs_VCDs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:03:46.084Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Payments.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Payments.cs",
+              "RelativeDocumentMoniker": "Forms\\Payments.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Payments.cs [Design]",
+              "RelativeToolTip": "Forms\\Payments.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:16:14.201Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "DVDs_VCDs.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\DVDs_VCDs.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\DVDs_VCDs.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\DVDs_VCDs.cs",
-              "RelativeToolTip": "Project\\Forms\\DVDs_VCDs.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBcAAAAMAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\DVDs_VCDs.cs",
+              "RelativeDocumentMoniker": "Forms\\DVDs_VCDs.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\DVDs_VCDs.cs",
+              "RelativeToolTip": "Forms\\DVDs_VCDs.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwCgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:08:22.685Z",
+              "WhenOpened": "2025-02-21T11:04:23.197Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Model\\Customer.cs",
-              "RelativeDocumentMoniker": "Project\\Model\\Customer.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Model\\Customer.cs",
-              "RelativeToolTip": "Project\\Model\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:09:42.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AddDVD_VCD.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:09:47.365Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "DataLoader.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\DataLoader.cs",
-              "RelativeDocumentMoniker": "Project\\Class\\DataLoader.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\DataLoader.cs",
-              "RelativeToolTip": "Project\\Class\\DataLoader.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAADwvyUAAAAqAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:20:13.211Z",
+              "WhenOpened": "2025-02-21T12:49:34.962Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "DVDs_VCDs.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\DVDs_VCDs.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\DVDs_VCDs.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\DVDs_VCDs.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\DVDs_VCDs.cs [Design]",
+              "Title": "HiddenColumn.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\HiddenColumn.cs",
+              "RelativeDocumentMoniker": "Class\\HiddenColumn.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\HiddenColumn.cs",
+              "RelativeToolTip": "Class\\HiddenColumn.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:55:12.971Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-21T13:06:52.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "EditDVD_VCD.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
-              "RelativeToolTip": "Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Title": "AddDVD_VCD.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
+              "RelativeDocumentMoniker": "Forms\\ExtensionForms\\AddDVD_VCD.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
+              "RelativeToolTip": "Forms\\ExtensionForms\\AddDVD_VCD.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwvzsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:13:59.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Transaction.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Transaction.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Transaction.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Transaction.cs",
-              "RelativeToolTip": "Project\\Forms\\Transaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:48:08.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Reports.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Reports.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Reports.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Reports.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\Reports.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:49:06.253Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Reports.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Reports.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Reports.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Reports.cs",
-              "RelativeToolTip": "Project\\Forms\\Reports.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:54:06.423Z",
+              "WhenOpened": "2025-02-21T09:09:45.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "EditDVD_VCD.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\ExtensionForms\\EditDVD_VCD.cs [Design]",
+              "Title": "DataLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\DataLoader.cs",
+              "RelativeDocumentMoniker": "Class\\DataLoader.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\DataLoader.cs",
+              "RelativeToolTip": "Class\\DataLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:22:57.403Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Payments.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Payments.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Payments.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Payments.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\Payments.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:02:57.945Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Payments.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Payments.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Payments.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Payments.cs",
-              "RelativeToolTip": "Project\\Forms\\Payments.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T07:04:09.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAOoSAAAAAAAAAAAtwPkSAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-02-21T07:08:30.225Z",
+              "WhenOpened": "2025-02-21T09:17:52.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Dashboard.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Forms\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Dashboard.cs [Design]",
+              "RelativeToolTip": "Forms\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:00:38.014Z",
+              "WhenOpened": "2025-02-21T11:04:16.238Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AddDVD_VCD.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
-              "RelativeToolTip": "Project\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\Helper.cs",
+              "RelativeDocumentMoniker": "Class\\Helper.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\Helper.cs",
+              "RelativeToolTip": "Class\\Helper.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAjwGkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:27:45.11Z",
+              "WhenOpened": "2025-02-21T10:14:25.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Forms\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Dashboard.cs",
+              "RelativeToolTip": "Forms\\Dashboard.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvyAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:10:48.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Reports.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Reports.cs",
+              "RelativeDocumentMoniker": "Forms\\Reports.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Reports.cs [Design]",
+              "RelativeToolTip": "Forms\\Reports.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:16:13.351Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Transaction.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Transaction.cs",
+              "RelativeDocumentMoniker": "Forms\\Transaction.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\Transaction.cs [Design]",
+              "RelativeToolTip": "Forms\\Transaction.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:16:26.653Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Security.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\Security.cs",
+              "RelativeDocumentMoniker": "Class\\Security.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\Security.cs",
+              "RelativeToolTip": "Class\\Security.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:22:43.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "Transaction.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Transaction.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\Transaction.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\Transaction.cs [Design]",
-              "RelativeToolTip": "Project\\Forms\\Transaction.cs [Design]",
+              "Title": "SignUp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\SignUp.cs",
+              "RelativeDocumentMoniker": "Forms\\SignUp.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\SignUp.cs [Design]",
+              "RelativeToolTip": "Forms\\SignUp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:04:04.052Z",
+              "WhenOpened": "2025-02-21T09:23:31.403Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "FormManager.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\FormManager.cs",
-              "RelativeDocumentMoniker": "Project\\Class\\FormManager.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\FormManager.cs",
-              "RelativeToolTip": "Project\\Class\\FormManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 26,
+              "Title": "VideoLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Model\\VideoLibrary.cs",
+              "RelativeDocumentMoniker": "Model\\VideoLibrary.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Model\\VideoLibrary.cs",
+              "RelativeToolTip": "Model\\VideoLibrary.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:28:44.317Z",
+              "WhenOpened": "2025-02-21T09:33:08.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "UserDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\userForm\\UserDashboard.cs",
-              "RelativeDocumentMoniker": "Project\\userForm\\UserDashboard.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\userForm\\UserDashboard.cs [Design]",
-              "RelativeToolTip": "Project\\userForm\\UserDashboard.cs [Design]",
+              "Title": "SignUpUser.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\SignUpUser.cs",
+              "RelativeDocumentMoniker": "Class\\SignUpUser.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Class\\SignUpUser.cs",
+              "RelativeToolTip": "Class\\SignUpUser.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T06:08:44.133Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-21T09:46:46.57Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "Helper.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\Helper.cs",
-              "RelativeDocumentMoniker": "Project\\Class\\Helper.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Class\\Helper.cs",
-              "RelativeToolTip": "Project\\Class\\Helper.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCEAAAAoAAAAAAAAAA==",
+              "Title": "UserDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\userForm\\UserDashboard.cs",
+              "RelativeDocumentMoniker": "userForm\\UserDashboard.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\userForm\\UserDashboard.cs [Design]",
+              "RelativeToolTip": "userForm\\UserDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:41:03.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UserLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Model\\UserLogin.cs",
-              "RelativeDocumentMoniker": "Project\\Model\\UserLogin.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Model\\UserLogin.cs",
-              "RelativeToolTip": "Project\\Model\\UserLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:09:57.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T09:04:37.145Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
@@ -532,12 +498,58 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "8e895074-303e-494b-adf4-d331ed5e9e87",
+        "Id": "1754401b-4b32-4df3-b631-20f4099817dc",
         "Display": 0,
-        "X": 29,
-        "Y": 135,
+        "X": 1,
+        "Y": 73,
         "Width": 1328,
         "Height": 532,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AddDVD_VCD.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\AddDVD_VCD.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\ExtensionForms\\AddDVD_VCD.Designer.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\AddDVD_VCD.Designer.cs",
+              "RelativeToolTip": "Forms\\ExtensionForms\\AddDVD_VCD.Designer.cs",
+              "ViewState": "AgIAAIMCAAAAAAAAAAArwJACAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T09:27:49.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddDVD_VCD.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\AddDVD_VCD.cs",
+              "RelativeDocumentMoniker": "Forms\\ExtensionForms\\AddDVD_VCD.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\AddDVD_VCD.cs [Design]",
+              "RelativeToolTip": "Forms\\ExtensionForms\\AddDVD_VCD.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T09:09:40.832Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "aee45074-6358-410e-8f19-5d599d7abbf6",
+        "Display": 0,
+        "X": 12,
+        "Y": 151,
+        "Width": 1353,
+        "Height": 523,
         "WindowState": 0
       },
       "DocumentGroups": [
@@ -547,14 +559,14 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SignUp.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\SignUp.cs",
-              "RelativeDocumentMoniker": "Project\\Forms\\SignUp.cs",
-              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Project\\Forms\\SignUp.cs [Design]*",
-              "RelativeToolTip": "Project\\Forms\\SignUp.cs [Design]*",
+              "DocumentIndex": 11,
+              "Title": "EditDVD_VCD.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditDVD_VCD.cs",
+              "RelativeDocumentMoniker": "Forms\\ExtensionForms\\EditDVD_VCD.cs",
+              "ToolTip": "C:\\Users\\Mariel\\source\\repos\\BogsyVideoStore\\Forms\\ExtensionForms\\EditDVD_VCD.cs [Design]",
+              "RelativeToolTip": "Forms\\ExtensionForms\\EditDVD_VCD.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T05:02:39.104Z",
+              "WhenOpened": "2025-02-21T11:06:17.687Z",
               "EditorCaption": " [Design]"
             }
           ]

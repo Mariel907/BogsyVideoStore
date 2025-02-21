@@ -61,12 +61,10 @@ namespace Project.Class
                     }
                 }
             }
-            catch (Exception ex)
-            
+            catch (Exception)
             {
-                MessageBox.Show("An error Occured during LogIn ", ex.Message);
+                return false;
             }
-            return false;
         }
 
         public void OpenForm(string role)

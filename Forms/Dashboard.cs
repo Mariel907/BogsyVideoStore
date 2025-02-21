@@ -29,7 +29,7 @@ namespace Project.Forms
                 switch (button.Name)
                 {
                     case "DVDVCD":
-                        DVDs_VCDs dVDs_VCDs = new DVDs_VCDs();
+                        DVDs_VCDs dVDs_VCDs = new DVDs_VCDs(this);
                         form.OpenForm(dVDs_VCDs, panelDashboard);
                         break;
                     case "Customer":

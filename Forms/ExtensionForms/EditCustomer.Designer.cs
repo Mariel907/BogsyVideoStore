@@ -33,7 +33,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2HtmlLabelEmaillShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabelEmailHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Guna2LabelCountryCodeHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -45,13 +44,11 @@
             this.guna2TextBoxFirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.GLblGmailErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblDateOfBirthErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.GLblPasswordErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblUsernameErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblPhoneNumberErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblAddressErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblLastnameErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblFirstnameErrorHide = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.GLblPasswordErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblPhoneNumberErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblUsernameErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblAddressErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -59,19 +56,11 @@
             this.GLblGmailErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblLastnameErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GLblFirstnameErrorShow = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pictureBoxPasswordShow = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPasswordHide = new System.Windows.Forms.PictureBox();
             this.guna2TextBoxPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2TextBoxCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.checkBoxLower = new System.Windows.Forms.CheckBox();
             this.pictureBoxErrorLastNameHide = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorLastNameShow = new System.Windows.Forms.PictureBox();
-            this.checkBoxUpper = new System.Windows.Forms.CheckBox();
-            this.checkBoxNumber = new System.Windows.Forms.CheckBox();
             this.pictureBoxErrorPhoneNumberHide = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorPhoneNumberShow = new System.Windows.Forms.PictureBox();
-            this.checkBoxLength = new System.Windows.Forms.CheckBox();
             this.pictureBoxErrorAddressHide = new System.Windows.Forms.PictureBox();
             this.pictureBoxErrorAddressShow = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -83,17 +72,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelFirstname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2ComboBoxPhoneNumber = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ButtonLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasswordShow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasswordHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorLastNameHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorLastNameShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPhoneNumberHide)).BeginInit();
@@ -104,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorFirstNameShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -149,17 +130,6 @@
             this.guna2HtmlLabelEmailHide.TabIndex = 430;
             this.guna2HtmlLabelEmailHide.Text = "example@domain.com";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(420, 324);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 21);
-            this.label6.TabIndex = 429;
-            this.label6.Text = "Password";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -187,7 +157,7 @@
             this.Guna2LabelCountryCodeHide.BackColor = System.Drawing.Color.Transparent;
             this.Guna2LabelCountryCodeHide.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guna2LabelCountryCodeHide.ForeColor = System.Drawing.Color.White;
-            this.Guna2LabelCountryCodeHide.Location = new System.Drawing.Point(157, 389);
+            this.Guna2LabelCountryCodeHide.Location = new System.Drawing.Point(506, 388);
             this.Guna2LabelCountryCodeHide.Name = "Guna2LabelCountryCodeHide";
             this.Guna2LabelCountryCodeHide.Size = new System.Drawing.Size(60, 19);
             this.Guna2LabelCountryCodeHide.TabIndex = 426;
@@ -198,7 +168,7 @@
             this.Guna2LabelCountryCodeShow.BackColor = System.Drawing.Color.Transparent;
             this.Guna2LabelCountryCodeShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guna2LabelCountryCodeShow.ForeColor = System.Drawing.Color.Red;
-            this.Guna2LabelCountryCodeShow.Location = new System.Drawing.Point(161, 385);
+            this.Guna2LabelCountryCodeShow.Location = new System.Drawing.Point(510, 384);
             this.Guna2LabelCountryCodeShow.Name = "Guna2LabelCountryCodeShow";
             this.Guna2LabelCountryCodeShow.Size = new System.Drawing.Size(53, 19);
             this.Guna2LabelCountryCodeShow.TabIndex = 425;
@@ -266,7 +236,7 @@
             this.guna2TextBoxAddress.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxAddress.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxAddress.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxAddress.Location = new System.Drawing.Point(69, 265);
+            this.guna2TextBoxAddress.Location = new System.Drawing.Point(65, 346);
             this.guna2TextBoxAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxAddress.Name = "guna2TextBoxAddress";
             this.guna2TextBoxAddress.Padding = new System.Windows.Forms.Padding(7);
@@ -290,14 +260,14 @@
             this.guna2TextBoxLastName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxLastName.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxLastName.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxLastName.Location = new System.Drawing.Point(240, 181);
+            this.guna2TextBoxLastName.Location = new System.Drawing.Point(69, 265);
             this.guna2TextBoxLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxLastName.Name = "guna2TextBoxLastName";
             this.guna2TextBoxLastName.Padding = new System.Windows.Forms.Padding(7);
             this.guna2TextBoxLastName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2TextBoxLastName.PlaceholderText = "";
             this.guna2TextBoxLastName.SelectedText = "";
-            this.guna2TextBoxLastName.Size = new System.Drawing.Size(168, 36);
+            this.guna2TextBoxLastName.Size = new System.Drawing.Size(333, 36);
             this.guna2TextBoxLastName.TabIndex = 420;
             // 
             // guna2TextBoxFirstname
@@ -321,7 +291,7 @@
             this.guna2TextBoxFirstname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2TextBoxFirstname.PlaceholderText = "";
             this.guna2TextBoxFirstname.SelectedText = "";
-            this.guna2TextBoxFirstname.Size = new System.Drawing.Size(170, 36);
+            this.guna2TextBoxFirstname.Size = new System.Drawing.Size(333, 36);
             this.guna2TextBoxFirstname.TabIndex = 419;
             // 
             // GLblGmailErrorHide
@@ -346,17 +316,6 @@
             this.GLblDateOfBirthErrorHide.TabIndex = 417;
             this.GLblDateOfBirthErrorHide.Text = "Letter onlyfgffgfdgfdgdfgdfgdfg dgdfgdfgdf";
             // 
-            // GLblPasswordErrorHide
-            // 
-            this.GLblPasswordErrorHide.BackColor = System.Drawing.Color.Transparent;
-            this.GLblPasswordErrorHide.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GLblPasswordErrorHide.ForeColor = System.Drawing.Color.White;
-            this.GLblPasswordErrorHide.Location = new System.Drawing.Point(694, 390);
-            this.GLblPasswordErrorHide.Name = "GLblPasswordErrorHide";
-            this.GLblPasswordErrorHide.Size = new System.Drawing.Size(60, 19);
-            this.GLblPasswordErrorHide.TabIndex = 416;
-            this.GLblPasswordErrorHide.Text = "Letter only";
-            // 
             // GLblUsernameErrorHide
             // 
             this.GLblUsernameErrorHide.BackColor = System.Drawing.Color.Transparent;
@@ -373,7 +332,7 @@
             this.GLblPhoneNumberErrorHide.BackColor = System.Drawing.Color.Transparent;
             this.GLblPhoneNumberErrorHide.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblPhoneNumberErrorHide.ForeColor = System.Drawing.Color.White;
-            this.GLblPhoneNumberErrorHide.Location = new System.Drawing.Point(345, 386);
+            this.GLblPhoneNumberErrorHide.Location = new System.Drawing.Point(694, 385);
             this.GLblPhoneNumberErrorHide.Name = "GLblPhoneNumberErrorHide";
             this.GLblPhoneNumberErrorHide.Size = new System.Drawing.Size(60, 19);
             this.GLblPhoneNumberErrorHide.TabIndex = 414;
@@ -384,7 +343,7 @@
             this.GLblAddressErrorHide.BackColor = System.Drawing.Color.Transparent;
             this.GLblAddressErrorHide.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblAddressErrorHide.ForeColor = System.Drawing.Color.White;
-            this.GLblAddressErrorHide.Location = new System.Drawing.Point(348, 308);
+            this.GLblAddressErrorHide.Location = new System.Drawing.Point(344, 389);
             this.GLblAddressErrorHide.Name = "GLblAddressErrorHide";
             this.GLblAddressErrorHide.Size = new System.Drawing.Size(60, 19);
             this.GLblAddressErrorHide.TabIndex = 413;
@@ -395,7 +354,7 @@
             this.GLblLastnameErrorHide.BackColor = System.Drawing.Color.Transparent;
             this.GLblLastnameErrorHide.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblLastnameErrorHide.ForeColor = System.Drawing.Color.White;
-            this.GLblLastnameErrorHide.Location = new System.Drawing.Point(348, 224);
+            this.GLblLastnameErrorHide.Location = new System.Drawing.Point(342, 308);
             this.GLblLastnameErrorHide.Name = "GLblLastnameErrorHide";
             this.GLblLastnameErrorHide.Size = new System.Drawing.Size(60, 19);
             this.GLblLastnameErrorHide.TabIndex = 412;
@@ -406,29 +365,18 @@
             this.GLblFirstnameErrorHide.BackColor = System.Drawing.Color.Transparent;
             this.GLblFirstnameErrorHide.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblFirstnameErrorHide.ForeColor = System.Drawing.Color.White;
-            this.GLblFirstnameErrorHide.Location = new System.Drawing.Point(175, 224);
+            this.GLblFirstnameErrorHide.Location = new System.Drawing.Point(345, 224);
             this.GLblFirstnameErrorHide.Name = "GLblFirstnameErrorHide";
             this.GLblFirstnameErrorHide.Size = new System.Drawing.Size(60, 19);
             this.GLblFirstnameErrorHide.TabIndex = 411;
             this.GLblFirstnameErrorHide.Text = "Letter only";
-            // 
-            // GLblPasswordErrorShow
-            // 
-            this.GLblPasswordErrorShow.BackColor = System.Drawing.Color.Transparent;
-            this.GLblPasswordErrorShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GLblPasswordErrorShow.ForeColor = System.Drawing.Color.Red;
-            this.GLblPasswordErrorShow.Location = new System.Drawing.Point(701, 385);
-            this.GLblPasswordErrorShow.Name = "GLblPasswordErrorShow";
-            this.GLblPasswordErrorShow.Size = new System.Drawing.Size(53, 19);
-            this.GLblPasswordErrorShow.TabIndex = 410;
-            this.GLblPasswordErrorShow.Text = "Required";
             // 
             // GLblPhoneNumberErrorShow
             // 
             this.GLblPhoneNumberErrorShow.BackColor = System.Drawing.Color.Transparent;
             this.GLblPhoneNumberErrorShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblPhoneNumberErrorShow.ForeColor = System.Drawing.Color.Red;
-            this.GLblPhoneNumberErrorShow.Location = new System.Drawing.Point(352, 385);
+            this.GLblPhoneNumberErrorShow.Location = new System.Drawing.Point(701, 384);
             this.GLblPhoneNumberErrorShow.Name = "GLblPhoneNumberErrorShow";
             this.GLblPhoneNumberErrorShow.Size = new System.Drawing.Size(53, 19);
             this.GLblPhoneNumberErrorShow.TabIndex = 409;
@@ -450,7 +398,7 @@
             this.GLblAddressErrorShow.BackColor = System.Drawing.Color.Transparent;
             this.GLblAddressErrorShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblAddressErrorShow.ForeColor = System.Drawing.Color.Red;
-            this.GLblAddressErrorShow.Location = new System.Drawing.Point(353, 303);
+            this.GLblAddressErrorShow.Location = new System.Drawing.Point(349, 384);
             this.GLblAddressErrorShow.Name = "GLblAddressErrorShow";
             this.GLblAddressErrorShow.Size = new System.Drawing.Size(53, 19);
             this.GLblAddressErrorShow.TabIndex = 407;
@@ -483,7 +431,7 @@
             this.GLblLastnameErrorShow.BackColor = System.Drawing.Color.Transparent;
             this.GLblLastnameErrorShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblLastnameErrorShow.ForeColor = System.Drawing.Color.Red;
-            this.GLblLastnameErrorShow.Location = new System.Drawing.Point(352, 219);
+            this.GLblLastnameErrorShow.Location = new System.Drawing.Point(346, 303);
             this.GLblLastnameErrorShow.Name = "GLblLastnameErrorShow";
             this.GLblLastnameErrorShow.Size = new System.Drawing.Size(53, 19);
             this.GLblLastnameErrorShow.TabIndex = 404;
@@ -494,31 +442,11 @@
             this.GLblFirstnameErrorShow.BackColor = System.Drawing.Color.Transparent;
             this.GLblFirstnameErrorShow.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GLblFirstnameErrorShow.ForeColor = System.Drawing.Color.Red;
-            this.GLblFirstnameErrorShow.Location = new System.Drawing.Point(182, 219);
+            this.GLblFirstnameErrorShow.Location = new System.Drawing.Point(352, 219);
             this.GLblFirstnameErrorShow.Name = "GLblFirstnameErrorShow";
             this.GLblFirstnameErrorShow.Size = new System.Drawing.Size(53, 19);
             this.GLblFirstnameErrorShow.TabIndex = 403;
             this.GLblFirstnameErrorShow.Text = "Required";
-            // 
-            // pictureBoxPasswordShow
-            // 
-            this.pictureBoxPasswordShow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPasswordShow.Image")));
-            this.pictureBoxPasswordShow.Location = new System.Drawing.Point(721, 351);
-            this.pictureBoxPasswordShow.Name = "pictureBoxPasswordShow";
-            this.pictureBoxPasswordShow.Size = new System.Drawing.Size(30, 28);
-            this.pictureBoxPasswordShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPasswordShow.TabIndex = 393;
-            this.pictureBoxPasswordShow.TabStop = false;
-            // 
-            // pictureBoxPasswordHide
-            // 
-            this.pictureBoxPasswordHide.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPasswordHide.Image")));
-            this.pictureBoxPasswordHide.Location = new System.Drawing.Point(721, 351);
-            this.pictureBoxPasswordHide.Name = "pictureBoxPasswordHide";
-            this.pictureBoxPasswordHide.Size = new System.Drawing.Size(30, 28);
-            this.pictureBoxPasswordHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPasswordHide.TabIndex = 394;
-            this.pictureBoxPasswordHide.TabStop = false;
             // 
             // guna2TextBoxPhoneNumber
             // 
@@ -534,64 +462,19 @@
             this.guna2TextBoxPhoneNumber.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxPhoneNumber.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxPhoneNumber.Location = new System.Drawing.Point(215, 347);
+            this.guna2TextBoxPhoneNumber.Location = new System.Drawing.Point(416, 346);
             this.guna2TextBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxPhoneNumber.Name = "guna2TextBoxPhoneNumber";
             this.guna2TextBoxPhoneNumber.Padding = new System.Windows.Forms.Padding(7);
             this.guna2TextBoxPhoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2TextBoxPhoneNumber.PlaceholderText = "";
             this.guna2TextBoxPhoneNumber.SelectedText = "";
-            this.guna2TextBoxPhoneNumber.Size = new System.Drawing.Size(193, 36);
+            this.guna2TextBoxPhoneNumber.Size = new System.Drawing.Size(341, 36);
             this.guna2TextBoxPhoneNumber.TabIndex = 402;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(795, 180);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(161, 21);
-            this.label9.TabIndex = 401;
-            this.label9.Text = "Password Validations:";
-            // 
-            // guna2TextBoxCountryCode
-            // 
-            this.guna2TextBoxCountryCode.BorderColor = System.Drawing.Color.White;
-            this.guna2TextBoxCountryCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxCountryCode.DefaultText = "";
-            this.guna2TextBoxCountryCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxCountryCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxCountryCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCountryCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCountryCode.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCountryCode.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBoxCountryCode.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxCountryCode.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCountryCode.Location = new System.Drawing.Point(76, 351);
-            this.guna2TextBoxCountryCode.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBoxCountryCode.Name = "guna2TextBoxCountryCode";
-            this.guna2TextBoxCountryCode.PlaceholderText = "";
-            this.guna2TextBoxCountryCode.ReadOnly = true;
-            this.guna2TextBoxCountryCode.SelectedText = "";
-            this.guna2TextBoxCountryCode.Size = new System.Drawing.Size(118, 29);
-            this.guna2TextBoxCountryCode.TabIndex = 400;
-            // 
-            // checkBoxLower
-            // 
-            this.checkBoxLower.AutoSize = true;
-            this.checkBoxLower.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxLower.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBoxLower.Location = new System.Drawing.Point(795, 293);
-            this.checkBoxLower.Name = "checkBoxLower";
-            this.checkBoxLower.Size = new System.Drawing.Size(277, 25);
-            this.checkBoxLower.TabIndex = 398;
-            this.checkBoxLower.Text = "Include at least one lowercase letter.";
-            this.checkBoxLower.UseVisualStyleBackColor = true;
             // 
             // pictureBoxErrorLastNameHide
             // 
-            this.pictureBoxErrorLastNameHide.Location = new System.Drawing.Point(319, 166);
+            this.pictureBoxErrorLastNameHide.Location = new System.Drawing.Point(148, 250);
             this.pictureBoxErrorLastNameHide.Name = "pictureBoxErrorLastNameHide";
             this.pictureBoxErrorLastNameHide.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorLastNameHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -601,40 +484,16 @@
             // pictureBoxErrorLastNameShow
             // 
             this.pictureBoxErrorLastNameShow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxErrorLastNameShow.Image")));
-            this.pictureBoxErrorLastNameShow.Location = new System.Drawing.Point(319, 166);
+            this.pictureBoxErrorLastNameShow.Location = new System.Drawing.Point(148, 250);
             this.pictureBoxErrorLastNameShow.Name = "pictureBoxErrorLastNameShow";
             this.pictureBoxErrorLastNameShow.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorLastNameShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxErrorLastNameShow.TabIndex = 391;
             this.pictureBoxErrorLastNameShow.TabStop = false;
             // 
-            // checkBoxUpper
-            // 
-            this.checkBoxUpper.AutoSize = true;
-            this.checkBoxUpper.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxUpper.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBoxUpper.Location = new System.Drawing.Point(795, 264);
-            this.checkBoxUpper.Name = "checkBoxUpper";
-            this.checkBoxUpper.Size = new System.Drawing.Size(281, 25);
-            this.checkBoxUpper.TabIndex = 397;
-            this.checkBoxUpper.Text = "Include at least one uppercase letter.";
-            this.checkBoxUpper.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxNumber
-            // 
-            this.checkBoxNumber.AutoSize = true;
-            this.checkBoxNumber.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxNumber.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxNumber.Location = new System.Drawing.Point(795, 235);
-            this.checkBoxNumber.Name = "checkBoxNumber";
-            this.checkBoxNumber.Size = new System.Drawing.Size(225, 25);
-            this.checkBoxNumber.TabIndex = 396;
-            this.checkBoxNumber.Text = "Include at least one number.";
-            this.checkBoxNumber.UseVisualStyleBackColor = true;
-            // 
             // pictureBoxErrorPhoneNumberHide
             // 
-            this.pictureBoxErrorPhoneNumberHide.Location = new System.Drawing.Point(184, 332);
+            this.pictureBoxErrorPhoneNumberHide.Location = new System.Drawing.Point(533, 331);
             this.pictureBoxErrorPhoneNumberHide.Name = "pictureBoxErrorPhoneNumberHide";
             this.pictureBoxErrorPhoneNumberHide.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorPhoneNumberHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -644,28 +503,16 @@
             // pictureBoxErrorPhoneNumberShow
             // 
             this.pictureBoxErrorPhoneNumberShow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxErrorPhoneNumberShow.Image")));
-            this.pictureBoxErrorPhoneNumberShow.Location = new System.Drawing.Point(184, 332);
+            this.pictureBoxErrorPhoneNumberShow.Location = new System.Drawing.Point(533, 331);
             this.pictureBoxErrorPhoneNumberShow.Name = "pictureBoxErrorPhoneNumberShow";
             this.pictureBoxErrorPhoneNumberShow.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorPhoneNumberShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxErrorPhoneNumberShow.TabIndex = 389;
             this.pictureBoxErrorPhoneNumberShow.TabStop = false;
             // 
-            // checkBoxLength
-            // 
-            this.checkBoxLength.AutoSize = true;
-            this.checkBoxLength.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxLength.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxLength.Location = new System.Drawing.Point(795, 206);
-            this.checkBoxLength.Name = "checkBoxLength";
-            this.checkBoxLength.Size = new System.Drawing.Size(173, 25);
-            this.checkBoxLength.TabIndex = 395;
-            this.checkBoxLength.Text = "At least 8 characters.";
-            this.checkBoxLength.UseVisualStyleBackColor = true;
-            // 
             // pictureBoxErrorAddressHide
             // 
-            this.pictureBoxErrorAddressHide.Location = new System.Drawing.Point(139, 250);
+            this.pictureBoxErrorAddressHide.Location = new System.Drawing.Point(135, 331);
             this.pictureBoxErrorAddressHide.Name = "pictureBoxErrorAddressHide";
             this.pictureBoxErrorAddressHide.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorAddressHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -675,7 +522,7 @@
             // pictureBoxErrorAddressShow
             // 
             this.pictureBoxErrorAddressShow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxErrorAddressShow.Image")));
-            this.pictureBoxErrorAddressShow.Location = new System.Drawing.Point(139, 250);
+            this.pictureBoxErrorAddressShow.Location = new System.Drawing.Point(135, 331);
             this.pictureBoxErrorAddressShow.Name = "pictureBoxErrorAddressShow";
             this.pictureBoxErrorAddressShow.Size = new System.Drawing.Size(18, 10);
             this.pictureBoxErrorAddressShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -687,7 +534,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(74, 242);
+            this.label11.Location = new System.Drawing.Point(70, 323);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 21);
             this.label11.TabIndex = 386;
@@ -717,7 +564,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(72, 324);
+            this.label4.Location = new System.Drawing.Point(421, 323);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 21);
             this.label4.TabIndex = 382;
@@ -728,7 +575,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(242, 158);
+            this.label2.Location = new System.Drawing.Point(71, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 21);
             this.label2.TabIndex = 381;
@@ -744,18 +591,18 @@
             this.guna2ButtonCreateAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonCreateAccount.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonCreateAccount.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonCreateAccount.Location = new System.Drawing.Point(416, 444);
+            this.guna2ButtonCreateAccount.Location = new System.Drawing.Point(260, 409);
             this.guna2ButtonCreateAccount.Name = "guna2ButtonCreateAccount";
             this.guna2ButtonCreateAccount.Size = new System.Drawing.Size(337, 36);
             this.guna2ButtonCreateAccount.TabIndex = 383;
-            this.guna2ButtonCreateAccount.Text = "Create Account";
+            this.guna2ButtonCreateAccount.Text = "Save";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(78, 122);
+            this.label3.Location = new System.Drawing.Point(65, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 21);
             this.label3.TabIndex = 379;
@@ -777,30 +624,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.label1.Location = new System.Drawing.Point(78, 87);
+            this.label1.Location = new System.Drawing.Point(63, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 34);
+            this.label1.Size = new System.Drawing.Size(193, 34);
             this.label1.TabIndex = 377;
-            this.label1.Text = "Sign Up";
-            // 
-            // guna2ComboBoxPhoneNumber
-            // 
-            this.guna2ComboBoxPhoneNumber.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxPhoneNumber.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxPhoneNumber.BorderThickness = 2;
-            this.guna2ComboBoxPhoneNumber.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxPhoneNumber.DropDownHeight = 150;
-            this.guna2ComboBoxPhoneNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxPhoneNumber.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxPhoneNumber.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBoxPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBoxPhoneNumber.IntegralHeight = false;
-            this.guna2ComboBoxPhoneNumber.ItemHeight = 30;
-            this.guna2ComboBoxPhoneNumber.Location = new System.Drawing.Point(69, 347);
-            this.guna2ComboBoxPhoneNumber.Name = "guna2ComboBoxPhoneNumber";
-            this.guna2ComboBoxPhoneNumber.Size = new System.Drawing.Size(145, 36);
-            this.guna2ComboBoxPhoneNumber.TabIndex = 399;
+            this.label1.Text = "Edit Customer";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2ButtonLogin
             // 
@@ -815,37 +644,12 @@
             this.guna2ButtonLogin.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.guna2ButtonLogin.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2ButtonLogin.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonLogin.Location = new System.Drawing.Point(249, 118);
+            this.guna2ButtonLogin.Location = new System.Drawing.Point(249, 119);
             this.guna2ButtonLogin.Name = "guna2ButtonLogin";
             this.guna2ButtonLogin.PressedColor = System.Drawing.Color.Transparent;
             this.guna2ButtonLogin.Size = new System.Drawing.Size(75, 28);
             this.guna2ButtonLogin.TabIndex = 380;
             this.guna2ButtonLogin.Text = "Log in";
-            // 
-            // guna2TextBoxPassword
-            // 
-            this.guna2TextBoxPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxPassword.BorderThickness = 2;
-            this.guna2TextBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxPassword.DefaultText = "";
-            this.guna2TextBoxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxPassword.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxPassword.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxPassword.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxPassword.Location = new System.Drawing.Point(417, 347);
-            this.guna2TextBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxPassword.Name = "guna2TextBoxPassword";
-            this.guna2TextBoxPassword.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxPassword.PasswordChar = '●';
-            this.guna2TextBoxPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxPassword.PlaceholderText = "";
-            this.guna2TextBoxPassword.SelectedText = "";
-            this.guna2TextBoxPassword.Size = new System.Drawing.Size(340, 36);
-            this.guna2TextBoxPassword.TabIndex = 424;
             // 
             // pictureBox1
             // 
@@ -866,40 +670,18 @@
             this.pictureBox4.TabIndex = 434;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(495, 333);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(18, 10);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 437;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(495, 333);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(18, 10);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 436;
-            this.pictureBox6.TabStop = false;
-            // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1145, 567);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
+            this.ClientSize = new System.Drawing.Size(833, 498);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.guna2HtmlLabelEmaillShow);
             this.Controls.Add(this.guna2HtmlLabelEmailHide);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Guna2LabelCountryCodeHide);
@@ -911,13 +693,11 @@
             this.Controls.Add(this.guna2TextBoxFirstname);
             this.Controls.Add(this.GLblGmailErrorHide);
             this.Controls.Add(this.GLblDateOfBirthErrorHide);
-            this.Controls.Add(this.GLblPasswordErrorHide);
             this.Controls.Add(this.GLblUsernameErrorHide);
             this.Controls.Add(this.GLblPhoneNumberErrorHide);
             this.Controls.Add(this.GLblAddressErrorHide);
             this.Controls.Add(this.GLblLastnameErrorHide);
             this.Controls.Add(this.GLblFirstnameErrorHide);
-            this.Controls.Add(this.GLblPasswordErrorShow);
             this.Controls.Add(this.GLblPhoneNumberErrorShow);
             this.Controls.Add(this.GLblUsernameErrorShow);
             this.Controls.Add(this.GLblAddressErrorShow);
@@ -925,19 +705,11 @@
             this.Controls.Add(this.GLblGmailErrorShow);
             this.Controls.Add(this.GLblLastnameErrorShow);
             this.Controls.Add(this.GLblFirstnameErrorShow);
-            this.Controls.Add(this.pictureBoxPasswordShow);
-            this.Controls.Add(this.pictureBoxPasswordHide);
             this.Controls.Add(this.guna2TextBoxPhoneNumber);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.guna2TextBoxCountryCode);
-            this.Controls.Add(this.checkBoxLower);
             this.Controls.Add(this.pictureBoxErrorLastNameHide);
             this.Controls.Add(this.pictureBoxErrorLastNameShow);
-            this.Controls.Add(this.checkBoxUpper);
-            this.Controls.Add(this.checkBoxNumber);
             this.Controls.Add(this.pictureBoxErrorPhoneNumberHide);
             this.Controls.Add(this.pictureBoxErrorPhoneNumberShow);
-            this.Controls.Add(this.checkBoxLength);
             this.Controls.Add(this.pictureBoxErrorAddressHide);
             this.Controls.Add(this.pictureBoxErrorAddressShow);
             this.Controls.Add(this.label11);
@@ -949,17 +721,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelFirstname);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2ComboBoxPhoneNumber);
             this.Controls.Add(this.guna2ButtonLogin);
-            this.Controls.Add(this.guna2TextBoxPassword);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCustomer";
             this.Text = "EditCustomer";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasswordShow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasswordHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorLastNameHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorLastNameShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorPhoneNumberHide)).EndInit();
@@ -970,8 +738,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxErrorFirstNameShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -983,7 +749,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelEmaillShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabelEmailHide;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2HtmlLabel Guna2LabelCountryCodeHide;
@@ -995,13 +760,11 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxFirstname;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblGmailErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblDateOfBirthErrorHide;
-        private Guna.UI2.WinForms.Guna2HtmlLabel GLblPasswordErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblUsernameErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblPhoneNumberErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblAddressErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblLastnameErrorHide;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblFirstnameErrorHide;
-        private Guna.UI2.WinForms.Guna2HtmlLabel GLblPasswordErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblPhoneNumberErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblUsernameErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblAddressErrorShow;
@@ -1009,19 +772,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblGmailErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblLastnameErrorShow;
         private Guna.UI2.WinForms.Guna2HtmlLabel GLblFirstnameErrorShow;
-        private System.Windows.Forms.PictureBox pictureBoxPasswordShow;
-        private System.Windows.Forms.PictureBox pictureBoxPasswordHide;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxPhoneNumber;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCountryCode;
-        private System.Windows.Forms.CheckBox checkBoxLower;
         private System.Windows.Forms.PictureBox pictureBoxErrorLastNameHide;
         private System.Windows.Forms.PictureBox pictureBoxErrorLastNameShow;
-        private System.Windows.Forms.CheckBox checkBoxUpper;
-        private System.Windows.Forms.CheckBox checkBoxNumber;
         private System.Windows.Forms.PictureBox pictureBoxErrorPhoneNumberHide;
         private System.Windows.Forms.PictureBox pictureBoxErrorPhoneNumberShow;
-        private System.Windows.Forms.CheckBox checkBoxLength;
         private System.Windows.Forms.PictureBox pictureBoxErrorAddressHide;
         private System.Windows.Forms.PictureBox pictureBoxErrorAddressShow;
         private System.Windows.Forms.Label label11;
@@ -1033,12 +788,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelFirstname;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxPhoneNumber;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonLogin;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
