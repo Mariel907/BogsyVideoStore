@@ -35,7 +35,19 @@ namespace Project.Class
             string query = "GetAllCustomer";
             LoadData(query, dataGridView);
         }
-      
+        private void BorrowingIDBookID(DataGridView dataGridView, string query)
+        {
+            DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
+            string bookId = selectedRow.Cells["book_id"].Value?.ToString() ?? string.Empty;
+            string borrowingId = selectedRow.Cells["borrowing_id"].Value?.ToString() ?? string.Empty;
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@BorrowingId", borrowingId),
+                new SqlParameter("@BookId", bookId)
+            };
+            LoadData(query, dataGridView, true, parameters);
+        }
 
     }
 }

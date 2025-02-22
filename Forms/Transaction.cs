@@ -1,4 +1,5 @@
 ﻿using Project.Class;
+using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,24 @@ namespace Project.Forms
         private void Transaction_Load(object sender, EventArgs e)
         {
             HiddenColumn hide = new HiddenColumn();
-            hide.GetAllRental(guna2DataGridViewPending);
+            hide.GetAllRental(guna2DataGridViewTransaction);
 
         }
-}
+
+        private void guna2Buttonreturn_Click(object sender, EventArgs e)
+        {
+            Transac transac = new Transac();
+            DataGridViewRow selectedRow = guna2DataGridViewTransaction.SelectedRows[0];
+            transac.VideoID = selectedRow.Cells["VideoID"].Value?.ToString();
+            transac.RentalId = selectedRow.Cells["RentalID"].Value?.ToString();
+
+            Trans trans = new Trans();
+            trans.Return(transac);
+        }
+
+        private void Transaction_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+    }
 }

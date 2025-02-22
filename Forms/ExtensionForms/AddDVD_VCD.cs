@@ -53,5 +53,10 @@ namespace Project.Forms.ExtensionForms
         {
 
         }
+
+        private void AddDVD_VCD_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

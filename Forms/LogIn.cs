@@ -40,9 +40,7 @@ namespace Project.Forms
 
         private void guna2ButtonSignUp_Click(object sender, EventArgs e)
         {
-            SignUp signUp = new SignUp();
-            signUp.Show();
-            this.Hide();
+
         }
 
         private void LogIn_FormClosing(object sender, FormClosingEventArgs e)

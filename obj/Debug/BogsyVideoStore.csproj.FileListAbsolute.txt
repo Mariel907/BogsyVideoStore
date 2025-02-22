@@ -47,9 +47,6 @@ C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionFo
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.EditCustomer.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.EditDVD_VCD.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.LogIn.resources
-C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.Payments.resources
-C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.Reports.resources
-C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.SignUp.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.Transaction.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Properties.Resources.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\BogsyVideoStore.csproj.GenerateResource.cache
@@ -58,3 +55,4 @@ C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\BogsyVid.FF4CBB59.Up2Date
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.exe
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.pdb
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.RentCustomer.resources
+C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.AddCustomer.resources

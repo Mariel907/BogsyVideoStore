@@ -23,8 +23,6 @@ namespace Project.Forms
                 guna2ButtonDVDVCD.Name = "DVDVCD";
                 guna2ButtonCustomer.Name = "Customer";
                 guna2ButtonTransactions.Name = "Transactions";
-                guna2ButtonReports.Name = "Reports";
-                guna2ButtonPayments.Name = "Payments";
 
                 switch (button.Name)
                 {
@@ -40,18 +38,27 @@ namespace Project.Forms
                         Transaction trans = new Transaction();
                         form.OpenForm(trans, panelDashboard);
                         break;
-                    case "Reports":
-                        Reports reports = new Reports();
-                        form.OpenForm(reports, panelDashboard);
-                        break;
-                    case "Payments":
-                        Payments payments = new Payments();
-                        form.OpenForm(payments, panelDashboard);
-                        break;
                     default:
                         break;
                 }
             }
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            DVDs_VCDs video = new DVDs_VCDs(this);
+            FormManager form = new FormManager();
+            form.OpenForm(video, panelDashboard);
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

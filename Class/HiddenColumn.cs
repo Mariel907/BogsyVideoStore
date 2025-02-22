@@ -38,5 +38,13 @@ namespace Project.Class
         {
             HideVisibleID(dataGrid, "GetAllRental", new List<string> { "RentalID", "CustomerID", "VideoID", });
         }
+        public void GetAllDVD(DataGridView dataGrid)
+        {
+            HideVisibleID(dataGrid, "GetAllDVD", new List<string> { "VideoID" });
+        }
+        public void GetAllVCD(DataGridView dataGrid)
+        {
+            HideVisibleID(dataGrid, "GetAllVCD", new List<string> { "VideoID" });
+        }
     }
 }

@@ -54,7 +54,7 @@
             this.panelEditBook.Controls.Add(this.label2);
             this.panelEditBook.Location = new System.Drawing.Point(-2, 1);
             this.panelEditBook.Name = "panelEditBook";
-            this.panelEditBook.Size = new System.Drawing.Size(1145, 567);
+            this.panelEditBook.Size = new System.Drawing.Size(1134, 567);
             this.panelEditBook.TabIndex = 65;
             // 
             // guna2TextBoxTitle
@@ -116,7 +116,7 @@
             this.guna2ButtonExit.FillColor = System.Drawing.Color.Transparent;
             this.guna2ButtonExit.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.guna2ButtonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonExit.Location = new System.Drawing.Point(1094, 12);
+            this.guna2ButtonExit.Location = new System.Drawing.Point(1083, 12);
             this.guna2ButtonExit.Name = "guna2ButtonExit";
             this.guna2ButtonExit.Size = new System.Drawing.Size(39, 29);
             this.guna2ButtonExit.TabIndex = 286;
@@ -214,6 +214,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddDVD_VCD";
             this.Text = "AddDVD_VCD";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddDVD_VCD_FormClosing);
             this.panelEditBook.ResumeLayout(false);
             this.panelEditBook.PerformLayout();
             this.ResumeLayout(false);

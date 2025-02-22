@@ -16,6 +16,32 @@ namespace Project.Class
         {
             this.dashboard = dashboard;
         }
+        public void Update(VideoLibrary video)
+        {
+
+            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("UpdateVideo", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
+                    cmd.Parameters.AddWithValue("@Title", video.Title);
+                    cmd.Parameters.AddWithValue("@Category", video.Category);
+                    cmd.Parameters.AddWithValue("@Out", video.CopiesAvailable);
+
+                    if (video.Category == "DVD")
+                    {
+                        cmd.Parameters.AddWithValue("@Amount", 50);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@Amount", 25);
+                    }
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         public bool Insert(VideoLibrary video)
         {
             try
@@ -56,11 +82,13 @@ namespace Project.Class
             using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
             {
                 connection.Open();
-                using (SqlCommand cmd = new SqlCommand("InsertCustomer", connection))
+                using (SqlCommand cmd = new SqlCommand("InsertRent", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@firstname", Customer.FirstName);
-                    cmd.Parameters.AddWithValue("@lastname", Customer.LastName);
+                    cmd.Parameters.AddWithValue("@CustomerID", Customer.CustomerID);
+                    cmd.Parameters.AddWithValue("@VideoID", Customer.VideoID);
+                    cmd.Parameters.AddWithValue("@RentDate", DateTime.Now.Date);
+                    cmd.Parameters.AddWithValue("@Duedate", DateTime.Now.AddDays(3).Date);
                     cmd.ExecuteNonQuery();
                 }
             }

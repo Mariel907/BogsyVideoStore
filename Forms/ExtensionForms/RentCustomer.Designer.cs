@@ -41,9 +41,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2TextBoxID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgvDVDs__VCDs = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2TextBoxCustomerID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvDVDs__VCDs = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2DataGridViewCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVDs__VCDs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridViewCustomer)).BeginInit();
@@ -158,7 +158,6 @@
             this.guna2TextBoxID.SelectedText = "";
             this.guna2TextBoxID.Size = new System.Drawing.Size(178, 36);
             this.guna2TextBoxID.TabIndex = 374;
-            this.guna2TextBoxID.TextChanged += new System.EventHandler(this.guna2TextBoxID_TextChanged);
             // 
             // label6
             // 
@@ -169,6 +168,40 @@
             this.label6.Size = new System.Drawing.Size(62, 21);
             this.label6.TabIndex = 373;
             this.label6.Text = "VideoID";
+            // 
+            // guna2TextBoxCustomerID
+            // 
+            this.guna2TextBoxCustomerID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxCustomerID.BorderThickness = 2;
+            this.guna2TextBoxCustomerID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxCustomerID.DefaultText = "";
+            this.guna2TextBoxCustomerID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxCustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxCustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxCustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxCustomerID.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.guna2TextBoxCustomerID.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBoxCustomerID.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2TextBoxCustomerID.Location = new System.Drawing.Point(510, 40);
+            this.guna2TextBoxCustomerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2TextBoxCustomerID.Name = "guna2TextBoxCustomerID";
+            this.guna2TextBoxCustomerID.Padding = new System.Windows.Forms.Padding(7);
+            this.guna2TextBoxCustomerID.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxCustomerID.PlaceholderText = "";
+            this.guna2TextBoxCustomerID.SelectedText = "";
+            this.guna2TextBoxCustomerID.Size = new System.Drawing.Size(178, 36);
+            this.guna2TextBoxCustomerID.TabIndex = 377;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(511, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 21);
+            this.label1.TabIndex = 376;
+            this.label1.Text = "CustomerID";
             // 
             // dgvDVDs__VCDs
             // 
@@ -228,41 +261,7 @@
             this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.Height = 22;
             this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.dgvDVDs__VCDs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVDs__VCDs_CellContentClick);
-            // 
-            // guna2TextBoxCustomerID
-            // 
-            this.guna2TextBoxCustomerID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxCustomerID.BorderThickness = 2;
-            this.guna2TextBoxCustomerID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxCustomerID.DefaultText = "";
-            this.guna2TextBoxCustomerID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxCustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxCustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxCustomerID.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxCustomerID.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxCustomerID.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCustomerID.Location = new System.Drawing.Point(510, 40);
-            this.guna2TextBoxCustomerID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxCustomerID.Name = "guna2TextBoxCustomerID";
-            this.guna2TextBoxCustomerID.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxCustomerID.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxCustomerID.PlaceholderText = "";
-            this.guna2TextBoxCustomerID.SelectedText = "";
-            this.guna2TextBoxCustomerID.Size = new System.Drawing.Size(178, 36);
-            this.guna2TextBoxCustomerID.TabIndex = 377;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(511, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 21);
-            this.label1.TabIndex = 376;
-            this.label1.Text = "CustomerID";
+            this.dgvDVDs__VCDs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVDs__VCDs_CellClick);
             // 
             // guna2DataGridViewCustomer
             // 
@@ -322,7 +321,7 @@
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.Height = 22;
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.guna2DataGridViewCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridViewCustomer_CellContentClick);
+            this.guna2DataGridViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridViewCustomer_CellClick);
             // 
             // RentCustomer
             // 
@@ -344,6 +343,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RentCustomer";
             this.Text = "RentCustomer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RentCustomer_FormClosing);
             this.Load += new System.EventHandler(this.RentCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVDs__VCDs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridViewCustomer)).EndInit();
@@ -360,9 +360,9 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxID;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvDVDs__VCDs;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerID;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvDVDs__VCDs;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridViewCustomer;
     }
 }

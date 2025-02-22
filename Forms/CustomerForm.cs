@@ -15,25 +15,25 @@ namespace Project.Forms
 {
     public partial class CustomerForm : Form
     {
-        Dashboard dashboard;
+        Dashboard _dashboard;
         FormManager form = new FormManager();
 
-        public CustomerForm(Dashboard dsahboard)
+        public CustomerForm(Dashboard dashboard)
         {
             InitializeComponent();
-            this.dashboard = dsahboard;
+            _dashboard = dashboard;
         }
 
         private void guna2ButtonApproved_Click(object sender, EventArgs e)
         {
-            SignUp signUp = new SignUp();
-            form.OpenForm(signUp, dashboard.Panel);
+            AddCustomer add = new AddCustomer(_dashboard);
+            form.OpenForm(add, _dashboard.Panel);
         }
 
         private void guna2ButtonEdit_Click(object sender, EventArgs e)
         {
             CustomerProp customerProp = new CustomerProp();
-            CustomerClass customer = new CustomerClass(dashboard);
+            CustomerClass customer = new CustomerClass(_dashboard);
             customer.FetchCustomerData(customerProp, guna2DataGridViewCustomer);
         }
 
@@ -43,21 +43,16 @@ namespace Project.Forms
             hiddenColumn.GetAllCustomer(guna2DataGridViewCustomer);
         }
 
-        private void guna2ButtonRent_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void guna2ButtonRent_Click_1(object sender, EventArgs e)
         {
-            CustomerProp customerProp = new CustomerProp();
-            CustomerClass customer = new CustomerClass(dashboard);
-            customer.FetchCustomerData(customerProp, guna2DataGridViewCustomer);
+            RentCustomer rent = new RentCustomer(_dashboard);
+            FormManager Form = new FormManager();
+            Form.OpenForm(rent, _dashboard.Panel);
         }
 
-        private void guna2DataGridViewCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

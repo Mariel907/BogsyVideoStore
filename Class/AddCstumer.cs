@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace Project.Class
 {
-    public class SignUpUser
+    public class AddCstumer
     {
-        public void InsertCustomer()
+        public void InsertCustomer(CustomerProp customer)
         {
-            CustomerProp customer = new CustomerProp();
             string query = "InsertCustomer";
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@firstname",customer.FirstName),
-                new SqlParameter("@lastname", customer.LastName),
+                new SqlParameter("@FirstName",customer.FirstName),
+                new SqlParameter("@LastName", customer.LastName),
             };
             
             DataLoader dataLoader = new DataLoader();

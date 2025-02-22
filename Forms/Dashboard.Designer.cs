@@ -30,19 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel6 = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.guna2ButtonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2ButtonPayments = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonReports = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonTransactions = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDVDVCD = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -50,23 +46,11 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel6.Controls.Add(this.labelTitle);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(215, 52);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1135, 61);
             this.panel6.TabIndex = 19;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(1, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(1135, 61);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "DVDs and VCDs";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -109,8 +93,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel4.Controls.Add(this.guna2ButtonPayments);
-            this.panel4.Controls.Add(this.guna2ButtonReports);
             this.panel4.Controls.Add(this.guna2ButtonTransactions);
             this.panel4.Controls.Add(this.guna2ButtonCustomer);
             this.panel4.Controls.Add(this.guna2ButtonDVDVCD);
@@ -120,50 +102,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(215, 681);
             this.panel4.TabIndex = 17;
-            // 
-            // guna2ButtonPayments
-            // 
-            this.guna2ButtonPayments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonPayments.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonPayments.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonPayments.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonPayments.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2ButtonPayments.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonPayments.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F);
-            this.guna2ButtonPayments.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonPayments.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonPayments.Image")));
-            this.guna2ButtonPayments.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonPayments.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonPayments.Location = new System.Drawing.Point(0, 262);
-            this.guna2ButtonPayments.Name = "guna2ButtonPayments";
-            this.guna2ButtonPayments.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.guna2ButtonPayments.Size = new System.Drawing.Size(215, 39);
-            this.guna2ButtonPayments.TabIndex = 14;
-            this.guna2ButtonPayments.Text = "Payments";
-            this.guna2ButtonPayments.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonPayments.Click += new System.EventHandler(this.Form_Click);
-            // 
-            // guna2ButtonReports
-            // 
-            this.guna2ButtonReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonReports.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2ButtonReports.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonReports.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonReports.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonReports.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonReports.Image")));
-            this.guna2ButtonReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonReports.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonReports.Location = new System.Drawing.Point(0, 223);
-            this.guna2ButtonReports.Name = "guna2ButtonReports";
-            this.guna2ButtonReports.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.guna2ButtonReports.Size = new System.Drawing.Size(215, 39);
-            this.guna2ButtonReports.TabIndex = 13;
-            this.guna2ButtonReports.Text = "Reports";
-            this.guna2ButtonReports.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonReports.Click += new System.EventHandler(this.Form_Click);
             // 
             // guna2ButtonTransactions
             // 
@@ -263,7 +201,8 @@
             this.Controls.Add(this.panelDashboard);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.panel6.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -273,13 +212,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonLogOut;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonPayments;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonReports;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonTransactions;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDVDVCD;

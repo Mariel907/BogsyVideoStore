@@ -18,17 +18,15 @@ namespace Project.Forms.ExtensionForms
     public partial class EditCustomer : Form
     {
         private Dashboard dashboard;
+        private CustomerProp _customerProp;
         public EditCustomer(Dashboard dashboard, CustomerProp customerProp)
         {
             InitializeComponent();
             this.dashboard = dashboard;
-            guna2TextBoxFirstname.Text = customerProp.FirstName;
-            guna2TextBoxLastName.Text = customerProp.LastName;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-             
+            _customerProp = customerProp;
+            guna2TextBoxFirstname.Text = _customerProp.FirstName;
+            guna2TextBoxLastName.Text = _customerProp.LastName;
+            guna2TextBoxID.Text = _customerProp.CustomerID;
         }
 
         private void guna2ButtonSave_Click(object sender, EventArgs e)
@@ -36,9 +34,20 @@ namespace Project.Forms.ExtensionForms
             CustomerProp customerProp = new CustomerProp();
             customerProp.FirstName = guna2TextBoxFirstname.Text;
             customerProp.LastName = guna2TextBoxLastName.Text;
+            customerProp.CustomerID = guna2TextBoxID.Text;
 
             CustomerClass customer = new CustomerClass(dashboard);
             customer.SaveEdit(customerProp);
+        }
+
+        private void EditCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditCustomer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

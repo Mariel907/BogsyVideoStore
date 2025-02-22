@@ -2,13 +2,6 @@
 using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -33,8 +26,8 @@ namespace Project.Forms
 
         private void DVDs_VCDs_Load(object sender, EventArgs e)
         {
-            HiddenColumn hide = new HiddenColumn();
-            hide.GetAllVideo(dgvDVDs__VCDs);
+            HiddenColumn hiddenColumn = new HiddenColumn();
+            hiddenColumn.GetAllDVD(dgvDVDs__VCDs);
         }
 
         private void guna2ButtonEdit_Click(object sender, EventArgs e)
@@ -53,7 +46,24 @@ namespace Project.Forms
         {
             VideoLibrary video = new VideoLibrary();
             DataGridViewRow selectedRow = dgvDVDs__VCDs.SelectedRows[0];
-            video.VideoId= selectedRow.Cells["VideoID"].Value.ToString();
+            video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
+        }
+
+        private void guna2ButtonDVD_Click(object sender, EventArgs e)
+        {
+            HiddenColumn hiddenColumn = new HiddenColumn();
+            hiddenColumn.GetAllDVD(dgvDVDs__VCDs);
+        }
+
+        private void guna2ButtonVCD_Click(object sender, EventArgs e)
+        {
+            HiddenColumn Hide = new HiddenColumn();
+            Hide.GetAllVCD(dgvDVDs__VCDs);
+        }
+
+        private void DVDs_VCDs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

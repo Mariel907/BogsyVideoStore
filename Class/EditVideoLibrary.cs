@@ -26,7 +26,7 @@ namespace Project.Class
                 video.Category = selectedRow.Cells["Category"].Value.ToString();
                 video.CopiesAvailable = selectedRow.Cells["CopiesAvailable"].Value.ToString();
 
-                EditDVD_VCD Edit = new EditDVD_VCD(dashboard);
+                EditDVD_VCD Edit = new EditDVD_VCD(dashboard, video);
                 FormManager form = new FormManager();
                 form.OpenForm(Edit, dashboard.Panel);
             }
