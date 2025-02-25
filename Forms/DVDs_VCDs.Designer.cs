@@ -57,7 +57,7 @@
             this.guna2ButtonBorrow.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonBorrow.TabIndex = 213;
             this.guna2ButtonBorrow.Text = "Add";
-            this.guna2ButtonBorrow.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
+            this.guna2ButtonBorrow.Click += new System.EventHandler(this.Guna2ButtonAdd_Click);
             // 
             // guna2Button1
             // 
@@ -75,7 +75,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(123, 46);
             this.guna2Button1.TabIndex = 214;
             this.guna2Button1.Text = "Edit";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2ButtonEdit_Click);
+            this.guna2Button1.Click += new System.EventHandler(this.Guna2ButtonEdit_Click);
             // 
             // guna2Button4
             // 
@@ -93,7 +93,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(123, 46);
             this.guna2Button4.TabIndex = 217;
             this.guna2Button4.Text = "Delete";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2ButtonDelete_Click);
+            this.guna2Button4.Click += new System.EventHandler(this.Guna2ButtonDelete_Click);
             // 
             // dgvDVDs__VCDs
             // 
@@ -153,7 +153,6 @@
             this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.Height = 22;
             this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.dgvDVDs__VCDs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.dgvDVDs__VCDs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDVDs__VCDs_CellContentClick);
             // 
             // label1
             // 
@@ -182,7 +181,7 @@
             this.guna2ButtonVCD.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonVCD.TabIndex = 242;
             this.guna2ButtonVCD.Text = "VCD";
-            this.guna2ButtonVCD.Click += new System.EventHandler(this.guna2ButtonVCD_Click);
+            this.guna2ButtonVCD.Click += new System.EventHandler(this.Guna2ButtonVCD_Click);
             // 
             // guna2ButtonDVD
             // 
@@ -200,7 +199,7 @@
             this.guna2ButtonDVD.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonDVD.TabIndex = 241;
             this.guna2ButtonDVD.Text = "DVD";
-            this.guna2ButtonDVD.Click += new System.EventHandler(this.guna2ButtonDVD_Click);
+            this.guna2ButtonDVD.Click += new System.EventHandler(this.Guna2ButtonDVD_Click);
             // 
             // DVDs_VCDs
             // 

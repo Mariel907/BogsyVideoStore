@@ -217,7 +217,6 @@
             this.Name = "EditCustomer";
             this.Text = "EditCustomer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditCustomer_FormClosing);
-            this.Load += new System.EventHandler(this.EditCustomer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

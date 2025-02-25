@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Project.Class;
+using Project.Forms.ExtensionForms;
 using System;
 using System.Windows.Forms;
 
@@ -23,6 +24,7 @@ namespace Project.Forms
                 guna2ButtonDVDVCD.Name = "DVDVCD";
                 guna2ButtonCustomer.Name = "Customer";
                 guna2ButtonTransactions.Name = "Transactions";
+                guna2ButtonReports.Name = "Reports";
 
                 switch (button.Name)
                 {
@@ -35,8 +37,12 @@ namespace Project.Forms
                         form.OpenForm(customer, panelDashboard);
                         break;
                     case "Transactions":
-                        Transaction trans = new Transaction();
+                        Transaction trans = new Transaction(this);
                         form.OpenForm(trans, panelDashboard);
+                        break;
+                    case "Reports":
+                        DGVReports reports = new DGVReports();
+                        form.OpenForm(reports, panelDashboard);
                         break;
                     default:
                         break;
@@ -54,11 +60,6 @@ namespace Project.Forms
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void labelTitle_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

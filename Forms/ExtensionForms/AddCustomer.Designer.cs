@@ -110,7 +110,7 @@
             this.guna2ButtonCreateAccount.Size = new System.Drawing.Size(337, 36);
             this.guna2ButtonCreateAccount.TabIndex = 423;
             this.guna2ButtonCreateAccount.Text = "Save";
-            this.guna2ButtonCreateAccount.Click += new System.EventHandler(this.guna2ButtonSave_Click);
+            this.guna2ButtonCreateAccount.Click += new System.EventHandler(this.Guna2ButtonSave_Click);
             // 
             // labelFirstname
             // 
@@ -150,7 +150,6 @@
             this.Name = "AddCustomer";
             this.Text = "AddCustomer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddCustomer_FormClosing);
-            this.Load += new System.EventHandler(this.AddCustomer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

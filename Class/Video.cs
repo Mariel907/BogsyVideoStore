@@ -1,45 +1,41 @@
-﻿using Project.Forms;
-using Project.Forms.ExtensionForms;
-using Project.Model;
+﻿using Project.Model;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Project.Class
 {
     public class Video
     {
-        private Dashboard dashboard;
-        public Video(Dashboard dashboard)
+        public bool Update(VideoLibrary video)
         {
-            this.dashboard = dashboard;
-        }
-        public void Update(VideoLibrary video)
-        {
-
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("UpdateVideo", connection))
+                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
-                    cmd.Parameters.AddWithValue("@Title", video.Title);
-                    cmd.Parameters.AddWithValue("@Category", video.Category);
-                    cmd.Parameters.AddWithValue("@Out", video.CopiesAvailable);
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("UpdateVideo", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
+                        cmd.Parameters.AddWithValue("@Title", video.Title);
+                        cmd.Parameters.AddWithValue("@Category", video.Category);
+                        cmd.Parameters.AddWithValue("@In", video.CopiesAvailable);
 
-                    if (video.Category == "DVD")
-                    {
-                        cmd.Parameters.AddWithValue("@Amount", 50);
+                        if (video.Category == "DVD")
+                            cmd.Parameters.AddWithValue("@Amount", 50);
+                        else
+                            cmd.Parameters.AddWithValue("@Amount", 25);
+                        
+                        cmd.ExecuteNonQuery();
                     }
-                    else
-                    {
-                        cmd.Parameters.AddWithValue("@Amount", 25);
-                    }
-                    cmd.ExecuteNonQuery();
                 }
+                return true;
+            }
+            catch(Exception)
+            {
+                return false;
             }
         }
         public bool Insert(VideoLibrary video)
@@ -55,16 +51,13 @@ namespace Project.Class
                         cmd.Parameters.AddWithValue("@Title", video.Title);
                         cmd.Parameters.AddWithValue("@Category", video.Category);
                         cmd.Parameters.AddWithValue("@In", video.CopiesAvailable);
-                        cmd.Parameters.AddWithValue("@Out", video.CopiesAvailable);
+                        cmd.Parameters.AddWithValue("@LimitDaysRented", video.LimitDaysRented);
 
                         if (video.Category == "DVD")
-                        {
                             cmd.Parameters.AddWithValue("@Amount", 50);
-                        }
                         else
-                        {
                             cmd.Parameters.AddWithValue("@Amount", 25);
-                        }
+
                         cmd.ExecuteNonQuery();
                         return true;
                     }
@@ -72,50 +65,33 @@ namespace Project.Class
             }
             catch (Exception)
             {
-                MessageBox.Show("An eror occured during login");
+                return false;
             }
-            return false;
         }
-        public void InsertCustomer(CustomerProp Customer)
-        {
 
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+        public bool Delete(VideoLibrary video)
+        {
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("InsertRent", connection))
+                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@CustomerID", Customer.CustomerID);
-                    cmd.Parameters.AddWithValue("@VideoID", Customer.VideoID);
-                    cmd.Parameters.AddWithValue("@RentDate", DateTime.Now.Date);
-                    cmd.Parameters.AddWithValue("@Duedate", DateTime.Now.AddDays(3).Date);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("DeleteVideos", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+                return true;
             }
-        }
-
-        public void Delete(DataGridView dataGridView, VideoLibrary video)
-        {
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            catch (SqlException ex)
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("DeleteVideos", connection))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
-                    cmd.ExecuteNonQuery();
-                }
+                if (ex.Class == 16)
+                    return false;
+                else 
+                    throw;
             }
         }
-        public void FetchId(DataGridView datagridView)
-        {
-            VideoLibrary video = new VideoLibrary();
-            DataGridViewRow selectedRow = datagridView.SelectedRows[0];
-            video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
-
-            Delete(datagridView, video);
-
-        }
-       
     }
 }

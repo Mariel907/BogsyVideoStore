@@ -1,28 +1,16 @@
 ﻿using Project.Class;
 using Project.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Configuration;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Project.Forms.ExtensionForms
 {
     public partial class EditCustomer : Form
     {
-        private Dashboard dashboard;
         private CustomerProp _customerProp;
-        public EditCustomer(Dashboard dashboard, CustomerProp customerProp)
+        public EditCustomer(CustomerProp customerProp)
         {
             InitializeComponent();
-            this.dashboard = dashboard;
             _customerProp = customerProp;
             guna2TextBoxFirstname.Text = _customerProp.FirstName;
             guna2TextBoxLastName.Text = _customerProp.LastName;
@@ -36,13 +24,13 @@ namespace Project.Forms.ExtensionForms
             customerProp.LastName = guna2TextBoxLastName.Text;
             customerProp.CustomerID = guna2TextBoxID.Text;
 
-            CustomerClass customer = new CustomerClass(dashboard);
-            customer.SaveEdit(customerProp);
-        }
+            CustomerClass customer = new CustomerClass();
+            bool isEdit = customer.SaveEdit(customerProp);
 
-        private void EditCustomer_Load(object sender, EventArgs e)
-        {
-
+            if (isEdit)
+                MessageBox.Show("Data updated successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("An error occured during updating. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void EditCustomer_FormClosing(object sender, FormClosingEventArgs e)

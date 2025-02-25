@@ -46,5 +46,9 @@ namespace Project.Class
         {
             HideVisibleID(dataGrid, "GetAllVCD", new List<string> { "VideoID" });
         }
+        public void GetAllReturned(DataGridView dataGrid)
+        {
+            HideVisibleID(dataGrid, "GetAllReturned", new List<string> { "RentalID", "CustomerID", "VideoID", });
+        }
     }
 }

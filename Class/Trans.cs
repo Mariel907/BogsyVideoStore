@@ -11,18 +11,26 @@ namespace Project.Class
 {
     public class Trans
     {
-        public void Return(Transac transac)
+        public bool Return(Transac transac)
         {
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("UpdateReturn", connection))
+                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@VideoID", transac.VideoID);
-                    cmd.Parameters.AddWithValue("@RentalID", transac.RentalId);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("UpdateReturn", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@VideoID", transac.VideoID);
+                        cmd.Parameters.AddWithValue("@RentalID", transac.RentalId);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

@@ -1,25 +1,16 @@
-﻿ using Project.Class;
+﻿using Project.Class;
 using Project.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project.Forms.ExtensionForms
 {
     public partial class EditDVD_VCD : Form
     {
-        private Dashboard dashboard;
         private VideoLibrary _video;
-        public EditDVD_VCD(Dashboard dashboard, VideoLibrary video)
+        public EditDVD_VCD(VideoLibrary video)
         {
             InitializeComponent();
-            this.dashboard = dashboard;
             _video = video;
             guna2TextBoxTitle.Text = _video.Title;
             guna2TextBoxCopiesAvailable.Text = _video.CopiesAvailable;
@@ -35,12 +26,13 @@ namespace Project.Forms.ExtensionForms
             video.Category = guna2ComboBoxCategory.Text;
             video.VideoId = guna2TextBoxVideoID.Text;
 
-            Video vd = new Video(dashboard);
-            vd.Update(video);
-        }
+            Video vd = new Video();
+            bool isUpdated = vd.Update(video);
 
-        private void labelBook_Click(object sender, EventArgs e)
-        {
+            if (isUpdated) 
+                MessageBox.Show("Data updated successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("An error occured during updating. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 

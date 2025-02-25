@@ -9,53 +9,65 @@ namespace Project.Forms
     public partial class DVDs_VCDs : Form
     {
         private Dashboard dashboard;
-        private AddDVD_VCD add;
+        private AddDVD_VCD add = new AddDVD_VCD();
+        private HiddenColumn hiddenColumn = new HiddenColumn();
+
         public DVDs_VCDs(Dashboard dashboard)
         {
             InitializeComponent();
             this.dashboard = dashboard;
-            add = new AddDVD_VCD(dashboard);
         }
 
-        private void guna2ButtonAdd_Click(object sender, EventArgs e)
+        private void Guna2ButtonAdd_Click(object sender, EventArgs e)
         {
             FormManager form = new FormManager();
-
             form.OpenForm(add, dashboard.Panel);
         }
 
         private void DVDs_VCDs_Load(object sender, EventArgs e)
         {
-            HiddenColumn hiddenColumn = new HiddenColumn();
             hiddenColumn.GetAllDVD(dgvDVDs__VCDs);
         }
 
-        private void guna2ButtonEdit_Click(object sender, EventArgs e)
-        {
-            EditVideoLibrary Edit = new EditVideoLibrary(dashboard);
-            Edit.FetchVideoLibrary(dgvDVDs__VCDs);
-        }
-
-        private void guna2ButtonDelete_Click(object sender, EventArgs e)
-        {
-            Video vd = new Video(dashboard);
-            vd.FetchId(dgvDVDs__VCDs);
-        }
-
-        private void dgvDVDs__VCDs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Guna2ButtonEdit_Click(object sender, EventArgs e)
         {
             VideoLibrary video = new VideoLibrary();
             DataGridViewRow selectedRow = dgvDVDs__VCDs.SelectedRows[0];
+
             video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
+            video.Title = selectedRow.Cells["Title"].Value.ToString();
+            video.Category = selectedRow.Cells["Category"].Value.ToString();
+            video.CopiesAvailable = selectedRow.Cells["CopiesAvailable"].Value.ToString();
+
+            EditDVD_VCD Edit = new EditDVD_VCD(video);
+            FormManager form = new FormManager();
+            form.OpenForm(Edit, dashboard.Panel);
         }
 
-        private void guna2ButtonDVD_Click(object sender, EventArgs e)
+        private void Guna2ButtonDelete_Click(object sender, EventArgs e)
+        {
+            Video vd = new Video();
+            VideoLibrary video = new VideoLibrary();
+            DataGridViewRow selectedRow = dgvDVDs__VCDs.SelectedRows[0];
+            video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
+
+            bool IsDeleted = vd.Delete(video);
+
+            if (IsDeleted)
+                MessageBox.Show("video deleted successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Oops! It looks like this video is currently rented, so we can't delete it right now.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           
+            hiddenColumn.GetAllDVD(dgvDVDs__VCDs);
+        }
+
+        private void Guna2ButtonDVD_Click(object sender, EventArgs e)
         {
             HiddenColumn hiddenColumn = new HiddenColumn();
             hiddenColumn.GetAllDVD(dgvDVDs__VCDs);
         }
 
-        private void guna2ButtonVCD_Click(object sender, EventArgs e)
+        private void Guna2ButtonVCD_Click(object sender, EventArgs e)
         {
             HiddenColumn Hide = new HiddenColumn();
             Hide.GetAllVCD(dgvDVDs__VCDs);

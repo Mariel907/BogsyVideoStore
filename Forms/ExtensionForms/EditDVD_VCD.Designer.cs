@@ -57,7 +57,7 @@
             this.guna2ComboBoxCategory.Items.AddRange(new object[] {
             "DVD",
             "VCD"});
-            this.guna2ComboBoxCategory.Location = new System.Drawing.Point(360, 319);
+            this.guna2ComboBoxCategory.Location = new System.Drawing.Point(360, 412);
             this.guna2ComboBoxCategory.Name = "guna2ComboBoxCategory";
             this.guna2ComboBoxCategory.Size = new System.Drawing.Size(377, 36);
             this.guna2ComboBoxCategory.TabIndex = 356;
@@ -76,7 +76,7 @@
             this.guna2TextBoxTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxTitle.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxTitle.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxTitle.Location = new System.Drawing.Point(360, 144);
+            this.guna2TextBoxTitle.Location = new System.Drawing.Point(360, 237);
             this.guna2TextBoxTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxTitle.Name = "guna2TextBoxTitle";
             this.guna2TextBoxTitle.Padding = new System.Windows.Forms.Padding(7);
@@ -100,7 +100,7 @@
             this.guna2TextBoxCopiesAvailable.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxCopiesAvailable.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCopiesAvailable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCopiesAvailable.Location = new System.Drawing.Point(360, 233);
+            this.guna2TextBoxCopiesAvailable.Location = new System.Drawing.Point(360, 326);
             this.guna2TextBoxCopiesAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxCopiesAvailable.Name = "guna2TextBoxCopiesAvailable";
             this.guna2TextBoxCopiesAvailable.Padding = new System.Windows.Forms.Padding(7);
@@ -120,7 +120,6 @@
             this.labelBook.Size = new System.Drawing.Size(142, 34);
             this.labelBook.TabIndex = 314;
             this.labelBook.Text = "Edit Video";
-            this.labelBook.Click += new System.EventHandler(this.labelBook_Click);
             // 
             // guna2ButtonSubmit
             // 
@@ -145,7 +144,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(361, 295);
+            this.label9.Location = new System.Drawing.Point(361, 388);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 21);
             this.label9.TabIndex = 312;
@@ -155,7 +154,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(363, 207);
+            this.label5.Location = new System.Drawing.Point(363, 300);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 21);
             this.label5.TabIndex = 311;
@@ -165,7 +164,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(363, 119);
+            this.label2.Location = new System.Drawing.Point(363, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 21);
             this.label2.TabIndex = 305;
@@ -185,7 +184,7 @@
             this.guna2TextBoxVideoID.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxVideoID.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxVideoID.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxVideoID.Location = new System.Drawing.Point(360, 404);
+            this.guna2TextBoxVideoID.Location = new System.Drawing.Point(360, 158);
             this.guna2TextBoxVideoID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxVideoID.Name = "guna2TextBoxVideoID";
             this.guna2TextBoxVideoID.Padding = new System.Windows.Forms.Padding(7);
@@ -200,7 +199,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(363, 379);
+            this.label1.Location = new System.Drawing.Point(363, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 377;

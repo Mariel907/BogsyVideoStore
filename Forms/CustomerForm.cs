@@ -1,4 +1,5 @@
-﻿using Project.Class;
+﻿using CustomizeButtons;
+using Project.Class;
 using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
@@ -24,30 +25,30 @@ namespace Project.Forms
             _dashboard = dashboard;
         }
 
-        private void guna2ButtonApproved_Click(object sender, EventArgs e)
+        private void Guna2ButtonApproved_Click(object sender, EventArgs e)
         {
-            AddCustomer add = new AddCustomer(_dashboard);
+            AddCustomer add = new AddCustomer();
             form.OpenForm(add, _dashboard.Panel);
         }
 
-        private void guna2ButtonEdit_Click(object sender, EventArgs e)
+        private void Guna2ButtonEdit_Click(object sender, EventArgs e)
         {
             CustomerProp customerProp = new CustomerProp();
-            CustomerClass customer = new CustomerClass(_dashboard);
-            customer.FetchCustomerData(customerProp, guna2DataGridViewCustomer);
+            DataGridViewRow selectedRow = guna2DataGridViewCustomer.SelectedRows[0];
+
+            customerProp.CustomerID = selectedRow.Cells["CustomerID"].Value.ToString();
+            customerProp.FirstName = selectedRow.Cells["FirstName"].Value.ToString();
+            customerProp.LastName = selectedRow.Cells["LastName"].Value.ToString();
+
+            EditCustomer Edit = new EditCustomer(customerProp);
+            FormManager form = new FormManager();
+            form.OpenForm(Edit, _dashboard.Panel);
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
         {
             HiddenColumn hiddenColumn = new HiddenColumn();
             hiddenColumn.GetAllCustomer(guna2DataGridViewCustomer);
-        }
-
-        private void guna2ButtonRent_Click_1(object sender, EventArgs e)
-        {
-            RentCustomer rent = new RentCustomer(_dashboard);
-            FormManager Form = new FormManager();
-            Form.OpenForm(rent, _dashboard.Panel);
         }
 
         private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)

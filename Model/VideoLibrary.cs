@@ -12,7 +12,6 @@ namespace Project.Model
         public string Title { get; set; }
         public string Category { get; set; }
         public string CopiesAvailable { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string LimitDaysRented { get; set; }
     }
 }

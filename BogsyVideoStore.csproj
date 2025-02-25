@@ -57,12 +57,10 @@
   <ItemGroup>
     <Compile Include="Class\CustomerClass.cs" />
     <Compile Include="Class\DataLoader.cs" />
-    <Compile Include="Class\EditVideoLibrary.cs" />
     <Compile Include="Class\FormManager.cs" />
-    <Compile Include="Class\Helper.cs" />
     <Compile Include="Class\HiddenColumn.cs" />
     <Compile Include="Class\Rent.cs" />
-    <Compile Include="Class\AddCstumer.cs" />
+    <Compile Include="Class\AddCustomers.cs" />
     <Compile Include="Class\Trans.cs" />
     <Compile Include="Class\Video.cs" />
     <Compile Include="Forms\CustomerForm.cs">
@@ -95,6 +93,12 @@
     <Compile Include="Forms\ExtensionForms\AddDVD_VCD.Designer.cs">
       <DependentUpon>AddDVD_VCD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ExtensionForms\DGVReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\DGVReports.Designer.cs">
+      <DependentUpon>DGVReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExtensionForms\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +117,6 @@
     <Compile Include="Forms\ExtensionForms\RentCustomer.Designer.cs">
       <DependentUpon>RentCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LogIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LogIn.Designer.cs">
-      <DependentUpon>LogIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Transaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,9 +125,7 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GlobalConnection.cs" />
-    <Compile Include="Model\Rental.cs" />
     <Compile Include="Model\Transac.cs" />
-    <Compile Include="Model\UserLogin.cs" />
     <Compile Include="Model\VideoLibrary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +144,9 @@
     <EmbeddedResource Include="Forms\ExtensionForms\AddDVD_VCD.resx">
       <DependentUpon>AddDVD_VCD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\DGVReports.resx">
+      <DependentUpon>DGVReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,9 +155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\RentCustomer.resx">
       <DependentUpon>RentCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LogIn.resx">
-      <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>

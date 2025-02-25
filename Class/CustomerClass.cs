@@ -1,55 +1,33 @@
-﻿using Project.Forms;
-using Project.Forms.ExtensionForms;
-using Project.Model;
-using System;
+﻿using Project.Model;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace Project.Class
 {
     public class CustomerClass
     {
-        private Dashboard dashboard;
-        public CustomerClass(Dashboard dashboard)
-        {
-            this.dashboard = dashboard;
-        }
-        public void FetchCustomerData(CustomerProp cutomer, DataGridView dataGridView)
+        public bool SaveEdit(CustomerProp cutomer)
         {
             try
             {
-                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
-
-                cutomer.CustomerID = selectedRow.Cells["CustomerID"].Value.ToString();
-                cutomer.FirstName = selectedRow.Cells["FirstName"].Value.ToString();
-                cutomer.LastName = selectedRow.Cells["LastName"].Value.ToString();
-
-                EditCustomer Edit = new EditCustomer(dashboard, cutomer);
-                FormManager form = new FormManager();
-                form.OpenForm(Edit, dashboard.Panel);
-            }
-            catch (SqlException m)
-            {
-                MessageBox.Show(m.ToString());
-            }
-        }
-
-        public bool SaveEdit(CustomerProp cutomer)
-        {
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("UpdateCustomer", connection))
+                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@FirstName", cutomer.FirstName);
-                    cmd.Parameters.AddWithValue("@LastName", cutomer.LastName);
-                    cmd.Parameters.AddWithValue("@CustomerID", cutomer.VideoID);
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("UpdateCustomer", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@FirstName", cutomer.FirstName);
+                        cmd.Parameters.AddWithValue("@LastName", cutomer.LastName);
+                        cmd.Parameters.AddWithValue("@CustomerID", cutomer.CustomerID);
 
-                    cmd.ExecuteNonQuery();
-                    return true;
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
                 }
+            }
+            catch (SqlException)
+            {
+                return false;
             }
         }
     }

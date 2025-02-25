@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/BogsyVideoStore/FileContentIndex
+/Forms/Transaction.cs
+/Forms/Transaction.Designer.cs
+/Forms/Transaction.resx

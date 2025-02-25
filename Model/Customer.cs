@@ -12,5 +12,6 @@ namespace Project.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string VideoID {  get; set; }
+        public string LimitDaysRented { get; set; }
     }
 }
