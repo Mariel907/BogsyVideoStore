@@ -31,10 +31,10 @@ namespace Project.Forms
 
         private void Guna2ButtonEdit_Click(object sender, EventArgs e)
         {
-            VideoLibrary video = new VideoLibrary();
+            Model.VideoProp video = new VideoProp();
             DataGridViewRow selectedRow = dgvDVDs__VCDs.SelectedRows[0];
 
-            video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
+            video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString());
             video.Title = selectedRow.Cells["Title"].Value.ToString();
             video.Category = selectedRow.Cells["Category"].Value.ToString();
             video.CopiesAvailable = selectedRow.Cells["CopiesAvailable"].Value.ToString();
@@ -46,10 +46,10 @@ namespace Project.Forms
 
         private void Guna2ButtonDelete_Click(object sender, EventArgs e)
         {
-            Video vd = new Video();
-            VideoLibrary video = new VideoLibrary();
-            DataGridViewRow selectedRow = dgvDVDs__VCDs.SelectedRows[0];
-            video.VideoId = selectedRow.Cells["VideoID"].Value.ToString();
+            VideoLibrary vd = new VideoLibrary();
+            VideoProp video = new VideoProp();
+            DataGridViewRow selectedRow = dgvDVDs__VCDs.SelectedRows[0]; 
+            video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString());
 
             bool IsDeleted = vd.Delete(video);
 
@@ -57,7 +57,7 @@ namespace Project.Forms
                 MessageBox.Show("video deleted successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("Oops! It looks like this video is currently rented, so we can't delete it right now.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-           
+
             hiddenColumn.GetAllDVD(dgvDVDs__VCDs);
         }
 

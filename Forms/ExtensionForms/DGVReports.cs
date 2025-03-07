@@ -23,5 +23,10 @@ namespace Project.Forms.ExtensionForms
             DataLoader dataLoader = new DataLoader();
             dataLoader.Reports(guna2DataGridViewReports);
         }
+
+        private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

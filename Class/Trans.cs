@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project.Class
 {
@@ -32,6 +33,45 @@ namespace Project.Class
             {
                 return false;
             }
+        }
+
+        public void SearchCMB(int? month, int? year, DataGridView datagrid)
+        {
+            string query;
+            SqlParameter[] parameters;
+            HiddenColumn hidden = new HiddenColumn();
+            if (month != null && month != 0 && year != 0)
+            {
+                query = "SearchYearMonth";
+                parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@Month", month),
+                    new SqlParameter("@Year", year)
+                };
+            }
+            else if (year != 0)
+            {
+                query = "SearchYear";
+                parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@Year", year),
+                };
+            }
+            else if (month != 0)
+            {
+                query = "SearchMonth";
+                parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@Month", month)
+                };
+            }
+            else
+            {
+                return;
+            }
+
+            DataLoader dataLoader = new DataLoader();
+            dataLoader.LoadData(query, datagrid, true, parameters);
         }
     }
 }

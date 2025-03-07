@@ -64,12 +64,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridViewReports.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridViewReports.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridViewReports.Location = new System.Drawing.Point(34, 33);
+            this.guna2DataGridViewReports.Location = new System.Drawing.Point(34, 32);
             this.guna2DataGridViewReports.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridViewReports.Name = "guna2DataGridViewReports";
             this.guna2DataGridViewReports.ReadOnly = true;
             this.guna2DataGridViewReports.RowHeadersVisible = false;
-            this.guna2DataGridViewReports.Size = new System.Drawing.Size(1049, 429);
+            this.guna2DataGridViewReports.Size = new System.Drawing.Size(1049, 430);
             this.guna2DataGridViewReports.TabIndex = 226;
             this.guna2DataGridViewReports.Tag = "book_id";
             this.guna2DataGridViewReports.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;

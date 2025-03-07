@@ -18,13 +18,13 @@ namespace Project.Forms.ExtensionForms
 
         private void guna2ButtonSubmit_Click(object sender, EventArgs e)
         {
-            VideoLibrary video = new VideoLibrary();
+            VideoProp video = new VideoProp();
             video.Title = Title;
             video.CopiesAvailable = CopiesAvailable;
             video.Category = Category;
-            video.LimitDaysRented = guna2ComboBoxLimitdaysRented.Text;
+            video.LimitDaysRented = Convert.ToInt16(guna2ComboBoxLimitdaysRented.Text);
 
-            Video vd = new Video();
+            VideoLibrary vd = new VideoLibrary();
             bool IsInserted = vd.Insert(video);
 
             if (IsInserted)

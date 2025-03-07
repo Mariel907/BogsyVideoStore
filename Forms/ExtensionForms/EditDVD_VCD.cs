@@ -7,26 +7,27 @@ namespace Project.Forms.ExtensionForms
 {
     public partial class EditDVD_VCD : Form
     {
-        private VideoLibrary _video;
-        public EditDVD_VCD(VideoLibrary video)
+        private VideoProp _video;
+        public EditDVD_VCD(VideoProp video)
         {
             InitializeComponent();
             _video = video;
-            guna2TextBoxTitle.Text = _video.Title;
-            guna2TextBoxCopiesAvailable.Text = _video.CopiesAvailable;
-            guna2ComboBoxCategory.Text = _video.Category;
-            guna2TextBoxVideoID.Text = _video.VideoId;
+            //guna2TextBoxTitle.Text = _video.Title;
+            //guna2TextBoxCopiesAvailable.Text = _video.CopiesAvailable;
+            //guna2ComboBoxCategory.Text = _video.Category;
+
+            //guna2TextBoxVideoID.Text = _video.VideoId;
         }
 
         private void guna2ButtonSubmit_Click(object sender, EventArgs e)
         {
-            VideoLibrary video = new VideoLibrary();
+            VideoProp video = new VideoProp();
             video.Title = guna2TextBoxTitle.Text;
             video.CopiesAvailable = guna2TextBoxCopiesAvailable.Text;
             video.Category = guna2ComboBoxCategory.Text;
-            video.VideoId = guna2TextBoxVideoID.Text;
+            video.VideoId = Convert.ToInt16(guna2TextBoxVideoID.Text);
 
-            Video vd = new Video();
+            Class.VideoLibrary vd = new Class.VideoLibrary();
             bool isUpdated = vd.Update(video);
 
             if (isUpdated) 

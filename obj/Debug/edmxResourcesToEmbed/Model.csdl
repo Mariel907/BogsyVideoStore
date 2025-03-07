@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BogsyVideoStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BogsyVideoStoreEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Video" ReturnType="Collection(BogsyVideoStoreModel.Video_Result)" />
+  </EntityContainer>
+  <ComplexType Name="Video_Result">
+    <Property Type="Int32" Name="VideoID" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="LimitDaysRented" Nullable="true" />
+    <Property Type="Decimal" Name="Amount" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

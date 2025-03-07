@@ -19,6 +19,7 @@ namespace Project.Class
                     DGV.Columns[column].Visible = false;
             }
         }
+
         private void HideVisibleID(DataGridView dataGridView, string query, List<string> columnsHide, SqlParameter[] parameter = null)
         {
             DataLoader dataLoader = new DataLoader();
@@ -26,14 +27,16 @@ namespace Project.Class
             HideID(dataGridView, columnsHide);
         }
 
+        public void Unpaid(DataGridView datagridView)
+        {
+            HideVisibleID(datagridView, "Unpaid", new List<string> { "RentalID", "CustomerID", "VideoID", });
+        }
+
         public void GetAllCustomer(DataGridView datagridView)
         {
             HideVisibleID(datagridView, "GetAllCustomer", new List<string> { "CustomerID" });
         }
-        public void GetAllVideo(DataGridView datagridView)
-        {
-            HideVisibleID(datagridView, "GetAllVideo", new List<string> { "VideoID", "Director", "Rating", "ReleaseDate"});
-        }
+        
         public void GetAllRental(DataGridView dataGrid)
         {
             HideVisibleID(dataGrid, "GetAllRental", new List<string> { "RentalID", "CustomerID", "VideoID", });

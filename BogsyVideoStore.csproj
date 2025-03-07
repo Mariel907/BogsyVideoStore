@@ -39,10 +39,30 @@
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\CPayments.cs" />
     <Compile Include="Class\CustomerClass.cs" />
     <Compile Include="Class\DataLoader.cs" />
     <Compile Include="Class\FormManager.cs" />
@@ -62,7 +83,18 @@
     <Compile Include="Class\Rent.cs" />
     <Compile Include="Class\AddCustomers.cs" />
     <Compile Include="Class\Trans.cs" />
-    <Compile Include="Class\Video.cs" />
+    <Compile Include="Class\VideoLibrary.cs" />
+    <Compile Include="Class\_Report.cs" />
+    <Compile Include="DataSet\DSPayment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSReceipt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReceipt.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +143,23 @@
     <Compile Include="Forms\ExtensionForms\EditDVD_VCD.Designer.cs">
       <DependentUpon>EditDVD_VCD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ExtensionForms\PrintReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\PrintReceipt.Designer.cs">
+      <DependentUpon>PrintReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExtensionForms\RentCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ExtensionForms\RentCustomer.Designer.cs">
       <DependentUpon>RentCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Transaction.cs">
       <SubType>Form</SubType>
@@ -125,10 +169,13 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GlobalConnection.cs" />
+    <Compile Include="Model\Receipt.cs" />
+    <Compile Include="Model\SearchUnpaid.cs" />
     <Compile Include="Model\Transac.cs" />
-    <Compile Include="Model\VideoLibrary.cs" />
+    <Compile Include="Model\VideoProp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Forms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,9 +200,18 @@
     <EmbeddedResource Include="Forms\ExtensionForms\EditDVD_VCD.resx">
       <DependentUpon>EditDVD_VCD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\PrintReceipt.resx">
+      <DependentUpon>PrintReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\RentCustomer.resx">
       <DependentUpon>RentCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportRDLC\PaymentReceipt.rdlc" />
+    <EmbeddedResource Include="Forms\ReportRDLC\Receipt.rdlc" />
     <EmbeddedResource Include="Forms\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +224,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet\DSPayment.xsc">
+      <DependentUpon>DSPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSPayment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPayment.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSPayment.xss">
+      <DependentUpon>DSPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSReceipt.xsc">
+      <DependentUpon>DSReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSReceipt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReceipt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSReceipt.xss">
+      <DependentUpon>DSReceipt.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -182,6 +260,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelEditBook = new System.Windows.Forms.Panel();
+            this.guna2ComboBoxLimitdaysRented = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ComboBoxCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBoxTitle = new Guna.UI2.WinForms.Guna2TextBox();
@@ -38,8 +40,6 @@
             this.guna2ButtonSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBoxLimitdaysRented = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelEditBook.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,10 +56,44 @@
             this.panelEditBook.Controls.Add(this.guna2ButtonSubmit);
             this.panelEditBook.Controls.Add(this.label5);
             this.panelEditBook.Controls.Add(this.label2);
-            this.panelEditBook.Location = new System.Drawing.Point(-2, 1);
+            this.panelEditBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEditBook.Location = new System.Drawing.Point(0, 0);
             this.panelEditBook.Name = "panelEditBook";
-            this.panelEditBook.Size = new System.Drawing.Size(1134, 567);
+            this.panelEditBook.Size = new System.Drawing.Size(1144, 567);
             this.panelEditBook.TabIndex = 65;
+            // 
+            // guna2ComboBoxLimitdaysRented
+            // 
+            this.guna2ComboBoxLimitdaysRented.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBoxLimitdaysRented.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxLimitdaysRented.BorderThickness = 2;
+            this.guna2ComboBoxLimitdaysRented.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBoxLimitdaysRented.DropDownHeight = 150;
+            this.guna2ComboBoxLimitdaysRented.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBoxLimitdaysRented.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxLimitdaysRented.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ComboBoxLimitdaysRented.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBoxLimitdaysRented.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBoxLimitdaysRented.IntegralHeight = false;
+            this.guna2ComboBoxLimitdaysRented.ItemHeight = 30;
+            this.guna2ComboBoxLimitdaysRented.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.guna2ComboBoxLimitdaysRented.Location = new System.Drawing.Point(383, 425);
+            this.guna2ComboBoxLimitdaysRented.Name = "guna2ComboBoxLimitdaysRented";
+            this.guna2ComboBoxLimitdaysRented.Size = new System.Drawing.Size(353, 36);
+            this.guna2ComboBoxLimitdaysRented.TabIndex = 361;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(382, 390);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 21);
+            this.label3.TabIndex = 359;
+            this.label3.Text = "Limit Days Rented";
             // 
             // label1
             // 
@@ -152,7 +186,7 @@
             this.guna2ButtonExit.FillColor = System.Drawing.Color.Transparent;
             this.guna2ButtonExit.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.guna2ButtonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonExit.Location = new System.Drawing.Point(1083, 12);
+            this.guna2ButtonExit.Location = new System.Drawing.Point(1093, 12);
             this.guna2ButtonExit.Name = "guna2ButtonExit";
             this.guna2ButtonExit.Size = new System.Drawing.Size(39, 29);
             this.guna2ButtonExit.TabIndex = 286;
@@ -207,39 +241,6 @@
             this.label2.Size = new System.Drawing.Size(39, 21);
             this.label2.TabIndex = 38;
             this.label2.Text = "Title";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(382, 390);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 21);
-            this.label3.TabIndex = 359;
-            this.label3.Text = "Limit Days Rented";
-            // 
-            // guna2ComboBoxLimitdaysRented
-            // 
-            this.guna2ComboBoxLimitdaysRented.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxLimitdaysRented.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxLimitdaysRented.BorderThickness = 2;
-            this.guna2ComboBoxLimitdaysRented.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxLimitdaysRented.DropDownHeight = 150;
-            this.guna2ComboBoxLimitdaysRented.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxLimitdaysRented.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxLimitdaysRented.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxLimitdaysRented.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBoxLimitdaysRented.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBoxLimitdaysRented.IntegralHeight = false;
-            this.guna2ComboBoxLimitdaysRented.ItemHeight = 30;
-            this.guna2ComboBoxLimitdaysRented.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.guna2ComboBoxLimitdaysRented.Location = new System.Drawing.Point(383, 425);
-            this.guna2ComboBoxLimitdaysRented.Name = "guna2ComboBoxLimitdaysRented";
-            this.guna2ComboBoxLimitdaysRented.Size = new System.Drawing.Size(353, 36);
-            this.guna2ComboBoxLimitdaysRented.TabIndex = 361;
             // 
             // AddDVD_VCD
             // 

@@ -11,7 +11,13 @@ namespace Project.Model
         public string CustomerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string VideoID {  get; set; }
-        public string LimitDaysRented { get; set; }
+    }
+
+    public class Customers
+    {
+        public string  CustomerID { get; set; }
+        public string Fullname { get; set; }
+        public int Cash { get; set; }
+        public decimal Change { get; set; }
     }
 }

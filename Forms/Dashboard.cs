@@ -25,6 +25,7 @@ namespace Project.Forms
                 guna2ButtonCustomer.Name = "Customer";
                 guna2ButtonTransactions.Name = "Transactions";
                 guna2ButtonReports.Name = "Reports";
+                guna2ButtonPayments.Name = "Payments";
 
                 switch (button.Name)
                 {
@@ -43,6 +44,10 @@ namespace Project.Forms
                     case "Reports":
                         DGVReports reports = new DGVReports();
                         form.OpenForm(reports, panelDashboard);
+                        break;
+                    case "Payments":
+                        Payments payments = new Payments();
+                        form.OpenForm(payments, panelDashboard);
                         break;
                     default:
                         break;
