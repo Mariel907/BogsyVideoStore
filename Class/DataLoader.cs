@@ -19,21 +19,23 @@ namespace Project.Class
                     if (parameters != null)
                         cmd.Parameters.AddRange(parameters);
 
-                        SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
-                        DataTable dataTable = new DataTable();
-                        Adapter.Fill(dataTable);
+                    SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    Adapter.Fill(dataTable);
                     if (datagridView != null)
                     {
-                        datagridView.DataSource = dataTable; 
+                        datagridView.DataSource = dataTable;
                     }
                 }
             }
         }
-
-        public void Reports(DataGridView dataGridView)
+        public void SearchTxbx(string query, string searchtext, DataGridView dataGridView)
         {
-            string query = "Reports";
-            LoadData(query, dataGridView);
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("Searchtext", searchtext)
+            };
+            LoadData(query, dataGridView, true, parameters);
         }
     }
 }

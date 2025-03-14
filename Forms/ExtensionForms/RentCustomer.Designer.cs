@@ -29,13 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ButtonSave = new Guna.UI2.WinForms.Guna2Button();
             this.DGVRent = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2ComboBoxCustomer = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBoxVideo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
@@ -51,11 +58,79 @@
             this.getAllVideoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fullnameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.videoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewerRent = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.getAllCustomerRentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSReports = new Project.DataSet.DSReports();
+            this.getAllCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchTxbxRentCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchTxbxRentCustomerTableAdapter = new Project.DataSet.DSReportsTableAdapters.SearchTxbxRentCustomerTableAdapter();
+            this.getAllCustomerTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllCustomerTableAdapter();
+            this.getAllCustomerRentTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllCustomerRentTableAdapter();
+            this.getAllVideoRentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getAllVideoRentTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllVideoRentTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxVideo = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.comboBoxFullname = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVRent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullnameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerRentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTxbxRentCustomerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoRentBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel33.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ButtonSave
@@ -80,37 +155,47 @@
             // 
             this.DGVRent.AllowUserToAddRows = false;
             this.DGVRent.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DGVRent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.DGVRent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.DGVRent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVRent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVRent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVRent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.DGVRent.ColumnHeadersHeight = 35;
             this.DGVRent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVRent.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DGVRent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Title,
+            this.VideoID,
+            this.Quantity,
+            this.Price,
+            this.Category,
+            this.DueDate,
+            this.TotalAmount,
+            this.LimitDaysRented,
+            this.Status});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVRent.DefaultCellStyle = dataGridViewCellStyle12;
             this.DGVRent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGVRent.Location = new System.Drawing.Point(39, 97);
+            this.DGVRent.Location = new System.Drawing.Point(39, 76);
             this.DGVRent.Margin = new System.Windows.Forms.Padding(4);
             this.DGVRent.Name = "DGVRent";
             this.DGVRent.ReadOnly = true;
             this.DGVRent.RowHeadersVisible = false;
-            this.DGVRent.Size = new System.Drawing.Size(1053, 350);
+            this.DGVRent.Size = new System.Drawing.Size(616, 371);
             this.DGVRent.TabIndex = 375;
             this.DGVRent.Tag = "book_id";
             this.DGVRent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -135,55 +220,68 @@
             this.DGVRent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.DGVRent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             // 
-            // guna2ComboBoxCustomer
+            // Title
             // 
-            this.guna2ComboBoxCustomer.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxCustomer.BorderThickness = 2;
-            this.guna2ComboBoxCustomer.DisplayMember = "CustomerID";
-            this.guna2ComboBoxCustomer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxCustomer.DropDownHeight = 150;
-            this.guna2ComboBoxCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxCustomer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxCustomer.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBoxCustomer.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBoxCustomer.IntegralHeight = false;
-            this.guna2ComboBoxCustomer.ItemHeight = 30;
-            this.guna2ComboBoxCustomer.Location = new System.Drawing.Point(39, 33);
-            this.guna2ComboBoxCustomer.Name = "guna2ComboBoxCustomer";
-            this.guna2ComboBoxCustomer.Size = new System.Drawing.Size(217, 36);
-            this.guna2ComboBoxCustomer.TabIndex = 383;
-            this.guna2ComboBoxCustomer.ValueMember = "CustomerID";
-            this.guna2ComboBoxCustomer.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxCustomer_SelectedIndexChanged_1);
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
             // 
-            // guna2ComboBoxVideo
+            // VideoID
             // 
-            this.guna2ComboBoxVideo.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxVideo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxVideo.BorderThickness = 2;
-            this.guna2ComboBoxVideo.DisplayMember = "VideoID";
-            this.guna2ComboBoxVideo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxVideo.DropDownHeight = 150;
-            this.guna2ComboBoxVideo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxVideo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxVideo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxVideo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2ComboBoxVideo.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBoxVideo.IntegralHeight = false;
-            this.guna2ComboBoxVideo.ItemHeight = 30;
-            this.guna2ComboBoxVideo.Location = new System.Drawing.Point(285, 33);
-            this.guna2ComboBoxVideo.Name = "guna2ComboBoxVideo";
-            this.guna2ComboBoxVideo.Size = new System.Drawing.Size(217, 36);
-            this.guna2ComboBoxVideo.TabIndex = 384;
-            this.guna2ComboBoxVideo.ValueMember = "VideoID";
-            this.guna2ComboBoxVideo.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxVideo_SelectedIndexChanged);
+            this.VideoID.HeaderText = "VideoID";
+            this.VideoID.Name = "VideoID";
+            this.VideoID.ReadOnly = true;
+            this.VideoID.Visible = false;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // DueDate
+            // 
+            this.DueDate.HeaderText = "Due Date";
+            this.DueDate.Name = "DueDate";
+            this.DueDate.ReadOnly = true;
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.HeaderText = "Total";
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.ReadOnly = true;
+            // 
+            // LimitDaysRented
+            // 
+            this.LimitDaysRented.HeaderText = "LimitDaysRented";
+            this.LimitDaysRented.Name = "LimitDaysRented";
+            this.LimitDaysRented.ReadOnly = true;
+            this.LimitDaysRented.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 9);
+            this.label3.Location = new System.Drawing.Point(35, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 21);
             this.label3.TabIndex = 369;
@@ -193,7 +291,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(281, 8);
+            this.label4.Location = new System.Drawing.Point(234, 8);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 21);
             this.label4.TabIndex = 385;
@@ -253,7 +351,7 @@
             this.guna2TextBoxCustomerID.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
             this.guna2TextBoxCustomerID.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCustomerID.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCustomerID.Location = new System.Drawing.Point(115, 14);
+            this.guna2TextBoxCustomerID.Location = new System.Drawing.Point(107, 14);
             this.guna2TextBoxCustomerID.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxCustomerID.Name = "guna2TextBoxCustomerID";
             this.guna2TextBoxCustomerID.Padding = new System.Windows.Forms.Padding(5);
@@ -263,7 +361,6 @@
             this.guna2TextBoxCustomerID.SelectedText = "";
             this.guna2TextBoxCustomerID.Size = new System.Drawing.Size(72, 15);
             this.guna2TextBoxCustomerID.TabIndex = 377;
-            this.guna2TextBoxCustomerID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -370,12 +467,408 @@
             // 
             this.videoBindingSource.DataMember = "Video";
             // 
+            // reportViewerRent
+            // 
+            this.reportViewerRent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewerRent.Location = new System.Drawing.Point(662, 76);
+            this.reportViewerRent.Name = "reportViewerRent";
+            this.reportViewerRent.ServerReport.BearerToken = null;
+            this.reportViewerRent.Size = new System.Drawing.Size(430, 371);
+            this.reportViewerRent.TabIndex = 432;
+            // 
+            // getAllCustomerRentBindingSource
+            // 
+            this.getAllCustomerRentBindingSource.DataMember = "GetAllCustomerRent";
+            this.getAllCustomerRentBindingSource.DataSource = this.dSReports;
+            // 
+            // dSReports
+            // 
+            this.dSReports.DataSetName = "DSReports";
+            this.dSReports.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // getAllCustomerBindingSource
+            // 
+            this.getAllCustomerBindingSource.DataMember = "GetAllCustomer";
+            this.getAllCustomerBindingSource.DataSource = this.dSReports;
+            // 
+            // searchTxbxRentCustomerBindingSource
+            // 
+            this.searchTxbxRentCustomerBindingSource.DataMember = "SearchTxbxRentCustomer";
+            this.searchTxbxRentCustomerBindingSource.DataSource = this.dSReports;
+            // 
+            // searchTxbxRentCustomerTableAdapter
+            // 
+            this.searchTxbxRentCustomerTableAdapter.ClearBeforeFill = true;
+            // 
+            // getAllCustomerTableAdapter
+            // 
+            this.getAllCustomerTableAdapter.ClearBeforeFill = true;
+            // 
+            // getAllCustomerRentTableAdapter
+            // 
+            this.getAllCustomerRentTableAdapter.ClearBeforeFill = true;
+            // 
+            // getAllVideoRentBindingSource
+            // 
+            this.getAllVideoRentBindingSource.DataMember = "GetAllVideoRent";
+            this.getAllVideoRentBindingSource.DataSource = this.dSReports;
+            // 
+            // getAllVideoRentTableAdapter
+            // 
+            this.getAllVideoRentTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(431, 278);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 29);
+            this.label1.TabIndex = 440;
+            this.label1.Text = "I";
+            // 
+            // comboBoxVideo
+            // 
+            this.comboBoxVideo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxVideo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxVideo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBoxVideo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxVideo.Location = new System.Drawing.Point(236, 37);
+            this.comboBoxVideo.Name = "comboBoxVideo";
+            this.comboBoxVideo.Size = new System.Drawing.Size(179, 35);
+            this.comboBoxVideo.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Location = new System.Drawing.Point(231, 32);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(179, 2);
+            this.panel1.TabIndex = 441;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel2.Location = new System.Drawing.Point(232, 67);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(179, 2);
+            this.panel2.TabIndex = 442;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel3.Location = new System.Drawing.Point(0, -10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(179, 2);
+            this.panel3.TabIndex = 442;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(231, 33);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2, 36);
+            this.panel4.TabIndex = 443;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel5.Location = new System.Drawing.Point(0, -10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(179, 2);
+            this.panel5.TabIndex = 442;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Location = new System.Drawing.Point(409, 33);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(2, 36);
+            this.panel6.TabIndex = 444;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel7.Location = new System.Drawing.Point(0, -10);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(179, 2);
+            this.panel7.TabIndex = 442;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Location = new System.Drawing.Point(233, 62);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(176, 5);
+            this.panel8.TabIndex = 443;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel9.Location = new System.Drawing.Point(0, -10);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(179, 2);
+            this.panel9.TabIndex = 442;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Location = new System.Drawing.Point(233, 36);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(176, 5);
+            this.panel10.TabIndex = 444;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel11.Location = new System.Drawing.Point(0, -10);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(179, 2);
+            this.panel11.TabIndex = 442;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Location = new System.Drawing.Point(231, 69);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(181, 5);
+            this.panel12.TabIndex = 445;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel13.Location = new System.Drawing.Point(0, -10);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(179, 2);
+            this.panel13.TabIndex = 442;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Location = new System.Drawing.Point(236, 35);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(2, 32);
+            this.panel14.TabIndex = 444;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel15.Location = new System.Drawing.Point(0, -10);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(179, 2);
+            this.panel15.TabIndex = 442;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Controls.Add(this.panel17);
+            this.panel16.Location = new System.Drawing.Point(411, 34);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(4, 36);
+            this.panel16.TabIndex = 445;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel17.Location = new System.Drawing.Point(0, -10);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(179, 2);
+            this.panel17.TabIndex = 442;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Controls.Add(this.panel19);
+            this.panel18.Location = new System.Drawing.Point(217, 35);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(4, 36);
+            this.panel18.TabIndex = 454;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel19.Location = new System.Drawing.Point(0, -10);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(179, 2);
+            this.panel19.TabIndex = 442;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.White;
+            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Location = new System.Drawing.Point(42, 36);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(2, 32);
+            this.panel20.TabIndex = 451;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel21.Location = new System.Drawing.Point(0, -10);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(179, 2);
+            this.panel21.TabIndex = 442;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.White;
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Location = new System.Drawing.Point(37, 70);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(181, 5);
+            this.panel22.TabIndex = 455;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel23.Location = new System.Drawing.Point(0, -10);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(179, 2);
+            this.panel23.TabIndex = 442;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Controls.Add(this.panel25);
+            this.panel24.Location = new System.Drawing.Point(39, 37);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(176, 5);
+            this.panel24.TabIndex = 452;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel25.Location = new System.Drawing.Point(0, -10);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(179, 2);
+            this.panel25.TabIndex = 442;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.White;
+            this.panel26.Controls.Add(this.panel27);
+            this.panel26.Location = new System.Drawing.Point(39, 63);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(176, 5);
+            this.panel26.TabIndex = 449;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel27.Location = new System.Drawing.Point(0, -10);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(179, 2);
+            this.panel27.TabIndex = 442;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Location = new System.Drawing.Point(215, 34);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(2, 36);
+            this.panel28.TabIndex = 453;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel29.Location = new System.Drawing.Point(0, -10);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(179, 2);
+            this.panel29.TabIndex = 442;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel30.Controls.Add(this.panel31);
+            this.panel30.Location = new System.Drawing.Point(37, 34);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(2, 36);
+            this.panel30.TabIndex = 450;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel31.Location = new System.Drawing.Point(0, -10);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(179, 2);
+            this.panel31.TabIndex = 442;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel32.Location = new System.Drawing.Point(38, 68);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(179, 2);
+            this.panel32.TabIndex = 448;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel33.Controls.Add(this.panel34);
+            this.panel33.Location = new System.Drawing.Point(37, 33);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(179, 2);
+            this.panel33.TabIndex = 447;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel34.Location = new System.Drawing.Point(0, -10);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(179, 2);
+            this.panel34.TabIndex = 442;
+            // 
+            // comboBoxFullname
+            // 
+            this.comboBoxFullname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxFullname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxFullname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBoxFullname.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFullname.Location = new System.Drawing.Point(42, 38);
+            this.comboBoxFullname.Name = "comboBoxFullname";
+            this.comboBoxFullname.Size = new System.Drawing.Size(179, 35);
+            this.comboBoxFullname.TabIndex = 446;
+            this.comboBoxFullname.SelectedIndexChanged += new System.EventHandler(this.comboBoxFullname_SelectedIndexChanged);
+            // 
             // RentCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1119, 526);
+            this.Controls.Add(this.panel18);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel20);
+            this.Controls.Add(this.panel14);
+            this.Controls.Add(this.panel22);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel24);
+            this.Controls.Add(this.panel26);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel28);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel30);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel32);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel33);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.comboBoxFullname);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.comboBoxVideo);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.reportViewerRent);
             this.Controls.Add(this.guna2ButtonVoid);
             this.Controls.Add(this.guna2TextBoxCash);
             this.Controls.Add(this.guna2TextBoxChange);
@@ -385,8 +878,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2ButtonAdd);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2ComboBoxVideo);
-            this.Controls.Add(this.guna2ComboBoxCustomer);
             this.Controls.Add(this.guna2TextBoxCustomerID);
             this.Controls.Add(this.DGVRent);
             this.Controls.Add(this.label3);
@@ -401,6 +892,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullnameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerRentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTxbxRentCustomerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoRentBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,8 +921,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Button guna2ButtonSave;
         private Guna.UI2.WinForms.Guna2DataGridView DGVRent;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxCustomer;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxVideo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonAdd;
@@ -426,5 +936,61 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCash;
         private System.Windows.Forms.BindingSource receiptBindingSource;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonVoid;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerRent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VideoID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LimitDaysRented;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.BindingSource searchTxbxRentCustomerBindingSource;
+        private DataSet.DSReports dSReports;
+        private DataSet.DSReportsTableAdapters.SearchTxbxRentCustomerTableAdapter searchTxbxRentCustomerTableAdapter;
+        private System.Windows.Forms.BindingSource getAllCustomerBindingSource;
+        private DataSet.DSReportsTableAdapters.GetAllCustomerTableAdapter getAllCustomerTableAdapter;
+        private System.Windows.Forms.BindingSource getAllCustomerRentBindingSource;
+        private DataSet.DSReportsTableAdapters.GetAllCustomerRentTableAdapter getAllCustomerRentTableAdapter;
+        private System.Windows.Forms.BindingSource getAllVideoRentBindingSource;
+        private DataSet.DSReportsTableAdapters.GetAllVideoRentTableAdapter getAllVideoRentTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxVideo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.ComboBox comboBoxFullname;
     }
 }

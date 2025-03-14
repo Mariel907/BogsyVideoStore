@@ -34,7 +34,7 @@ namespace Project.Forms
                         form.OpenForm(dVDs_VCDs, panelDashboard);
                         break;
                     case "Customer":
-                        CustomerForm customer = new CustomerForm(this);
+                        CustomerForm customer = new CustomerForm();
                         form.OpenForm(customer, panelDashboard);
                         break;
                     case "Transactions":

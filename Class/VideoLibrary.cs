@@ -2,7 +2,6 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace Project.Class
 {
@@ -11,32 +10,26 @@ namespace Project.Class
 
         public bool Update(VideoProp video)
         {
-            try
+            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
             {
-                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand("UpdateVideo", connection))
                 {
-                    connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("UpdateVideo", connection))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
-                        cmd.Parameters.AddWithValue("@Title", video.Title);
-                        cmd.Parameters.AddWithValue("@Category", video.Category);
-                        cmd.Parameters.AddWithValue("In", video.CopiesAvailable);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("VideoID", video.VideoId);
+                    cmd.Parameters.AddWithValue("Title", video.Title);
+                    cmd.Parameters.AddWithValue("Category", video.Category);
+                    cmd.Parameters.AddWithValue("Out", video.CopiesAvailable);
 
-                        if (video.Category == "DVD")
-                            cmd.Parameters.AddWithValue("@Amount", 50);
-                        else
-                            cmd.Parameters.AddWithValue("@Amount", 25);
-                        
-                        cmd.ExecuteNonQuery();
-                    }
+                    if (video.Category == "DVD")
+                        cmd.Parameters.AddWithValue("Amount", 50);
+                    else
+                        cmd.Parameters.AddWithValue("Amount", 25);
+
+                    cmd.ExecuteNonQuery();
+              
                 }
                 return true;
-            }
-            catch(Exception)
-            {
-                return false;
             }
         }
         public bool Insert(VideoProp video)
@@ -90,7 +83,7 @@ namespace Project.Class
             {
                 if (ex.Class == 16)
                     return false;
-                else 
+                else
                     throw;
             }
         }

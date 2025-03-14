@@ -12,34 +12,32 @@ namespace Project.Forms.ExtensionForms
         {
             InitializeComponent();
             _video = video;
-            //guna2TextBoxTitle.Text = _video.Title;
-            //guna2TextBoxCopiesAvailable.Text = _video.CopiesAvailable;
-            //guna2ComboBoxCategory.Text = _video.Category;
+            guna2TextBoxTitle.Text = _video.Title;
+            guna2TextBoxCopiesAvailable.Text = _video.CopiesAvailable;
+            guna2ComboBoxCategory.Text = _video.Category;
 
-            //guna2TextBoxVideoID.Text = _video.VideoId;
+            guna2TextBoxVideoID.Text = Convert.ToInt32(_video.VideoId).ToString();
         }
 
         private void guna2ButtonSubmit_Click(object sender, EventArgs e)
         {
-            VideoProp video = new VideoProp();
-            video.Title = guna2TextBoxTitle.Text;
-            video.CopiesAvailable = guna2TextBoxCopiesAvailable.Text;
-            video.Category = guna2ComboBoxCategory.Text;
-            video.VideoId = Convert.ToInt16(guna2TextBoxVideoID.Text);
+            try
+            {
+                VideoProp video = new VideoProp();
+                video.Title = guna2TextBoxTitle.Text;
+                video.CopiesAvailable = guna2TextBoxCopiesAvailable.Text;
+                video.Category = guna2ComboBoxCategory.Text;
+                video.VideoId = Convert.ToInt16(guna2TextBoxVideoID.Text);
 
-            Class.VideoLibrary vd = new Class.VideoLibrary();
-            bool isUpdated = vd.Update(video);
-
-            if (isUpdated) 
-                MessageBox.Show("Data updated successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("An error occured during updating. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        }
-
-        private void EditDVD_VCD_Load(object sender, EventArgs e)
-        {
-            HiddenColumn hide = new HiddenColumn();
+                VideoLibrary vd = new VideoLibrary();
+                bool isUpdated = vd.Update(video);
+                if(isUpdated)
+                    MessageBox.Show("Video updated successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void EditDVD_VCD_FormClosing(object sender, FormClosingEventArgs e)

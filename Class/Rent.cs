@@ -1,9 +1,11 @@
-﻿using Project.Forms.ExtensionForms;
+﻿using Microsoft.Reporting.WinForms;
+using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Configuration;
 using System.Windows.Forms;
 
 namespace Project.Class
@@ -63,97 +65,138 @@ namespace Project.Class
             return video;
         }
 
-        public Receipt _InsertRent(Customers Customer, DataGridView dataGridView)
+        public void _InsertRent(Customers Customer, DataGridView dataGridView)
         {
-            Receipt receipt = new Receipt();
-            try
+            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
             {
-                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    connection.Open();
-
-                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    foreach (DataGridViewRow row in dataGridView.Rows)
                     {
-                        try
-                        {
-                            foreach (DataGridViewRow row in dataGridView.Rows)
-                            {
-                                if (row.IsNewRow) continue;
+                        if (row.IsNewRow) continue;
 
-                                SqlCommand cmd = new SqlCommand("InsertRent", connection, transaction);
-                                cmd.CommandType = CommandType.StoredProcedure;
+                        SqlCommand cmd = new SqlCommand("InsertRent", connection, transaction);
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                                cmd.Parameters.AddWithValue("@CustomerID", Customer.CustomerID);
-                                cmd.Parameters.AddWithValue("@VideoID", row.Cells["VideoID"].Value);
-                                cmd.Parameters.AddWithValue("@RentDate", DateTime.Now.Date);
-                                cmd.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
-                                cmd.Parameters.AddWithValue("@TotalAmount", row.Cells["TotalAmount"].Value);
-                                cmd.Parameters.AddWithValue("@Price", row.Cells["Price"].Value);
-                                cmd.Parameters.AddWithValue("@Status", row.Cells["Status"].Value);
+                        cmd.Parameters.AddWithValue("@CustomerID", Customer.CustomerID);
+                        cmd.Parameters.AddWithValue("@VideoID", row.Cells["VideoID"].Value);
+                        cmd.Parameters.AddWithValue("@RentDate", DateTime.Now.Date);
+                        cmd.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
+                        cmd.Parameters.AddWithValue("@TotalAmount", row.Cells["TotalAmount"].Value);
+                        cmd.Parameters.AddWithValue("@Price", row.Cells["Price"].Value);
+                        cmd.Parameters.AddWithValue("@Status", row.Cells["Status"].Value);
 
-                                int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
-                                cmd.Parameters.AddWithValue("@DueDate", DateTime.Now.Date.AddDays(rentedDays));
+                        int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
+                        cmd.Parameters.AddWithValue("@DueDate", DateTime.Now.Date.AddDays(rentedDays));
 
-                                cmd.ExecuteNonQuery();
-
-                                AddReceiptModel(receipt, row, rentedDays);
-                            }
-
-                            transaction.Commit();
-                            receipt.CustomerName = Customer.Fullname;
-                            receipt.RentDate = DateTime.Now;
-                            receipt.Cash = Customer.Cash;
-                            receipt.Change = Customer.Change;
-                            //receipt.TotalAmount = receipt.RentedVideos.Sum(v => v.Price * v.Quantity);
-                            //receipt.DueDate = DateTime.Now.AddDays(receipt.RentedVideos.Max(v => v.LimitDaysRented)); 
-
-                            using (PrintReceipt print = new PrintReceipt(receipt, receipt.RentedVideos))
-                            {
-                                print.ShowDialog();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            transaction.Rollback();
-                            MessageBox.Show(ex.Message, "An error occurred during the transaction.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return null;
-                        }
+                        cmd.ExecuteNonQuery();
                     }
+                    transaction.Commit();
                 }
-                return receipt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
             }
         }
 
-        public void AddReceiptModel(Receipt receipt, DataGridViewRow row, int rentedDays)
+        public void AddReceiptModel(ReportViewer reportViewer, Customers customerProp, DataGridView datagridView)
         {
-            if (row.Cells["Status"].Value == null || row.Cells["Status"].Value.ToString() != "Void")
+            var list = new List<VideoProp>();
+
+            foreach(DataGridViewRow row in datagridView.Rows)
             {
-                receipt.RentedVideos.Add(new VideoProp
+                var _video = new VideoProp();
+
+                int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
+                _video.VideoId = Convert.ToInt32(row.Cells["VideoID"].Value);
+                _video.Title = row.Cells["Title"].Value.ToString();
+                _video.LimitDaysRented = rentedDays;
+                _video.Price = Convert.ToDecimal(row.Cells["Price"].Value);
+                _video.Quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+                _video.DueDate = DateTime.Now.Date.AddDays(rentedDays);
+                _video.Category = row.Cells["Category"].Value.ToString();
+                _video.TotalAmount = Convert.ToDecimal(row.Cells["TotalAmount"].Value);
+
+                list.Add(_video);
+            }
+            RentReceiptGenerator GntrReceipt = new RentReceiptGenerator(reportViewer);
+            GntrReceipt.GenerateReceipt(customerProp, list);
+        }
+
+        public void Void(DataGridView dataGridView, string customerID)
+        {
+            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            {
+                con.Open();
+                foreach (DataGridViewRow row in dataGridView.SelectedRows)
                 {
-                    VideoId = Convert.ToInt32(row.Cells["VideoID"].Value),
-                    Title = row.Cells["Title"].Value.ToString(),
-                    LimitDaysRented = rentedDays,
-                    Price = Convert.ToDecimal(row.Cells["Price"].Value),
-                    Quantity = Convert.ToInt32(row.Cells["Quantity"].Value),
-                    DueDate = DateTime.Now.Date.AddDays(rentedDays),
-                    Category = row.Cells["Category"].Value.ToString(),
-                    TotalAmount = Convert.ToDecimal(row.Cells["TotalAmount"].Value)
-                });
+                    SqlCommand cmd = new SqlCommand("Void", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("CustomerID", customerID);
+                    cmd.Parameters.AddWithValue("RentDate", DateTime.Now.Date);
+                    cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
+                    cmd.Parameters.AddWithValue("VideoID", row.Cells["VideoID"].Value);
+                    cmd.Parameters.AddWithValue("TotalAmount", row.Cells["TotalAmount"].Value);
+                    cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
+
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
 
-        public void   CalculateChange(decimal totalAmount, string Cash, ref string Change)
+        public bool TotalAmountToSubtract(DataGridView dataGridView, string label, ref string _updatelabel)
+        {
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                decimal TotalAmountToSubtract = 0;
+                foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                {
+                    TotalAmountToSubtract += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
+                    dataGridView.Rows.RemoveAt(row.Index);
+                }
+                decimal updateLabel = Convert.ToDecimal(label.Replace("P", "").ToString());
+
+                updateLabel -= TotalAmountToSubtract;
+                _updatelabel = "P" + updateLabel.ToString("N2");
+                return true;
+            }
+            else
+                return false;
+        }
+        public void checkedOut(DataGridView dataGridView, VideoProp VideoID)
+        {
+            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("CheckedOut", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@VideoID", VideoID.VideoId);
+                cmd.Parameters.AddWithValue("@Quantity", 1);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void CalculateChange(decimal totalAmount, string Cash, ref string Change)
         {
             decimal cashGiven = Convert.ToDecimal(Cash);
             decimal change = cashGiven - totalAmount;
-            Change = "P" + change.ToString("N2");
+            Change = change.ToString("N2");
         }
 
-        
+        public void UpdateTotal(DataGridView datagridView, ref string Label)
+        {
+            decimal totalAmount = 0;
+            foreach (DataGridViewRow row in datagridView.Rows)
+            {
+                if (row.Cells["TotalAmount"].Value != null)
+                {
+                    totalAmount += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
+                }
+            }
+            Label = "P" + totalAmount.ToString("N2");
+        }
+
     }
 }

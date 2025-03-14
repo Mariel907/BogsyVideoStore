@@ -20,13 +20,7 @@ namespace Project.Forms.ExtensionForms
 
         private void DGVReports_Load(object sender, EventArgs e)
         {
-            DataLoader dataLoader = new DataLoader();
-            dataLoader.Reports(guna2DataGridViewReports);
-        }
-
-        private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
+            this.reportsTableAdapter.Fill(this.dSReports.Reports);
         }
     }
 }

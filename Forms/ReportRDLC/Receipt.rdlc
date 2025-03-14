@@ -16,6 +16,13 @@
       </ConnectionProperties>
       <rd:DataSourceID>aa92b029-2285-4018-bb7a-73aa622efe41</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="ProjectModel">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>3d43892e-86a4-4d66-811c-51bffcff86e7</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DSReceipt">
@@ -71,19 +78,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.23673in</Width>
+                  <Width>1.02431in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.65625in</Width>
+                  <Width>0.75in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.39175in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.67995in</Width>
+                  <Width>0.56537in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.98937in</Width>
+                  <Width>0.79145in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.04923in</Width>
@@ -104,19 +111,19 @@
                                 <TextRun>
                                   <Value>Title</Value>
                                   <Style>
-                                    <FontWeight>Medium</FontWeight>
+                                    <FontWeight>Heavy</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox21</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -138,19 +145,19 @@
                                 <TextRun>
                                   <Value>Category</Value>
                                   <Style>
-                                    <FontWeight>Medium</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox36</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -172,19 +179,19 @@
                                 <TextRun>
                                   <Value>Qty</Value>
                                   <Style>
-                                    <FontWeight>Medium</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox23</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -206,19 +213,19 @@
                                 <TextRun>
                                   <Value>Price</Value>
                                   <Style>
-                                    <FontWeight>Medium</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -240,19 +247,19 @@
                                 <TextRun>
                                   <Value>Due Date</Value>
                                   <Style>
-                                    <FontWeight>Medium</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox28</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -274,19 +281,19 @@
                                 <TextRun>
                                   <Value>Total</Value>
                                   <Style>
-                                    <FontWeight>Medium</FontWeight>
+                                    <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox30</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -316,14 +323,14 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Title</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -348,14 +355,14 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Category</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -380,14 +387,14 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Quantity</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -408,24 +415,27 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Price.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>'₱'#,0.00;('₱'#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Price</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -439,19 +449,19 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!DueDate.Value</Value>
+                                  <Value>=Format(Fields!DueDate.Value, "MM/dd/yyyy")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DueDate</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -471,25 +481,28 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Format(Fields!TotalAmount.Value, "0.00")</Value>
-                                  <Style />
+                                  <Value>= "₱" + Format(Fields!TotalAmount.Value, "0.00")</Value>
+                                  <Style>
+                                    <Format>'₱'#,0.00;('₱'#,0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>TotalAmount</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>LightGrey</Color>
+                              <Color>White</Color>
                               <Style>Solid</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -520,9 +533,9 @@
             </TablixRowHierarchy>
             <DataSetName>DSReceipt</DataSetName>
             <Top>0.02778in</Top>
-            <Left>0.069in</Left>
+            <Left>0.08983in</Left>
             <Height>0.5in</Height>
-            <Width>5.00328in</Width>
+            <Width>4.57211in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -533,10 +546,10 @@
         <Height>0.52778in</Height>
         <Style />
       </Body>
-      <Width>5.07228in</Width>
+      <Width>4.66194in</Width>
       <Page>
         <PageHeader>
-          <Height>1.39583in</Height>
+          <Height>1.27083in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -549,8 +562,7 @@
                     <TextRun>
                       <Value>Bogsy Video Store </Value>
                       <Style>
-                        <FontSize>12pt</FontSize>
-                        <FontWeight>Medium</FontWeight>
+                        <FontWeight>SemiBold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -563,8 +575,7 @@
                     <TextRun>
                       <Value> Buhangin ,Davao City  </Value>
                       <Style>
-                        <FontSize>12pt</FontSize>
-                        <FontWeight>Medium</FontWeight>
+                        <FontWeight>SemiBold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -574,9 +585,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Left>0in</Left>
-              <Height>0.55083in</Height>
-              <Width>5.07228in</Width>
+              <Left>0.02083in</Left>
+              <Height>0.41194in</Height>
+              <Width>4.64111in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -602,8 +613,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.67583in</Top>
-              <Left>0.069in</Left>
+              <Top>0.55083in</Top>
+              <Left>0.08983in</Left>
               <Height>0.25in</Height>
               <Width>0.71875in</Width>
               <ZIndex>1</ZIndex>
@@ -632,8 +643,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.99528in</Top>
-              <Left>0.069in</Left>
+              <Top>0.81472in</Top>
+              <Left>0.08983in</Left>
               <Height>0.25in</Height>
               <Width>0.71875in</Width>
               <ZIndex>2</ZIndex>
@@ -662,8 +673,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>RentDate</rd:DefaultName>
-              <Top>0.99528in</Top>
-              <Left>0.84331in</Left>
+              <Top>0.81472in</Top>
+              <Left>0.86414in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>3</ZIndex>
@@ -692,8 +703,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>CustomerName</rd:DefaultName>
-              <Top>0.67583in</Top>
-              <Left>0.84331in</Left>
+              <Top>0.55083in</Top>
+              <Left>0.86414in</Left>
               <Height>0.25in</Height>
               <Width>1.85417in</Width>
               <ZIndex>4</ZIndex>
@@ -708,10 +719,10 @@
               </Style>
             </Textbox>
             <Line Name="Line2">
-              <Top>0.55083in</Top>
-              <Left>0in</Left>
+              <Top>0.42583in</Top>
+              <Left>0.02083in</Left>
               <Height>0in</Height>
-              <Width>5.07228in</Width>
+              <Width>4.64111in</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -720,10 +731,10 @@
               </Style>
             </Line>
             <Line Name="Line3">
-              <Top>1.38417in</Top>
-              <Left>0in</Left>
+              <Top>1.25917in</Top>
+              <Left>0.02083in</Left>
               <Height>0in</Height>
-              <Width>5.07228in</Width>
+              <Width>4.64111in</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
@@ -752,7 +763,7 @@
                     <TextRun>
                       <Value>Grand Total:</Value>
                       <Style>
-                        <FontWeight>Medium</FontWeight>
+                        <FontWeight>SemiBold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -763,7 +774,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox32</rd:DefaultName>
               <Top>0.20833in</Top>
-              <Left>0.07248in</Left>
+              <Left>0.09331in</Left>
               <Height>0.25in</Height>
               <Width>0.89583in</Width>
               <Style>
@@ -783,10 +794,11 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Format(Sum(Fields!TotalAmount.Value, "DSReceipt"), "0.00")</Value>
+                      <Value>= "₱" + Format(Sum(Fields!TotalAmount.Value, "DSReceipt"), "0.00")</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>SemiBold</FontWeight>
+                        <Format>'₱'#,0.00;('₱'#,0.00)</Format>
                       </Style>
                     </TextRun>
                     <TextRun>
@@ -794,6 +806,7 @@
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>SemiBold</FontWeight>
+                        <Format>'₱'#,0.00;('₱'#,0.00)</Format>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -804,7 +817,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox32</rd:DefaultName>
               <Top>0.20833in</Top>
-              <Left>0.99608in</Left>
+              <Left>1.01691in</Left>
               <Height>0.25in</Height>
               <Width>0.64298in</Width>
               <ZIndex>1</ZIndex>
@@ -816,6 +829,7 @@
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+                <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
               </Style>
             </Textbox>
             <Textbox Name="Textbox34">
@@ -836,7 +850,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox32</rd:DefaultName>
               <Top>0.72222in</Top>
-              <Left>0.07248in</Left>
+              <Left>0.09331in</Left>
               <Height>0.25in</Height>
               <Width>0.5625in</Width>
               <ZIndex>2</ZIndex>
@@ -859,7 +873,7 @@
                     <TextRun>
                       <Value>Change:</Value>
                       <Style>
-                        <FontWeight>Medium</FontWeight>
+                        <FontWeight>SemiBold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -870,44 +884,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox32</rd:DefaultName>
               <Top>0.98611in</Top>
-              <Left>0.07248in</Left>
+              <Left>0.09331in</Left>
               <Height>0.25in</Height>
-              <Width>0.5625in</Width>
+              <Width>0.65971in</Width>
               <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Cash">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!Cash.Value</Value>
-                      <Style />
-                    </TextRun>
-                    <TextRun>
-                      <Value xml:space="preserve"> </Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Cash</rd:DefaultName>
-              <Top>0.72222in</Top>
-              <Left>0.66275in</Left>
-              <Height>0.25in</Height>
-              <Width>0.64298in</Width>
-              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -944,10 +924,10 @@
               </Paragraphs>
               <rd:DefaultName>Change</rd:DefaultName>
               <Top>1in</Top>
-              <Left>0.66275in</Left>
+              <Left>0.80858in</Left>
               <Height>0.25in</Height>
               <Width>0.64298in</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -960,16 +940,48 @@
             </Textbox>
             <Line Name="Line4">
               <Top>0.02778in</Top>
-              <Left>0in</Left>
               <Height>0in</Height>
-              <Width>5.07228in</Width>
-              <ZIndex>6</ZIndex>
+              <Width>4.64111in</Width>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
                 </Border>
               </Style>
             </Line>
+            <Textbox Name="Cash1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!Cash.Value</Value>
+                      <Style>
+                        <Format>'₱'0.00;('₱'0.00)</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Cash1</rd:DefaultName>
+              <Top>0.72222in</Top>
+              <Left>0.72526in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+                <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
+              </Style>
+            </Textbox>
           </ReportItems>
           <Style>
             <Border>

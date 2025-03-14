@@ -1,59 +1,91 @@
-﻿using CustomizeButtons;
-using Project.Class;
+﻿using Project.Class;
 using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project.Forms
 {
     public partial class CustomerForm : Form
     {
-        Dashboard _dashboard;
-        FormManager form = new FormManager();
+        private SearchCustomer search = new SearchCustomer();
 
-        public CustomerForm(Dashboard dashboard)
+        public CustomerForm()
         {
             InitializeComponent();
-            _dashboard = dashboard;
-        }
-
-        private void Guna2ButtonApproved_Click(object sender, EventArgs e)
-        {
-            AddCustomer add = new AddCustomer();
-            form.OpenForm(add, _dashboard.Panel);
         }
 
         private void Guna2ButtonEdit_Click(object sender, EventArgs e)
         {
-            CustomerProp customerProp = new CustomerProp();
-            DataGridViewRow selectedRow = guna2DataGridViewCustomer.SelectedRows[0];
-
-            customerProp.CustomerID = selectedRow.Cells["CustomerID"].Value.ToString();
-            customerProp.FirstName = selectedRow.Cells["FirstName"].Value.ToString();
-            customerProp.LastName = selectedRow.Cells["LastName"].Value.ToString();
-
-            EditCustomer Edit = new EditCustomer(customerProp);
-            FormManager form = new FormManager();
-            form.OpenForm(Edit, _dashboard.Panel);
+            panelAdd.Visible = false;
+            panelEdit.Visible = true;
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
         {
-            HiddenColumn hiddenColumn = new HiddenColumn();
-            hiddenColumn.GetAllCustomer(guna2DataGridViewCustomer);
+            CustomerLoad();
+        }
+        private void CustomerLoad()
+        {
+            this.getAllCustomerTableAdapter.Fill(this.dSReports.GetAllCustomer);
         }
 
         private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2TextBoxCustomer_TextChanged(object sender, EventArgs e)
+        {
+            string txbx = guna2TextBoxCustomer.Text;
+            search.SearchTxbxCustomer(txbx, guna2DataGridViewCustomer);
+        }
+
+        private void guna2ButtonCreateAccount_Click(object sender, EventArgs e)
+        {
+            CustomerProp customerprop = new CustomerProp();
+            customerprop.FirstName = guna2TextBoxFirstname.Text;
+            customerprop.LastName = guna2TextBoxLastName.Text;
+
+            AddCustomers add = new AddCustomers();
+            bool isInserted = add.InsertCustomer(customerprop);
+
+            if (isInserted)
+                MessageBox.Show("Data added successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Duplicate entry detected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            CustomerLoad();
+        }
+
+        private void guna2ButtonAdd_Click(object sender, EventArgs e)
+        {
+            panelAdd.Visible = true;
+            panelEdit.Visible = false;
+        }
+
+        private void guna2ButtonSaveEdit_Click(object sender, EventArgs e)
+        {
+            CustomerProp customerProp = new CustomerProp();
+            customerProp.FirstName = guna2TextBoxEditFirstname.Text;
+            customerProp.LastName = guna2TextBoxEditLastname.Text;
+            customerProp.CustomerID = guna2TextBoxID.Text;
+
+            CustomerClass customer = new CustomerClass();
+            bool isEdit = customer.SaveEdit(customerProp);
+
+            if (isEdit)
+                MessageBox.Show("Data updated successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("An error occured during updating. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            CustomerLoad();
+        }
+
+        private void guna2DataGridViewCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow selectedRow = guna2DataGridViewCustomer.SelectedRows[0];
+            guna2TextBoxEditFirstname.Text = selectedRow.Cells["FirstName"].Value.ToString();
+            guna2TextBoxEditLastname.Text = selectedRow.Cells["LastName"].Value.ToString();
+            guna2TextBoxID.Text = selectedRow.Cells["CustomerID"].Value.ToString();
         }
     }
 }

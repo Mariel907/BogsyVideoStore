@@ -8,57 +8,62 @@ namespace Project.Forms.ExtensionForms
     public partial class RentCustomer : Form
     {
         private Rent rent = new Rent();
-
+        private Timer HideDGVTimer;
         public RentCustomer()
         {
             InitializeComponent();
-            InitializeDataGridView();
         }
-
-        private void InitializeDataGridView()
-        {
-            DGVRent.Columns.Add("Title", "Title");
-            DGVRent.Columns.Add("VideoID", "Video ID");
-            DGVRent.Columns["VideoID"].Visible = false;
-            DGVRent.Columns.Add("LimitDaysRented", "Limit Days Rented");
-            DGVRent.Columns["LimitDaysRented"].Visible = false;
-            DGVRent.Columns.Add("Quantity", "Quantity");
-            DGVRent.Columns.Add("Price", "Price");
-            DGVRent.Columns.Add("Category", "Category");
-            DGVRent.Columns.Add("DueDate", "Due Date");
-            DGVRent.Columns.Add("TotalAmount", "Total Amount");
-            DGVRent.Columns.Add("Status", "Status");
-            DGVRent.Columns["Status"].Visible = false;
-        }
-
         private void guna2ButtonRent_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(guna2TextBoxCash.Text) && !string.IsNullOrEmpty(guna2TextBoxChange.Text))
             {
                 Customers customerProp = new Customers();
                 customerProp.CustomerID = guna2TextBoxCustomerID.Text;
-                customerProp.Fullname = guna2ComboBoxCustomer.Text;
+                customerProp.Fullname = comboBoxFullname.Text;
                 customerProp.Cash = Convert.ToInt32(guna2TextBoxCash.Text);
-                customerProp.Change = Convert.ToDecimal(guna2TextBoxChange.Text.Replace("P","").Trim());
+                customerProp.Change = Convert.ToDecimal(guna2TextBoxChange.Text);
+                customerProp.CustomerID = guna2TextBoxCustomerID.Text;
 
-                Receipt receipt = rent._InsertRent(customerProp, DGVRent);
+                try
+                {
+                    rent._InsertRent(customerProp, DGVRent);
+                    rent.AddReceiptModel(this.reportViewerRent, customerProp, DGVRent);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                guna2TextBoxCash.Text = string.Empty;
+                guna2TextBoxChange.Text = string.Empty;
+                labelTotal.Text = string.Empty;
+                DGVRent.Rows.Clear();
             }
             else
                 MessageBox.Show("Invalid Cash/Change input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-           
         }
 
         private void RentCustomer_Load(object sender, EventArgs e)
         {
-            var customers = Rent.Fullname();
-            guna2ComboBoxCustomer.DataSource = customers;
-            guna2ComboBoxCustomer.DisplayMember = "Fullname";
-            guna2ComboBoxCustomer.ValueMember = "CustomerID";
+            //this.getAllVideoRentTableAdapter.Fill(this.dSReports.GetAllVideoRent);
+            //this.getAllCustomerRentTableAdapter.Fill(this.dSReports.GetAllCustomerRent);
+            //this.getAllCustomerTableAdapter.Fill(this.dSReports.GetAllCustomer);
 
+            DisplayVideo();
+            var customers = Rent.Fullname();
+            comboBoxFullname.DataSource = customers;
+            comboBoxFullname.DisplayMember = "Fullname";
+            comboBoxFullname.ValueMember = "CustomerID";
+
+            this.reportViewerRent.RefreshReport();
+        }
+
+        private void DisplayVideo()
+        {
             var Title = Rent.Video();
-            guna2ComboBoxVideo.DataSource = Title;
-            guna2ComboBoxVideo.DisplayMember = "Title";
-            guna2ComboBoxVideo.ValueMember = "VideoID";
+            comboBoxVideo.DataSource = Title;
+            comboBoxVideo.DisplayMember = "Title";
+            comboBoxVideo.ValueMember = "VideoID";
         }
 
         private void RentCustomer_FormClosing(object sender, FormClosingEventArgs e)
@@ -68,7 +73,7 @@ namespace Project.Forms.ExtensionForms
 
         private void guna2ButtonAdd_Click(object sender, EventArgs e)
         {
-            VideoProp selectedVideo = guna2ComboBoxVideo.SelectedItem as VideoProp;
+            VideoProp selectedVideo = comboBoxVideo.SelectedItem as VideoProp;
             try
             {
                 if (selectedVideo != null)
@@ -76,12 +81,14 @@ namespace Project.Forms.ExtensionForms
                     bool videoExists = false;
                     foreach (DataGridViewRow row in DGVRent.Rows)
                     {
-                        if (row.Cells["VideoID"].Value.ToString() == selectedVideo.VideoId.ToString())
+                        if (row.Cells["VideoID"].Value.ToString() == selectedVideo.VideoId.ToString() && row.Cells["Status"].Value.ToString() != "Void")
                         {
                             int currentQuantity = Convert.ToInt32(row.Cells["Quantity"].Value);
                             row.Cells["Quantity"].Value = currentQuantity + 1;
                             row.Cells["Price"].Value = selectedVideo.Price;
                             row.Cells["TotalAmount"].Value = (currentQuantity + 1) * selectedVideo.Price;
+
+                            rent.checkedOut(DGVRent, selectedVideo);
                             videoExists = true;
                             break;
                         }
@@ -92,7 +99,7 @@ namespace Project.Forms.ExtensionForms
                         int rowIndex = DGVRent.Rows.Add();
                         DataGridViewRow row = DGVRent.Rows[rowIndex];
                         row.Cells["Title"].Value = selectedVideo.Title;
-                        row.Cells["VideoID"].Value = selectedVideo.VideoId;
+                        row.Cells["VideoID"].Value=selectedVideo.VideoId ;
                         row.Cells["LimitDaysRented"].Value = selectedVideo.LimitDaysRented;
                         row.Cells["Quantity"].Value = 1;
                         row.Cells["Price"].Value = selectedVideo.Price;
@@ -101,7 +108,9 @@ namespace Project.Forms.ExtensionForms
                         row.Cells["Status"].Value = "Checked Out";
 
                         int rentedDays = selectedVideo.LimitDaysRented;
-                        row.Cells["DueDate"].Value = DateTime.Now.Date.AddDays(rentedDays).ToString("yyyy-MM-dd");
+                        row.Cells["DueDate"].Value = DateTime.Now.Date.AddDays(rentedDays).ToString("MM/dd/yyyy");
+                        rent.checkedOut(DGVRent, selectedVideo);
+
                     }
                 }
             }
@@ -109,29 +118,12 @@ namespace Project.Forms.ExtensionForms
             {
                 MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            UpdateTotal();
-        }
 
-        private void UpdateTotal()
-        {
-            decimal totalAmount = 0;
-            foreach (DataGridViewRow row in DGVRent.Rows)
-            {
-                if (row.Cells["TotalAmount"].Value != null)
-                {
-                    totalAmount += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
-                }
-            }
-            labelTotal.Text = "P" + totalAmount.ToString("N2");
-        }
+            string UpdateTotal = string.Empty;
+            rent.UpdateTotal(DGVRent, ref UpdateTotal);
+            labelTotal.Text = UpdateTotal;
 
-        private void guna2ComboBoxCustomer_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (guna2ComboBoxCustomer.SelectedValue != null)
-            {
-                Customers customer = guna2ComboBoxCustomer.SelectedItem as Customers;
-                guna2TextBoxCustomerID.Text = customer.CustomerID;
-            }
+            DisplayVideo();
         }
 
         private void TxtbxCash_KeyDown(object sender, KeyEventArgs e)
@@ -160,38 +152,29 @@ namespace Project.Forms.ExtensionForms
         {
             try
             {
-                if (DGVRent.SelectedRows.Count > 0)
-                {
-                    decimal TotalAmountToSubtract = 0;
-                    foreach (DataGridViewRow row in DGVRent.SelectedRows)
-                    {
-                        row.Cells["Status"].Value = "Void";
-                        TotalAmountToSubtract += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
-                    }
-                    decimal updateLabel = Convert.ToDecimal(labelTotal.Text.Replace("P", "").ToString());
-                   
-                    UpdateTotalVoid(labelTotal.Text, ref updateLabel, TotalAmountToSubtract);
+                string updateTotal = string.Empty;
+                rent.Void(DGVRent, guna2TextBoxCustomerID.Text);
+                bool hasError = rent.TotalAmountToSubtract(DGVRent, labelTotal.Text, ref updateTotal);
 
-                    labelTotal.Text ="P" + updateLabel.ToString("N2");
-                }
-                else
-                    MessageBox.Show("Please select a row to void.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (!hasError)
+                    MessageBox.Show("Please select a row to void", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                labelTotal.Text = updateTotal;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            DisplayVideo();
         }
 
-        public void UpdateTotalVoid(string label, ref decimal updatelabel, decimal amountToSubtract)
+        private void comboBoxFullname_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updatelabel -= amountToSubtract;
-            label = "P" + updatelabel.ToString("N2");
-        }
-
-        private void guna2ComboBoxVideo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (comboBoxFullname.SelectedValue != null)
+            {
+                Customers customer = comboBoxFullname.SelectedItem as Customers;
+                guna2TextBoxCustomerID.Text = customer.CustomerID;
+            }
         }
     }
 }
