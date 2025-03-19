@@ -167,13 +167,10 @@ namespace Project.Class
             using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
             {
                 con.Open();
-
                 SqlCommand cmd = new SqlCommand("CheckedOut", con);
+
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@VideoID", VideoID.VideoId);
-                cmd.Parameters.AddWithValue("@Quantity", 1);
-
+                cmd.Parameters.AddWithValue("VideoID", VideoID.VideoId);
                 cmd.ExecuteNonQuery();
             }
         }

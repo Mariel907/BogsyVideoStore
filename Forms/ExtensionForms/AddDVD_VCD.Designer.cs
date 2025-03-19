@@ -35,7 +35,6 @@
             this.guna2ComboBoxCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBoxTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBoxTotalCopies = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ButtonExit = new Guna.UI2.WinForms.Guna2Button();
             this.labelBook = new System.Windows.Forms.Label();
             this.guna2ButtonSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.panelEditBook.Controls.Add(this.guna2ComboBoxCategory);
             this.panelEditBook.Controls.Add(this.guna2TextBoxTitle);
             this.panelEditBook.Controls.Add(this.guna2TextBoxTotalCopies);
-            this.panelEditBook.Controls.Add(this.guna2ButtonExit);
             this.panelEditBook.Controls.Add(this.labelBook);
             this.panelEditBook.Controls.Add(this.guna2ButtonSubmit);
             this.panelEditBook.Controls.Add(this.label5);
@@ -175,23 +173,6 @@
             this.guna2TextBoxTotalCopies.Size = new System.Drawing.Size(353, 36);
             this.guna2TextBoxTotalCopies.TabIndex = 290;
             // 
-            // guna2ButtonExit
-            // 
-            this.guna2ButtonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ButtonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.guna2ButtonExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonExit.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonExit.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.guna2ButtonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonExit.Location = new System.Drawing.Point(1093, 12);
-            this.guna2ButtonExit.Name = "guna2ButtonExit";
-            this.guna2ButtonExit.Size = new System.Drawing.Size(39, 29);
-            this.guna2ButtonExit.TabIndex = 286;
-            this.guna2ButtonExit.Text = "X";
-            // 
             // labelBook
             // 
             this.labelBook.AutoSize = true;
@@ -264,7 +245,6 @@
         private System.Windows.Forms.Panel panelEditBook;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTitle;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTotalCopies;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonExit;
         private System.Windows.Forms.Label labelBook;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonSubmit;
         private System.Windows.Forms.Label label5;

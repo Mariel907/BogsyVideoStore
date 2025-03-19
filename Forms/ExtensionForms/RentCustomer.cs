@@ -45,17 +45,13 @@ namespace Project.Forms.ExtensionForms
 
         private void RentCustomer_Load(object sender, EventArgs e)
         {
-            //this.getAllVideoRentTableAdapter.Fill(this.dSReports.GetAllVideoRent);
-            //this.getAllCustomerRentTableAdapter.Fill(this.dSReports.GetAllCustomerRent);
-            //this.getAllCustomerTableAdapter.Fill(this.dSReports.GetAllCustomer);
-
             DisplayVideo();
             var customers = Rent.Fullname();
             comboBoxFullname.DataSource = customers;
             comboBoxFullname.DisplayMember = "Fullname";
             comboBoxFullname.ValueMember = "CustomerID";
 
-            this.reportViewerRent.RefreshReport();
+            //this.reportViewerRent.RefreshReport();
         }
 
         private void DisplayVideo()
@@ -175,6 +171,12 @@ namespace Project.Forms.ExtensionForms
                 Customers customer = comboBoxFullname.SelectedItem as Customers;
                 guna2TextBoxCustomerID.Text = customer.CustomerID;
             }
+        }
+
+        private void guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

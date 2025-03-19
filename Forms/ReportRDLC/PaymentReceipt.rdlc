@@ -401,7 +401,7 @@
         <Height>0.57292in</Height>
         <Style />
       </Body>
-      <Width>3.48833in</Width>
+      <Width>3.49181in</Width>
       <Page>
         <PageHeader>
           <Height>1.33208in</Height>
@@ -689,9 +689,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>0.15625in</Top>
-              <Left>0.95486in</Left>
+              <Left>0.87501in</Left>
               <Height>0.25in</Height>
-              <Width>0.67931in</Width>
+              <Width>2.53347in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -763,9 +763,9 @@
               </Paragraphs>
               <rd:DefaultName>pCash</rd:DefaultName>
               <Top>0.60069in</Top>
-              <Left>0.51736in</Left>
+              <Left>0.50348in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>2.98833in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -828,9 +828,9 @@
               </Paragraphs>
               <rd:DefaultName>pChange</rd:DefaultName>
               <Top>0.92014in</Top>
-              <Left>0.71528in</Left>
+              <Left>0.64584in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>2.76264in</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>

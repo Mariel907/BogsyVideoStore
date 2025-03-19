@@ -29,20 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ButtonSave = new Guna.UI2.WinForms.Guna2Button();
             this.DGVRent = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
@@ -71,8 +62,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxVideo = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -105,6 +96,23 @@
             this.panel33 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.comboBoxFullname = new System.Windows.Forms.ComboBox();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVRent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).BeginInit();
@@ -131,6 +139,10 @@
             this.panel28.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel33.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panel39.SuspendLayout();
+            this.panel41.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ButtonSave
@@ -155,20 +167,20 @@
             // 
             this.DGVRent.AllowUserToAddRows = false;
             this.DGVRent.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.DGVRent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DGVRent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVRent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVRent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVRent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVRent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVRent.ColumnHeadersHeight = 35;
             this.DGVRent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DGVRent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -181,14 +193,14 @@
             this.TotalAmount,
             this.LimitDaysRented,
             this.Status});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVRent.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVRent.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVRent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVRent.Location = new System.Drawing.Point(39, 76);
             this.DGVRent.Margin = new System.Windows.Forms.Padding(4);
@@ -219,63 +231,6 @@
             this.DGVRent.ThemeStyle.RowsStyle.Height = 22;
             this.DGVRent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.DGVRent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            // 
-            // Title
-            // 
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // VideoID
-            // 
-            this.VideoID.HeaderText = "VideoID";
-            this.VideoID.Name = "VideoID";
-            this.VideoID.ReadOnly = true;
-            this.VideoID.Visible = false;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // DueDate
-            // 
-            this.DueDate.HeaderText = "Due Date";
-            this.DueDate.Name = "DueDate";
-            this.DueDate.ReadOnly = true;
-            // 
-            // TotalAmount
-            // 
-            this.TotalAmount.HeaderText = "Total";
-            this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.ReadOnly = true;
-            // 
-            // LimitDaysRented
-            // 
-            this.LimitDaysRented.HeaderText = "LimitDaysRented";
-            this.LimitDaysRented.Name = "LimitDaysRented";
-            this.LimitDaysRented.ReadOnly = true;
-            this.LimitDaysRented.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
             // 
             // label3
             // 
@@ -432,6 +387,7 @@
             this.guna2TextBoxCash.Size = new System.Drawing.Size(179, 36);
             this.guna2TextBoxCash.TabIndex = 430;
             this.guna2TextBoxCash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtbxCash_KeyDown);
+            this.guna2TextBoxCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBoxCash_KeyPress);
             // 
             // guna2ButtonVoid
             // 
@@ -550,14 +506,6 @@
             this.panel1.Size = new System.Drawing.Size(179, 2);
             this.panel1.TabIndex = 441;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel2.Location = new System.Drawing.Point(232, 67);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(179, 2);
-            this.panel2.TabIndex = 442;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
@@ -565,6 +513,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(179, 2);
             this.panel3.TabIndex = 442;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel2.Location = new System.Drawing.Point(232, 67);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(179, 2);
+            this.panel2.TabIndex = 442;
             // 
             // panel4
             // 
@@ -841,12 +797,146 @@
             this.comboBoxFullname.TabIndex = 446;
             this.comboBoxFullname.SelectedIndexChanged += new System.EventHandler(this.comboBoxFullname_SelectedIndexChanged);
             // 
+            // panel35
+            // 
+            this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel35.Controls.Add(this.panel36);
+            this.panel35.Location = new System.Drawing.Point(39, 474);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(306, 2);
+            this.panel35.TabIndex = 448;
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel36.Location = new System.Drawing.Point(0, -10);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(179, 2);
+            this.panel36.TabIndex = 442;
+            // 
+            // panel37
+            // 
+            this.panel37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel37.Controls.Add(this.panel38);
+            this.panel37.Location = new System.Drawing.Point(38, 474);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(2, 40);
+            this.panel37.TabIndex = 451;
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel38.Location = new System.Drawing.Point(0, -10);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(179, 2);
+            this.panel38.TabIndex = 442;
+            // 
+            // panel39
+            // 
+            this.panel39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel39.Controls.Add(this.panel40);
+            this.panel39.Location = new System.Drawing.Point(39, 512);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(306, 2);
+            this.panel39.TabIndex = 449;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel40.Location = new System.Drawing.Point(0, -10);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(179, 2);
+            this.panel40.TabIndex = 442;
+            // 
+            // panel41
+            // 
+            this.panel41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel41.Controls.Add(this.panel42);
+            this.panel41.Location = new System.Drawing.Point(343, 475);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(2, 39);
+            this.panel41.TabIndex = 452;
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel42.Location = new System.Drawing.Point(0, -10);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(179, 2);
+            this.panel42.TabIndex = 442;
+            // 
+            // Title
+            // 
+            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // VideoID
+            // 
+            this.VideoID.HeaderText = "VideoID";
+            this.VideoID.Name = "VideoID";
+            this.VideoID.ReadOnly = true;
+            this.VideoID.Visible = false;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // DueDate
+            // 
+            this.DueDate.HeaderText = "Due Date";
+            this.DueDate.Name = "DueDate";
+            this.DueDate.ReadOnly = true;
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.HeaderText = "Total";
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.ReadOnly = true;
+            // 
+            // LimitDaysRented
+            // 
+            this.LimitDaysRented.HeaderText = "LimitDaysRented";
+            this.LimitDaysRented.Name = "LimitDaysRented";
+            this.LimitDaysRented.ReadOnly = true;
+            this.LimitDaysRented.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
             // RentCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1119, 526);
+            this.Controls.Add(this.panel41);
+            this.Controls.Add(this.panel39);
+            this.Controls.Add(this.panel37);
+            this.Controls.Add(this.panel35);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel20);
@@ -913,6 +1003,10 @@
             this.panel28.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
+            this.panel35.ResumeLayout(false);
+            this.panel37.ResumeLayout(false);
+            this.panel39.ResumeLayout(false);
+            this.panel41.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -937,15 +1031,6 @@
         private System.Windows.Forms.BindingSource receiptBindingSource;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonVoid;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerRent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VideoID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LimitDaysRented;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.BindingSource searchTxbxRentCustomerBindingSource;
         private DataSet.DSReports dSReports;
         private DataSet.DSReportsTableAdapters.SearchTxbxRentCustomerTableAdapter searchTxbxRentCustomerTableAdapter;
@@ -992,5 +1077,22 @@
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.ComboBox comboBoxFullname;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VideoID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LimitDaysRented;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

@@ -66,5 +66,10 @@ namespace Project.Forms
         {
             Application.Exit();
         }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

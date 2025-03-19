@@ -165,12 +165,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDVD.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDVD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDVD.Location = new System.Drawing.Point(27, 70);
+            this.dgvDVD.Location = new System.Drawing.Point(27, 57);
             this.dgvDVD.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDVD.Name = "dgvDVD";
             this.dgvDVD.ReadOnly = true;
             this.dgvDVD.RowHeadersVisible = false;
-            this.dgvDVD.Size = new System.Drawing.Size(1046, 364);
+            this.dgvDVD.Size = new System.Drawing.Size(1046, 377);
             this.dgvDVD.TabIndex = 232;
             this.dgvDVD.Tag = "book_id";
             this.dgvDVD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -341,12 +341,12 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVCD.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvVCD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvVCD.Location = new System.Drawing.Point(27, 70);
+            this.dgvVCD.Location = new System.Drawing.Point(27, 57);
             this.dgvVCD.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVCD.Name = "dgvVCD";
             this.dgvVCD.ReadOnly = true;
             this.dgvVCD.RowHeadersVisible = false;
-            this.dgvVCD.Size = new System.Drawing.Size(1046, 364);
+            this.dgvVCD.Size = new System.Drawing.Size(1046, 377);
             this.dgvVCD.TabIndex = 244;
             this.dgvVCD.Tag = "book_id";
             this.dgvVCD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -451,7 +451,7 @@
             this.guna2TextBoxDVD.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxDVD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDVD.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxDVD.IconLeft")));
-            this.guna2TextBoxDVD.Location = new System.Drawing.Point(27, 26);
+            this.guna2TextBoxDVD.Location = new System.Drawing.Point(27, 13);
             this.guna2TextBoxDVD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxDVD.Name = "guna2TextBoxDVD";
             this.guna2TextBoxDVD.PlaceholderText = "";
@@ -477,7 +477,7 @@
             this.guna2TextBoxVCD.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxVCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxVCD.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxVCD.IconLeft")));
-            this.guna2TextBoxVCD.Location = new System.Drawing.Point(27, 26);
+            this.guna2TextBoxVCD.Location = new System.Drawing.Point(27, 13);
             this.guna2TextBoxVCD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxVCD.Name = "guna2TextBoxVCD";
             this.guna2TextBoxVCD.PlaceholderText = "";

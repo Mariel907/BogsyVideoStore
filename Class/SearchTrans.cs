@@ -15,6 +15,7 @@ namespace Project.Class
         {
             searchCmbx("SearchCmbxRented", cmbx, dataGridView);
         }
+
         public void SearchCmbxReturned(string cmbx, DataGridView dataGridView)
         {
             searchCmbx("SearchcmbxReturned", cmbx, dataGridView);

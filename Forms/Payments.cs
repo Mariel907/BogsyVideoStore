@@ -43,48 +43,34 @@ namespace Project.Forms
 
         private void guna2ButtonGntrReceipt_Click(object sender, EventArgs e)
         {
-            try
+            if (guna2TextBoxCustomerID == null)
             {
-                var list = new List<PenaltyReceipt>();
-                foreach (DataGridViewRow row in DGVUnpaid.Rows)
+                MessageBox.Show("Customer does not exist in the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                payments.Confirmation(DGVUnpaid);
+                try
                 {
-                    var penalty = new PenaltyReceipt();
-                    penalty.RentalID = row.Cells["RentalID"].Value.ToString();
-                    penalty.Fullname = row.Cells["Fullname"].Value.ToString();
-                    penalty.Qty = row.Cells["Quantity"].Value.ToString();
-                    penalty.Title = row.Cells["Title"].Value.ToString();
-                    penalty.Category = row.Cells["Category"].Value.ToString();
-                    penalty.Penalty = Convert.ToDecimal(row.Cells["Penalty"].Value);
+                    string Cash = guna2TextBoxCash.Text;
+                    string Change = guna2TextBoxChange.Text;
+                    string fullname = comboBoxFullname.Text;
+                    payments.StoreRDLC(DGVUnpaid,Cash, Change, this.reportViewerPayment, fullname );
 
-                    list.Add(penalty);
+                    payments.Closed(DGVUnpaid);
+
+                    DisplayCustomer();
+                    DisplayUnpaid();
+                    DGVUnpaid.Rows.Clear();
                 }
-
-                ReceiptRDLC(list);
-
-                payments.Closed(DGVUnpaid);
-
-                DisplayCustomer();
-                DisplayUnpaid();
-                DGVUnpaid.Rows.Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
-        private void ReceiptRDLC(List<PenaltyReceipt> list)
-        {
-            PenaltyReceipt penalty = new PenaltyReceipt
-            {
-                Cash = Convert.ToInt32(guna2TextBoxCash.Text),
-                Change = Convert.ToDecimal(guna2TextBoxChange.Text)
-            };
-
-            PenaltyReceiptGenerator reportGenerator = new PenaltyReceiptGenerator(this.reportViewerPayment);
-            reportGenerator.GeneratePaymentReceipt(penalty, comboBoxFullname.Text, list);
-        }
-
+       
+       
         private void guna2TextBoxCash_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -114,11 +100,6 @@ namespace Project.Forms
             }
         }
 
-        private void LabelTotal_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2ComboBoxTitle_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (guna2ComboBoxVideoUnpaid.SelectedValue != null)
@@ -136,7 +117,6 @@ namespace Project.Forms
                 SearchUnpaid searchUnpaid = comboBoxFullname.SelectedItem as SearchUnpaid;
                 guna2TextBoxCustomerID.Text = searchUnpaid.CustomerID;
             }
-            CPayments.SearchUnpaid(guna2TextBoxCustomerID.Text);
             DisplayUnpaid();
         }
 
@@ -147,6 +127,16 @@ namespace Project.Forms
             {
                 if (penalty != null)
                 {
+                    if (DGVUnpaid.Rows.Count > 0)
+                    {
+                        string existingCustomerID = DGVUnpaid.Rows[0].Cells["CustomerID"].Value.ToString();
+
+                        if (existingCustomerID != penalty.CustomerID)
+                        {
+                            MessageBox.Show("You can only add items for the same customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return; 
+                        }
+                    }
                     int rowIndex = DGVUnpaid.Rows.Add();
                     DataGridViewRow row = DGVUnpaid.Rows[rowIndex];
                     row.Cells["RentalID"].Value = penalty.RentalID;
@@ -155,6 +145,7 @@ namespace Project.Forms
                     row.Cells["Title"].Value = penalty.Title;
                     row.Cells["Category"].Value = penalty.Category;
                     row.Cells["Penalty"].Value = penalty.Penalty;
+                    row.Cells["CustomerID"].Value = penalty.CustomerID;
                 }
             }
             catch (Exception ex)
@@ -162,10 +153,33 @@ namespace Project.Forms
                 MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            DisplayUnpaid();
             string label = string.Empty;
             payments.UpdateTotal(DGVUnpaid, ref label);
             labelTotal.Text = label;
+        }
 
+        private void guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void guna2ButtonRemove_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in DGVUnpaid.Rows)
+            {
+                DGVUnpaid.Rows.RemoveAt(row.Index);
+            }
+        }
+
+        private void comboBoxFullname_TextChanged(object sender, EventArgs e)
+        {
+            guna2TextBoxCustomerID.Text = string.Empty;
+            guna2ComboBoxVideoUnpaid.DataSource = new List<string>();
+            guna2ComboBoxVideoUnpaid.Text = string.Empty;
+            guna2TextBoxPenalty.Text = string.Empty;
+            guna2TextBoxRentalID.Text = string.Empty;   
         }
     }
 }

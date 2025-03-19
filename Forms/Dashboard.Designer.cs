@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.guna2ButtonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2ButtonReports = new Guna.UI2.WinForms.Guna2Button();
@@ -41,8 +40,11 @@
             this.guna2ButtonDVDVCD = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelDashboard = new System.Windows.Forms.Panel();
+            this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -53,33 +55,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1135, 61);
             this.panel6.TabIndex = 19;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.guna2ButtonLogOut);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(215, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1135, 52);
             this.panel5.TabIndex = 18;
-            // 
-            // guna2ButtonLogOut
-            // 
-            this.guna2ButtonLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ButtonLogOut.BorderRadius = 15;
-            this.guna2ButtonLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.guna2ButtonLogOut.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonLogOut.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonLogOut.Location = new System.Drawing.Point(1011, 8);
-            this.guna2ButtonLogOut.Name = "guna2ButtonLogOut";
-            this.guna2ButtonLogOut.Size = new System.Drawing.Size(112, 38);
-            this.guna2ButtonLogOut.TabIndex = 12;
-            this.guna2ButtonLogOut.Text = "Log Out";
             // 
             // label2
             // 
@@ -220,6 +205,7 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.guna2Panel3.Controls.Add(this.rjCircularPictureBox1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
@@ -237,6 +223,22 @@
             this.panelDashboard.Size = new System.Drawing.Size(1135, 565);
             this.panelDashboard.TabIndex = 20;
             // 
+            // rjCircularPictureBox1
+            // 
+            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox1.BorderSize = 2;
+            this.rjCircularPictureBox1.GradientAngle = 50F;
+            this.rjCircularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("rjCircularPictureBox1.Image")));
+            this.rjCircularPictureBox1.Location = new System.Drawing.Point(18, -27);
+            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(182, 182);
+            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox1.TabIndex = 0;
+            this.rjCircularPictureBox1.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,11 +250,14 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelDashboard);
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,7 +266,6 @@
 
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonLogOut;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonTransactions;
@@ -271,5 +275,6 @@
         private System.Windows.Forms.Panel panelDashboard;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonPayments;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonReports;
+        private CustomControls.RJControls.RJCircularPictureBox rjCircularPictureBox1;
     }
 }
