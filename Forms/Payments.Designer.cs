@@ -33,6 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVUnpaid = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.RentalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Penalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unpaidBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dSReports = new Project.DataSet.DSReports();
             this.guna2Buttonreturn = new Guna.UI2.WinForms.Guna2Button();
@@ -79,14 +87,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2ButtonRemove = new Guna.UI2.WinForms.Guna2Button();
-            this.RentalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Penalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUnpaid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unpaidBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
@@ -173,6 +173,59 @@
             this.DGVUnpaid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.DGVUnpaid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             // 
+            // RentalID
+            // 
+            this.RentalID.HeaderText = "RentalID";
+            this.RentalID.Name = "RentalID";
+            this.RentalID.ReadOnly = true;
+            this.RentalID.Visible = false;
+            // 
+            // VideoID
+            // 
+            this.VideoID.HeaderText = "VideoID";
+            this.VideoID.Name = "VideoID";
+            this.VideoID.ReadOnly = true;
+            this.VideoID.Visible = false;
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.DataPropertyName = "CustomerID";
+            this.CustomerID.HeaderText = "CustomerID";
+            this.CustomerID.Name = "CustomerID";
+            this.CustomerID.ReadOnly = true;
+            this.CustomerID.Visible = false;
+            // 
+            // Fullname
+            // 
+            this.Fullname.HeaderText = "Fullname";
+            this.Fullname.Name = "Fullname";
+            this.Fullname.ReadOnly = true;
+            this.Fullname.Visible = false;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Title
+            // 
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // Penalty
+            // 
+            this.Penalty.HeaderText = "Penalty";
+            this.Penalty.Name = "Penalty";
+            this.Penalty.ReadOnly = true;
+            // 
             // unpaidBindingSource1
             // 
             this.unpaidBindingSource1.DataMember = "Unpaid";
@@ -232,7 +285,7 @@
             this.guna2TextBoxCustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxCustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxCustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxCustomerID.FocusedState.BorderColor = System.Drawing.Color.White;
             this.guna2TextBoxCustomerID.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
             this.guna2TextBoxCustomerID.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCustomerID.HoverState.BorderColor = System.Drawing.Color.Transparent;
@@ -271,6 +324,7 @@
             this.guna2TextBoxCash.SelectedText = "";
             this.guna2TextBoxCash.Size = new System.Drawing.Size(179, 36);
             this.guna2TextBoxCash.TabIndex = 434;
+            this.guna2TextBoxCash.TextChanged += new System.EventHandler(this.guna2TextBoxCash_TextChanged);
             this.guna2TextBoxCash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxCash_KeyDown);
             this.guna2TextBoxCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBoxCash_KeyPress);
             // 
@@ -589,11 +643,11 @@
             this.guna2TextBoxRentalID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxRentalID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxRentalID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxRentalID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2TextBoxRentalID.FocusedState.BorderColor = System.Drawing.Color.White;
             this.guna2TextBoxRentalID.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
             this.guna2TextBoxRentalID.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxRentalID.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxRentalID.Location = new System.Drawing.Point(335, 28);
+            this.guna2TextBoxRentalID.Location = new System.Drawing.Point(335, 27);
             this.guna2TextBoxRentalID.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxRentalID.Name = "guna2TextBoxRentalID";
             this.guna2TextBoxRentalID.Padding = new System.Windows.Forms.Padding(5);
@@ -703,59 +757,6 @@
             this.guna2ButtonRemove.TabIndex = 473;
             this.guna2ButtonRemove.Text = "Remove";
             this.guna2ButtonRemove.Click += new System.EventHandler(this.guna2ButtonRemove_Click);
-            // 
-            // RentalID
-            // 
-            this.RentalID.HeaderText = "RentalID";
-            this.RentalID.Name = "RentalID";
-            this.RentalID.ReadOnly = true;
-            this.RentalID.Visible = false;
-            // 
-            // VideoID
-            // 
-            this.VideoID.HeaderText = "VideoID";
-            this.VideoID.Name = "VideoID";
-            this.VideoID.ReadOnly = true;
-            this.VideoID.Visible = false;
-            // 
-            // CustomerID
-            // 
-            this.CustomerID.DataPropertyName = "CustomerID";
-            this.CustomerID.HeaderText = "CustomerID";
-            this.CustomerID.Name = "CustomerID";
-            this.CustomerID.ReadOnly = true;
-            this.CustomerID.Visible = false;
-            // 
-            // Fullname
-            // 
-            this.Fullname.HeaderText = "Fullname";
-            this.Fullname.Name = "Fullname";
-            this.Fullname.ReadOnly = true;
-            this.Fullname.Visible = false;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Title
-            // 
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // Penalty
-            // 
-            this.Penalty.HeaderText = "Penalty";
-            this.Penalty.Name = "Penalty";
-            this.Penalty.ReadOnly = true;
             // 
             // Payments
             // 

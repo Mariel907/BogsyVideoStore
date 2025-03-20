@@ -73,22 +73,37 @@ namespace Project.Class
 
         public void Closed(DataGridView dataGridView)
         {
-            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                con.Open();
-
-                foreach (DataGridViewRow row in dataGridView.Rows)
+                SqlParameter[] parameter = new SqlParameter[]
                 {
-                    if (row.IsNewRow) continue;
-
-                    SqlCommand cmd = new SqlCommand("Closed", con);
-
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@RentalID", row.Cells["RentalID"].Value);
-
-                    cmd.ExecuteNonQuery();
-                }
+                    new SqlParameter("@RentalID", row.Cells["RentalID"].Value)
+                };
+                DataLoader dataLoader = new DataLoader();
+                dataLoader.ExecuteData("Closed", parameter);
             }
+        }
+
+        public void BtnUnpaid(DataGridView dataGridView)
+        {
+            foreach (DataGridViewRow row in dataGridView.SelectedRows)
+            {
+                SqlParameter[] parameter = new SqlParameter[]
+                {
+                    new SqlParameter("RentalID", row.Cells["RentalID"].Value)
+                };
+                DataLoader dataLoader = new DataLoader();
+                dataLoader.ExecuteData("BtnUnpaid", parameter);
+            }
+        }
+        public void BtnPaid(SearchUnpaid unpaid)
+        {
+            SqlParameter[] parameter = new SqlParameter[]
+            {
+                new SqlParameter("RentalID", unpaid.RentalID)
+            };
+            DataLoader dataLoader = new DataLoader();
+            dataLoader.ExecuteData("BtnPaid", parameter);
         }
 
         public void UpdateTotal(DataGridView datagridView, ref string Label)
@@ -103,22 +118,25 @@ namespace Project.Class
             }
             Label = "P" + totalAmount.ToString("N2");
         }
-        public void Confirmation(DataGridView dataGridView)
+        public bool Confirmation(DataGridView dataGridView, string TxtxbxName, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname)
         {
             SearchUnpaid _penalty = new SearchUnpaid();
             if (dataGridView.Rows.Count > 0)
             {
                 string existingCustomerID = dataGridView.Rows[0].Cells["CustomerID"].Value.ToString();
                 string Name = dataGridView.Rows[0].Cells["Fullname"].Value.ToString();
+                string NowID = TxtxbxName;
 
-                if (existingCustomerID != _penalty.CustomerID)
+                if (existingCustomerID != NowID && NowID != null)
                 {
                     MessageBox.Show($"The previous customer's name was {Name}, but it seems the name has changed. Please verify to ensure consistency.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    return false;
                 }
             }
+            StoreRDLC(dataGridView, TxbxCash, TxbxChange, reportViewer, cmbxFulname);
+            return true;
         }
-        public void StoreRDLC(DataGridView datagridView, string TxbxCash, string TxbxChange, ReportViewer reportViewer, string cmbxFulname)
+        public void StoreRDLC(DataGridView datagridView, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname)
         {
             var list = new List<PenaltyReceipt>();
             foreach (DataGridViewRow row in datagridView.Rows)
@@ -134,14 +152,16 @@ namespace Project.Class
                 list.Add(penalty);
             }
             ReceiptRDLC(list, TxbxCash, TxbxChange, reportViewer, cmbxFulname);
+            Closed(datagridView);
+            datagridView.Rows.Clear();
         }
 
-        public void ReceiptRDLC(List<PenaltyReceipt> list, string TxbxCash, string TxbxChange, ReportViewer reportViewer, string cmbxFulname)
+        public void ReceiptRDLC(List<PenaltyReceipt> list, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname)
         {
             PenaltyReceipt penalty = new PenaltyReceipt
             {
-                Cash = Convert.ToInt32(TxbxCash),
-                Change = Convert.ToDecimal(TxbxChange)
+                Cash = TxbxCash,
+                Change = TxbxChange
             };
 
             PenaltyReceiptGenerator reportGenerator = new PenaltyReceiptGenerator(reportViewer);

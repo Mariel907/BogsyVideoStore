@@ -1,17 +1,17 @@
 ﻿using Microsoft.Reporting.WinForms;
-using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Web.Configuration;
 using System.Windows.Forms;
 
 namespace Project.Class
 {
     public class Rent
     {
+        private DataLoader dataLoader = new DataLoader();
+
         public static List<Customers> Fullname()
         {
             List<Customers> customer = new List<Customers>();
@@ -67,33 +67,21 @@ namespace Project.Class
 
         public void _InsertRent(Customers Customer, DataGridView dataGridView)
         {
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                connection.Open();
-                using (SqlTransaction transaction = connection.BeginTransaction())
+                int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
+                SqlParameter[] parameter = new SqlParameter[]
                 {
-                    foreach (DataGridViewRow row in dataGridView.Rows)
-                    {
-                        if (row.IsNewRow) continue;
-
-                        SqlCommand cmd = new SqlCommand("InsertRent", connection, transaction);
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.AddWithValue("@CustomerID", Customer.CustomerID);
-                        cmd.Parameters.AddWithValue("@VideoID", row.Cells["VideoID"].Value);
-                        cmd.Parameters.AddWithValue("@RentDate", DateTime.Now.Date);
-                        cmd.Parameters.AddWithValue("@Quantity", row.Cells["Quantity"].Value);
-                        cmd.Parameters.AddWithValue("@TotalAmount", row.Cells["TotalAmount"].Value);
-                        cmd.Parameters.AddWithValue("@Price", row.Cells["Price"].Value);
-                        cmd.Parameters.AddWithValue("@Status", row.Cells["Status"].Value);
-
-                        int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
-                        cmd.Parameters.AddWithValue("@DueDate", DateTime.Now.Date.AddDays(rentedDays));
-
-                        cmd.ExecuteNonQuery();
-                    }
-                    transaction.Commit();
-                }
+                    new SqlParameter("@CustomerID", Customer.CustomerID),
+                    new SqlParameter("@VideoID", row.Cells["VideoID"].Value),
+                    new SqlParameter("@RentDate", DateTime.Now.Date),
+                    new SqlParameter("@Quantity", row.Cells["Quantity"].Value),
+                    new SqlParameter("@TotalAmount", row.Cells["TotalAmount"].Value),
+                    new SqlParameter("@Price", row.Cells["Price"].Value),
+                    new SqlParameter("@Status", row.Cells["Status"].Value),
+                    new SqlParameter("@DueDate", DateTime.Now.Date.AddDays(rentedDays)),
+                };
+                dataLoader.ExecuteData("InsertRent", parameter);
             }
         }
 
@@ -101,7 +89,7 @@ namespace Project.Class
         {
             var list = new List<VideoProp>();
 
-            foreach(DataGridViewRow row in datagridView.Rows)
+            foreach (DataGridViewRow row in datagridView.Rows)
             {
                 var _video = new VideoProp();
 
@@ -117,29 +105,25 @@ namespace Project.Class
 
                 list.Add(_video);
             }
+
             RentReceiptGenerator GntrReceipt = new RentReceiptGenerator(reportViewer);
             GntrReceipt.GenerateReceipt(customerProp, list);
         }
 
         public void Void(DataGridView dataGridView, string customerID)
         {
-            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                con.Open();
-                foreach (DataGridViewRow row in dataGridView.SelectedRows)
+                SqlParameter[] parameter = new SqlParameter[]
                 {
-                    SqlCommand cmd = new SqlCommand("Void", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("CustomerID", customerID);
-                    cmd.Parameters.AddWithValue("RentDate", DateTime.Now.Date);
-                    cmd.Parameters.AddWithValue("Quantity", row.Cells["Quantity"].Value);
-                    cmd.Parameters.AddWithValue("VideoID", row.Cells["VideoID"].Value);
-                    cmd.Parameters.AddWithValue("TotalAmount", row.Cells["TotalAmount"].Value);
-                    cmd.Parameters.AddWithValue("Price", row.Cells["Price"].Value);
-
-                    cmd.ExecuteNonQuery();
-                }
+                    new SqlParameter("CustomerID", customerID),
+                    new SqlParameter("RentDate", DateTime.Now.Date),
+                    new SqlParameter("Quantity", row.Cells["Quantity"].Value),
+                    new SqlParameter("VideoID", row.Cells["VideoID"].Value),
+                    new SqlParameter("TotalAmount", row.Cells["TotalAmount"].Value),
+                    new SqlParameter("Price", row.Cells["Price"].Value),
+                };
+                dataLoader.ExecuteData("Void", parameter);
             }
         }
 
@@ -164,20 +148,16 @@ namespace Project.Class
         }
         public void checkedOut(DataGridView dataGridView, VideoProp VideoID)
         {
-            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            SqlParameter[] parameter = new SqlParameter[]
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("CheckedOut", con);
-
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("VideoID", VideoID.VideoId);
-                cmd.ExecuteNonQuery();
-            }
+                new SqlParameter("VideoID", VideoID.VideoId)
+            };
+            dataLoader.ExecuteData("CheckedOut", parameter);
         }
 
-        public void CalculateChange(decimal totalAmount, string Cash, ref string Change)
+        public void CalculateChange(decimal totalAmount, decimal Cash, ref string Change)
         {
-            decimal cashGiven = Convert.ToDecimal(Cash);
+            decimal cashGiven = Cash;
             decimal change = cashGiven - totalAmount;
             Change = change.ToString("N2");
         }
@@ -194,6 +174,5 @@ namespace Project.Class
             }
             Label = "P" + totalAmount.ToString("N2");
         }
-
     }
 }

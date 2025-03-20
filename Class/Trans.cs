@@ -6,25 +6,15 @@ namespace Project.Class
 {
     public class Trans
     {
-        public bool Return(Transac transac)
+        public void Return(Transac transac)
         {
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            SqlParameter[] parameter = new SqlParameter[]
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("UpdateReturn", connection))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@VideoID", transac.VideoID);
-                    cmd.Parameters.AddWithValue("@RentalID", transac.RentalId);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            return true;
-        }
-
-        public void SearchCategory()
-        {
-
+                new SqlParameter("@VideoID", transac.VideoID),
+                new SqlParameter("@RentalID", transac.RentalId)
+            };
+            DataLoader ds = new DataLoader();
+            ds.ExecuteData("UpdateReturn", parameter);
         }
     }
 }

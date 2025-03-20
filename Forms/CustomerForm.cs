@@ -2,6 +2,7 @@
 using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -43,17 +44,19 @@ namespace Project.Forms
 
         private void guna2ButtonCreateAccount_Click(object sender, EventArgs e)
         {
-            CustomerProp customerprop = new CustomerProp();
-            customerprop.FirstName = guna2TextBoxFirstname.Text;
-            customerprop.LastName = guna2TextBoxLastName.Text;
+            try
+            {
+                CustomerProp customerprop = new CustomerProp();
+                customerprop.FirstName = guna2TextBoxFirstname.Text;
+                customerprop.LastName = guna2TextBoxLastName.Text;
 
-            AddCustomers add = new AddCustomers();
-            bool isInserted = add.InsertCustomer(customerprop);
-
-            if (isInserted)
-                MessageBox.Show("Data added successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Duplicate entry detected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                AddCustomers add = new AddCustomers();
+                add.InsertCustomer(customerprop);
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+            }
             CustomerLoad();
         }
 
@@ -65,19 +68,23 @@ namespace Project.Forms
 
         private void guna2ButtonSaveEdit_Click(object sender, EventArgs e)
         {
-            CustomerProp customerProp = new CustomerProp();
-            customerProp.FirstName = guna2TextBoxEditFirstname.Text;
-            customerProp.LastName = guna2TextBoxEditLastname.Text;
-            customerProp.CustomerID = guna2TextBoxID.Text;
+            try
+            {
+                CustomerProp customerProp = new CustomerProp();
+                customerProp.FirstName = guna2TextBoxEditFirstname.Text;
+                customerProp.LastName = guna2TextBoxEditLastname.Text;
+                customerProp.CustomerID = guna2TextBoxID.Text;
 
-            CustomerClass customer = new CustomerClass();
-            bool isEdit = customer.SaveEdit(customerProp);
+                CustomerClass customer = new CustomerClass();
+                customer.SaveEdit(customerProp);
 
-            if (isEdit)
                 MessageBox.Show("Data updated successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("An error occured during updating. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            CustomerLoad();
+                CustomerLoad();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Errro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void guna2DataGridViewCustomer_CellClick(object sender, DataGridViewCellEventArgs e)

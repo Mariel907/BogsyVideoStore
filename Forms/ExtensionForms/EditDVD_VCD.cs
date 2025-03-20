@@ -30,9 +30,8 @@ namespace Project.Forms.ExtensionForms
                 video.VideoId = Convert.ToInt16(guna2TextBoxVideoID.Text);
 
                 VideoLibrary vd = new VideoLibrary();
-                bool isUpdated = vd.Update(video);
-                if(isUpdated)
-                    MessageBox.Show("Video updated successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                vd.Update(video);
+                MessageBox.Show("Video updated successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {

@@ -2,6 +2,7 @@
 using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -70,26 +71,36 @@ namespace Project.Forms
 
         private void Guna2ButtonDelete_Click(object sender, EventArgs e)
         {
-            VideoLibrary vd = new VideoLibrary();
-            VideoProp video = new VideoProp();
-            if(dgvDVD.Visible)
+            try
             {
-                DataGridViewRow selectedRow = dgvDVD.SelectedRows[0];
-                video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString());
+                VideoLibrary vd = new VideoLibrary();
+                VideoProp video = new VideoProp();
+
+                DataGridViewRow selectedRow = dgvDVD.Visible
+                    ? dgvDVD.SelectedRows[0]
+                    : dgvVCD.SelectedRows[0];
+
+                video.VideoId = dgvDVD.Visible
+                    ? Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString())
+                    : Convert.ToInt32(selectedRow.Cells["VCDVideoID"].Value.ToString());
+
+                var result = MessageBox.Show("Are you sure you want to delete this video.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    vd.Delete(video);
+                    MessageBox.Show("video deleted successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    return;
+
+                GetAllDVD();
             }
-            else
+            catch (SqlException ex)
             {
-                DataGridViewRow selectedRow = dgvVCD.SelectedRows[0];
-                video.VideoId = Convert.ToInt32(selectedRow.Cells["VCDVideoID"].Value.ToString());
+                if (ex.Class == 16)
+                    MessageBox.Show("Oops! It looks like this video is currently rented, so we can't delete it right now.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                bool IsDeleted = vd.Delete(video);
-
-            if (IsDeleted)
-                MessageBox.Show("video deleted successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Oops! It looks like this video is currently rented, so we can't delete it right now.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            GetAllDVD();
         }
 
         private void Guna2ButtonDVD_Click(object sender, EventArgs e)

@@ -27,7 +27,7 @@ namespace Project.Class
             {
                 new SqlParameter("Category", cmbx)
             };
-            dataLoader.LoadData(Query, dataGridView, true, parameter);
+            dataLoader.LoadData(Query, dataGridView, parameter);
         }
 
         public void SearchTxbxRented(string cmbx, string searchtext, DataGridView dataGridView)
@@ -60,7 +60,7 @@ namespace Project.Class
                     new SqlParameter("SearchText", searchtext)
                 };
             }
-            dataLoader.LoadData(query, dataGridView, true, parameter);
+            dataLoader.LoadData(query, dataGridView, parameter);
         }
     }
 }

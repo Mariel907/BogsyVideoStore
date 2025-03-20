@@ -27,7 +27,7 @@ namespace Project.Class
             reportViewer.LocalReport.DataSources.Clear();
             reportViewer.LocalReport.ReportPath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Forms\\ReportRDLC\\PaymentReceipt.rdlc");
             reportViewer.LocalReport.DataSources.Add(ds);
-            reportViewer.LocalReport.SetParameters(new[] { name, rentdate, cash, change });
+            reportViewer.LocalReport.SetParameters(new[] { name, rentdate, cash, change});
             reportViewer.RefreshReport();
         }
 

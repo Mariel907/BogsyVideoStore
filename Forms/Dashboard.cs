@@ -9,7 +9,6 @@ namespace Project.Forms
     public partial class Dashboard : Form
     {
         public Panel Panel { get { return panelDashboard; } }
-
         public Dashboard()
         {
             InitializeComponent();
@@ -18,7 +17,6 @@ namespace Project.Forms
         private void Form_Click(object sender, EventArgs e)
         {
             FormManager form = new FormManager();
-
             if (sender is Guna2Button button)
             {
                 guna2ButtonDVDVCD.Name = "DVDVCD";
@@ -65,11 +63,6 @@ namespace Project.Forms
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

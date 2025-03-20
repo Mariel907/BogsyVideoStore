@@ -8,7 +8,6 @@ namespace Project.Forms.ExtensionForms
     public partial class RentCustomer : Form
     {
         private Rent rent = new Rent();
-        private Timer HideDGVTimer;
         public RentCustomer()
         {
             InitializeComponent();
@@ -34,13 +33,17 @@ namespace Project.Forms.ExtensionForms
                     MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                guna2TextBoxCash.Text = string.Empty;
-                guna2TextBoxChange.Text = string.Empty;
-                labelTotal.Text = string.Empty;
-                DGVRent.Rows.Clear();
+                ClearFields();
             }
             else
                 MessageBox.Show("Invalid Cash/Change input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void ClearFields()
+        {
+            guna2TextBoxCash.Text = string.Empty;
+            guna2TextBoxChange.Text = string.Empty;
+            labelTotal.Text = string.Empty;
+            DGVRent.Rows.Clear();
         }
 
         private void RentCustomer_Load(object sender, EventArgs e)
@@ -133,7 +136,7 @@ namespace Project.Forms.ExtensionForms
                     MessageBox.Show("Invalid total amount format.");
                     return;
                 }
-                string cash = guna2TextBoxCash.Text;
+                decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
                 string Change = string.Empty;
 
                 rent.CalculateChange(totalAmount, cash, ref Change);

@@ -18,19 +18,22 @@ namespace Project.Forms.ExtensionForms
 
         private void guna2ButtonSubmit_Click(object sender, EventArgs e)
         {
-            VideoProp video = new VideoProp();
-            video.Title = Title;
-            video.CopiesAvailable = CopiesAvailable;
-            video.Category = Category;
-            video.LimitDaysRented = Convert.ToInt16(guna2ComboBoxLimitdaysRented.Text);
+            try
+            {
+                VideoProp video = new VideoProp();
+                video.Title = Title;
+                video.CopiesAvailable = CopiesAvailable;
+                video.Category = Category;
+                video.LimitDaysRented = Convert.ToInt16(guna2ComboBoxLimitdaysRented.Text);
 
-            VideoLibrary vd = new VideoLibrary();
-            bool IsInserted = vd.Insert(video);
-
-            if (IsInserted)
+                VideoLibrary vd = new VideoLibrary();
+                vd.Insert(video);
                 MessageBox.Show("Data added successfully ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-                MessageBox.Show("An error occured during inserting. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AddDVD_VCD_FormClosing(object sender, FormClosingEventArgs e)

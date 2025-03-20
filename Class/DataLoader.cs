@@ -7,7 +7,7 @@ namespace Project.Class
 {
     public class DataLoader
     {
-        public void LoadData(string query, DataGridView datagridView = null, bool isStoredProcedure = true, SqlParameter[] parameters = null)
+        public void LoadData(string query, DataGridView datagridView, SqlParameter[] parameters = null, bool isStoredProcedure = true)
         {
             using (SqlConnection conn = new SqlConnection(GlobalConnection.Connection))
             {
@@ -18,7 +18,6 @@ namespace Project.Class
                         cmd.CommandType = CommandType.StoredProcedure;
                     if (parameters != null)
                         cmd.Parameters.AddRange(parameters);
-
                     SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
                     DataTable dataTable = new DataTable();
                     Adapter.Fill(dataTable);
@@ -29,13 +28,27 @@ namespace Project.Class
                 }
             }
         }
+
+        public void ExecuteData(string query, SqlParameter[] parameters)
+        {
+            using (SqlConnection conn = new SqlConnection(GlobalConnection.Connection))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddRange(parameters);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         public void SearchTxbx(string query, string searchtext, DataGridView dataGridView)
         {
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("Searchtext", searchtext)
             };
-            LoadData(query, dataGridView, true, parameters);
+            LoadData(query, dataGridView, parameters);
         }
     }
 }

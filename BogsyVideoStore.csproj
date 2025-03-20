@@ -79,6 +79,7 @@
     <Compile Include="Class\CustomerClass.cs" />
     <Compile Include="Class\DataLoader.cs" />
     <Compile Include="Class\FormManager.cs" />
+    <Compile Include="Class\Helper\HPenalty.cs" />
     <Compile Include="Class\PenaltyReceiptGenerator.cs" />
     <Compile Include="Class\Rent.cs" />
     <Compile Include="Class\AddCustomers.cs" />

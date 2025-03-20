@@ -1,91 +1,68 @@
 ﻿using Project.Model;
-using System;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace Project.Class
 {
     public class VideoLibrary
     {
+        private DataLoader ds = new DataLoader();
 
-        public bool Update(VideoProp video)
+        public void Update(VideoProp video)
         {
-            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("UpdateVideo", connection))
+            SqlParameter[] parameter;
+            if (video.Category == "DVD")
+                parameter = new SqlParameter[]
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("VideoID", video.VideoId);
-                    cmd.Parameters.AddWithValue("Title", video.Title);
-                    cmd.Parameters.AddWithValue("Category", video.Category);
-                    cmd.Parameters.AddWithValue("Out", video.CopiesAvailable);
+                    new SqlParameter("Amount", 50),
+                    new SqlParameter("VideoID", video.VideoId),
+                    new SqlParameter("Title", video.Title),
+                    new SqlParameter("Category", video.Category),
+                    new SqlParameter("Out", video.CopiesAvailable),
+                };
+            else
+                parameter = new SqlParameter[]
+                {
+                    new SqlParameter("Amount", 25),
+                    new SqlParameter("VideoID", video.VideoId),
+                    new SqlParameter("Title", video.Title),
+                    new SqlParameter("Category", video.Category),
+                    new SqlParameter("Out", video.CopiesAvailable),
+                };
 
-                    if (video.Category == "DVD")
-                        cmd.Parameters.AddWithValue("Amount", 50);
-                    else
-                        cmd.Parameters.AddWithValue("Amount", 25);
-
-                    cmd.ExecuteNonQuery();
-              
-                }
-                return true;
-            }
+            ds.ExecuteData("UpdateVideo", parameter);
         }
-        public bool Insert(VideoProp video)
+        public void Insert(VideoProp video)
         {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            SqlParameter[] parameter;
+            if (video.Category == "DVD")
+                parameter = new SqlParameter[]
                 {
-                    connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("InsertVideo", connection))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Title", video.Title);
-                        cmd.Parameters.AddWithValue("@Category", video.Category);
-                        cmd.Parameters.AddWithValue("@In", video.CopiesAvailable);
-                        cmd.Parameters.AddWithValue("@LimitDaysRented", video.LimitDaysRented);
+                    new SqlParameter("Amount", 50),
+                    new SqlParameter("Title", video.Title),
+                    new SqlParameter("Category", video.Category),
+                    new SqlParameter("In", video.CopiesAvailable),
+                    new SqlParameter("LimitDaysRented", video.LimitDaysRented),
+                };
+            else
+                parameter = new SqlParameter[]
+                {
+                    new SqlParameter("Amount", 25),
+                    new SqlParameter("Title", video.Title),
+                    new SqlParameter("Category", video.Category),
+                    new SqlParameter("In", video.CopiesAvailable),
+                    new SqlParameter("LimitDaysRented", video.LimitDaysRented),
+                };
 
-                        if (video.Category == "DVD")
-                            cmd.Parameters.AddWithValue("@Amount", 50);
-                        else
-                            cmd.Parameters.AddWithValue("@Amount", 25);
-
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            ds.ExecuteData("InsertVideo", parameter);
         }
 
-        public bool Delete(VideoProp video)
+        public void Delete(VideoProp video)
         {
-            try
+            SqlParameter[] parameter = new SqlParameter[]
             {
-                using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
-                {
-                    connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("DeleteVideos", connection))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@VideoID", video.VideoId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                return true;
-            }
-            catch (SqlException ex)
-            {
-                if (ex.Class == 16)
-                    return false;
-                else
-                    throw;
-            }
+                new SqlParameter("@VideoID", video.VideoId)
+            };
+            ds.ExecuteData("DeleteVideos", parameter);
         }
     }
 }

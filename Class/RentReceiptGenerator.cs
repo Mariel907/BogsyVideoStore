@@ -23,7 +23,8 @@ namespace Project.Class
                 new ReportParameter("CustomerName", customerProp.Fullname),
                 new ReportParameter("RentDate", DateTime.Now.Date.ToString("MM/dd/yyyy")),
                 new ReportParameter("Cash",  "₱" + customerProp.Cash.ToString("F2")),
-                new ReportParameter("Change",  "₱" + customerProp.Change.ToString("F2"))
+                new ReportParameter("Change",  "₱" + customerProp.Change.ToString("F2")),
+                new ReportParameter("ID", customerProp.CustomerID)
             };
             reportViewer.LocalReport.SetParameters(p);
 

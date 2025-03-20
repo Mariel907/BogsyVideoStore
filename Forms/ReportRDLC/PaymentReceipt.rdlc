@@ -456,7 +456,7 @@
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>0.77306in</Top>
               <Height>0.25in</Height>
-              <Width>1.15625in</Width>
+              <Width>1.1007in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -485,7 +485,7 @@
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>1.03694in</Top>
               <Height>0.25in</Height>
-              <Width>0.44792in</Width>
+              <Width>0.37848in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -559,9 +559,9 @@
               </Paragraphs>
               <rd:DefaultName>pCustomerName</rd:DefaultName>
               <Top>0.77306in</Top>
-              <Left>1.17014in</Left>
+              <Left>1.11458in</Left>
               <Height>0.25in</Height>
-              <Width>2.30778in</Width>
+              <Width>1.43278in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -589,7 +589,7 @@
               </Paragraphs>
               <rd:DefaultName>pDate</rd:DefaultName>
               <Top>1.03694in</Top>
-              <Left>0.44792in</Left>
+              <Left>0.37848in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>5</ZIndex>
@@ -763,7 +763,7 @@
               </Paragraphs>
               <rd:DefaultName>pCash</rd:DefaultName>
               <Top>0.60069in</Top>
-              <Left>0.50348in</Left>
+              <Left>0.44792in</Left>
               <Height>0.25in</Height>
               <Width>2.98833in</Width>
               <ZIndex>4</ZIndex>

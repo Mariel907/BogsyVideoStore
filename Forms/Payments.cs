@@ -2,6 +2,7 @@
 using Project.Model;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -29,7 +30,6 @@ namespace Project.Forms
             comboBoxFullname.DisplayMember = "Fullname";
             comboBoxFullname.ValueMember = "CustomerID";
             comboBoxFullname.DataSource = Client;
-
         }
 
         private void DisplayUnpaid()
@@ -38,7 +38,6 @@ namespace Project.Forms
             guna2ComboBoxVideoUnpaid.DataSource = Unpaid;
             guna2ComboBoxVideoUnpaid.DisplayMember = "Title";
             guna2ComboBoxVideoUnpaid.ValueMember = "VideoID";
-
         }
 
         private void guna2ButtonGntrReceipt_Click(object sender, EventArgs e)
@@ -46,31 +45,36 @@ namespace Project.Forms
             if (guna2TextBoxCustomerID == null)
             {
                 MessageBox.Show("Customer does not exist in the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+            try
             {
-                payments.Confirmation(DGVUnpaid);
-                try
-                {
-                    string Cash = guna2TextBoxCash.Text;
-                    string Change = guna2TextBoxChange.Text;
-                    string fullname = comboBoxFullname.Text;
-                    payments.StoreRDLC(DGVUnpaid,Cash, Change, this.reportViewerPayment, fullname );
+                decimal Cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+                decimal Change = Convert.ToDecimal(guna2TextBoxChange.Text);
+                string fullname = comboBoxFullname.Text;
+                string Txtxname = guna2TextBoxCustomerID.Text;
+                bool NoError = payments.Confirmation(DGVUnpaid, Txtxname, Cash, Change, this.reportViewerPayment, fullname);
 
-                    payments.Closed(DGVUnpaid);
+                DisplayCustomer();
+                DisplayUnpaid();
 
-                    DisplayCustomer();
-                    DisplayUnpaid();
-                    DGVUnpaid.Rows.Clear();
-                }
-                catch (Exception ex)
+                if (NoError)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearInputs();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       
-       
+        private void ClearInputs()
+        {
+            guna2TextBoxCash.Text = string.Empty;
+            guna2TextBoxChange.Text = string.Empty;
+            labelTotal.Text = string.Empty;
+        }
+
         private void guna2TextBoxCash_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -78,19 +82,11 @@ namespace Project.Forms
                 if (e.KeyCode == Keys.Enter)
                 {
                     string totalAmountText = labelTotal.Text.Replace("P", "").Trim();
-                    decimal totalAmount;
-                    if (!decimal.TryParse(totalAmountText, out totalAmount))
-                    {
-                        MessageBox.Show("Invalid total amount format.");
-                        return;
-                    }
-                    string _cash = guna2TextBoxCash.Text;
-                    string Change = string.Empty;
+                    decimal totalAmount = Convert.ToDecimal(totalAmountText);
+                    decimal _cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+                    decimal Change = CalculateAndFormatChange(totalAmount, _cash);
 
-                    rent.CalculateChange(totalAmount, _cash, ref Change);
-
-                    guna2TextBoxChange.Text = Change;
-
+                    UpdateCahsAndChangeFields(_cash, Change);
                     e.SuppressKeyPress = true;
                 }
             }
@@ -100,6 +96,17 @@ namespace Project.Forms
             }
         }
 
+        private decimal CalculateAndFormatChange(decimal totalAmount, decimal cash)
+        {
+            decimal change = cash - totalAmount;
+            return change;
+        }
+        private void UpdateCahsAndChangeFields(decimal cash, decimal change)
+        {
+            guna2TextBoxCash.Text = cash.ToString("N2");
+            guna2TextBoxChange.Text = change.ToString("N2");
+        }
+
         private void guna2ComboBoxTitle_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (guna2ComboBoxVideoUnpaid.SelectedValue != null)
@@ -107,6 +114,11 @@ namespace Project.Forms
                 SearchUnpaid search = guna2ComboBoxVideoUnpaid.SelectedItem as SearchUnpaid;
                 guna2TextBoxPenalty.Text = search.Penalty;
                 guna2TextBoxRentalID.Text = search.RentalID;
+            }
+            if (guna2ComboBoxVideoUnpaid.SelectedValue == null)
+            {
+                guna2TextBoxRentalID.Text = string.Empty;
+                guna2TextBoxPenalty.Text = string.Empty;
             }
         }
 
@@ -125,40 +137,58 @@ namespace Project.Forms
             SearchUnpaid penalty = guna2ComboBoxVideoUnpaid.SelectedItem as SearchUnpaid;
             try
             {
-                if (penalty != null)
+                if (penalty == null)
                 {
-                    if (DGVUnpaid.Rows.Count > 0)
-                    {
-                        string existingCustomerID = DGVUnpaid.Rows[0].Cells["CustomerID"].Value.ToString();
-
-                        if (existingCustomerID != penalty.CustomerID)
-                        {
-                            MessageBox.Show("You can only add items for the same customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return; 
-                        }
-                    }
-                    int rowIndex = DGVUnpaid.Rows.Add();
-                    DataGridViewRow row = DGVUnpaid.Rows[rowIndex];
-                    row.Cells["RentalID"].Value = penalty.RentalID;
-                    row.Cells["Fullname"].Value = penalty.Fullname;
-                    row.Cells["Quantity"].Value = penalty.Qty;
-                    row.Cells["Title"].Value = penalty.Title;
-                    row.Cells["Category"].Value = penalty.Category;
-                    row.Cells["Penalty"].Value = penalty.Penalty;
-                    row.Cells["CustomerID"].Value = penalty.CustomerID;
+                    MessageBox.Show("Please select a valid unpaid item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                if (!IsSameCustomer(penalty.CustomerID))
+                {
+                    MessageBox.Show("You can only add items for the same customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                AddPenaltyToList(penalty);
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            RefreshFields();
+            guna2ComboBoxTitle_SelectedIndexChanged(sender, e);
+
+        }
+
+        private bool IsSameCustomer(string customerID)
+        {
+            if (DGVUnpaid.Rows.Count == 0)
+                return true;
+            string existingCustomerID = DGVUnpaid.Rows[0].Cells["CustomerID"].Value.ToString();
+            return existingCustomerID == customerID;
+        }
+        private void AddPenaltyToList(SearchUnpaid penalty)
+        {
+            int rowIndex = DGVUnpaid.Rows.Add();
+            DataGridViewRow row = DGVUnpaid.Rows[rowIndex];
+            row.Cells["RentalID"].Value = penalty.RentalID;
+            row.Cells["Fullname"].Value = penalty.Fullname;
+            row.Cells["Quantity"].Value = penalty.Qty;
+            row.Cells["Title"].Value = penalty.Title;
+            row.Cells["Category"].Value = penalty.Category;
+            row.Cells["Penalty"].Value = penalty.Penalty;
+            row.Cells["CustomerID"].Value = penalty.CustomerID;
+            payments.BtnPaid(penalty);
+        }
+
+        private void RefreshFields()
+        {
             DisplayUnpaid();
             string label = string.Empty;
             payments.UpdateTotal(DGVUnpaid, ref label);
             labelTotal.Text = label;
         }
-
         private void guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -169,8 +199,10 @@ namespace Project.Forms
         {
             foreach (DataGridViewRow row in DGVUnpaid.Rows)
             {
+                payments.BtnUnpaid(DGVUnpaid);
                 DGVUnpaid.Rows.RemoveAt(row.Index);
             }
+            DisplayUnpaid();
         }
 
         private void comboBoxFullname_TextChanged(object sender, EventArgs e)
@@ -179,7 +211,12 @@ namespace Project.Forms
             guna2ComboBoxVideoUnpaid.DataSource = new List<string>();
             guna2ComboBoxVideoUnpaid.Text = string.Empty;
             guna2TextBoxPenalty.Text = string.Empty;
-            guna2TextBoxRentalID.Text = string.Empty;   
+            guna2TextBoxRentalID.Text = string.Empty;
+        }
+
+        private void guna2TextBoxCash_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
