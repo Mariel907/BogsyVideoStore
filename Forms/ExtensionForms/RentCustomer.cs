@@ -12,7 +12,7 @@ namespace Project.Forms.ExtensionForms
         {
             InitializeComponent();
         }
-        private void guna2ButtonRent_Click(object sender, EventArgs e)
+        private void Guna2ButtonRent_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(guna2TextBoxCash.Text) && !string.IsNullOrEmpty(guna2TextBoxChange.Text))
             {
@@ -70,7 +70,7 @@ namespace Project.Forms.ExtensionForms
             Application.Exit();
         }
 
-        private void guna2ButtonAdd_Click(object sender, EventArgs e)
+        private void Guna2ButtonAdd_Click(object sender, EventArgs e)
         {
             VideoProp selectedVideo = comboBoxVideo.SelectedItem as VideoProp;
             try
@@ -87,7 +87,7 @@ namespace Project.Forms.ExtensionForms
                             row.Cells["Price"].Value = selectedVideo.Price;
                             row.Cells["TotalAmount"].Value = (currentQuantity + 1) * selectedVideo.Price;
 
-                            rent.checkedOut(DGVRent, selectedVideo);
+                            rent.CheckedOut(selectedVideo);
                             videoExists = true;
                             break;
                         }
@@ -108,7 +108,7 @@ namespace Project.Forms.ExtensionForms
 
                         int rentedDays = selectedVideo.LimitDaysRented;
                         row.Cells["DueDate"].Value = DateTime.Now.Date.AddDays(rentedDays).ToString("MM/dd/yyyy");
-                        rent.checkedOut(DGVRent, selectedVideo);
+                        rent.CheckedOut(selectedVideo);
 
                     }
                 }
@@ -147,7 +147,7 @@ namespace Project.Forms.ExtensionForms
             }
         }
 
-        private void guna2ButtonVoid_Click(object sender, EventArgs e)
+        private void Guna2ButtonVoid_Click(object sender, EventArgs e)
         {
             try
             {
@@ -167,7 +167,7 @@ namespace Project.Forms.ExtensionForms
             DisplayVideo();
         }
 
-        private void comboBoxFullname_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxFullname_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxFullname.SelectedValue != null)
             {
@@ -176,7 +176,7 @@ namespace Project.Forms.ExtensionForms
             }
         }
 
-        private void guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
+        private void Guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;

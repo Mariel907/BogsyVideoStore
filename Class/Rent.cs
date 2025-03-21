@@ -112,19 +112,17 @@ namespace Project.Class
 
         public void Void(DataGridView dataGridView, string customerID)
         {
-            foreach (DataGridViewRow row in dataGridView.Rows)
+            DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
+            SqlParameter[] parameter = new SqlParameter[]
             {
-                SqlParameter[] parameter = new SqlParameter[]
-                {
-                    new SqlParameter("CustomerID", customerID),
-                    new SqlParameter("RentDate", DateTime.Now.Date),
-                    new SqlParameter("Quantity", row.Cells["Quantity"].Value),
-                    new SqlParameter("VideoID", row.Cells["VideoID"].Value),
-                    new SqlParameter("TotalAmount", row.Cells["TotalAmount"].Value),
-                    new SqlParameter("Price", row.Cells["Price"].Value),
-                };
-                dataLoader.ExecuteData("Void", parameter);
-            }
+                new SqlParameter("CustomerID", customerID),
+                new SqlParameter("RentDate", DateTime.Now.Date),
+                new SqlParameter("Quantity", selectedRow.Cells["Quantity"].Value),
+                new SqlParameter("VideoID", selectedRow.Cells["VideoID"].Value),
+                new SqlParameter("TotalAmount", selectedRow.Cells["TotalAmount"].Value),
+                new SqlParameter("Price", selectedRow.Cells["Price"].Value),
+            };
+            dataLoader.ExecuteData("Void", parameter);
         }
 
         public bool TotalAmountToSubtract(DataGridView dataGridView, string label, ref string _updatelabel)
@@ -146,7 +144,7 @@ namespace Project.Class
             else
                 return false;
         }
-        public void checkedOut(DataGridView dataGridView, VideoProp VideoID)
+        public void CheckedOut(VideoProp VideoID)
         {
             SqlParameter[] parameter = new SqlParameter[]
             {

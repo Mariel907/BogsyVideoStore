@@ -161,7 +161,7 @@
             this.guna2ButtonSave.Size = new System.Drawing.Size(150, 39);
             this.guna2ButtonSave.TabIndex = 323;
             this.guna2ButtonSave.Text = "Rent";
-            this.guna2ButtonSave.Click += new System.EventHandler(this.guna2ButtonRent_Click);
+            this.guna2ButtonSave.Click += new System.EventHandler(this.Guna2ButtonRent_Click);
             // 
             // DGVRent
             // 
@@ -326,7 +326,7 @@
             this.guna2ButtonAdd.Size = new System.Drawing.Size(150, 39);
             this.guna2ButtonAdd.TabIndex = 387;
             this.guna2ButtonAdd.Text = "Add";
-            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.Guna2ButtonAdd_Click);
             // 
             // label5
             // 
@@ -449,7 +449,7 @@
             this.guna2TextBoxCash.Size = new System.Drawing.Size(179, 36);
             this.guna2TextBoxCash.TabIndex = 430;
             this.guna2TextBoxCash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtbxCash_KeyDown);
-            this.guna2TextBoxCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBoxCash_KeyPress);
+            this.guna2TextBoxCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Guna2TextBoxCash_KeyPress);
             // 
             // guna2ButtonVoid
             // 
@@ -467,7 +467,7 @@
             this.guna2ButtonVoid.Size = new System.Drawing.Size(150, 39);
             this.guna2ButtonVoid.TabIndex = 431;
             this.guna2ButtonVoid.Text = "Void";
-            this.guna2ButtonVoid.Click += new System.EventHandler(this.guna2ButtonVoid_Click);
+            this.guna2ButtonVoid.Click += new System.EventHandler(this.Guna2ButtonVoid_Click);
             // 
             // receiptBindingSource
             // 
@@ -857,7 +857,7 @@
             this.comboBoxFullname.Name = "comboBoxFullname";
             this.comboBoxFullname.Size = new System.Drawing.Size(179, 35);
             this.comboBoxFullname.TabIndex = 446;
-            this.comboBoxFullname.SelectedIndexChanged += new System.EventHandler(this.comboBoxFullname_SelectedIndexChanged);
+            this.comboBoxFullname.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFullname_SelectedIndexChanged);
             // 
             // panel35
             // 

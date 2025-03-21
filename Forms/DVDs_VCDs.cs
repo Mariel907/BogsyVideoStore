@@ -118,13 +118,13 @@ namespace Project.Forms
             Application.Exit();
         }
 
-        private void guna2TextBoxDVD_TextChanged(object sender, EventArgs e)
+        private void Guna2TextBoxDVD_TextChanged(object sender, EventArgs e)
         {
             string txbx = guna2TextBoxDVD.Text;
             search.SearchTxbxDVD(txbx, dgvDVD);
         }
 
-        private void guna2TextBoxVCD_TextChanged(object sender, EventArgs e)
+        private void Guna2TextBoxVCD_TextChanged(object sender, EventArgs e)
         {
             string txbx = guna2TextBoxVCD.Text;
             search.SearchTxbxVCD(txbx, dgvVCD);

@@ -201,7 +201,7 @@
             this.guna2ButtonSubmit.TabIndex = 53;
             this.guna2ButtonSubmit.Text = "Save";
             this.guna2ButtonSubmit.UseTransparentBackground = true;
-            this.guna2ButtonSubmit.Click += new System.EventHandler(this.guna2ButtonSubmit_Click);
+            this.guna2ButtonSubmit.Click += new System.EventHandler(this.Guna2ButtonSubmit_Click);
             // 
             // label5
             // 

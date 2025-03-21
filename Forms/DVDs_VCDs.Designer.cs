@@ -458,7 +458,7 @@
             this.guna2TextBoxDVD.SelectedText = "";
             this.guna2TextBoxDVD.Size = new System.Drawing.Size(1046, 36);
             this.guna2TextBoxDVD.TabIndex = 245;
-            this.guna2TextBoxDVD.TextChanged += new System.EventHandler(this.guna2TextBoxDVD_TextChanged);
+            this.guna2TextBoxDVD.TextChanged += new System.EventHandler(this.Guna2TextBoxDVD_TextChanged);
             // 
             // guna2TextBoxVCD
             // 
@@ -484,7 +484,7 @@
             this.guna2TextBoxVCD.SelectedText = "";
             this.guna2TextBoxVCD.Size = new System.Drawing.Size(1046, 36);
             this.guna2TextBoxVCD.TabIndex = 246;
-            this.guna2TextBoxVCD.TextChanged += new System.EventHandler(this.guna2TextBoxVCD_TextChanged);
+            this.guna2TextBoxVCD.TextChanged += new System.EventHandler(this.Guna2TextBoxVCD_TextChanged);
             // 
             // DVDs_VCDs
             // 

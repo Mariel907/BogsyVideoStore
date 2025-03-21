@@ -36,13 +36,13 @@ namespace Project.Forms
             Application.Exit();
         }
 
-        private void guna2TextBoxCustomer_TextChanged(object sender, EventArgs e)
+        private void Guna2TextBoxCustomer_TextChanged(object sender, EventArgs e)
         {
             string txbx = guna2TextBoxCustomer.Text;
             search.SearchTxbxCustomer(txbx, guna2DataGridViewCustomer);
         }
 
-        private void guna2ButtonCreateAccount_Click(object sender, EventArgs e)
+        private void Guna2ButtonCreateAccount_Click(object sender, EventArgs e)
         {
             try
             {
@@ -60,13 +60,13 @@ namespace Project.Forms
             CustomerLoad();
         }
 
-        private void guna2ButtonAdd_Click(object sender, EventArgs e)
+        private void Guna2ButtonAdd_Click(object sender, EventArgs e)
         {
             panelAdd.Visible = true;
             panelEdit.Visible = false;
         }
 
-        private void guna2ButtonSaveEdit_Click(object sender, EventArgs e)
+        private void Guna2ButtonSaveEdit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -87,7 +87,7 @@ namespace Project.Forms
             }
         }
 
-        private void guna2DataGridViewCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Guna2DataGridViewCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow selectedRow = guna2DataGridViewCustomer.SelectedRows[0];
             guna2TextBoxEditFirstname.Text = selectedRow.Cells["FirstName"].Value.ToString();

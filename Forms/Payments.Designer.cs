@@ -252,7 +252,7 @@
             this.guna2Buttonreturn.Size = new System.Drawing.Size(152, 36);
             this.guna2Buttonreturn.TabIndex = 377;
             this.guna2Buttonreturn.Text = "Generate Receipt";
-            this.guna2Buttonreturn.Click += new System.EventHandler(this.guna2ButtonGntrReceipt_Click);
+            this.guna2Buttonreturn.Click += new System.EventHandler(this.Guna2ButtonGntrReceipt_Click);
             // 
             // label4
             // 
@@ -324,9 +324,8 @@
             this.guna2TextBoxCash.SelectedText = "";
             this.guna2TextBoxCash.Size = new System.Drawing.Size(179, 36);
             this.guna2TextBoxCash.TabIndex = 434;
-            this.guna2TextBoxCash.TextChanged += new System.EventHandler(this.guna2TextBoxCash_TextChanged);
-            this.guna2TextBoxCash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.guna2TextBoxCash_KeyDown);
-            this.guna2TextBoxCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBoxCash_KeyPress);
+            this.guna2TextBoxCash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Guna2TextBoxCash_KeyDown);
+            this.guna2TextBoxCash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Guna2TextBoxCash_KeyPress);
             // 
             // guna2TextBoxChange
             // 
@@ -562,8 +561,8 @@
             this.comboBoxFullname.Name = "comboBoxFullname";
             this.comboBoxFullname.Size = new System.Drawing.Size(179, 35);
             this.comboBoxFullname.TabIndex = 456;
-            this.comboBoxFullname.SelectedIndexChanged += new System.EventHandler(this.comboBoxFullname_SelectedIndexChanged_1);
-            this.comboBoxFullname.TextChanged += new System.EventHandler(this.comboBoxFullname_TextChanged);
+            this.comboBoxFullname.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFullname_SelectedIndexChanged_1);
+            this.comboBoxFullname.TextChanged += new System.EventHandler(this.ComboBoxFullname_TextChanged);
             // 
             // guna2ComboBoxVideoUnpaid
             // 
@@ -585,7 +584,7 @@
             this.guna2ComboBoxVideoUnpaid.Size = new System.Drawing.Size(170, 36);
             this.guna2ComboBoxVideoUnpaid.TabIndex = 389;
             this.guna2ComboBoxVideoUnpaid.ValueMember = "VideoID";
-            this.guna2ComboBoxVideoUnpaid.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxTitle_SelectedIndexChanged);
+            this.guna2ComboBoxVideoUnpaid.SelectedIndexChanged += new System.EventHandler(this.Guna2ComboBoxTitle_SelectedIndexChanged);
             // 
             // guna2TextBoxPenalty
             // 
@@ -603,7 +602,7 @@
             this.guna2TextBoxPenalty.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxPenalty.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxPenalty.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxPenalty.Location = new System.Drawing.Point(401, 49);
+            this.guna2TextBoxPenalty.Location = new System.Drawing.Point(399, 49);
             this.guna2TextBoxPenalty.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxPenalty.Name = "guna2TextBoxPenalty";
             this.guna2TextBoxPenalty.Padding = new System.Windows.Forms.Padding(5);
@@ -630,7 +629,7 @@
             this.guna2ButtonAdd.Size = new System.Drawing.Size(100, 36);
             this.guna2ButtonAdd.TabIndex = 467;
             this.guna2ButtonAdd.Text = "Add";
-            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.Guna2ButtonAdd_Click);
             // 
             // guna2TextBoxRentalID
             // 
@@ -756,7 +755,7 @@
             this.guna2ButtonRemove.Size = new System.Drawing.Size(100, 36);
             this.guna2ButtonRemove.TabIndex = 473;
             this.guna2ButtonRemove.Text = "Remove";
-            this.guna2ButtonRemove.Click += new System.EventHandler(this.guna2ButtonRemove_Click);
+            this.guna2ButtonRemove.Click += new System.EventHandler(this.Guna2ButtonRemove_Click);
             // 
             // Payments
             // 

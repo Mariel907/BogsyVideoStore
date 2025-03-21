@@ -120,7 +120,6 @@ namespace Project.Class
         }
         public bool Confirmation(DataGridView dataGridView, string TxtxbxName, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname)
         {
-            SearchUnpaid _penalty = new SearchUnpaid();
             if (dataGridView.Rows.Count > 0)
             {
                 string existingCustomerID = dataGridView.Rows[0].Cells["CustomerID"].Value.ToString();

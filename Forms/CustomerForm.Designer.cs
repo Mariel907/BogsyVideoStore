@@ -153,7 +153,7 @@
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.Height = 22;
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2DataGridViewCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.guna2DataGridViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridViewCustomer_CellClick);
+            this.guna2DataGridViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Guna2DataGridViewCustomer_CellClick);
             // 
             // CustomerID
             // 
@@ -211,7 +211,7 @@
             this.guna2TextBoxCustomer.SelectedText = "";
             this.guna2TextBoxCustomer.Size = new System.Drawing.Size(456, 36);
             this.guna2TextBoxCustomer.TabIndex = 242;
-            this.guna2TextBoxCustomer.TextChanged += new System.EventHandler(this.guna2TextBoxCustomer_TextChanged);
+            this.guna2TextBoxCustomer.TextChanged += new System.EventHandler(this.Guna2TextBoxCustomer_TextChanged);
             // 
             // label1
             // 
@@ -298,7 +298,7 @@
             this.guna2ButtonCreateAccount.Size = new System.Drawing.Size(337, 36);
             this.guna2ButtonCreateAccount.TabIndex = 429;
             this.guna2ButtonCreateAccount.Text = "Save";
-            this.guna2ButtonCreateAccount.Click += new System.EventHandler(this.guna2ButtonCreateAccount_Click);
+            this.guna2ButtonCreateAccount.Click += new System.EventHandler(this.Guna2ButtonCreateAccount_Click);
             // 
             // labelFirstname
             // 
@@ -463,7 +463,7 @@
             this.guna2ButtonSaveEdit.Size = new System.Drawing.Size(337, 36);
             this.guna2ButtonSaveEdit.TabIndex = 426;
             this.guna2ButtonSaveEdit.Text = "Save";
-            this.guna2ButtonSaveEdit.Click += new System.EventHandler(this.guna2ButtonSaveEdit_Click);
+            this.guna2ButtonSaveEdit.Click += new System.EventHandler(this.Guna2ButtonSaveEdit_Click);
             // 
             // label5
             // 
@@ -503,7 +503,7 @@
             this.guna2ButtonAdd.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonAdd.TabIndex = 435;
             this.guna2ButtonAdd.Text = "Add";
-            this.guna2ButtonAdd.Click += new System.EventHandler(this.guna2ButtonAdd_Click);
+            this.guna2ButtonAdd.Click += new System.EventHandler(this.Guna2ButtonAdd_Click);
             // 
             // CustomerForm
             // 

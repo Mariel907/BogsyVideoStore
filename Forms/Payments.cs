@@ -9,9 +9,7 @@ namespace Project.Forms
 {
     public partial class Payments : Form
     {
-        private Rent rent = new Rent();
         private CPayments payments = new CPayments();
-
         public Payments()
         {
             InitializeComponent();
@@ -40,7 +38,7 @@ namespace Project.Forms
             guna2ComboBoxVideoUnpaid.ValueMember = "VideoID";
         }
 
-        private void guna2ButtonGntrReceipt_Click(object sender, EventArgs e)
+        private void Guna2ButtonGntrReceipt_Click(object sender, EventArgs e)
         {
             if (guna2TextBoxCustomerID == null)
             {
@@ -75,7 +73,7 @@ namespace Project.Forms
             labelTotal.Text = string.Empty;
         }
 
-        private void guna2TextBoxCash_KeyDown(object sender, KeyEventArgs e)
+        private void Guna2TextBoxCash_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -107,7 +105,7 @@ namespace Project.Forms
             guna2TextBoxChange.Text = change.ToString("N2");
         }
 
-        private void guna2ComboBoxTitle_SelectedIndexChanged(object sender, EventArgs e)
+        private void Guna2ComboBoxTitle_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (guna2ComboBoxVideoUnpaid.SelectedValue != null)
             {
@@ -122,7 +120,7 @@ namespace Project.Forms
             }
         }
 
-        private void comboBoxFullname_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void ComboBoxFullname_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (comboBoxFullname.SelectedValue != null)
             {
@@ -132,7 +130,7 @@ namespace Project.Forms
             DisplayUnpaid();
         }
 
-        private void guna2ButtonAdd_Click(object sender, EventArgs e)
+        private void Guna2ButtonAdd_Click(object sender, EventArgs e)
         {
             SearchUnpaid penalty = guna2ComboBoxVideoUnpaid.SelectedItem as SearchUnpaid;
             try
@@ -149,7 +147,6 @@ namespace Project.Forms
                 }
                 AddPenaltyToList(penalty);
 
-
             }
             catch (Exception ex)
             {
@@ -157,8 +154,7 @@ namespace Project.Forms
             }
 
             RefreshFields();
-            guna2ComboBoxTitle_SelectedIndexChanged(sender, e);
-
+            Guna2ComboBoxTitle_SelectedIndexChanged(sender, e);
         }
 
         private bool IsSameCustomer(string customerID)
@@ -189,34 +185,27 @@ namespace Project.Forms
             payments.UpdateTotal(DGVUnpaid, ref label);
             labelTotal.Text = label;
         }
-        private void guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
+        private void Guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        private void guna2ButtonRemove_Click(object sender, EventArgs e)
+        private void Guna2ButtonRemove_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in DGVUnpaid.Rows)
-            {
-                payments.BtnUnpaid(DGVUnpaid);
-                DGVUnpaid.Rows.RemoveAt(row.Index);
-            }
+            DataGridViewRow row = DGVUnpaid.SelectedRows[0];
+            payments.BtnUnpaid(DGVUnpaid);
+            DGVUnpaid.Rows.RemoveAt(row.Index);
             DisplayUnpaid();
         }
 
-        private void comboBoxFullname_TextChanged(object sender, EventArgs e)
+        private void ComboBoxFullname_TextChanged(object sender, EventArgs e)
         {
             guna2TextBoxCustomerID.Text = string.Empty;
             guna2ComboBoxVideoUnpaid.DataSource = new List<string>();
             guna2ComboBoxVideoUnpaid.Text = string.Empty;
             guna2TextBoxPenalty.Text = string.Empty;
             guna2TextBoxRentalID.Text = string.Empty;
-        }
-
-        private void guna2TextBoxCash_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
