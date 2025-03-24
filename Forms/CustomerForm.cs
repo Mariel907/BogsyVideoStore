@@ -1,8 +1,10 @@
-﻿using Project.Class;
+﻿using Guna.UI2.WinForms;
+using Project.Class;
 using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -15,11 +17,30 @@ namespace Project.Forms
         {
             InitializeComponent();
         }
+        private void BtnNaming(object sender)
+        {
+            if (sender is Guna2Button button)
+            {
+                guna2ButtonAdd.Name = "Add";
+                guna2ButtonEdit.Name = "Edit";
 
+                ColorChanging(button.Name);
+            }
+        }
+
+        private void ColorChanging(string ActiveButton)
+        {
+            Color ActiveColor = Color.FromArgb(0, 50, 73);
+            Color InActiveColor = Color.FromArgb(0, 138, 162);
+
+            guna2ButtonAdd.FillColor = ActiveButton == "Add" ? ActiveColor : InActiveColor;
+            guna2ButtonEdit.FillColor = ActiveButton == "Edit" ? ActiveColor : InActiveColor;
+        }
         private void Guna2ButtonEdit_Click(object sender, EventArgs e)
         {
             panelAdd.Visible = false;
             panelEdit.Visible = true;
+            BtnNaming(sender);
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
@@ -64,6 +85,7 @@ namespace Project.Forms
         {
             panelAdd.Visible = true;
             panelEdit.Visible = false;
+            BtnNaming(sender);
         }
 
         private void Guna2ButtonSaveEdit_Click(object sender, EventArgs e)

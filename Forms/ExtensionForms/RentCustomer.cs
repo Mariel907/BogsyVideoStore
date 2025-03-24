@@ -1,6 +1,7 @@
 ﻿using Project.Class;
 using Project.Model;
 using System;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace Project.Forms.ExtensionForms
@@ -14,30 +15,42 @@ namespace Project.Forms.ExtensionForms
         }
         private void Guna2ButtonRent_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(guna2TextBoxCash.Text) && !string.IsNullOrEmpty(guna2TextBoxChange.Text))
+            if (HasInvalidInput()) return;
+
+            var customer = CreateCustomer();
+
+            try
             {
-                Customers customerProp = new Customers();
-                customerProp.CustomerID = guna2TextBoxCustomerID.Text;
-                customerProp.Fullname = comboBoxFullname.Text;
-                customerProp.Cash = Convert.ToInt32(guna2TextBoxCash.Text);
-                customerProp.Change = Convert.ToDecimal(guna2TextBoxChange.Text);
-                customerProp.CustomerID = guna2TextBoxCustomerID.Text;
-
-                try
-                {
-                    rent._InsertRent(customerProp, DGVRent);
-                    rent.AddReceiptModel(this.reportViewerRent, customerProp, DGVRent);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                rent._InsertRent(customer, DGVRent);
+                rent.AddReceiptModel(reportViewerRent, customer, DGVRent);
                 ClearFields();
             }
-            else
-                MessageBox.Show("Invalid Cash/Change input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+        private bool HasInvalidInput()
+        {
+            if (string.IsNullOrEmpty(guna2TextBoxCash.Text) && string.IsNullOrEmpty(guna2TextBoxChange.Text))
+            {
+                MessageBox.Show("Invalid Cash/Change input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return false;
+        }
+        private Customers CreateCustomer()
+        {
+            return new Customers
+            {
+                CustomerID = labelCustomerName.Text,
+                Fullname = comboBoxFullname.Text,
+                Cash = Convert.ToInt32(guna2TextBoxCash.Text),
+                Change = Convert.ToDecimal(guna2TextBoxChange.Text)
+            };
+        }
+       
         private void ClearFields()
         {
             guna2TextBoxCash.Text = string.Empty;
@@ -53,8 +66,6 @@ namespace Project.Forms.ExtensionForms
             comboBoxFullname.DataSource = customers;
             comboBoxFullname.DisplayMember = "Fullname";
             comboBoxFullname.ValueMember = "CustomerID";
-
-            //this.reportViewerRent.RefreshReport();
         }
 
         private void DisplayVideo()
@@ -98,7 +109,7 @@ namespace Project.Forms.ExtensionForms
                         int rowIndex = DGVRent.Rows.Add();
                         DataGridViewRow row = DGVRent.Rows[rowIndex];
                         row.Cells["Title"].Value = selectedVideo.Title;
-                        row.Cells["VideoID"].Value=selectedVideo.VideoId ;
+                        row.Cells["VideoID"].Value = selectedVideo.VideoId;
                         row.Cells["LimitDaysRented"].Value = selectedVideo.LimitDaysRented;
                         row.Cells["Quantity"].Value = 1;
                         row.Cells["Price"].Value = selectedVideo.Price;
@@ -127,36 +138,30 @@ namespace Project.Forms.ExtensionForms
 
         private void TxtbxCash_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode != Keys.Enter) return;
+
+            if (!decimal.TryParse(labelTotal.Text.Replace("P", "").Trim(), out decimal totalAmount))
             {
-                string totalAmountText = labelTotal.Text.Replace("P", "").Trim();
-                decimal totalAmount;
-                if (!decimal.TryParse(totalAmountText, out totalAmount))
-                {
-                    MessageBox.Show("Invalid total amount format.");
-                    return;
-                }
-                decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
-                string Change = string.Empty;
-
-                rent.CalculateChange(totalAmount, cash, ref Change);
-
-                guna2TextBoxChange.Text = Change;
-
-                e.SuppressKeyPress = true;
+                MessageBox.Show("Invalid total amount format.");
+                return;
             }
-        }
+            decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+            string Change = string.Empty;
 
+            rent.CalculateChange(totalAmount, Convert.ToDecimal(guna2TextBoxCash.Text), ref Change);
+
+            guna2TextBoxCash.Text = cash.ToString("N2");
+            guna2TextBoxChange.Text = Change;
+            e.SuppressKeyPress = true;
+        }
+       
         private void Guna2ButtonVoid_Click(object sender, EventArgs e)
         {
             try
             {
                 string updateTotal = string.Empty;
-                rent.Void(DGVRent, guna2TextBoxCustomerID.Text);
-                bool hasError = rent.TotalAmountToSubtract(DGVRent, labelTotal.Text, ref updateTotal);
-
-                if (!hasError)
-                    MessageBox.Show("Please select a row to void", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                rent.Void(DGVRent, labelCustomerName.Text);
+                rent.SubtractTotalAmount(DGVRent, labelTotal.Text, ref updateTotal);
 
                 labelTotal.Text = updateTotal;
             }
@@ -172,7 +177,7 @@ namespace Project.Forms.ExtensionForms
             if (comboBoxFullname.SelectedValue != null)
             {
                 Customers customer = comboBoxFullname.SelectedItem as Customers;
-                guna2TextBoxCustomerID.Text = customer.CustomerID;
+                labelCustomerName.Text = customer.CustomerID;
             }
         }
 
@@ -180,6 +185,15 @@ namespace Project.Forms.ExtensionForms
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void comboBoxVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxVideo.SelectedValue != null)
+            {
+                VideoProp vd = comboBoxVideo.SelectedItem as VideoProp;
+                guna2TextBoxVideo.Text = vd.VideoId.ToString();
+            }
         }
     }
 }

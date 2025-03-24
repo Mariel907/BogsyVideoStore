@@ -21,7 +21,7 @@ namespace Project.Class
             searchCmbx("SearchcmbxReturned", cmbx, dataGridView);
         }
 
-        private void searchCmbx(string Query, string cmbx, DataGridView dataGridView)
+        public void searchCmbx(string Query, string cmbx, DataGridView dataGridView)
         {
             SqlParameter[] parameter = new SqlParameter[]
             {
@@ -39,7 +39,7 @@ namespace Project.Class
             SearchTxbx("SearchTxbxReturned", "SearchcmbxInTxbxReturned", cmbx, searchtext, dataGridView);
         }
 
-        private void SearchTxbx(string EQuery, string nQuery, string cmbx, string searchtext, DataGridView dataGridView)
+        public void SearchTxbx(string EQuery, string nQuery, string cmbx, string searchtext, DataGridView dataGridView)
         {
             string query;
             SqlParameter[] parameter;

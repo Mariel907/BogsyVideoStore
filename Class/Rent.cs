@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Configuration;
 using System.Windows.Forms;
 
 namespace Project.Class
@@ -125,10 +126,10 @@ namespace Project.Class
             dataLoader.ExecuteData("Void", parameter);
         }
 
-        public bool TotalAmountToSubtract(DataGridView dataGridView, string label, ref string _updatelabel)
+        public void SubtractTotalAmount(DataGridView dataGridView, string label, ref string _updatelabel)
         {
             if (dataGridView.SelectedRows.Count > 0)
-            {
+            { 
                 decimal TotalAmountToSubtract = 0;
                 foreach (DataGridViewRow row in dataGridView.SelectedRows)
                 {
@@ -139,10 +140,7 @@ namespace Project.Class
 
                 updateLabel -= TotalAmountToSubtract;
                 _updatelabel = "P" + updateLabel.ToString("N2");
-                return true;
             }
-            else
-                return false;
         }
         public void CheckedOut(VideoProp VideoID)
         {

@@ -3,6 +3,7 @@ using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -27,6 +28,7 @@ namespace Project.Forms
         private void DVDs_VCDs_Load(object sender, EventArgs e)
         {
             GetAllDVD();
+
         }
         private void GetAllDVD()
         {
@@ -106,11 +108,15 @@ namespace Project.Forms
         private void Guna2ButtonDVD_Click(object sender, EventArgs e)
         {
             GetAllDVD();
+            guna2ButtonDVD.FillColor = Color.FromArgb(0, 50, 73);
+            guna2ButtonVCD.FillColor = Color.FromArgb(0, 138, 162);
         }
 
         private void Guna2ButtonVCD_Click(object sender, EventArgs e)
         {
             GetAllVCD();
+            guna2ButtonDVD.FillColor = Color.FromArgb(0, 138, 162);
+            guna2ButtonVCD.FillColor = Color.FromArgb(0, 50, 73);
         }
 
         private void DVDs_VCDs_FormClosing(object sender, FormClosingEventArgs e)

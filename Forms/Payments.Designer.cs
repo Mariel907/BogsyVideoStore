@@ -43,7 +43,7 @@
             this.Penalty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unpaidBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dSReports = new Project.DataSet.DSReports();
-            this.guna2Buttonreturn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonGntrReceipt = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.reportViewerPayment = new Microsoft.Reporting.WinForms.ReportViewer();
             this.guna2TextBoxCustomerID = new Guna.UI2.WinForms.Guna2TextBox();
@@ -143,7 +143,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVUnpaid.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVUnpaid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGVUnpaid.Location = new System.Drawing.Point(38, 91);
+            this.DGVUnpaid.Location = new System.Drawing.Point(23, 84);
             this.DGVUnpaid.Margin = new System.Windows.Forms.Padding(4);
             this.DGVUnpaid.Name = "DGVUnpaid";
             this.DGVUnpaid.ReadOnly = true;
@@ -236,29 +236,29 @@
             this.dSReports.DataSetName = "DSReports";
             this.dSReports.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // guna2Buttonreturn
+            // guna2ButtonGntrReceipt
             // 
-            this.guna2Buttonreturn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Buttonreturn.BorderRadius = 15;
-            this.guna2Buttonreturn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Buttonreturn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Buttonreturn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Buttonreturn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Buttonreturn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2Buttonreturn.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Buttonreturn.ForeColor = System.Drawing.Color.White;
-            this.guna2Buttonreturn.Location = new System.Drawing.Point(955, 483);
-            this.guna2Buttonreturn.Name = "guna2Buttonreturn";
-            this.guna2Buttonreturn.Size = new System.Drawing.Size(152, 36);
-            this.guna2Buttonreturn.TabIndex = 377;
-            this.guna2Buttonreturn.Text = "Generate Receipt";
-            this.guna2Buttonreturn.Click += new System.EventHandler(this.Guna2ButtonGntrReceipt_Click);
+            this.guna2ButtonGntrReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ButtonGntrReceipt.BorderRadius = 15;
+            this.guna2ButtonGntrReceipt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonGntrReceipt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonGntrReceipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonGntrReceipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonGntrReceipt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ButtonGntrReceipt.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonGntrReceipt.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonGntrReceipt.Location = new System.Drawing.Point(940, 476);
+            this.guna2ButtonGntrReceipt.Name = "guna2ButtonGntrReceipt";
+            this.guna2ButtonGntrReceipt.Size = new System.Drawing.Size(152, 36);
+            this.guna2ButtonGntrReceipt.TabIndex = 377;
+            this.guna2ButtonGntrReceipt.Text = "Generate Receipt";
+            this.guna2ButtonGntrReceipt.Click += new System.EventHandler(this.Guna2ButtonGntrReceipt_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 26);
+            this.label4.Location = new System.Drawing.Point(19, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 21);
             this.label4.TabIndex = 391;
@@ -269,7 +269,7 @@
             this.reportViewerPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewerPayment.Location = new System.Drawing.Point(784, 91);
+            this.reportViewerPayment.Location = new System.Drawing.Point(769, 84);
             this.reportViewerPayment.Name = "reportViewerPayment";
             this.reportViewerPayment.ServerReport.BearerToken = null;
             this.reportViewerPayment.Size = new System.Drawing.Size(324, 367);
@@ -289,7 +289,7 @@
             this.guna2TextBoxCustomerID.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
             this.guna2TextBoxCustomerID.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCustomerID.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCustomerID.Location = new System.Drawing.Point(153, 28);
+            this.guna2TextBoxCustomerID.Location = new System.Drawing.Point(138, 21);
             this.guna2TextBoxCustomerID.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxCustomerID.Name = "guna2TextBoxCustomerID";
             this.guna2TextBoxCustomerID.Padding = new System.Windows.Forms.Padding(5);
@@ -315,7 +315,7 @@
             this.guna2TextBoxCash.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxCash.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCash.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCash.Location = new System.Drawing.Point(744, 49);
+            this.guna2TextBoxCash.Location = new System.Drawing.Point(729, 42);
             this.guna2TextBoxCash.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxCash.Name = "guna2TextBoxCash";
             this.guna2TextBoxCash.Padding = new System.Windows.Forms.Padding(5);
@@ -343,7 +343,7 @@
             this.guna2TextBoxChange.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxChange.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxChange.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxChange.Location = new System.Drawing.Point(929, 49);
+            this.guna2TextBoxChange.Location = new System.Drawing.Point(914, 42);
             this.guna2TextBoxChange.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxChange.Name = "guna2TextBoxChange";
             this.guna2TextBoxChange.Padding = new System.Windows.Forms.Padding(5);
@@ -359,7 +359,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(925, 24);
+            this.label6.Location = new System.Drawing.Point(910, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 21);
             this.label6.TabIndex = 432;
@@ -370,7 +370,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(740, 25);
+            this.label2.Location = new System.Drawing.Point(725, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 21);
             this.label2.TabIndex = 431;
@@ -381,7 +381,7 @@
             this.labelTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTotal.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(40, 483);
+            this.labelTotal.Location = new System.Drawing.Point(25, 476);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(306, 39);
             this.labelTotal.TabIndex = 436;
@@ -392,7 +392,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 461);
+            this.label5.Location = new System.Drawing.Point(21, 454);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 21);
             this.label5.TabIndex = 435;
@@ -411,7 +411,7 @@
             // 
             this.panel18.BackColor = System.Drawing.Color.White;
             this.panel18.Controls.Add(this.panel19);
-            this.panel18.Location = new System.Drawing.Point(218, 50);
+            this.panel18.Location = new System.Drawing.Point(203, 43);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(4, 36);
             this.panel18.TabIndex = 464;
@@ -428,7 +428,7 @@
             // 
             this.panel20.BackColor = System.Drawing.Color.White;
             this.panel20.Controls.Add(this.panel21);
-            this.panel20.Location = new System.Drawing.Point(43, 51);
+            this.panel20.Location = new System.Drawing.Point(28, 44);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(2, 32);
             this.panel20.TabIndex = 461;
@@ -445,7 +445,7 @@
             // 
             this.panel22.BackColor = System.Drawing.Color.White;
             this.panel22.Controls.Add(this.panel23);
-            this.panel22.Location = new System.Drawing.Point(38, 85);
+            this.panel22.Location = new System.Drawing.Point(23, 78);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(181, 4);
             this.panel22.TabIndex = 465;
@@ -462,7 +462,7 @@
             // 
             this.panel24.BackColor = System.Drawing.Color.White;
             this.panel24.Controls.Add(this.panel25);
-            this.panel24.Location = new System.Drawing.Point(40, 52);
+            this.panel24.Location = new System.Drawing.Point(25, 45);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(176, 5);
             this.panel24.TabIndex = 462;
@@ -479,7 +479,7 @@
             // 
             this.panel26.BackColor = System.Drawing.Color.White;
             this.panel26.Controls.Add(this.panel27);
-            this.panel26.Location = new System.Drawing.Point(40, 78);
+            this.panel26.Location = new System.Drawing.Point(25, 71);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(176, 5);
             this.panel26.TabIndex = 459;
@@ -496,7 +496,7 @@
             // 
             this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel28.Controls.Add(this.panel29);
-            this.panel28.Location = new System.Drawing.Point(216, 49);
+            this.panel28.Location = new System.Drawing.Point(201, 42);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(2, 36);
             this.panel28.TabIndex = 463;
@@ -513,7 +513,7 @@
             // 
             this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel30.Controls.Add(this.panel31);
-            this.panel30.Location = new System.Drawing.Point(38, 49);
+            this.panel30.Location = new System.Drawing.Point(23, 42);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(2, 36);
             this.panel30.TabIndex = 460;
@@ -529,7 +529,7 @@
             // panel32
             // 
             this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel32.Location = new System.Drawing.Point(39, 83);
+            this.panel32.Location = new System.Drawing.Point(24, 76);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(179, 2);
             this.panel32.TabIndex = 458;
@@ -538,7 +538,7 @@
             // 
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(38, 49);
+            this.panel33.Location = new System.Drawing.Point(23, 42);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(179, 2);
             this.panel33.TabIndex = 457;
@@ -557,7 +557,7 @@
             this.comboBoxFullname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxFullname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBoxFullname.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFullname.Location = new System.Drawing.Point(43, 53);
+            this.comboBoxFullname.Location = new System.Drawing.Point(28, 46);
             this.comboBoxFullname.Name = "comboBoxFullname";
             this.comboBoxFullname.Size = new System.Drawing.Size(179, 35);
             this.comboBoxFullname.TabIndex = 456;
@@ -579,7 +579,7 @@
             this.guna2ComboBoxVideoUnpaid.ForeColor = System.Drawing.Color.Black;
             this.guna2ComboBoxVideoUnpaid.IntegralHeight = false;
             this.guna2ComboBoxVideoUnpaid.ItemHeight = 30;
-            this.guna2ComboBoxVideoUnpaid.Location = new System.Drawing.Point(224, 49);
+            this.guna2ComboBoxVideoUnpaid.Location = new System.Drawing.Point(209, 42);
             this.guna2ComboBoxVideoUnpaid.Name = "guna2ComboBoxVideoUnpaid";
             this.guna2ComboBoxVideoUnpaid.Size = new System.Drawing.Size(170, 36);
             this.guna2ComboBoxVideoUnpaid.TabIndex = 389;
@@ -602,7 +602,7 @@
             this.guna2TextBoxPenalty.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxPenalty.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxPenalty.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxPenalty.Location = new System.Drawing.Point(399, 49);
+            this.guna2TextBoxPenalty.Location = new System.Drawing.Point(384, 42);
             this.guna2TextBoxPenalty.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxPenalty.Name = "guna2TextBoxPenalty";
             this.guna2TextBoxPenalty.Padding = new System.Windows.Forms.Padding(5);
@@ -624,7 +624,7 @@
             this.guna2ButtonAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2ButtonAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAdd.Location = new System.Drawing.Point(849, 483);
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(834, 476);
             this.guna2ButtonAdd.Name = "guna2ButtonAdd";
             this.guna2ButtonAdd.Size = new System.Drawing.Size(100, 36);
             this.guna2ButtonAdd.TabIndex = 467;
@@ -646,7 +646,7 @@
             this.guna2TextBoxRentalID.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
             this.guna2TextBoxRentalID.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxRentalID.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxRentalID.Location = new System.Drawing.Point(335, 27);
+            this.guna2TextBoxRentalID.Location = new System.Drawing.Point(320, 20);
             this.guna2TextBoxRentalID.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxRentalID.Name = "guna2TextBoxRentalID";
             this.guna2TextBoxRentalID.Padding = new System.Windows.Forms.Padding(5);
@@ -661,7 +661,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(220, 26);
+            this.label1.Location = new System.Drawing.Point(205, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 21);
             this.label1.TabIndex = 469;
@@ -672,7 +672,7 @@
             this.panel41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel41.Controls.Add(this.panel42);
-            this.panel41.Location = new System.Drawing.Point(344, 484);
+            this.panel41.Location = new System.Drawing.Point(329, 477);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(2, 39);
             this.panel41.TabIndex = 472;
@@ -690,7 +690,7 @@
             this.panel37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel37.Controls.Add(this.panel38);
-            this.panel37.Location = new System.Drawing.Point(39, 483);
+            this.panel37.Location = new System.Drawing.Point(24, 476);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(2, 40);
             this.panel37.TabIndex = 471;
@@ -708,7 +708,7 @@
             this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(40, 483);
+            this.panel35.Location = new System.Drawing.Point(25, 476);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(306, 2);
             this.panel35.TabIndex = 470;
@@ -726,7 +726,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(40, 521);
+            this.panel1.Location = new System.Drawing.Point(25, 514);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 2);
             this.panel1.TabIndex = 471;
@@ -750,7 +750,7 @@
             this.guna2ButtonRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonRemove.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonRemove.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonRemove.Location = new System.Drawing.Point(743, 483);
+            this.guna2ButtonRemove.Location = new System.Drawing.Point(728, 476);
             this.guna2ButtonRemove.Name = "guna2ButtonRemove";
             this.guna2ButtonRemove.Size = new System.Drawing.Size(100, 36);
             this.guna2ButtonRemove.TabIndex = 473;
@@ -791,7 +791,7 @@
             this.Controls.Add(this.reportViewerPayment);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2ComboBoxVideoUnpaid);
-            this.Controls.Add(this.guna2Buttonreturn);
+            this.Controls.Add(this.guna2ButtonGntrReceipt);
             this.Controls.Add(this.DGVUnpaid);
             this.Controls.Add(this.guna2TextBoxRentalID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -822,7 +822,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView DGVUnpaid;
-        private Guna.UI2.WinForms.Guna2Button guna2Buttonreturn;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonGntrReceipt;
         private System.Windows.Forms.Label label4;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerPayment;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomerID;

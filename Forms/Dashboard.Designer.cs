@@ -39,8 +39,8 @@
             this.guna2ButtonCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDVDVCD = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelDashboard = new System.Windows.Forms.Panel();
             this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
+            this.panelDashboard = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -93,6 +93,8 @@
             // 
             // guna2ButtonReports
             // 
+            this.guna2ButtonReports.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonReports.BorderThickness = 1;
             this.guna2ButtonReports.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonReports.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonReports.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -104,7 +106,7 @@
             this.guna2ButtonReports.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonReports.Image")));
             this.guna2ButtonReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonReports.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonReports.Location = new System.Drawing.Point(0, 262);
+            this.guna2ButtonReports.Location = new System.Drawing.Point(0, 269);
             this.guna2ButtonReports.Name = "guna2ButtonReports";
             this.guna2ButtonReports.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.guna2ButtonReports.Size = new System.Drawing.Size(215, 39);
@@ -115,6 +117,8 @@
             // 
             // guna2ButtonPayments
             // 
+            this.guna2ButtonPayments.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonPayments.BorderThickness = 1;
             this.guna2ButtonPayments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonPayments.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonPayments.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -126,7 +130,7 @@
             this.guna2ButtonPayments.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonPayments.Image")));
             this.guna2ButtonPayments.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonPayments.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonPayments.Location = new System.Drawing.Point(0, 223);
+            this.guna2ButtonPayments.Location = new System.Drawing.Point(0, 230);
             this.guna2ButtonPayments.Name = "guna2ButtonPayments";
             this.guna2ButtonPayments.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.guna2ButtonPayments.Size = new System.Drawing.Size(215, 39);
@@ -137,6 +141,8 @@
             // 
             // guna2ButtonTransactions
             // 
+            this.guna2ButtonTransactions.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonTransactions.BorderThickness = 1;
             this.guna2ButtonTransactions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonTransactions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonTransactions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -151,7 +157,7 @@
             this.guna2ButtonTransactions.Location = new System.Drawing.Point(0, 191);
             this.guna2ButtonTransactions.Name = "guna2ButtonTransactions";
             this.guna2ButtonTransactions.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.guna2ButtonTransactions.Size = new System.Drawing.Size(215, 32);
+            this.guna2ButtonTransactions.Size = new System.Drawing.Size(215, 39);
             this.guna2ButtonTransactions.TabIndex = 12;
             this.guna2ButtonTransactions.Text = "Transactions";
             this.guna2ButtonTransactions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -159,6 +165,8 @@
             // 
             // guna2ButtonCustomer
             // 
+            this.guna2ButtonCustomer.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonCustomer.BorderThickness = 1;
             this.guna2ButtonCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -181,12 +189,15 @@
             // 
             // guna2ButtonDVDVCD
             // 
+            this.guna2ButtonDVDVCD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ButtonDVDVCD.BorderColor = System.Drawing.Color.White;
+            this.guna2ButtonDVDVCD.BorderThickness = 1;
             this.guna2ButtonDVDVCD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonDVDVCD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonDVDVCD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2ButtonDVDVCD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2ButtonDVDVCD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2ButtonDVDVCD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ButtonDVDVCD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2ButtonDVDVCD.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonDVDVCD.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonDVDVCD.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonDVDVCD.Image")));
@@ -212,16 +223,6 @@
             this.guna2Panel3.Size = new System.Drawing.Size(215, 113);
             this.guna2Panel3.TabIndex = 7;
             // 
-            // panelDashboard
-            // 
-            this.panelDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDashboard.Location = new System.Drawing.Point(215, 113);
-            this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1135, 565);
-            this.panelDashboard.TabIndex = 20;
-            // 
             // rjCircularPictureBox1
             // 
             this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -237,6 +238,16 @@
             this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rjCircularPictureBox1.TabIndex = 0;
             this.rjCircularPictureBox1.TabStop = false;
+            // 
+            // panelDashboard
+            // 
+            this.panelDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDashboard.Location = new System.Drawing.Point(215, 113);
+            this.panelDashboard.Name = "panelDashboard";
+            this.panelDashboard.Size = new System.Drawing.Size(1135, 565);
+            this.panelDashboard.TabIndex = 20;
             // 
             // Dashboard
             // 

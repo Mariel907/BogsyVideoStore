@@ -79,13 +79,13 @@
     <Compile Include="Class\CustomerClass.cs" />
     <Compile Include="Class\DataLoader.cs" />
     <Compile Include="Class\FormManager.cs" />
-    <Compile Include="Class\Helper\HPenalty.cs" />
     <Compile Include="Class\PenaltyReceiptGenerator.cs" />
     <Compile Include="Class\Rent.cs" />
     <Compile Include="Class\AddCustomers.cs" />
     <Compile Include="Class\RentReceiptGenerator.cs" />
     <Compile Include="Class\SearchCustomer.cs" />
     <Compile Include="Class\SearchRent.cs" />
+    <Compile Include="Class\SearchReports.cs" />
     <Compile Include="Class\SearchTrans.cs" />
     <Compile Include="Class\SearchVideo.cs" />
     <Compile Include="Class\Trans.cs" />

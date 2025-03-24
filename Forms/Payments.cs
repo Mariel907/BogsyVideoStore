@@ -1,8 +1,11 @@
-﻿using Project.Class;
+﻿using Guna.UI2.WinForms;
+using Project.Class;
 using Project.Model;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Printing;
+using System.Runtime.Remoting.Channels;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -40,6 +43,7 @@ namespace Project.Forms
 
         private void Guna2ButtonGntrReceipt_Click(object sender, EventArgs e)
         {
+            BtnNaming(sender);
             if (guna2TextBoxCustomerID == null)
             {
                 MessageBox.Show("Customer does not exist in the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -132,6 +136,7 @@ namespace Project.Forms
 
         private void Guna2ButtonAdd_Click(object sender, EventArgs e)
         {
+            BtnNaming(sender);
             SearchUnpaid penalty = guna2ComboBoxVideoUnpaid.SelectedItem as SearchUnpaid;
             try
             {
@@ -190,13 +195,36 @@ namespace Project.Forms
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+        private void BtnNaming(object sender)
+        {
+            if (sender is Guna2Button button)
+            {
+                guna2ButtonAdd.Name = "Add";
+                guna2ButtonRemove.Name = "Remove";
+                guna2ButtonGntrReceipt.Name = "GntrReceipt";
+
+                ColorChanging(button.Name);
+            }
+        }
+
+        private void ColorChanging(string ActiveButton)
+        {
+            Color ActiveColor = Color.FromArgb(0, 50, 73);
+            Color InActiveColor = Color.FromArgb(0, 138, 162);
+
+            guna2ButtonGntrReceipt.FillColor = ActiveButton == "GntrReceipt"? ActiveColor : InActiveColor;
+            guna2ButtonAdd.FillColor = ActiveButton == "Add" ? ActiveColor : InActiveColor;
+            guna2ButtonRemove.FillColor = ActiveButton == "Remove" ? ActiveColor : InActiveColor;
+        }
 
         private void Guna2ButtonRemove_Click(object sender, EventArgs e)
         {
+            BtnNaming(sender);
             DataGridViewRow row = DGVUnpaid.SelectedRows[0];
             payments.BtnUnpaid(DGVUnpaid);
             DGVUnpaid.Rows.RemoveAt(row.Index);
             DisplayUnpaid();
+
         }
 
         private void ComboBoxFullname_TextChanged(object sender, EventArgs e)

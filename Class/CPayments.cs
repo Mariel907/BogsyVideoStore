@@ -1,4 +1,5 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿using Guna.UI2.WinForms;
+using Microsoft.Reporting.WinForms;
 using Project.Model;
 using System;
 using System.Collections.Generic;
@@ -167,5 +168,6 @@ namespace Project.Class
             reportGenerator.GeneratePaymentReceipt(penalty, cmbxFulname, list);
         }
 
+       
     }
 }
