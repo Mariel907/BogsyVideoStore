@@ -101,7 +101,14 @@ namespace Project.Forms
                 customer.SaveEdit(customerProp);
 
                 MessageBox.Show("Data updated successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CustomerLoad();
+
+                if(!string.IsNullOrEmpty(guna2TextBoxCustomer.Text))
+                {
+                    string txbx = guna2TextBoxCustomer.Text;
+                    search.SearchTxbxCustomer(txbx, guna2DataGridViewCustomer);
+                }
+                else
+                    CustomerLoad();
             }
             catch(Exception ex)
             {

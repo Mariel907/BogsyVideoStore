@@ -39,7 +39,7 @@ namespace Project.Class
                 query = "GetAllRentedTxbxDVD";
                 parameter = new SqlParameter[]
                 {
-                    new SqlParameter("@SearchText", Txbx)
+                    new SqlParameter("@SearchText", Txbx),
                 };
             }
             else

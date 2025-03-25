@@ -13,6 +13,7 @@ namespace Project.Forms
         private FormManager form = new FormManager();
 
         public Panel Panel { get { return panelDashboard; } }
+
         public Dashboard()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace Project.Forms
             guna2ButtonReports.Name = "Reports";
             guna2ButtonPayments.Name = "Payments";
         }
+
         private void UpdateButtonColors(string ActiveButton)
         {
             Color ActiveColor = Color.FromArgb(0, 50, 73);
@@ -54,6 +56,7 @@ namespace Project.Forms
             guna2ButtonPayments.FillColor = ActiveButton == "Payments" ? ActiveColor :InActiveColor;
             guna2ButtonPayments.BorderColor = ActiveButton == "Payments" ? BorderActive : BorderInActive;
         }
+
         private void OpenCorrespondingForm(string buttonName)
         {
             switch (buttonName)

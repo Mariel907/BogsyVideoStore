@@ -108,3 +108,4 @@ C:\Users\Mariel\source\repos\BogsyVideoStore\bin\Debug\zh-CHS\Microsoft.ReportVi
 C:\Users\Mariel\source\repos\BogsyVideoStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.PrintReceipt.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.Payments.resources
+C:\Users\Mariel\source\repos\BogsyVideoStore\bin\Debug\Guna.UI2.dll
