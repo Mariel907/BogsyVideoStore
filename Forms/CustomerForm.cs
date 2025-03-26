@@ -12,6 +12,7 @@ namespace Project.Forms
     public partial class CustomerForm : Form
     {
         private SearchCustomer search = new SearchCustomer();
+        private string txbx;
 
         public CustomerForm()
         {
@@ -59,7 +60,7 @@ namespace Project.Forms
 
         private void Guna2TextBoxCustomer_TextChanged(object sender, EventArgs e)
         {
-            string txbx = guna2TextBoxCustomer.Text;
+            txbx = guna2TextBoxCustomer.Text;
             search.SearchTxbxCustomer(txbx, guna2DataGridViewCustomer);
         }
 
@@ -92,6 +93,8 @@ namespace Project.Forms
         {
             try
             {
+                txbx = guna2TextBoxCustomer.Text;
+
                 CustomerProp customerProp = new CustomerProp();
                 customerProp.FirstName = guna2TextBoxEditFirstname.Text;
                 customerProp.LastName = guna2TextBoxEditLastname.Text;
@@ -102,9 +105,9 @@ namespace Project.Forms
 
                 MessageBox.Show("Data updated successfully. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if(!string.IsNullOrEmpty(guna2TextBoxCustomer.Text))
+
+                if (!string.IsNullOrEmpty(txbx))
                 {
-                    string txbx = guna2TextBoxCustomer.Text;
                     search.SearchTxbxCustomer(txbx, guna2DataGridViewCustomer);
                 }
                 else

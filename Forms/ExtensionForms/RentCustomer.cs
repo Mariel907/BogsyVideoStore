@@ -46,7 +46,7 @@ namespace Project.Forms.ExtensionForms
             {
                 CustomerID = labelCustomerName.Text,
                 Fullname = comboBoxFullname.Text,
-                Cash = Convert.ToInt32(guna2TextBoxCash.Text),
+                Cash = Convert.ToDecimal(guna2TextBoxCash.Text),
                 Change = Convert.ToDecimal(guna2TextBoxChange.Text)
             };
         }

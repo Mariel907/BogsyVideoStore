@@ -17,7 +17,7 @@ namespace Project.Model
     {
         public string  CustomerID { get; set; }
         public string Fullname { get; set; }
-        public int Cash { get; set; }
+        public decimal Cash { get; set; }
         public decimal Change { get; set; }
     }
 }

@@ -8,91 +8,84 @@ namespace Project.Class
     public class SearchTrans
     {
         DataLoader dataLoader = new DataLoader();
-        //private void SearchDate()
-        //{
-        //    DateTime date = dateTimePicker1.Value;
-        //    cmbx = guna2ComboBoxRented.Text;
-        //    txbx = guna2TextBoxCheckedOut.Text;
 
-        //    search.SearchDate(txbx, cmbx, date, guna2DataGridViewRented);
-        //}
-        //public void SearchDate(string txbx, string cmbx, DateTime Date, DataGridView DGV)
-        //{
-        //    string query;
-        //    List<SqlParameter> parameters = new List<SqlParameter>
-        //    {
-        //        new SqlParameter("Date", Date) 
-        //    };
-
-        //    if (string.IsNullOrEmpty(cmbx) && string.IsNullOrEmpty(txbx))
-        //    {
-        //        query = "SearchRentDateDTP";
-        //    }
-        //    else if (!string.IsNullOrEmpty(cmbx) && string.IsNullOrEmpty(txbx))
-        //    {
-        //        query = "SearchRentDateDTPcmbx";
-        //        parameters.Add(new SqlParameter("Category", cmbx));
-        //    }
-        //    else if (!string.IsNullOrEmpty(txbx) && string.IsNullOrEmpty(cmbx))
-        //    {
-        //        query = "SearchRentDateDTPTxbx";
-        //        parameters.Add(new SqlParameter("SearchText", txbx));
-        //    }
-        //    else
-        //    {
-        //        query = "SearchRentDateDTPcmbxTxbx";
-        //        parameters.Add(new SqlParameter("Category", cmbx));
-        //        parameters.Add(new SqlParameter("SearchText", txbx));
-        //    }
-
-        //    dataLoader.LoadData(query, DGV, parameters.ToArray());
-        //}
-
-        public void SearchCmbxRented(string cmbx, DataGridView dataGridView)
+        public void SearchDate(string txbx, string cmbx, string SDate, string EDate, DataGridView DGV)
         {
-            searchCmbx("SearchCmbxRented", cmbx, dataGridView);
-        }
-
-        public void SearchCmbxReturned(string cmbx, DataGridView dataGridView)
-        {
-            searchCmbx("SearchcmbxReturned", cmbx, dataGridView);
-        }
-
-        public void searchCmbx(string Query, string cmbx, DataGridView dataGridView)
-        {
-            SqlParameter[] parameter = new SqlParameter[]
+            string query;
+            List<SqlParameter> parameters = new List<SqlParameter>
             {
-                new SqlParameter("Category", cmbx)
+                new SqlParameter("StartDate", SDate),
+                new SqlParameter("EndDate", EDate)
             };
-            dataLoader.LoadData(Query, dataGridView, parameter);
+
+            string key = (string.IsNullOrEmpty(cmbx) ? "empty" : "filled") + "-" + (string.IsNullOrEmpty(txbx) ? "empty" : "filled");
+
+            switch(key)
+            {
+                case "empty-empty":
+                    query = "SearchRentDateDTP";
+                    break;
+
+                case "filled-empty":
+                    query = "SearchRentDateDTPcmbx";
+                    parameters.Add(new SqlParameter("Category", cmbx));
+                    break;
+
+                case "empty-filled":
+                    query = "SearchRentDateDTPTxbx";
+                    parameters.Add(new SqlParameter("SearchText", txbx));
+                    break;
+
+                case "filled-filled":
+                    query = "SearchRentDateDTPcmbxTxbx";
+                    parameters.Add(new SqlParameter("Category", cmbx));
+                    parameters.Add(new SqlParameter("SearchText", txbx));
+                    break;
+
+                default:
+                    throw new InvalidOperationException("Unexpected state for cmbx and txbx.");
+            }    
+            dataLoader.LoadData(query, DGV, parameters.ToArray());
         }
 
-        public void SearchTxbxRented(string cmbx, string searchtext, DataGridView dataGridView)
+        public void searchDateReturned(string cmbx, string txbx, string SDate, string EDate, DataGridView DGV)
         {
-            SearchTxbx("SearchtxbxRented", "SearchcmbxInTxbxRented", cmbx, searchtext, dataGridView);
-        }
-        public void SearchTxbxReturned(string cmbx, string searchtext, DataGridView dataGridView)
-        {
-            SearchTxbx("SearchTxbxReturned", "SearchcmbxInTxbxReturned", cmbx, searchtext, dataGridView);
-        }
+            string query;
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("StartDate", SDate),
+                new SqlParameter("EndDate", EDate)
+            };
 
-        public void SearchTxbx(string EQuery, string nQuery, string cmbx, string searchtext, DataGridView dataGridView)
-        {
-            string query = string.IsNullOrEmpty(cmbx) 
-                ? EQuery 
-                : nQuery;
+            string key = (string.IsNullOrEmpty(cmbx) ? "empty" : "filled") + "-" + (string.IsNullOrEmpty(txbx) ? "empty" : "filled");
 
-            SqlParameter[] parameter = string.IsNullOrEmpty(cmbx)
-                ? new SqlParameter[] 
-                {
-                    new SqlParameter("SearchText", searchtext)
-                }
-                : new SqlParameter[]
-                {
-                    new SqlParameter("Category", cmbx),
-                    new SqlParameter("SearchText", searchtext)
-                }; 
-            dataLoader.LoadData(query, dataGridView, parameter);
+            switch (key)
+            {
+                case "empty-empty":
+                    query = "SearchReturnDTP";
+                    break;
+
+                case "filled-empty":
+                    query = "SearchcmbxReturned";
+                    parameters.Add(new SqlParameter("Category", cmbx));
+                    break;
+
+                case "empty-filled":
+                    query = "SearchTxbxReturned";
+                    parameters.Add(new SqlParameter("SearchText", txbx));
+                    break;
+
+                case "filled-filled":
+                    query = "SearchReturnDTPTxbxCmbx";
+                    parameters.Add(new SqlParameter("SearchText", txbx));
+                    parameters.Add(new SqlParameter("Category", cmbx));
+                    break;
+
+                default:
+                    throw new InvalidOperationException("Unexpected state for cmbx and txbx.");
+            }
+
+            dataLoader.LoadData(query, DGV, parameters.ToArray());
         }
     }
 }
