@@ -83,6 +83,7 @@
     <Compile Include="Class\Rent.cs" />
     <Compile Include="Class\AddCustomers.cs" />
     <Compile Include="Class\RentReceiptGenerator.cs" />
+    <Compile Include="Class\RntRcptSendEmail.cs" />
     <Compile Include="Class\SearchCustomer.cs" />
     <Compile Include="Class\SearchRent.cs" />
     <Compile Include="Class\SearchReports.cs" />

@@ -1,5 +1,7 @@
 ﻿using Project.Model;
+using System;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Project.Class
 {
@@ -31,29 +33,50 @@ namespace Project.Class
 
             ds.ExecuteData("UpdateVideo", parameter);
         }
-        public void Insert(VideoProp video)
+        public void Insert(DataGridView DGV)
         {
-            SqlParameter[] parameter;
-            if (video.Category == "DVD")
-                parameter = new SqlParameter[]
+            foreach (DataGridViewRow row in DGV.Rows)
+            {
+                if (row == null) return;
+                SqlParameter[] parameters = new SqlParameter[]
                 {
-                    new SqlParameter("Amount", 50),
-                    new SqlParameter("Title", video.Title),
-                    new SqlParameter("Category", video.Category),
-                    new SqlParameter("In", video.CopiesAvailable),
-                    new SqlParameter("LimitDaysRented", video.LimitDaysRented),
+                    new SqlParameter("Amount", row.Cells["Price"].Value),
+                    new SqlParameter("Title", row.Cells["Title"].Value),
+                    new SqlParameter("Category",  row.Cells["Category"].Value),
+                    new SqlParameter("In", row.Cells["Qty"].Value),
+                    new SqlParameter("LimitDaysRented", row.Cells["LimitDaysRented"].Value),
+                    new SqlParameter("DocumentNo", row.Cells["DocumentNo"].Value),
+                    new SqlParameter("VideoID", row.Cells["VideoID"].Value),
+                    new SqlParameter("SerialNo", row.Cells["SerialNo"].Value),
+                    new SqlParameter("Date", DateTime.Now.Date),
+                    new SqlParameter("UpdateDate", DateTime.Now.Date),
+                    new SqlParameter("Type", "Purchase")
                 };
-            else
-                parameter = new SqlParameter[]
-                {
-                    new SqlParameter("Amount", 25),
-                    new SqlParameter("Title", video.Title),
-                    new SqlParameter("Category", video.Category),
-                    new SqlParameter("In", video.CopiesAvailable),
-                    new SqlParameter("LimitDaysRented", video.LimitDaysRented),
-                };
+                ds.ExecuteData("InsertVideo", parameters);
 
-            ds.ExecuteData("InsertVideo", parameter);
+            }
+            //SqlParameter[] parameter;
+            //if (video.Category == "DVD")
+            //    parameter = new SqlParameter[]
+            //    {
+            //        new SqlParameter("Amount", 50),
+            //        new SqlParameter("Title", video.Title),
+            //        new SqlParameter("Category", video.Category),
+            //        new SqlParameter("In", video.CopiesAvailable),
+            //        new SqlParameter("LimitDaysRented", video.LimitDaysRented),
+            //        new SqlParameter("Date", DateTime.Now.Date)
+            //    };
+            //else
+            //    parameter = new SqlParameter[]
+            //    {
+            //        new SqlParameter("Amount", 25),
+            //        new SqlParameter("Title", video.Title),
+            //        new SqlParameter("Category", video.Category),
+            //        new SqlParameter("In", video.CopiesAvailable),
+            //        new SqlParameter("LimitDaysRented", video.LimitDaysRented),
+            //        new SqlParameter("Date", DateTime.Now.Date)
+            //    };
+
         }
 
         public void Delete(VideoProp video)

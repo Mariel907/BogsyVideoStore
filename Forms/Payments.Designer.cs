@@ -148,7 +148,7 @@
             this.DGVUnpaid.Name = "DGVUnpaid";
             this.DGVUnpaid.ReadOnly = true;
             this.DGVUnpaid.RowHeadersVisible = false;
-            this.DGVUnpaid.Size = new System.Drawing.Size(739, 367);
+            this.DGVUnpaid.Size = new System.Drawing.Size(707, 367);
             this.DGVUnpaid.TabIndex = 376;
             this.DGVUnpaid.Tag = "book_id";
             this.DGVUnpaid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -269,10 +269,10 @@
             this.reportViewerPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewerPayment.Location = new System.Drawing.Point(769, 84);
+            this.reportViewerPayment.Location = new System.Drawing.Point(737, 84);
             this.reportViewerPayment.Name = "reportViewerPayment";
             this.reportViewerPayment.ServerReport.BearerToken = null;
-            this.reportViewerPayment.Size = new System.Drawing.Size(324, 367);
+            this.reportViewerPayment.Size = new System.Drawing.Size(356, 367);
             this.reportViewerPayment.TabIndex = 392;
             // 
             // guna2TextBoxCustomerID

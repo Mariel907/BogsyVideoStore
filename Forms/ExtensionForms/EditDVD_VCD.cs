@@ -43,5 +43,17 @@ namespace Project.Forms.ExtensionForms
         {
             Application.Exit();
         }
+        
+        private void GBtnAdd_Click_1(object sender, EventArgs e)
+        {
+            //AddDVD_VCD add = new AddDVD_VCD();
+            //FormManager form = new FormManager();
+            //form.OpenForm(add, panelEdit);
+        }
+
+        private void GBtnEdit_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

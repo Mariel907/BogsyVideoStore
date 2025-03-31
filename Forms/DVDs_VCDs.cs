@@ -135,5 +135,12 @@ namespace Project.Forms
             string txbx = guna2TextBoxVCD.Text;
             search.SearchTxbxVCD(txbx, dgvVCD);
         }
+
+        private void dgvDVD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            AddDVD_VCD add = new AddDVD_VCD();
+            add.Show();
+
+        }
     }
 }

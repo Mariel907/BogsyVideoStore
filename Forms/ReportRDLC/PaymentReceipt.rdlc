@@ -388,7 +388,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.02778in</Top>
+            <Top>0.11458in</Top>
+            <Left>1.79861in</Left>
             <Height>0.5in</Height>
             <Width>3.47792in</Width>
             <Style>
@@ -397,14 +398,222 @@
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Grand Total: </Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.01737in</Top>
+            <Left>1.86159in</Left>
+            <Height>0.25in</Height>
+            <Width>0.88542in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Sum(Fields!Penalty.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                      <Format>'₱'#,0.00;('₱'#,0.00)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.01737in</Top>
+            <Left>2.7366in</Left>
+            <Height>0.25in</Height>
+            <Width>2.53347in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
+            </Style>
+          </Textbox>
+          <Line Name="Line1">
+            <Top>0.8507in</Top>
+            <Height>0in</Height>
+            <Width>8.19666in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>Dashed</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="pCash">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!pCash.Value</Value>
+                    <Style>
+                      <Format>'₱'#,0,.00;('₱'#,0,.00)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>pCash</rd:DefaultName>
+            <Top>1.46181in</Top>
+            <Left>2.30951in</Left>
+            <Height>0.25in</Height>
+            <Width>2.98833in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox8">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Change: </Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.78126in</Top>
+            <Left>1.86159in</Left>
+            <Height>0.25in</Height>
+            <Width>0.64584in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="pChange">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!pChange.Value</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>'₱'#,0.00;('₱'#,0.00)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>pChange</rd:DefaultName>
+            <Top>1.78126in</Top>
+            <Left>2.50743in</Left>
+            <Height>0.25in</Height>
+            <Width>2.76264in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Cash: </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.46181in</Top>
+            <Left>1.85513in</Left>
+            <Height>0.25in</Height>
+            <Width>0.44271in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>0.57292in</Height>
+        <Height>2.91667in</Height>
         <Style />
       </Body>
-      <Width>3.49181in</Width>
+      <Width>8.33208in</Width>
       <Page>
         <PageHeader>
-          <Height>1.33208in</Height>
+          <Height>1.67583in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -427,8 +636,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Top>0.01389in</Top>
+              <Left>0.1684in</Left>
               <Height>0.3125in</Height>
-              <Width>3.47792in</Width>
+              <Width>6.53569in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -454,7 +665,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.77306in</Top>
+              <Top>0.85987in</Top>
+              <Left>1.75694in</Left>
               <Height>0.25in</Height>
               <Width>1.1007in</Width>
               <ZIndex>1</ZIndex>
@@ -483,7 +695,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>1.03694in</Top>
+              <Top>1.12375in</Top>
+              <Left>1.75694in</Left>
               <Height>0.25in</Height>
               <Width>0.37848in</Width>
               <ZIndex>2</ZIndex>
@@ -530,8 +743,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.32639in</Top>
+              <Left>0.1684in</Left>
               <Height>0.4375in</Height>
-              <Width>3.47792in</Width>
+              <Width>6.53569in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -558,8 +772,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pCustomerName</rd:DefaultName>
-              <Top>0.77306in</Top>
-              <Left>1.11458in</Left>
+              <Top>0.85987in</Top>
+              <Left>2.87152in</Left>
               <Height>0.25in</Height>
               <Width>1.43278in</Width>
               <ZIndex>4</ZIndex>
@@ -588,8 +802,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pDate</rd:DefaultName>
-              <Top>1.03694in</Top>
-              <Left>0.37848in</Left>
+              <Top>1.12375in</Top>
+              <Left>2.13542in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>5</ZIndex>
@@ -604,21 +818,22 @@
               </Style>
             </Textbox>
             <Line Name="Line2">
-              <Top>1.30083in</Top>
+              <Top>1.53347in</Top>
+              <Left>0.10243in</Left>
               <Height>0in</Height>
-              <Width>3.47792in</Width>
+              <Width>8.12722in</Width>
               <ZIndex>6</ZIndex>
               <Style>
                 <Border>
-                  <Style>Solid</Style>
+                  <Style>Dashed</Style>
                 </Border>
               </Style>
             </Line>
             <Line Name="Line3">
               <Top>0.29104in</Top>
-              <Left>0.00521in</Left>
+              <Left>0.1684in</Left>
               <Height>0in</Height>
-              <Width>3.47792in</Width>
+              <Width>8.16368in</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
@@ -633,223 +848,6 @@
             </Border>
           </Style>
         </PageHeader>
-        <PageFooter>
-          <Height>1.32292in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox5">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Grand Total: </Value>
-                      <Style>
-                        <FontWeight>SemiBold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.15625in</Top>
-              <Height>0.25in</Height>
-              <Width>0.88542in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox6">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Sum(Fields!Penalty.Value, "DataSet1")</Value>
-                      <Style>
-                        <FontWeight>SemiBold</FontWeight>
-                        <Format>'₱'#,0.00;('₱'#,0.00)</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.15625in</Top>
-              <Left>0.87501in</Left>
-              <Height>0.25in</Height>
-              <Width>2.53347in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-                <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
-              </Style>
-            </Textbox>
-            <Line Name="Line1">
-              <Top>0.01389in</Top>
-              <Height>0in</Height>
-              <Width>3.47792in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-              </Style>
-            </Line>
-            <Textbox Name="Textbox7">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Cash: </Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.60069in</Top>
-              <Left>0.00521in</Left>
-              <Height>0.25in</Height>
-              <Width>0.44271in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="pCash">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!pCash.Value</Value>
-                      <Style>
-                        <Format>'₱'#,0,.00;('₱'#,0,.00)</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>pCash</rd:DefaultName>
-              <Top>0.60069in</Top>
-              <Left>0.44792in</Left>
-              <Height>0.25in</Height>
-              <Width>2.98833in</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-                <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox8">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Change: </Value>
-                      <Style>
-                        <FontWeight>SemiBold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.92014in</Top>
-              <Height>0.25in</Height>
-              <Width>0.64584in</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="pChange">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!pChange.Value</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                        <Format>'₱'#,0.00;('₱'#,0.00)</Format>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>pChange</rd:DefaultName>
-              <Top>0.92014in</Top>
-              <Left>0.64584in</Left>
-              <Height>0.25in</Height>
-              <Width>2.76264in</Width>
-              <ZIndex>6</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-                <rd:FormatSymbolCulture>fil-PH</rd:FormatSymbolCulture>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageFooter>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>

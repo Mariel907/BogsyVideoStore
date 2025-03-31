@@ -17,32 +17,7 @@ namespace Project.Class
             };
             ds.ExecuteData("UpdateReturn", parameter);
         }
-        public void RefreshSearchCMBXRented(string SDate, string EDate, string Cmbx, DataGridView dt)
-        {
-            string query = string.Empty;
-            SqlParameter[] parameter;
-            if (Cmbx == "DVD")
-            {
-                query = "GetAllRentedDVD";
-                parameter = new SqlParameter[]
-                {
-                    new SqlParameter("StartDate", SDate),
-                    new SqlParameter("EndDate", EDate)
-                };
-            }
-            else
-            {
-                query = "GetAllRentedVCD";
-                parameter = new SqlParameter[]
-                {
-                    new SqlParameter("StartDate", SDate),
-                    new SqlParameter("EndDate", EDate)
-                };
-            }
-
-            ds.LoadData(query, dt);
-        }
-
+       
         public void RefreshSearchCMBXTxbxRented(string SDate, string EDate, string cmbx, string Txbx, DataGridView dt)
         {
             string query = string.Empty;
