@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Web.Configuration;
 using System.Windows.Forms;
 
 namespace Project.Class
@@ -12,7 +11,6 @@ namespace Project.Class
     public class Rent
     {
         private DataLoader dataLoader = new DataLoader();
-
         public static List<Customers> Fullname()
         {
             List<Customers> customer = new List<Customers>();
@@ -58,7 +56,8 @@ namespace Project.Class
                             VideoId = int.Parse(reader["VideoID"].ToString()),
                             LimitDaysRented = int.Parse(reader["LimitDaysRented"].ToString()),
                             Price = Convert.ToDecimal(reader["Amount"].ToString()),
-                            Category = reader["Category"].ToString()
+                            Category = reader["Category"].ToString().Trim(),
+                            SerialNo = reader["SerialNo"].ToString()
                         });
                     }
                 }
@@ -66,11 +65,42 @@ namespace Project.Class
             return video;
         }
 
+        public static List<SrchSerial> SearchSerial(string cmbx)
+        {
+            List<SrchSerial> Serial = new List<SrchSerial>();
+            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("SearchSerial", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@SearchText", $"%{cmbx}%");
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Serial.Add(new SrchSerial
+                            {
+                                Title = reader["Title"].ToString(),
+                                SerialID = reader["SerialID"].ToString(),
+                                SerialNo = reader["SerialNo"].ToString(),
+                                VideoID = int.Parse(reader["VideoID"].ToString()),
+                            });
+                        }
+                    }
+                }
+            }
+            return Serial;
+        }
+
         public void _InsertRent(Customers Customer, DataGridView dataGridView)
         {
+           
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
+                int EntryNo =AutoIncrementManager.GetNextEntryNo();
+
                 SqlParameter[] parameter = new SqlParameter[]
                 {
                     new SqlParameter("@CustomerID", Customer.CustomerID),
@@ -81,6 +111,10 @@ namespace Project.Class
                     new SqlParameter("@Price", row.Cells["Price"].Value),
                     new SqlParameter("@Status", row.Cells["Status"].Value),
                     new SqlParameter("@DueDate", DateTime.Now.Date.AddDays(rentedDays)),
+                    new SqlParameter("DocumentNo", row.Cells["DocumentNo"].Value),
+                    new SqlParameter("EntryNo", EntryNo),
+                    new SqlParameter("Title", row.Cells["Title"].Value),
+                    new SqlParameter("SerialNo", Customer.SerialNo)
                 };
                 dataLoader.ExecuteData("InsertRent", parameter);
             }
@@ -103,6 +137,7 @@ namespace Project.Class
                 _video.DueDate = DateTime.Now.Date.AddDays(rentedDays);
                 _video.Category = row.Cells["Category"].Value.ToString();
                 _video.TotalAmount = Convert.ToDecimal(row.Cells["TotalAmount"].Value);
+                _video.SerialNo = row.Cells["SerialNo"].Value.ToString();
 
                 list.Add(_video);
             }
@@ -122,6 +157,10 @@ namespace Project.Class
                 new SqlParameter("VideoID", selectedRow.Cells["VideoID"].Value),
                 new SqlParameter("TotalAmount", selectedRow.Cells["TotalAmount"].Value),
                 new SqlParameter("Price", selectedRow.Cells["Price"].Value),
+                new SqlParameter("Title", selectedRow.Cells["Title"].Value),
+                new SqlParameter("DocumentNo", selectedRow.Cells["DocumentNo"].Value),
+                new SqlParameter("SerialNo", selectedRow.Cells["SerialNo"].Value),
+                new SqlParameter("Category", selectedRow.Cells["Category"].Value)
             };
             dataLoader.ExecuteData("Void", parameter);
         }
@@ -129,7 +168,7 @@ namespace Project.Class
         public void SubtractTotalAmount(DataGridView dataGridView, string label, ref string _updatelabel)
         {
             if (dataGridView.SelectedRows.Count > 0)
-            { 
+            {
                 decimal TotalAmountToSubtract = 0;
                 foreach (DataGridViewRow row in dataGridView.SelectedRows)
                 {

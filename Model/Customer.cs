@@ -19,5 +19,6 @@ namespace Project.Model
         public string Fullname { get; set; }
         public decimal Cash { get; set; }
         public decimal Change { get; set; }
+        public string SerialNo { get; set; }
     }
 }

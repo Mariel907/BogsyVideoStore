@@ -279,6 +279,8 @@ namespace Project.DataSet {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ReceiptDataTable : global::System.Data.TypedTableBase<ReceiptRow> {
             
+            private global::System.Data.DataColumn columnSerialNo;
+            
             private global::System.Data.DataColumn columnVideoID;
             
             private global::System.Data.DataColumn columnTitle;
@@ -324,6 +326,14 @@ namespace Project.DataSet {
             protected ReceiptDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SerialNoColumn {
+                get {
+                    return this.columnSerialNo;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -419,10 +429,11 @@ namespace Project.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ReceiptRow AddReceiptRow(string Title, string Category, int Quantity, decimal Price, System.DateTime DueDate, int TotalAmount) {
+            public ReceiptRow AddReceiptRow(string SerialNo, int VideoID, string Title, string Category, int Quantity, decimal Price, System.DateTime DueDate, decimal TotalAmount) {
                 ReceiptRow rowReceiptRow = ((ReceiptRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        SerialNo,
+                        VideoID,
                         Title,
                         Category,
                         Quantity,
@@ -458,6 +469,7 @@ namespace Project.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnSerialNo = base.Columns["SerialNo"];
                 this.columnVideoID = base.Columns["VideoID"];
                 this.columnTitle = base.Columns["Title"];
                 this.columnCategory = base.Columns["Category"];
@@ -470,6 +482,8 @@ namespace Project.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnSerialNo = new global::System.Data.DataColumn("SerialNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerialNo);
                 this.columnVideoID = new global::System.Data.DataColumn("VideoID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVideoID);
                 this.columnTitle = new global::System.Data.DataColumn("Title", typeof(string), null, global::System.Data.MappingType.Element);
@@ -482,13 +496,12 @@ namespace Project.DataSet {
                 base.Columns.Add(this.columnPrice);
                 this.columnDueDate = new global::System.Data.DataColumn("DueDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDueDate);
-                this.columnTotalAmount = new global::System.Data.DataColumn("TotalAmount", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnTotalAmount = new global::System.Data.DataColumn("TotalAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalAmount);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnVideoID}, true));
-                this.columnVideoID.AutoIncrement = true;
+                this.columnSerialNo.MaxLength = 100;
                 this.columnVideoID.AllowDBNull = false;
-                this.columnVideoID.ReadOnly = true;
                 this.columnVideoID.Unique = true;
                 this.columnTitle.MaxLength = 100;
                 this.columnCategory.MaxLength = 50;
@@ -634,6 +647,22 @@ namespace Project.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SerialNo {
+                get {
+                    try {
+                        return ((string)(this[this.tableReceipt.SerialNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SerialNo\' in table \'Receipt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReceipt.SerialNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int VideoID {
                 get {
                     return ((int)(this[this.tableReceipt.VideoIDColumn]));
@@ -725,10 +754,10 @@ namespace Project.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int TotalAmount {
+            public decimal TotalAmount {
                 get {
                     try {
-                        return ((int)(this[this.tableReceipt.TotalAmountColumn]));
+                        return ((decimal)(this[this.tableReceipt.TotalAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TotalAmount\' in table \'Receipt\' is DBNull.", e);
@@ -737,6 +766,18 @@ namespace Project.DataSet {
                 set {
                     this[this.tableReceipt.TotalAmountColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSerialNoNull() {
+                return this.IsNull(this.tableReceipt.SerialNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSerialNoNull() {
+                this[this.tableReceipt.SerialNoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -971,6 +1012,7 @@ namespace Project.DataSet.DSReceiptTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Receipt";
+            tableMapping.ColumnMappings.Add("SerialNo", "SerialNo");
             tableMapping.ColumnMappings.Add("VideoID", "VideoID");
             tableMapping.ColumnMappings.Add("Title", "Title");
             tableMapping.ColumnMappings.Add("Category", "Category");

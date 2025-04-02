@@ -40,6 +40,7 @@ namespace Project.Forms.ExtensionForms
             }
             return false;
         }
+
         private Customers CreateCustomer()
         {
             return new Customers
@@ -47,7 +48,8 @@ namespace Project.Forms.ExtensionForms
                 CustomerID = labelCustomerName.Text,
                 Fullname = comboBoxFullname.Text,
                 Cash = Convert.ToDecimal(guna2TextBoxCash.Text),
-                Change = Convert.ToDecimal(guna2TextBoxChange.Text)
+                Change = Convert.ToDecimal(guna2TextBoxChange.Text),
+                SerialNo = CmbxSerialNo.Text
             };
         }
        
@@ -62,6 +64,7 @@ namespace Project.Forms.ExtensionForms
         private void RentCustomer_Load(object sender, EventArgs e)
         {
             DisplayVideo();
+            DisplaySerial();
             var customers = Rent.Fullname();
             comboBoxFullname.DataSource = customers;
             comboBoxFullname.DisplayMember = "Fullname";
@@ -76,6 +79,13 @@ namespace Project.Forms.ExtensionForms
             comboBoxVideo.ValueMember = "VideoID";
         }
 
+        private void DisplaySerial()
+        {
+            var serial = Rent.SearchSerial(comboBoxVideo.Text);
+            CmbxSerialNo.DataSource = serial;
+            CmbxSerialNo.DisplayMember = "SerialNo";
+            CmbxSerialNo.ValueMember = "SerialID";
+        }
         private void RentCustomer_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -88,24 +98,25 @@ namespace Project.Forms.ExtensionForms
             {
                 if (selectedVideo != null)
                 {
-                    bool videoExists = false;
-                    foreach (DataGridViewRow row in DGVRent.Rows)
-                    {
-                        if (row.Cells["VideoID"].Value.ToString() == selectedVideo.VideoId.ToString() && row.Cells["Status"].Value.ToString() != "Void")
-                        {
-                            int currentQuantity = Convert.ToInt32(row.Cells["Quantity"].Value);
-                            row.Cells["Quantity"].Value = currentQuantity + 1;
-                            row.Cells["Price"].Value = selectedVideo.Price;
-                            row.Cells["TotalAmount"].Value = (currentQuantity + 1) * selectedVideo.Price;
+                    //bool videoExists = false;
+                    //foreach (DataGridViewRow row in DGVRent.Rows)
+                    //{
+                    //    if (row.Cells["VideoID"].Value.ToString() == selectedVideo.VideoId.ToString() && row.Cells["Status"].Value.ToString() != "Void")
+                    //    {
+                    //        int currentQuantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+                    //        row.Cells["Quantity"].Value = currentQuantity + 1;
+                    //        row.Cells["Price"].Value = selectedVideo.Price;
+                    //        row.Cells["TotalAmount"].Value = (currentQuantity + 1) * selectedVideo.Price;
 
-                            rent.CheckedOut(selectedVideo);
-                            videoExists = true;
-                            break;
-                        }
-                    }
+                    //        rent.CheckedOut(selectedVideo);
+                    //        videoExists = true;
+                    //        break;
+                    //    }
+                    //}
 
-                    if (!videoExists)
-                    {
+                    //if (!videoExists)
+                    //{
+
                         int rowIndex = DGVRent.Rows.Add();
                         DataGridViewRow row = DGVRent.Rows[rowIndex];
                         row.Cells["Title"].Value = selectedVideo.Title;
@@ -116,12 +127,14 @@ namespace Project.Forms.ExtensionForms
                         row.Cells["TotalAmount"].Value = selectedVideo.Price;
                         row.Cells["Category"].Value = selectedVideo.Category;
                         row.Cells["Status"].Value = "Checked Out";
+                        row.Cells["DocumentNo"].Value = selectedVideo.DocumentNo = AutoIncrementManager.GetNextDocumentNo();
+                        row.Cells["SerialNo"].Value = selectedVideo.SerialNo;
 
                         int rentedDays = selectedVideo.LimitDaysRented;
                         row.Cells["DueDate"].Value = DateTime.Now.Date.AddDays(rentedDays).ToString("MM/dd/yyyy");
                         rent.CheckedOut(selectedVideo);
 
-                    }
+                    //}
                 }
             }
             catch (Exception ex)
@@ -132,6 +145,7 @@ namespace Project.Forms.ExtensionForms
             string UpdateTotal = string.Empty;
             rent.UpdateTotal(DGVRent, ref UpdateTotal);
             labelTotal.Text = UpdateTotal;
+
 
             DisplayVideo();
         }

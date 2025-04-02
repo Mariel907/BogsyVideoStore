@@ -8,7 +8,6 @@ namespace Project.Class
     public class VideoLibrary
     {
         private DataLoader ds = new DataLoader();
-
         public void Update(VideoProp video)
         {
             SqlParameter[] parameter;
@@ -37,7 +36,11 @@ namespace Project.Class
         {
             foreach (DataGridViewRow row in DGV.Rows)
             {
-                if (row == null) return;
+                if (row.IsNewRow) continue;
+                int EntryNo = AutoIncrementManager.GetNextEntryNo();
+                string DocumentNo = AutoIncrementManager.GetNextDocumentNo();
+                int SerialID = AutoIncrementManager.GetNextSerialID();
+
                 SqlParameter[] parameters = new SqlParameter[]
                 {
                     new SqlParameter("Amount", row.Cells["Price"].Value),
@@ -45,12 +48,13 @@ namespace Project.Class
                     new SqlParameter("Category",  row.Cells["Category"].Value),
                     new SqlParameter("In", row.Cells["Qty"].Value),
                     new SqlParameter("LimitDaysRented", row.Cells["LimitDaysRented"].Value),
-                    new SqlParameter("DocumentNo", row.Cells["DocumentNo"].Value),
                     new SqlParameter("VideoID", row.Cells["VideoID"].Value),
                     new SqlParameter("SerialNo", row.Cells["SerialNo"].Value),
                     new SqlParameter("Date", DateTime.Now.Date),
                     new SqlParameter("UpdateDate", DateTime.Now.Date),
-                    new SqlParameter("Type", "Purchase")
+                    new SqlParameter("DocumentNo", DocumentNo),
+                    new SqlParameter("EntryNo", EntryNo),
+                    new SqlParameter("SerialID", SerialID)
                 };
                 ds.ExecuteData("InsertVideo", parameters);
 

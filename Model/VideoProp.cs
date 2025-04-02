@@ -17,6 +17,8 @@ namespace Project.Model
         public DateTime DueDate { get; set; }
         public int Quantity { get; set; }
         public decimal TotalAmount { get; set; }
+        public string SerialNo { get; set; }
+        public string DocumentNo { get; set; }
 
     }
 }

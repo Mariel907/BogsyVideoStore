@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\AutoIncrementManager.cs" />
     <Compile Include="Class\CPayments.cs" />
     <Compile Include="Class\CustomerClass.cs" />
     <Compile Include="Class\DataLoader.cs" />
@@ -95,6 +96,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSReceipt.cs">
+      <DependentUpon>DSReceipt.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet\DSReceipt.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -162,6 +166,12 @@
     <Compile Include="Forms\ExtensionForms\RentCustomer.Designer.cs">
       <DependentUpon>RentCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemLedger.Designer.cs">
+      <DependentUpon>ItemLedger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Payments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,7 +189,9 @@
     <Compile Include="Model\PenaltyReceipt.cs" />
     <Compile Include="Model\Receipt.cs" />
     <Compile Include="Model\SearchUnpaid.cs" />
+    <Compile Include="Model\SrchSerial.cs" />
     <Compile Include="Model\Transac.cs" />
+    <Compile Include="Model\UndoRedoAction.cs" />
     <Compile Include="Model\VideoProp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,6 +220,9 @@
     <EmbeddedResource Include="Forms\ExtensionForms\RentCustomer.resx">
       <DependentUpon>RentCustomer.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemLedger.resx">
+      <DependentUpon>ItemLedger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Payments.resx">
       <DependentUpon>Payments.cs</DependentUpon>
@@ -271,6 +286,7 @@
       <DependentUpon>PenaltyReceipt.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Project.DataSet.DSReceipt.datasource" />
     <None Include="Properties\DataSources\Project.Model.PenaltyReceipt.datasource" />
     <None Include="Properties\DataSources\Project.Model.Receipt.datasource" />
     <None Include="Properties\Settings.settings">

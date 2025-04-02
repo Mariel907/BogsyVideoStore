@@ -1,38 +1,27 @@
-﻿using Project.Class;
+﻿using Guna.UI2.WinForms;
+using Project.Class;
 using Project.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Drawing;
-using System.Web.UI.WebControls;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Project.Forms.ExtensionForms
 {
     public partial class AddDVD_VCD : Form
     {
+        private object[] copiedData;
+        private object copiedCellValue;
+        private Stack<UndoRedoAction> undoStack = new Stack<UndoRedoAction>();
+        private Stack<UndoRedoAction> redoStack = new Stack<UndoRedoAction>();
+
         public AddDVD_VCD()
         {
             InitializeComponent();
         }
 
-        private void Guna2ButtonSubmit_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                VideoProp video = new VideoProp();
-                video.Title = guna2TextBoxTitle.Text;
-                video.CopiesAvailable = guna2TextBoxTotalCopies.Text;
-                video.Category = guna2ComboBoxCategory.Text;
-                video.LimitDaysRented = Convert.ToInt16(guna2ComboBoxLimitdaysRented.Text);
-
-              
-                MessageBox.Show("Data added successfully ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private void AddDVD_VCD_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -42,10 +31,26 @@ namespace Project.Forms.ExtensionForms
         private void AddDVD_VCD_Load(object sender, EventArgs e)
         {
             AddColumnCMBX("Category", "Category", new List<string> { "DVD", "VCD" });
-            AddColumnCMBX("Limit Days Rented", "LimitDaysRented", new List<string> { "1", "2", "3" });
-
+            DataGridViewComboBoxColumn cmbxClmn = new DataGridViewComboBoxColumn
+            {
+                HeaderText = "Limit Days Rented",
+                Name = "LimitDaysRented",
+                DataSource = new List<int> {1, 2, 3 },
+            };
+            cmbxClmn.DefaultCellStyle.BackColor = Color.White;
+            cmbxClmn.FlatStyle = FlatStyle.Flat;
+            G2DGVAddSave.Columns.Add(cmbxClmn);
+            DisplayVideo();
         }
-       
+        private void DisplayVideo()
+        {
+            var Title = Rent.Video();
+            comboBoxVideo.DataSource = Title;
+            comboBoxVideo.DisplayMember = "Title";
+            comboBoxVideo.ValueMember = "VideoID";
+        }
+        
+
         private void AddColumnCMBX(string HdrText, string NmText, List<string> dataSource)
         {
             DataGridViewComboBoxColumn cmbxClmn = new DataGridViewComboBoxColumn
@@ -56,26 +61,40 @@ namespace Project.Forms.ExtensionForms
             };
             cmbxClmn.DefaultCellStyle.BackColor = Color.White;
             cmbxClmn.FlatStyle = FlatStyle.Flat;
-            G2BtnAddSave.Columns.Add(cmbxClmn);
+            G2DGVAddSave.Columns.Add(cmbxClmn);
         }
 
         private void G2DGVAdd_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (G2BtnAddSave.Columns[e.ColumnIndex].Name == "Category")
+            try
             {
-                DataGridViewRow currentRow = G2BtnAddSave.Rows[e.RowIndex];
-                string selectedCategory = currentRow.Cells["Category"].Value?.ToString();
+                if (G2DGVAddSave.Columns[e.ColumnIndex].Name == "Category")
+                {
+                    DataGridViewRow currentRow = G2DGVAddSave.Rows[e.RowIndex];
+                    string selectedCategory = currentRow.Cells["Category"].Value?.ToString();
 
-                currentRow.Cells["Price"].Value = selectedCategory == "DVD" ? 50 : 25;
-                currentRow.Cells["Qty"].Value = 1;
+                    currentRow.Cells["Price"].Value = selectedCategory == "DVD" ? (decimal)50.00 : (decimal)25.00;
+                    currentRow.Cells["Qty"].Value = 1;
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void G2DGVAdd_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
-            if (G2BtnAddSave.IsCurrentCellDirty && G2BtnAddSave.CurrentCell.OwningColumn.Name == "Category")
+            try
             {
-                G2BtnAddSave.CommitEdit(DataGridViewDataErrorContexts.Commit);
+                if (G2DGVAddSave.IsCurrentCellDirty && G2DGVAddSave.CurrentCell.OwningColumn.Name == "Category")
+                {
+                    G2DGVAddSave.CommitEdit(DataGridViewDataErrorContexts.Commit);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -84,12 +103,129 @@ namespace Project.Forms.ExtensionForms
             try
             {
                 VideoLibrary vd = new VideoLibrary();
-                vd.Insert(G2BtnAddSave);
+                vd.Insert(G2DGVAddSave);
+                MessageBox.Show("Data save successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void G2BtnAddSave_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.C:
+                    if (e.Control)
+                    {
+                        if (G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+                            copiedData = G2DGVAddSave.CurrentRow.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
+                        else if (G2DGVAddSave.CurrentCell != null)
+                            copiedCellValue = G2DGVAddSave.CurrentCell.Value;
+                    }
+                    break;
+                case Keys.V:
+                    if (e.Control)
+                    {
+                        if (copiedCellValue != null && G2DGVAddSave.CurrentCell != null)
+                        {
+                            AddToUndoStackCell();
+                            G2DGVAddSave.CurrentCell.Value = copiedCellValue;
+                        }
+                        else if(copiedData != null)
+                        {
+                            AddToUndoStack();
+
+                            int newRowIndex = G2DGVAddSave.Rows.Add();
+                            for (int i = 0; i < copiedData.Length; i++)
+                                G2DGVAddSave.Rows[newRowIndex].Cells[i].Value = copiedData[i];
+                        }
+                    }
+                    break;
+                case Keys.Delete:
+                    if (G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+                        G2DGVAddSave.Rows.Remove(G2DGVAddSave.CurrentRow);
+                    else if (G2DGVAddSave.CurrentCell != null)
+                        G2DGVAddSave.CurrentCell.Value = null;
+                        break;
+                //case Keys.Y:
+                //    if (e.Control && redoStack.Count > 0)
+                //    {
+                //        var redoAction = redoStack.Pop();
+                //        undoStack.Push(redoAction);
+                //        if (redoAction.Cell != null && redoAction.Cells.Length > 0)
+                //        {
+                //            int newRowIndex = G2DGVAddSave.Rows.Add();
+                //            for (int i = 0; i < redoAction.Cells.Length; i++)
+                //                G2DGVAddSave.Rows[newRowIndex].Cells[i].Value = redoAction.Cells[i];
+                //        }
+                //        else if (G2DGVAddSave.CurrentCell != null)
+                //            G2DGVAddSave.CurrentCell.Value = redoAction;
+                //    }
+                //    break;
+                default:
+                    break;
+            }
+        }
+
+        private void AddToUndoStack()
+        {
+          if(G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+            {
+               var rowValues = G2DGVAddSave.CurrentRow.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
+
+                undoStack.Push(new UndoRedoAction
+                {
+                    Cells = rowValues
+                });
+                redoStack.Clear();
+            }
+        }
+         private void AddToUndoStackCell()
+        {
+            if (G2DGVAddSave.CurrentCell != null)
+            {
+                undoStack.Push(new UndoRedoAction
+                {
+                    Cell = G2DGVAddSave.CurrentCell,
+                    PreviousValue = G2DGVAddSave.CurrentCell.Value 
+                });
+
+                redoStack.Clear();
+            }
+        }
+
+        private void comboBoxFullname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxVideo.SelectedValue != null)
+            {
+                VideoProp vd = comboBoxVideo.SelectedItem as VideoProp;
+                guna2TextBoxVideo.Text = vd.VideoId.ToString();
+            }
+        }
+
+        private void G2BtnAdd_Click(object sender, EventArgs e)
+        {
+            VideoProp SlctdVideo = comboBoxVideo.SelectedItem as VideoProp;
+            try
+            {
+                int RowIndex = G2DGVAddSave.Rows.Add();
+                DataGridViewRow row = G2DGVAddSave.Rows[RowIndex];
+                row.Cells["VideoID"].Value = SlctdVideo.VideoId;
+                row.Cells["Title"].Value = SlctdVideo.Title;
+                row.Cells["LimitDaysRented"].Value = SlctdVideo.LimitDaysRented;
+                row.Cells["Category"].Value = SlctdVideo.Category;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void G2DGVAddSave_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
         }
     }
 }

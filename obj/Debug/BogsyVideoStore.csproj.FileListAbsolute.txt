@@ -109,3 +109,4 @@ C:\Users\Mariel\source\repos\BogsyVideoStore\bin\Debug\zh-CHT\Microsoft.ReportVi
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.PrintReceipt.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.Payments.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\bin\Debug\Guna.UI2.dll
+C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ItemLedger.resources

@@ -32,46 +32,279 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelEditBook = new System.Windows.Forms.Panel();
+            this.G2BtnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBoxVideo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.comboBoxVideo = new System.Windows.Forms.ComboBox();
             this.G2BtnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.G2BtnAddSave = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2ComboBoxLimitdaysRented = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2ComboBoxCategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2TextBoxTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxTotalCopies = new Guna.UI2.WinForms.Guna2TextBox();
+            this.G2DGVAddSave = new Guna.UI2.WinForms.Guna2DataGridView();
             this.labelBook = new System.Windows.Forms.Label();
-            this.guna2ButtonSubmit = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.DocumentNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelEditBook.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.G2BtnAddSave)).BeginInit();
+            this.panel18.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.G2DGVAddSave)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEditBook
             // 
+            this.panelEditBook.Controls.Add(this.G2BtnAdd);
+            this.panelEditBook.Controls.Add(this.guna2TextBoxVideo);
+            this.panelEditBook.Controls.Add(this.label4);
+            this.panelEditBook.Controls.Add(this.panel18);
+            this.panelEditBook.Controls.Add(this.panel20);
+            this.panelEditBook.Controls.Add(this.panel22);
+            this.panelEditBook.Controls.Add(this.panel24);
+            this.panelEditBook.Controls.Add(this.panel26);
+            this.panelEditBook.Controls.Add(this.panel28);
+            this.panelEditBook.Controls.Add(this.panel30);
+            this.panelEditBook.Controls.Add(this.panel32);
+            this.panelEditBook.Controls.Add(this.panel33);
+            this.panelEditBook.Controls.Add(this.comboBoxVideo);
             this.panelEditBook.Controls.Add(this.G2BtnSave);
-            this.panelEditBook.Controls.Add(this.G2BtnAddSave);
-            this.panelEditBook.Controls.Add(this.guna2ComboBoxLimitdaysRented);
-            this.panelEditBook.Controls.Add(this.label3);
-            this.panelEditBook.Controls.Add(this.label1);
-            this.panelEditBook.Controls.Add(this.guna2ComboBoxCategory);
-            this.panelEditBook.Controls.Add(this.guna2TextBoxTitle);
-            this.panelEditBook.Controls.Add(this.guna2TextBoxTotalCopies);
+            this.panelEditBook.Controls.Add(this.G2DGVAddSave);
             this.panelEditBook.Controls.Add(this.labelBook);
-            this.panelEditBook.Controls.Add(this.guna2ButtonSubmit);
-            this.panelEditBook.Controls.Add(this.label5);
-            this.panelEditBook.Controls.Add(this.label2);
             this.panelEditBook.Location = new System.Drawing.Point(0, 0);
             this.panelEditBook.Name = "panelEditBook";
             this.panelEditBook.Size = new System.Drawing.Size(1132, 567);
             this.panelEditBook.TabIndex = 65;
+            // 
+            // G2BtnAdd
+            // 
+            this.G2BtnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.G2BtnAdd.BorderRadius = 15;
+            this.G2BtnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2BtnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2BtnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.G2BtnAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.G2BtnAdd.ForeColor = System.Drawing.Color.White;
+            this.G2BtnAdd.Location = new System.Drawing.Point(847, 519);
+            this.G2BtnAdd.Name = "G2BtnAdd";
+            this.G2BtnAdd.Size = new System.Drawing.Size(125, 36);
+            this.G2BtnAdd.TabIndex = 468;
+            this.G2BtnAdd.Text = "Add";
+            this.G2BtnAdd.UseTransparentBackground = true;
+            this.G2BtnAdd.Click += new System.EventHandler(this.G2BtnAdd_Click);
+            // 
+            // guna2TextBoxVideo
+            // 
+            this.guna2TextBoxVideo.BorderColor = System.Drawing.Color.White;
+            this.guna2TextBoxVideo.BorderThickness = 2;
+            this.guna2TextBoxVideo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBoxVideo.DefaultText = "";
+            this.guna2TextBoxVideo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBoxVideo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBoxVideo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxVideo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBoxVideo.FocusedState.BorderColor = System.Drawing.Color.White;
+            this.guna2TextBoxVideo.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F);
+            this.guna2TextBoxVideo.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBoxVideo.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2TextBoxVideo.Location = new System.Drawing.Point(374, 15);
+            this.guna2TextBoxVideo.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2TextBoxVideo.Name = "guna2TextBoxVideo";
+            this.guna2TextBoxVideo.Padding = new System.Windows.Forms.Padding(5);
+            this.guna2TextBoxVideo.PlaceholderForeColor = System.Drawing.Color.White;
+            this.guna2TextBoxVideo.PlaceholderText = "";
+            this.guna2TextBoxVideo.ReadOnly = true;
+            this.guna2TextBoxVideo.SelectedText = "";
+            this.guna2TextBoxVideo.Size = new System.Drawing.Size(72, 15);
+            this.guna2TextBoxVideo.TabIndex = 467;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(292, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 21);
+            this.label4.TabIndex = 466;
+            this.label4.Text = "Existed ID";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Controls.Add(this.panel19);
+            this.panel18.Location = new System.Drawing.Point(476, 35);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(4, 36);
+            this.panel18.TabIndex = 464;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel19.Location = new System.Drawing.Point(0, -10);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(179, 2);
+            this.panel19.TabIndex = 442;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.White;
+            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Location = new System.Drawing.Point(301, 36);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(2, 32);
+            this.panel20.TabIndex = 461;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel21.Location = new System.Drawing.Point(0, -10);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(179, 2);
+            this.panel21.TabIndex = 442;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.White;
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Location = new System.Drawing.Point(296, 70);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(181, 5);
+            this.panel22.TabIndex = 465;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel23.Location = new System.Drawing.Point(0, -10);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(179, 2);
+            this.panel23.TabIndex = 442;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Controls.Add(this.panel25);
+            this.panel24.Location = new System.Drawing.Point(298, 37);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(176, 5);
+            this.panel24.TabIndex = 462;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel25.Location = new System.Drawing.Point(0, -10);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(179, 2);
+            this.panel25.TabIndex = 442;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.White;
+            this.panel26.Controls.Add(this.panel27);
+            this.panel26.Location = new System.Drawing.Point(298, 63);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(176, 5);
+            this.panel26.TabIndex = 459;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel27.Location = new System.Drawing.Point(0, -10);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(179, 2);
+            this.panel27.TabIndex = 442;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Location = new System.Drawing.Point(474, 33);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(2, 36);
+            this.panel28.TabIndex = 463;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel29.Location = new System.Drawing.Point(0, -10);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(179, 2);
+            this.panel29.TabIndex = 442;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel30.Controls.Add(this.panel31);
+            this.panel30.Location = new System.Drawing.Point(296, 34);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(2, 36);
+            this.panel30.TabIndex = 460;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel31.Location = new System.Drawing.Point(0, -10);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(179, 2);
+            this.panel31.TabIndex = 442;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel32.Location = new System.Drawing.Point(297, 68);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(179, 2);
+            this.panel32.TabIndex = 458;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel33.Controls.Add(this.panel34);
+            this.panel33.Location = new System.Drawing.Point(296, 33);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(179, 2);
+            this.panel33.TabIndex = 457;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel34.Location = new System.Drawing.Point(0, -10);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(179, 2);
+            this.panel34.TabIndex = 442;
+            // 
+            // comboBoxVideo
+            // 
+            this.comboBoxVideo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxVideo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxVideo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBoxVideo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxVideo.Location = new System.Drawing.Point(301, 38);
+            this.comboBoxVideo.Name = "comboBoxVideo";
+            this.comboBoxVideo.Size = new System.Drawing.Size(179, 35);
+            this.comboBoxVideo.TabIndex = 456;
+            this.comboBoxVideo.SelectedIndexChanged += new System.EventHandler(this.comboBoxFullname_SelectedIndexChanged);
             // 
             // G2BtnSave
             // 
@@ -84,7 +317,7 @@
             this.G2BtnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.G2BtnSave.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.G2BtnSave.ForeColor = System.Drawing.Color.White;
-            this.G2BtnSave.Location = new System.Drawing.Point(978, 426);
+            this.G2BtnSave.Location = new System.Drawing.Point(978, 519);
             this.G2BtnSave.Name = "G2BtnSave";
             this.G2BtnSave.Size = new System.Drawing.Size(125, 36);
             this.G2BtnSave.TabIndex = 363;
@@ -92,15 +325,15 @@
             this.G2BtnSave.UseTransparentBackground = true;
             this.G2BtnSave.Click += new System.EventHandler(this.G2BtnSave_Click);
             // 
-            // G2BtnAddSave
+            // G2DGVAddSave
             // 
-            this.G2BtnAddSave.AllowUserToDeleteRows = false;
+            this.G2DGVAddSave.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.G2BtnAddSave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.G2BtnAddSave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.G2DGVAddSave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.G2DGVAddSave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.G2BtnAddSave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.G2DGVAddSave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,16 +341,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.G2BtnAddSave.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.G2BtnAddSave.ColumnHeadersHeight = 35;
-            this.G2BtnAddSave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.G2BtnAddSave.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DocumentNo,
+            this.G2DGVAddSave.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.G2DGVAddSave.ColumnHeadersHeight = 35;
+            this.G2DGVAddSave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.G2DGVAddSave.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SerialNo,
             this.VideoID,
             this.Title,
             this.Qty,
-            this.Price,
-            this.SerialNo});
+            this.Price});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,151 +357,40 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.G2BtnAddSave.DefaultCellStyle = dataGridViewCellStyle3;
-            this.G2BtnAddSave.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.G2BtnAddSave.Location = new System.Drawing.Point(422, 31);
-            this.G2BtnAddSave.Margin = new System.Windows.Forms.Padding(4);
-            this.G2BtnAddSave.Name = "G2BtnAddSave";
-            this.G2BtnAddSave.RowHeadersVisible = false;
-            this.G2BtnAddSave.Size = new System.Drawing.Size(681, 388);
-            this.G2BtnAddSave.TabIndex = 362;
-            this.G2BtnAddSave.Tag = "book_id";
-            this.G2BtnAddSave.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.G2BtnAddSave.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.G2BtnAddSave.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.G2BtnAddSave.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.G2BtnAddSave.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.G2BtnAddSave.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.G2BtnAddSave.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.G2BtnAddSave.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2BtnAddSave.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.G2BtnAddSave.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2BtnAddSave.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.G2BtnAddSave.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.G2BtnAddSave.ThemeStyle.HeaderStyle.Height = 35;
-            this.G2BtnAddSave.ThemeStyle.ReadOnly = false;
-            this.G2BtnAddSave.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.G2BtnAddSave.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.G2BtnAddSave.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2BtnAddSave.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.G2BtnAddSave.ThemeStyle.RowsStyle.Height = 22;
-            this.G2BtnAddSave.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.G2BtnAddSave.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.G2BtnAddSave.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.G2DGVAdd_CellValueChanged);
-            this.G2BtnAddSave.CurrentCellDirtyStateChanged += new System.EventHandler(this.G2DGVAdd_CurrentCellDirtyStateChanged);
-            // 
-            // guna2ComboBoxLimitdaysRented
-            // 
-            this.guna2ComboBoxLimitdaysRented.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxLimitdaysRented.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxLimitdaysRented.BorderThickness = 2;
-            this.guna2ComboBoxLimitdaysRented.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxLimitdaysRented.DropDownHeight = 150;
-            this.guna2ComboBoxLimitdaysRented.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxLimitdaysRented.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxLimitdaysRented.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxLimitdaysRented.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBoxLimitdaysRented.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBoxLimitdaysRented.IntegralHeight = false;
-            this.guna2ComboBoxLimitdaysRented.ItemHeight = 30;
-            this.guna2ComboBoxLimitdaysRented.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.guna2ComboBoxLimitdaysRented.Location = new System.Drawing.Point(13, 383);
-            this.guna2ComboBoxLimitdaysRented.Name = "guna2ComboBoxLimitdaysRented";
-            this.guna2ComboBoxLimitdaysRented.Size = new System.Drawing.Size(353, 36);
-            this.guna2ComboBoxLimitdaysRented.TabIndex = 361;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 348);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 21);
-            this.label3.TabIndex = 359;
-            this.label3.Text = "Limit Days Rented";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 261);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 21);
-            this.label1.TabIndex = 358;
-            this.label1.Text = "Category";
-            // 
-            // guna2ComboBoxCategory
-            // 
-            this.guna2ComboBoxCategory.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBoxCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxCategory.BorderThickness = 2;
-            this.guna2ComboBoxCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBoxCategory.DropDownHeight = 150;
-            this.guna2ComboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBoxCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ComboBoxCategory.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBoxCategory.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBoxCategory.IntegralHeight = false;
-            this.guna2ComboBoxCategory.ItemHeight = 30;
-            this.guna2ComboBoxCategory.Items.AddRange(new object[] {
-            "DVD",
-            "VCD"});
-            this.guna2ComboBoxCategory.Location = new System.Drawing.Point(13, 285);
-            this.guna2ComboBoxCategory.Name = "guna2ComboBoxCategory";
-            this.guna2ComboBoxCategory.Size = new System.Drawing.Size(353, 36);
-            this.guna2ComboBoxCategory.TabIndex = 357;
-            // 
-            // guna2TextBoxTitle
-            // 
-            this.guna2TextBoxTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxTitle.BorderThickness = 2;
-            this.guna2TextBoxTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxTitle.DefaultText = "";
-            this.guna2TextBoxTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxTitle.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxTitle.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxTitle.Location = new System.Drawing.Point(13, 118);
-            this.guna2TextBoxTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxTitle.Name = "guna2TextBoxTitle";
-            this.guna2TextBoxTitle.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxTitle.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxTitle.PlaceholderText = "";
-            this.guna2TextBoxTitle.SelectedText = "";
-            this.guna2TextBoxTitle.Size = new System.Drawing.Size(353, 36);
-            this.guna2TextBoxTitle.TabIndex = 292;
-            // 
-            // guna2TextBoxTotalCopies
-            // 
-            this.guna2TextBoxTotalCopies.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxTotalCopies.BorderThickness = 2;
-            this.guna2TextBoxTotalCopies.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxTotalCopies.DefaultText = "";
-            this.guna2TextBoxTotalCopies.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxTotalCopies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxTotalCopies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxTotalCopies.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxTotalCopies.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxTotalCopies.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxTotalCopies.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxTotalCopies.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxTotalCopies.Location = new System.Drawing.Point(13, 205);
-            this.guna2TextBoxTotalCopies.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxTotalCopies.Name = "guna2TextBoxTotalCopies";
-            this.guna2TextBoxTotalCopies.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxTotalCopies.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxTotalCopies.PlaceholderText = "";
-            this.guna2TextBoxTotalCopies.SelectedText = "";
-            this.guna2TextBoxTotalCopies.Size = new System.Drawing.Size(353, 36);
-            this.guna2TextBoxTotalCopies.TabIndex = 290;
+            this.G2DGVAddSave.DefaultCellStyle = dataGridViewCellStyle3;
+            this.G2DGVAddSave.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.G2DGVAddSave.Location = new System.Drawing.Point(18, 93);
+            this.G2DGVAddSave.Margin = new System.Windows.Forms.Padding(4);
+            this.G2DGVAddSave.Name = "G2DGVAddSave";
+            this.G2DGVAddSave.RowHeadersVisible = false;
+            this.G2DGVAddSave.Size = new System.Drawing.Size(1085, 419);
+            this.G2DGVAddSave.TabIndex = 362;
+            this.G2DGVAddSave.Tag = "book_id";
+            this.G2DGVAddSave.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.G2DGVAddSave.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.G2DGVAddSave.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.G2DGVAddSave.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.G2DGVAddSave.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.G2DGVAddSave.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.G2DGVAddSave.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.G2DGVAddSave.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.G2DGVAddSave.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.G2DGVAddSave.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2DGVAddSave.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.G2DGVAddSave.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.G2DGVAddSave.ThemeStyle.HeaderStyle.Height = 35;
+            this.G2DGVAddSave.ThemeStyle.ReadOnly = false;
+            this.G2DGVAddSave.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.G2DGVAddSave.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.G2DGVAddSave.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2DGVAddSave.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.G2DGVAddSave.ThemeStyle.RowsStyle.Height = 22;
+            this.G2DGVAddSave.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.G2DGVAddSave.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.G2DGVAddSave.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.G2DGVAdd_CellValueChanged);
+            this.G2DGVAddSave.CurrentCellDirtyStateChanged += new System.EventHandler(this.G2DGVAdd_CurrentCellDirtyStateChanged);
+            this.G2DGVAddSave.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.G2DGVAddSave_DataError);
+            this.G2DGVAddSave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.G2BtnAddSave_KeyDown);
             // 
             // labelBook
             // 
@@ -282,49 +403,10 @@
             this.labelBook.TabIndex = 206;
             this.labelBook.Text = "Add DVDs and VCDs";
             // 
-            // guna2ButtonSubmit
+            // SerialNo
             // 
-            this.guna2ButtonSubmit.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonSubmit.BorderRadius = 15;
-            this.guna2ButtonSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonSubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonSubmit.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2ButtonSubmit.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonSubmit.Location = new System.Drawing.Point(11, 455);
-            this.guna2ButtonSubmit.Name = "guna2ButtonSubmit";
-            this.guna2ButtonSubmit.Size = new System.Drawing.Size(355, 36);
-            this.guna2ButtonSubmit.TabIndex = 53;
-            this.guna2ButtonSubmit.Text = "Save";
-            this.guna2ButtonSubmit.UseTransparentBackground = true;
-            this.guna2ButtonSubmit.Click += new System.EventHandler(this.Guna2ButtonSubmit_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 180);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 21);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "Qty";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 21);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Title";
-            // 
-            // DocumentNo
-            // 
-            this.DocumentNo.HeaderText = "Document No.";
-            this.DocumentNo.Name = "DocumentNo";
+            this.SerialNo.HeaderText = "Serial No.";
+            this.SerialNo.Name = "SerialNo";
             // 
             // VideoID
             // 
@@ -346,11 +428,6 @@
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             // 
-            // SerialNo
-            // 
-            this.SerialNo.HeaderText = "Serial No.";
-            this.SerialNo.Name = "SerialNo";
-            // 
             // AddDVD_VCD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,7 +442,15 @@
             this.Load += new System.EventHandler(this.AddDVD_VCD_Load);
             this.panelEditBook.ResumeLayout(false);
             this.panelEditBook.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.G2BtnAddSave)).EndInit();
+            this.panel18.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.G2DGVAddSave)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,23 +458,34 @@
         #endregion
 
         private System.Windows.Forms.Panel panelEditBook;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTitle;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTotalCopies;
         private System.Windows.Forms.Label labelBook;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonSubmit;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxCategory;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxLimitdaysRented;
-        private Guna.UI2.WinForms.Guna2DataGridView G2BtnAddSave;
+        private Guna.UI2.WinForms.Guna2DataGridView G2DGVAddSave;
         private Guna.UI2.WinForms.Guna2Button G2BtnSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DocumentNo;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.ComboBox comboBoxVideo;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxVideo;
+        private Guna.UI2.WinForms.Guna2Button G2BtnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SerialNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn VideoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SerialNo;
     }
 }
