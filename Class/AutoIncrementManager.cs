@@ -1,30 +1,104 @@
-﻿using System;
+﻿using Project.Model;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project.Class
 {
     public static class AutoIncrementManager
     {
-        private static int counter = 1000;
-        private static int EntryNoCount = 1;
-        private static int SerialNoCount = 100;
-        
-        public static string GetNextDocumentNo( string prefix = "D")
+        private static int SerialNoCount;
+        private static int currentCounter;
+        private static int DocumentNo;
+
+        public static int GetNextEntryNo()
         {
-            return $"{prefix} {counter++}";
+            GetNextEntryNoFromDB();
+            return currentCounter;
         }
 
-        public static int GetNextEntryNo(string prefix = "E")
+        private static int GetNextEntryNoFromDB()
         {
-            return EntryNoCount++;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("GetNextEntryNoFromDB", con);
+                    object result = cmd.ExecuteScalar();
+
+                    currentCounter = result != null? Convert.ToInt32(result) : 1;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return currentCounter++;
+        }
+
+        public static string GetNextDocumentNo( string prefix = "D")
+        {
+            GetNextDocumentNoFromDB();
+            return $"{prefix} {DocumentNo}";
+        }
+
+        private static int GetNextDocumentNoFromDB()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("GetNextDocumentNoFromDB", con);
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        string resultString = result.ToString();
+                        if (resultString.StartsWith("D"))
+                            DocumentNo = Convert.ToInt32(resultString.Substring(1).Trim());
+                        else
+                            DocumentNo = Convert.ToInt32(resultString);
+                    }
+                    else
+                        DocumentNo = 1000;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return DocumentNo++;
         }
 
         public static int GetNextSerialID()
         {
+            GetNextSerialIDFromDB();
             return SerialNoCount;
+        }
+        private static int GetNextSerialIDFromDB()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("GetNextEntryNoFromDB", con);
+                    object result = cmd.ExecuteScalar();
+
+                    SerialNoCount = result != null ? Convert.ToInt32(result) : 100;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return SerialNoCount++;
         }
     }
 }

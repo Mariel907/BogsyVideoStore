@@ -1,4 +1,5 @@
 ﻿using Microsoft.Reporting.WinForms;
+using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
 using System.Collections.Generic;
@@ -57,7 +58,8 @@ namespace Project.Class
                             LimitDaysRented = int.Parse(reader["LimitDaysRented"].ToString()),
                             Price = Convert.ToDecimal(reader["Amount"].ToString()),
                             Category = reader["Category"].ToString().Trim(),
-                            SerialNo = reader["SerialNo"].ToString()
+                            SerialNo = reader["SerialNo"].ToString(),
+                            SerialID = int.Parse(reader["SerialID"].ToString())
                         });
                     }
                 }
@@ -95,26 +97,27 @@ namespace Project.Class
 
         public void _InsertRent(Customers Customer, DataGridView dataGridView)
         {
-           
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
-                int EntryNo =AutoIncrementManager.GetNextEntryNo();
+                //int EntryNo =AutoIncrementManager.GetNextEntryNo();
+                //string DocumwentNo = AutoIncrementManager.GetNextDocumentNo();
 
                 SqlParameter[] parameter = new SqlParameter[]
                 {
-                    new SqlParameter("@CustomerID", Customer.CustomerID),
-                    new SqlParameter("@VideoID", row.Cells["VideoID"].Value),
-                    new SqlParameter("@RentDate", DateTime.Now.Date),
-                    new SqlParameter("@Quantity", row.Cells["Quantity"].Value),
-                    new SqlParameter("@TotalAmount", row.Cells["TotalAmount"].Value),
-                    new SqlParameter("@Price", row.Cells["Price"].Value),
-                    new SqlParameter("@Status", row.Cells["Status"].Value),
-                    new SqlParameter("@DueDate", DateTime.Now.Date.AddDays(rentedDays)),
-                    new SqlParameter("DocumentNo", row.Cells["DocumentNo"].Value),
-                    new SqlParameter("EntryNo", EntryNo),
-                    new SqlParameter("Title", row.Cells["Title"].Value),
-                    new SqlParameter("SerialNo", Customer.SerialNo)
+                    new SqlParameter("CustomerID", Customer.CustomerID),
+                    new SqlParameter("VideoID", row.Cells["VideoID"].Value),
+                    new SqlParameter("RentDate", DateTime.Now.Date),
+                    new SqlParameter("Quantity", row.Cells["Quantity"].Value),
+                    new SqlParameter("TotalAmount", row.Cells["TotalAmount"].Value),
+                    new SqlParameter("Price", row.Cells["Price"].Value),
+                    new SqlParameter("Status", row.Cells["Status"].Value),
+                    new SqlParameter("DueDate", DateTime.Now.Date.AddDays(rentedDays)),
+                    //new SqlParameter("DocumentNo", DocumwentNo),
+                    //new SqlParameter("EntryNo", EntryNo),
+                    //new SqlParameter("Title", row.Cells["Title"].Value),
+                    //new SqlParameter("SerialNo", Customer.SerialNo),
+                    //new SqlParameter("Category", row.Cells["Category"].Value),
                 };
                 dataLoader.ExecuteData("InsertRent", parameter);
             }
@@ -142,12 +145,13 @@ namespace Project.Class
                 list.Add(_video);
             }
 
-            RentReceiptGenerator GntrReceipt = new RentReceiptGenerator(reportViewer);
-            GntrReceipt.GenerateReceipt(customerProp, list);
+            PrintReceipt print = new PrintReceipt(customerProp, list);
+            print.ShowDialog();
         }
 
         public void Void(DataGridView dataGridView, string customerID)
         {
+            int EntryNo = AutoIncrementManager.GetNextEntryNo();
             DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
             SqlParameter[] parameter = new SqlParameter[]
             {
@@ -160,7 +164,8 @@ namespace Project.Class
                 new SqlParameter("Title", selectedRow.Cells["Title"].Value),
                 new SqlParameter("DocumentNo", selectedRow.Cells["DocumentNo"].Value),
                 new SqlParameter("SerialNo", selectedRow.Cells["SerialNo"].Value),
-                new SqlParameter("Category", selectedRow.Cells["Category"].Value)
+                new SqlParameter("Category", selectedRow.Cells["Category"].Value),
+                new SqlParameter("EntryNo", EntryNo)
             };
             dataLoader.ExecuteData("Void", parameter);
         }
@@ -183,9 +188,16 @@ namespace Project.Class
         }
         public void CheckedOut(VideoProp VideoID)
         {
+            int entryNo = AutoIncrementManager.GetNextEntryNo();
             SqlParameter[] parameter = new SqlParameter[]
             {
-                new SqlParameter("VideoID", VideoID.VideoId)
+                new SqlParameter("VideoID", VideoID.VideoId),
+                new SqlParameter("DocumentNo", VideoID.DocumentNo),
+                new SqlParameter("Title", VideoID.Title),
+                new SqlParameter("SerialNo", VideoID.SerialNo),
+                new SqlParameter("Category", VideoID.Category),
+                new SqlParameter("EntryNo", entryNo)
+
             };
             dataLoader.ExecuteData("CheckedOut", parameter);
         }

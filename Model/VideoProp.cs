@@ -18,6 +18,7 @@ namespace Project.Model
         public int Quantity { get; set; }
         public decimal TotalAmount { get; set; }
         public string SerialNo { get; set; }
+        public int SerialID { get; set; }
         public string DocumentNo { get; set; }
 
     }

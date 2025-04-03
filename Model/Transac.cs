@@ -10,5 +10,9 @@ namespace Project.Model
     {
         public string VideoID { get; set; }
         public string RentalId {  get; set; }
+        public string DocumentNo { get; set; }
+        public string  Title { get; set; }
+        public string  SerialNo { get; set; }
+        public int EntryNo { get; set; }
     }
 }

@@ -55,12 +55,12 @@
             this.comboBoxVideo = new System.Windows.Forms.ComboBox();
             this.G2BtnSave = new Guna.UI2.WinForms.Guna2Button();
             this.G2DGVAddSave = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.labelBook = new System.Windows.Forms.Label();
             this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelBook = new System.Windows.Forms.Label();
             this.panelEditBook.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -91,9 +91,10 @@
             this.panelEditBook.Controls.Add(this.G2BtnSave);
             this.panelEditBook.Controls.Add(this.G2DGVAddSave);
             this.panelEditBook.Controls.Add(this.labelBook);
+            this.panelEditBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEditBook.Location = new System.Drawing.Point(0, 0);
             this.panelEditBook.Name = "panelEditBook";
-            this.panelEditBook.Size = new System.Drawing.Size(1132, 567);
+            this.panelEditBook.Size = new System.Drawing.Size(1144, 567);
             this.panelEditBook.TabIndex = 65;
             // 
             // G2BtnAdd
@@ -363,7 +364,7 @@
             this.G2DGVAddSave.Margin = new System.Windows.Forms.Padding(4);
             this.G2DGVAddSave.Name = "G2DGVAddSave";
             this.G2DGVAddSave.RowHeadersVisible = false;
-            this.G2DGVAddSave.Size = new System.Drawing.Size(1085, 419);
+            this.G2DGVAddSave.Size = new System.Drawing.Size(1111, 419);
             this.G2DGVAddSave.TabIndex = 362;
             this.G2DGVAddSave.Tag = "book_id";
             this.G2DGVAddSave.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -392,17 +393,6 @@
             this.G2DGVAddSave.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.G2DGVAddSave_DataError);
             this.G2DGVAddSave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.G2BtnAddSave_KeyDown);
             // 
-            // labelBook
-            // 
-            this.labelBook.AutoSize = true;
-            this.labelBook.Font = new System.Drawing.Font("Franklin Gothic Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.labelBook.Location = new System.Drawing.Point(12, 37);
-            this.labelBook.Name = "labelBook";
-            this.labelBook.Size = new System.Drawing.Size(268, 34);
-            this.labelBook.TabIndex = 206;
-            this.labelBook.Text = "Add DVDs and VCDs";
-            // 
             // SerialNo
             // 
             this.SerialNo.HeaderText = "Serial No.";
@@ -427,6 +417,17 @@
             // 
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
+            // 
+            // labelBook
+            // 
+            this.labelBook.AutoSize = true;
+            this.labelBook.Font = new System.Drawing.Font("Franklin Gothic Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.labelBook.Location = new System.Drawing.Point(12, 37);
+            this.labelBook.Name = "labelBook";
+            this.labelBook.Size = new System.Drawing.Size(268, 34);
+            this.labelBook.TabIndex = 206;
+            this.labelBook.Text = "Add DVDs and VCDs";
             // 
             // AddDVD_VCD
             // 

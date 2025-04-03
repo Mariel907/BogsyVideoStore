@@ -36,14 +36,13 @@
             this.dSReports = new Project.DataSet.DSReports();
             this.getAllItemLedgerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getAllItemLedgerTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllItemLedgerTableAdapter();
-            this.entryNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documentNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.videoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serialNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serialNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.G2DGVAddSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource)).BeginInit();
@@ -51,6 +50,7 @@
             // 
             // G2DGVAddSave
             // 
+            this.G2DGVAddSave.AllowUserToAddRows = false;
             this.G2DGVAddSave.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.G2DGVAddSave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -70,14 +70,13 @@
             this.G2DGVAddSave.ColumnHeadersHeight = 35;
             this.G2DGVAddSave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.G2DGVAddSave.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.entryNoDataGridViewTextBoxColumn,
             this.documentNoDataGridViewTextBoxColumn,
             this.videoIDDataGridViewTextBoxColumn,
             this.titleDataGridViewTextBoxColumn,
-            this.qtyDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn,
             this.serialNoDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.categoryDataGridViewTextBoxColumn});
+            this.qtyDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn});
             this.G2DGVAddSave.DataSource = this.getAllItemLedgerBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -88,11 +87,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.G2DGVAddSave.DefaultCellStyle = dataGridViewCellStyle3;
             this.G2DGVAddSave.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.G2DGVAddSave.Location = new System.Drawing.Point(12, 49);
+            this.G2DGVAddSave.Location = new System.Drawing.Point(12, 13);
             this.G2DGVAddSave.Margin = new System.Windows.Forms.Padding(4);
             this.G2DGVAddSave.Name = "G2DGVAddSave";
+            this.G2DGVAddSave.ReadOnly = true;
             this.G2DGVAddSave.RowHeadersVisible = false;
-            this.G2DGVAddSave.Size = new System.Drawing.Size(1085, 386);
+            this.G2DGVAddSave.Size = new System.Drawing.Size(1111, 539);
             this.G2DGVAddSave.TabIndex = 363;
             this.G2DGVAddSave.Tag = "book_id";
             this.G2DGVAddSave.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -108,7 +108,7 @@
             this.G2DGVAddSave.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.G2DGVAddSave.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.G2DGVAddSave.ThemeStyle.HeaderStyle.Height = 35;
-            this.G2DGVAddSave.ThemeStyle.ReadOnly = false;
+            this.G2DGVAddSave.ThemeStyle.ReadOnly = true;
             this.G2DGVAddSave.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.G2DGVAddSave.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.G2DGVAddSave.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,62 +131,62 @@
             // 
             this.getAllItemLedgerTableAdapter.ClearBeforeFill = true;
             // 
-            // entryNoDataGridViewTextBoxColumn
-            // 
-            this.entryNoDataGridViewTextBoxColumn.DataPropertyName = "EntryNo";
-            this.entryNoDataGridViewTextBoxColumn.HeaderText = "EntryNo";
-            this.entryNoDataGridViewTextBoxColumn.Name = "entryNoDataGridViewTextBoxColumn";
-            this.entryNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.entryNoDataGridViewTextBoxColumn.Visible = false;
-            // 
             // documentNoDataGridViewTextBoxColumn
             // 
             this.documentNoDataGridViewTextBoxColumn.DataPropertyName = "DocumentNo";
             this.documentNoDataGridViewTextBoxColumn.HeaderText = "DocumentNo";
             this.documentNoDataGridViewTextBoxColumn.Name = "documentNoDataGridViewTextBoxColumn";
+            this.documentNoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // videoIDDataGridViewTextBoxColumn
             // 
             this.videoIDDataGridViewTextBoxColumn.DataPropertyName = "VideoID";
             this.videoIDDataGridViewTextBoxColumn.HeaderText = "VideoID";
             this.videoIDDataGridViewTextBoxColumn.Name = "videoIDDataGridViewTextBoxColumn";
+            this.videoIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.videoIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // titleDataGridViewTextBoxColumn
             // 
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
             this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            // 
-            // qtyDataGridViewTextBoxColumn
-            // 
-            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
-            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
-            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
-            // 
-            // serialNoDataGridViewTextBoxColumn
-            // 
-            this.serialNoDataGridViewTextBoxColumn.DataPropertyName = "SerialNo";
-            this.serialNoDataGridViewTextBoxColumn.HeaderText = "SerialNo";
-            this.serialNoDataGridViewTextBoxColumn.Name = "serialNoDataGridViewTextBoxColumn";
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serialNoDataGridViewTextBoxColumn
+            // 
+            this.serialNoDataGridViewTextBoxColumn.DataPropertyName = "SerialNo";
+            this.serialNoDataGridViewTextBoxColumn.HeaderText = "SerialNo";
+            this.serialNoDataGridViewTextBoxColumn.Name = "serialNoDataGridViewTextBoxColumn";
+            this.serialNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtyDataGridViewTextBoxColumn
+            // 
+            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
+            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
+            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ItemLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1108, 450);
+            this.ClientSize = new System.Drawing.Size(1135, 565);
             this.Controls.Add(this.G2DGVAddSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ItemLedger";
@@ -205,13 +205,12 @@
         private DataSet.DSReports dSReports;
         private System.Windows.Forms.BindingSource getAllItemLedgerBindingSource;
         private DataSet.DSReportsTableAdapters.GetAllItemLedgerTableAdapter getAllItemLedgerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entryNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn documentNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn videoIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serialNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serialNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
     }
 }

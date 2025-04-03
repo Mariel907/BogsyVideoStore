@@ -238,7 +238,7 @@
             this.DGVRent.Name = "DGVRent";
             this.DGVRent.ReadOnly = true;
             this.DGVRent.RowHeadersVisible = false;
-            this.DGVRent.Size = new System.Drawing.Size(616, 371);
+            this.DGVRent.Size = new System.Drawing.Size(1053, 371);
             this.DGVRent.TabIndex = 375;
             this.DGVRent.Tag = "book_id";
             this.DGVRent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -1077,7 +1077,7 @@
             // 
             // DocumentNo
             // 
-            this.DocumentNo.HeaderText = "Document No";
+            this.DocumentNo.HeaderText = "DocumentNo";
             this.DocumentNo.Name = "DocumentNo";
             this.DocumentNo.ReadOnly = true;
             this.DocumentNo.Visible = false;
@@ -1183,7 +1183,6 @@
             this.Controls.Add(this.comboBoxFullname);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBoxVideo);
-            this.Controls.Add(this.reportViewerRent);
             this.Controls.Add(this.guna2ButtonVoid);
             this.Controls.Add(this.guna2TextBoxCash);
             this.Controls.Add(this.guna2TextBoxChange);

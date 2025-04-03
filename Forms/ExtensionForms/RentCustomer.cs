@@ -9,6 +9,7 @@ namespace Project.Forms.ExtensionForms
     public partial class RentCustomer : Form
     {
         private Rent rent = new Rent();
+        public DataGridView DgvRent { get{return DGVRent; } }
         public RentCustomer()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace Project.Forms.ExtensionForms
             }
 
         }
+       
         private bool HasInvalidInput()
         {
             if (string.IsNullOrEmpty(guna2TextBoxCash.Text) && string.IsNullOrEmpty(guna2TextBoxChange.Text))
@@ -41,7 +43,7 @@ namespace Project.Forms.ExtensionForms
             return false;
         }
 
-        private Customers CreateCustomer()
+        public Customers CreateCustomer()
         {
             return new Customers
             {
@@ -49,7 +51,6 @@ namespace Project.Forms.ExtensionForms
                 Fullname = comboBoxFullname.Text,
                 Cash = Convert.ToDecimal(guna2TextBoxCash.Text),
                 Change = Convert.ToDecimal(guna2TextBoxChange.Text),
-                SerialNo = CmbxSerialNo.Text
             };
         }
        

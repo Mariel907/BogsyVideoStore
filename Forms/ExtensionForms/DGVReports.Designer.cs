@@ -86,12 +86,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridViewReports.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridViewReports.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridViewReports.Location = new System.Drawing.Point(34, 69);
+            this.guna2DataGridViewReports.Location = new System.Drawing.Point(13, 69);
             this.guna2DataGridViewReports.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridViewReports.Name = "guna2DataGridViewReports";
             this.guna2DataGridViewReports.ReadOnly = true;
             this.guna2DataGridViewReports.RowHeadersVisible = false;
-            this.guna2DataGridViewReports.Size = new System.Drawing.Size(1049, 379);
+            this.guna2DataGridViewReports.Size = new System.Drawing.Size(1090, 406);
             this.guna2DataGridViewReports.TabIndex = 226;
             this.guna2DataGridViewReports.Tag = "book_id";
             this.guna2DataGridViewReports.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -180,9 +180,9 @@
             this.guna2ComboBoxReports.Items.AddRange(new object[] {
             "DVD",
             "VCD"});
-            this.guna2ComboBoxReports.Location = new System.Drawing.Point(34, 25);
+            this.guna2ComboBoxReports.Location = new System.Drawing.Point(13, 25);
             this.guna2ComboBoxReports.Name = "guna2ComboBoxReports";
-            this.guna2ComboBoxReports.Size = new System.Drawing.Size(156, 36);
+            this.guna2ComboBoxReports.Size = new System.Drawing.Size(177, 36);
             this.guna2ComboBoxReports.TabIndex = 244;
             this.guna2ComboBoxReports.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxReports_SelectedIndexChanged);
             // 
@@ -208,7 +208,7 @@
             this.guna2TextBoxReports.Name = "guna2TextBoxReports";
             this.guna2TextBoxReports.PlaceholderText = "";
             this.guna2TextBoxReports.SelectedText = "";
-            this.guna2TextBoxReports.Size = new System.Drawing.Size(886, 36);
+            this.guna2TextBoxReports.Size = new System.Drawing.Size(906, 36);
             this.guna2TextBoxReports.TabIndex = 243;
             this.guna2TextBoxReports.TextChanged += new System.EventHandler(this.guna2TextBoxReports_TextChanged);
             // 

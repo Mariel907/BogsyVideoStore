@@ -36,6 +36,7 @@ namespace Project.Forms
             guna2ButtonTransactions.Name = "Transactions";
             guna2ButtonReports.Name = "Reports";
             guna2ButtonPayments.Name = "Payments";
+            Itemledger.Name = "ItemLedger";
         }
 
         private void UpdateButtonColors(string ActiveButton)
@@ -55,6 +56,8 @@ namespace Project.Forms
             guna2ButtonReports.BorderColor = ActiveButton == "Reports" ? BorderActive : BorderInActive;
             guna2ButtonPayments.FillColor = ActiveButton == "Payments" ? ActiveColor :InActiveColor;
             guna2ButtonPayments.BorderColor = ActiveButton == "Payments" ? BorderActive : BorderInActive;
+            Itemledger.FillColor = ActiveButton == "ItemLedger" ? ActiveColor : InActiveColor;
+            Itemledger.BorderColor = ActiveButton == "ItemLedger" ? BorderActive: BorderInActive;
         }
 
         private void OpenCorrespondingForm(string buttonName)
@@ -80,6 +83,10 @@ namespace Project.Forms
                 case "Payments":
                     Payments payments = new Payments();
                     form.OpenForm(payments, panelDashboard);
+                    break;
+                case "ItemLedger":
+                    ItemLedger item = new ItemLedger();
+                    form.OpenForm(item, panelDashboard);
                     break;
                 default:
                     break;

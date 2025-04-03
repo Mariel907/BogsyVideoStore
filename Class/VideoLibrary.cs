@@ -1,5 +1,7 @@
 ﻿using Project.Model;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -90,6 +92,36 @@ namespace Project.Class
                 new SqlParameter("@VideoID", video.VideoId)
             };
             ds.ExecuteData("DeleteVideos", parameter);
+        }
+
+        public static List<VideoProp> ShowAllVideo()
+        {
+            List<VideoProp> video = new List<VideoProp>();
+
+            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("ShowVideo", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        video.Add(new VideoProp
+                        {
+                            Title = reader["Title"].ToString(),
+                            VideoId = int.Parse(reader["VideoID"].ToString()),
+                            LimitDaysRented = int.Parse(reader["LimitDaysRented"].ToString()),
+                            Price = Convert.ToDecimal(reader["Amount"].ToString()),
+                            Category = reader["Category"].ToString().Trim(),
+                            SerialNo = reader["SerialNo"].ToString(),
+                            SerialID = int.Parse(reader["SerialID"].ToString())
+                        });
+                    }
+                }
+            }
+            return video;
         }
     }
 }

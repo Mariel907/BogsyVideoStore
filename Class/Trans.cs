@@ -10,10 +10,14 @@ namespace Project.Class
 
         public void Return(Transac transac)
         {
+            string DocsNo = AutoIncrementManager.GetNextDocumentNo();
+            int EntryNo = AutoIncrementManager.GetNextEntryNo();
             SqlParameter[] parameter = new SqlParameter[]
             {
                 new SqlParameter("@VideoID", transac.VideoID),
-                new SqlParameter("@RentalID", transac.RentalId)
+                new SqlParameter("@RentalID", transac.RentalId),
+                new SqlParameter("DocumentNo", DocsNo),
+                new SqlParameter("EntryNo", EntryNo),
             };
             ds.ExecuteData("UpdateReturn", parameter);
         }

@@ -4,5 +4,8 @@
 
     public partial class DSReports
     {
+        partial class GetAllRentalDataTable
+        {
+        }
     }
 }

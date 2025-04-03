@@ -22,7 +22,6 @@ namespace Project.Forms.ExtensionForms
             InitializeComponent();
         }
 
-
         private void AddDVD_VCD_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -44,7 +43,7 @@ namespace Project.Forms.ExtensionForms
         }
         private void DisplayVideo()
         {
-            var Title = Rent.Video();
+            var Title = VideoLibrary.ShowAllVideo();
             comboBoxVideo.DataSource = Title;
             comboBoxVideo.DisplayMember = "Title";
             comboBoxVideo.ValueMember = "VideoID";
@@ -110,6 +109,7 @@ namespace Project.Forms.ExtensionForms
             {
                 MessageBox.Show(ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            G2DGVAddSave.Rows.Clear();
         }
 
         private void G2BtnAddSave_KeyDown(object sender, KeyEventArgs e)
@@ -149,21 +149,7 @@ namespace Project.Forms.ExtensionForms
                     else if (G2DGVAddSave.CurrentCell != null)
                         G2DGVAddSave.CurrentCell.Value = null;
                         break;
-                //case Keys.Y:
-                //    if (e.Control && redoStack.Count > 0)
-                //    {
-                //        var redoAction = redoStack.Pop();
-                //        undoStack.Push(redoAction);
-                //        if (redoAction.Cell != null && redoAction.Cells.Length > 0)
-                //        {
-                //            int newRowIndex = G2DGVAddSave.Rows.Add();
-                //            for (int i = 0; i < redoAction.Cells.Length; i++)
-                //                G2DGVAddSave.Rows[newRowIndex].Cells[i].Value = redoAction.Cells[i];
-                //        }
-                //        else if (G2DGVAddSave.CurrentCell != null)
-                //            G2DGVAddSave.CurrentCell.Value = redoAction;
-                //    }
-                //    break;
+              
                 default:
                     break;
             }

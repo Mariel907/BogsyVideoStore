@@ -1,38 +1,33 @@
 ﻿using Microsoft.Reporting.WinForms;
+using Project.Class;
 using Project.Model;
 using System;
 using System.Collections.Generic;
+using System.Web.Configuration;
 using System.Windows.Forms;
 
 namespace Project.Forms.ExtensionForms
 {
     public partial class PrintReceipt : Form
     {
-        Receipt receipt;
-        List<VideoProp> list;
-        public PrintReceipt(Receipt receipt, List<VideoProp> list)
+        private List<VideoProp> videoList;
+        private Customers customers;
+        public PrintReceipt(Customers customer, List<VideoProp> videoList)
         {
             InitializeComponent();
-            this.receipt = receipt;
-            this.list = list;
+            this.videoList = videoList;
+            customers = customer;
         }
 
         private void PrintReceipt_Load(object sender, EventArgs e)
         {
-            ReportParameter[] p = new ReportParameter[]
-            {
-                new ReportParameter("CustomerName", receipt.CustomerName),
-                new ReportParameter("RentDate", receipt.RentDate.ToString("MM/dd/yyyy")),
-                new ReportParameter("Cash", receipt.Cash.ToString("F2")),
-                new ReportParameter("Change", receipt.Change.ToString("F2"))
-            };
-            this.reportViewer1.LocalReport.SetParameters(p);
+            RentReceiptGenerator GntrReceipt = new RentReceiptGenerator(RptrViewerRent);
+            GntrReceipt.GenerateReceipt(customers, videoList);
+        }
 
-            ReportDataSource dataSource = new ReportDataSource("DSReceipt", list);
-            this.reportViewer1.LocalReport.DataSources.Clear();
-            this.reportViewer1.LocalReport.DataSources.Add(dataSource);
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
 
-            this.reportViewer1.RefreshReport();
         }
     }
 }
