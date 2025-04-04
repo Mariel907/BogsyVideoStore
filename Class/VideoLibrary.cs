@@ -34,11 +34,25 @@ namespace Project.Class
 
             ds.ExecuteData("UpdateVideo", parameter);
         }
+
+        public int LastVideoID()
+        {
+            ds.LoadData("LastVideoID", null);
+            using(SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("LastVideoID", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                return (int)cmd.ExecuteScalar();
+            }
+        }
+        
         public void Insert(DataGridView DGV)
         {
             foreach (DataGridViewRow row in DGV.Rows)
             {
                 if (row.IsNewRow) continue;
+
                 int EntryNo = AutoIncrementManager.GetNextEntryNo();
                 string DocumentNo = AutoIncrementManager.GetNextDocumentNo();
                 int SerialID = AutoIncrementManager.GetNextSerialID();
@@ -59,30 +73,7 @@ namespace Project.Class
                     new SqlParameter("SerialID", SerialID)
                 };
                 ds.ExecuteData("InsertVideo", parameters);
-
             }
-            //SqlParameter[] parameter;
-            //if (video.Category == "DVD")
-            //    parameter = new SqlParameter[]
-            //    {
-            //        new SqlParameter("Amount", 50),
-            //        new SqlParameter("Title", video.Title),
-            //        new SqlParameter("Category", video.Category),
-            //        new SqlParameter("In", video.CopiesAvailable),
-            //        new SqlParameter("LimitDaysRented", video.LimitDaysRented),
-            //        new SqlParameter("Date", DateTime.Now.Date)
-            //    };
-            //else
-            //    parameter = new SqlParameter[]
-            //    {
-            //        new SqlParameter("Amount", 25),
-            //        new SqlParameter("Title", video.Title),
-            //        new SqlParameter("Category", video.Category),
-            //        new SqlParameter("In", video.CopiesAvailable),
-            //        new SqlParameter("LimitDaysRented", video.LimitDaysRented),
-            //        new SqlParameter("Date", DateTime.Now.Date)
-            //    };
-
         }
 
         public void Delete(VideoProp video)

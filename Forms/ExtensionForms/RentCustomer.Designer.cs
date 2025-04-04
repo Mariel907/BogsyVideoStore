@@ -124,16 +124,16 @@
             this.panel59 = new System.Windows.Forms.Panel();
             this.CmbxSerialNo = new System.Windows.Forms.ComboBox();
             this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SerialID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DocumentNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVRent)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -214,16 +214,16 @@
             this.DGVRent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DGVRent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SerialNo,
+            this.SerialID,
             this.DocumentNo,
             this.Title,
             this.VideoID,
             this.Quantity,
-            this.Price,
             this.Category,
             this.DueDate,
-            this.TotalAmount,
             this.LimitDaysRented,
-            this.Status});
+            this.Status,
+            this.Price});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1075,6 +1075,13 @@
             this.SerialNo.Name = "SerialNo";
             this.SerialNo.ReadOnly = true;
             // 
+            // SerialID
+            // 
+            this.SerialID.HeaderText = "Serial ID";
+            this.SerialID.Name = "SerialID";
+            this.SerialID.ReadOnly = true;
+            this.SerialID.Visible = false;
+            // 
             // DocumentNo
             // 
             this.DocumentNo.HeaderText = "DocumentNo";
@@ -1102,12 +1109,6 @@
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
             // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
             // Category
             // 
             this.Category.HeaderText = "Category";
@@ -1119,12 +1120,6 @@
             this.DueDate.HeaderText = "Due Date";
             this.DueDate.Name = "DueDate";
             this.DueDate.ReadOnly = true;
-            // 
-            // TotalAmount
-            // 
-            this.TotalAmount.HeaderText = "Total";
-            this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.ReadOnly = true;
             // 
             // LimitDaysRented
             // 
@@ -1139,6 +1134,12 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             this.Status.Visible = false;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // RentCustomer
             // 
@@ -1336,15 +1337,15 @@
         private System.Windows.Forms.Panel panel59;
         private System.Windows.Forms.ComboBox CmbxSerialNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn SerialNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SerialID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DocumentNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn VideoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn LimitDaysRented;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

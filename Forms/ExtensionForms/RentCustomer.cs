@@ -1,7 +1,6 @@
 ﻿using Project.Class;
 using Project.Model;
 using System;
-using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace Project.Forms.ExtensionForms
@@ -9,7 +8,7 @@ namespace Project.Forms.ExtensionForms
     public partial class RentCustomer : Form
     {
         private Rent rent = new Rent();
-        public DataGridView DgvRent { get{return DGVRent; } }
+        public DataGridView DgvRent { get { return DGVRent; } }
         public RentCustomer()
         {
             InitializeComponent();
@@ -32,7 +31,7 @@ namespace Project.Forms.ExtensionForms
             }
 
         }
-       
+
         private bool HasInvalidInput()
         {
             if (string.IsNullOrEmpty(guna2TextBoxCash.Text) && string.IsNullOrEmpty(guna2TextBoxChange.Text))
@@ -53,7 +52,7 @@ namespace Project.Forms.ExtensionForms
                 Change = Convert.ToDecimal(guna2TextBoxChange.Text),
             };
         }
-       
+
         private void ClearFields()
         {
             guna2TextBoxCash.Text = string.Empty;
@@ -82,7 +81,7 @@ namespace Project.Forms.ExtensionForms
 
         private void DisplaySerial()
         {
-            var serial = Rent.SearchSerial(comboBoxVideo.Text);
+            var serial = Rent.SearchSerial(guna2TextBoxVideo.Text);
             CmbxSerialNo.DataSource = serial;
             CmbxSerialNo.DisplayMember = "SerialNo";
             CmbxSerialNo.ValueMember = "SerialID";
@@ -118,22 +117,23 @@ namespace Project.Forms.ExtensionForms
                     //if (!videoExists)
                     //{
 
-                        int rowIndex = DGVRent.Rows.Add();
-                        DataGridViewRow row = DGVRent.Rows[rowIndex];
-                        row.Cells["Title"].Value = selectedVideo.Title;
-                        row.Cells["VideoID"].Value = selectedVideo.VideoId;
-                        row.Cells["LimitDaysRented"].Value = selectedVideo.LimitDaysRented;
-                        row.Cells["Quantity"].Value = 1;
-                        row.Cells["Price"].Value = selectedVideo.Price;
-                        row.Cells["TotalAmount"].Value = selectedVideo.Price;
-                        row.Cells["Category"].Value = selectedVideo.Category;
-                        row.Cells["Status"].Value = "Checked Out";
-                        row.Cells["DocumentNo"].Value = selectedVideo.DocumentNo = AutoIncrementManager.GetNextDocumentNo();
-                        row.Cells["SerialNo"].Value = selectedVideo.SerialNo;
+                    int rowIndex = DGVRent.Rows.Add();
+                    DataGridViewRow row = DGVRent.Rows[rowIndex];
+                    row.Cells["Title"].Value = selectedVideo.Title;
+                    row.Cells["VideoID"].Value = selectedVideo.VideoId;
+                    row.Cells["LimitDaysRented"].Value = selectedVideo.LimitDaysRented;
+                    row.Cells["Quantity"].Value = 1;
+                    row.Cells["Price"].Value = selectedVideo.Price;
+                    row.Cells["TotalAmount"].Value = selectedVideo.Price;
+                    row.Cells["Category"].Value = selectedVideo.Category;
+                    row.Cells["Status"].Value = "Checked Out";
+                    row.Cells["DocumentNo"].Value = selectedVideo.DocumentNo = AutoIncrementManager.GetNextDocumentNo();
+                    row.Cells["SerialNo"].Value = selectedVideo.SerialNo;
+                    row.Cells["SerialID"].Value = selectedVideo.SerialID;
 
-                        int rentedDays = selectedVideo.LimitDaysRented;
-                        row.Cells["DueDate"].Value = DateTime.Now.Date.AddDays(rentedDays).ToString("MM/dd/yyyy");
-                        rent.CheckedOut(selectedVideo);
+                    int rentedDays = selectedVideo.LimitDaysRented;
+                    row.Cells["DueDate"].Value = DateTime.Now.Date.AddDays(rentedDays).ToString("MM/dd/yyyy");
+                    rent.CheckedOut(selectedVideo);
 
                     //}
                 }
@@ -169,7 +169,7 @@ namespace Project.Forms.ExtensionForms
             guna2TextBoxChange.Text = Change;
             e.SuppressKeyPress = true;
         }
-       
+
         private void Guna2ButtonVoid_Click(object sender, EventArgs e)
         {
             try
@@ -209,6 +209,7 @@ namespace Project.Forms.ExtensionForms
                 VideoProp vd = comboBoxVideo.SelectedItem as VideoProp;
                 guna2TextBoxVideo.Text = vd.VideoId.ToString();
             }
+            DisplaySerial();
         }
     }
 }

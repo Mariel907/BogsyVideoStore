@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Project.Forms
 {
     public partial class ItemLedger : Form
     {
+        private BindingSource bindingSource = new BindingSource();
         public ItemLedger()
         {
             InitializeComponent();
@@ -19,9 +21,10 @@ namespace Project.Forms
 
         private void ItemLedger_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dSReports.GetAllItemLedger' table. You can move, or remove it, as needed.
-            this.getAllItemLedgerTableAdapter.Fill(this.dSReports.GetAllItemLedger);
-
+            // TODO: This line of code loads data into the 'dSReports1.GetAllItemLedger' table. You can move, or remove it, as needed.
+            this.getAllItemLedgerTableAdapter.Fill(this.dSReports1.GetAllItemLedger);
+            //bindingSource.DataSource = Ledger.GetAllItemLedger();
+            //G2DGVItemLedger.DataSource = bindingSource;
         }
     }
 }

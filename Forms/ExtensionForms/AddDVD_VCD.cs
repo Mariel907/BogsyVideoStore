@@ -16,6 +16,7 @@ namespace Project.Forms.ExtensionForms
         private object copiedCellValue;
         private Stack<UndoRedoAction> undoStack = new Stack<UndoRedoAction>();
         private Stack<UndoRedoAction> redoStack = new Stack<UndoRedoAction>();
+        private VideoLibrary vd = new VideoLibrary();
 
         public AddDVD_VCD()
         {
@@ -38,8 +39,16 @@ namespace Project.Forms.ExtensionForms
             };
             cmbxClmn.DefaultCellStyle.BackColor = Color.White;
             cmbxClmn.FlatStyle = FlatStyle.Flat;
-            G2DGVAddSave.Columns.Add(cmbxClmn);
+            G2DGVAddSave.Columns.Add(cmbxClmn); 
             DisplayVideo();
+            UpdateLabel();
+        }
+
+        private void UpdateLabel()
+        {
+            if (LblLastVideoID == null) return;
+            int count = vd.LastVideoID();
+            LblLastVideoID.Text = count.ToString();
         }
         private void DisplayVideo()
         {
@@ -48,7 +57,6 @@ namespace Project.Forms.ExtensionForms
             comboBoxVideo.DisplayMember = "Title";
             comboBoxVideo.ValueMember = "VideoID";
         }
-        
 
         private void AddColumnCMBX(string HdrText, string NmText, List<string> dataSource)
         {
@@ -101,7 +109,6 @@ namespace Project.Forms.ExtensionForms
         {
             try
             {
-                VideoLibrary vd = new VideoLibrary();
                 vd.Insert(G2DGVAddSave);
                 MessageBox.Show("Data save successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -212,6 +219,15 @@ namespace Project.Forms.ExtensionForms
         private void G2DGVAddSave_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.ThrowException = false;
+        }
+
+        private void guna2TextBoxVideo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblLastVideoID_Click(object sender, EventArgs e)
+        {
         }
     }
 }

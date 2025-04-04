@@ -14,5 +14,6 @@ namespace Project.Model
         public string  Title { get; set; }
         public string  SerialNo { get; set; }
         public int EntryNo { get; set; }
+        public int SerialID { get; set; }
     }
 }

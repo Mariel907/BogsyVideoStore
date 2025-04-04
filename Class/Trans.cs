@@ -18,6 +18,8 @@ namespace Project.Class
                 new SqlParameter("@RentalID", transac.RentalId),
                 new SqlParameter("DocumentNo", DocsNo),
                 new SqlParameter("EntryNo", EntryNo),
+                new SqlParameter("SerialNo", transac.SerialNo),
+                new SqlParameter("SerialID", transac.SerialID)
             };
             ds.ExecuteData("UpdateReturn", parameter);
         }

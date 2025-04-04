@@ -67,7 +67,7 @@ namespace Project.Class
             return video;
         }
 
-        public static List<SrchSerial> SearchSerial(string cmbx)
+        public static List<SrchSerial> SearchSerial(string txbx)
         {
             List<SrchSerial> Serial = new List<SrchSerial>();
             using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
@@ -76,7 +76,7 @@ namespace Project.Class
                 using (SqlCommand cmd = new SqlCommand("SearchSerial", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@SearchText", $"%{cmbx}%");
+                    cmd.Parameters.AddWithValue("@SearchText", $"%{txbx}%");
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -109,7 +109,6 @@ namespace Project.Class
                     new SqlParameter("VideoID", row.Cells["VideoID"].Value),
                     new SqlParameter("RentDate", DateTime.Now.Date),
                     new SqlParameter("Quantity", row.Cells["Quantity"].Value),
-                    new SqlParameter("TotalAmount", row.Cells["TotalAmount"].Value),
                     new SqlParameter("Price", row.Cells["Price"].Value),
                     new SqlParameter("Status", row.Cells["Status"].Value),
                     new SqlParameter("DueDate", DateTime.Now.Date.AddDays(rentedDays)),
@@ -164,8 +163,8 @@ namespace Project.Class
                 new SqlParameter("Title", selectedRow.Cells["Title"].Value),
                 new SqlParameter("DocumentNo", selectedRow.Cells["DocumentNo"].Value),
                 new SqlParameter("SerialNo", selectedRow.Cells["SerialNo"].Value),
-                new SqlParameter("Category", selectedRow.Cells["Category"].Value),
-                new SqlParameter("EntryNo", EntryNo)
+                new SqlParameter("EntryNo", EntryNo),
+                new SqlParameter("SerialID", selectedRow.Cells["SerialID"].Value)
             };
             dataLoader.ExecuteData("Void", parameter);
         }
@@ -186,6 +185,7 @@ namespace Project.Class
                 _updatelabel = "P" + updateLabel.ToString("N2");
             }
         }
+
         public void CheckedOut(VideoProp VideoID)
         {
             int entryNo = AutoIncrementManager.GetNextEntryNo();
@@ -193,10 +193,9 @@ namespace Project.Class
             {
                 new SqlParameter("VideoID", VideoID.VideoId),
                 new SqlParameter("DocumentNo", VideoID.DocumentNo),
-                new SqlParameter("Title", VideoID.Title),
                 new SqlParameter("SerialNo", VideoID.SerialNo),
-                new SqlParameter("Category", VideoID.Category),
-                new SqlParameter("EntryNo", entryNo)
+                new SqlParameter("EntryNo", entryNo),
+                new SqlParameter("SerialID", VideoID.SerialID)
 
             };
             dataLoader.ExecuteData("CheckedOut", parameter);
@@ -214,9 +213,9 @@ namespace Project.Class
             decimal totalAmount = 0;
             foreach (DataGridViewRow row in datagridView.Rows)
             {
-                if (row.Cells["TotalAmount"].Value != null)
+                if (row.Cells["Price"].Value != null)
                 {
-                    totalAmount += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
+                    totalAmount += Convert.ToDecimal(row.Cells["Price"].Value);
                 }
             }
             Label = "P" + totalAmount.ToString("N2");

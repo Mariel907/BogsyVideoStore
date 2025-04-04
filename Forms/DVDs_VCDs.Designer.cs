@@ -451,12 +451,12 @@
             this.guna2TextBoxDVD.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxDVD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxDVD.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxDVD.IconLeft")));
-            this.guna2TextBoxDVD.Location = new System.Drawing.Point(27, 13);
+            this.guna2TextBoxDVD.Location = new System.Drawing.Point(13, 13);
             this.guna2TextBoxDVD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxDVD.Name = "guna2TextBoxDVD";
             this.guna2TextBoxDVD.PlaceholderText = "";
             this.guna2TextBoxDVD.SelectedText = "";
-            this.guna2TextBoxDVD.Size = new System.Drawing.Size(1069, 36);
+            this.guna2TextBoxDVD.Size = new System.Drawing.Size(1093, 36);
             this.guna2TextBoxDVD.TabIndex = 245;
             this.guna2TextBoxDVD.TextChanged += new System.EventHandler(this.Guna2TextBoxDVD_TextChanged);
             // 

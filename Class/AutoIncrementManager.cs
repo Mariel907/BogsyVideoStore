@@ -31,7 +31,7 @@ namespace Project.Class
                     SqlCommand cmd = new SqlCommand("GetNextEntryNoFromDB", con);
                     object result = cmd.ExecuteScalar();
 
-                    currentCounter = result != null? Convert.ToInt32(result) : 1;
+                    currentCounter = result != null? Convert.ToInt32(result) : 0;
                 }
             }
             catch(Exception ex)
@@ -44,7 +44,7 @@ namespace Project.Class
         public static string GetNextDocumentNo( string prefix = "D")
         {
             GetNextDocumentNoFromDB();
-            return $"{prefix} {DocumentNo}";
+            return $"{prefix}{DocumentNo}";
         }
 
         private static int GetNextDocumentNoFromDB()
@@ -66,7 +66,7 @@ namespace Project.Class
                             DocumentNo = Convert.ToInt32(resultString);
                     }
                     else
-                        DocumentNo = 1000;
+                        DocumentNo = 999;
                 }
             }
             catch (Exception ex)
@@ -88,10 +88,10 @@ namespace Project.Class
                 using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("GetNextEntryNoFromDB", con);
+                    SqlCommand cmd = new SqlCommand("GetNextSerialIDFromDB", con);
                     object result = cmd.ExecuteScalar();
 
-                    SerialNoCount = result != null ? Convert.ToInt32(result) : 100;
+                    SerialNoCount = result != null ? Convert.ToInt32(result) : 99;
                 }
             }
             catch (Exception ex)
