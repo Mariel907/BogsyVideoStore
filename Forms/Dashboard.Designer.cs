@@ -33,6 +33,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Itemledger = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonReports = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonPayments = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonTransactions = new Guna.UI2.WinForms.Guna2Button();
@@ -41,7 +42,6 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.Itemledger = new Guna.UI2.WinForms.Guna2Button();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -92,6 +92,32 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(215, 681);
             this.panel4.TabIndex = 17;
+            // 
+            // Itemledger
+            // 
+            this.Itemledger.BorderColor = System.Drawing.Color.Transparent;
+            this.Itemledger.BorderThickness = 1;
+            this.Itemledger.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Itemledger.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Itemledger.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Itemledger.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Itemledger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Itemledger.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.Itemledger.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.Itemledger.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F);
+            this.Itemledger.ForeColor = System.Drawing.Color.White;
+            this.Itemledger.Image = ((System.Drawing.Image)(resources.GetObject("Itemledger.Image")));
+            this.Itemledger.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Itemledger.ImageSize = new System.Drawing.Size(30, 30);
+            this.Itemledger.Location = new System.Drawing.Point(0, 308);
+            this.Itemledger.Name = "Itemledger";
+            this.Itemledger.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.Itemledger.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.Itemledger.Size = new System.Drawing.Size(215, 39);
+            this.Itemledger.TabIndex = 17;
+            this.Itemledger.Text = "Item Ledger";
+            this.Itemledger.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Itemledger.Click += new System.EventHandler(this.Form_Click);
             // 
             // guna2ButtonReports
             // 
@@ -254,32 +280,6 @@
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(1135, 565);
             this.panelDashboard.TabIndex = 20;
-            // 
-            // Itemledger
-            // 
-            this.Itemledger.BorderColor = System.Drawing.Color.Transparent;
-            this.Itemledger.BorderThickness = 1;
-            this.Itemledger.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Itemledger.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Itemledger.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Itemledger.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Itemledger.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Itemledger.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.Itemledger.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.Itemledger.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F);
-            this.Itemledger.ForeColor = System.Drawing.Color.White;
-            this.Itemledger.Image = ((System.Drawing.Image)(resources.GetObject("Itemledger.Image")));
-            this.Itemledger.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Itemledger.ImageSize = new System.Drawing.Size(30, 30);
-            this.Itemledger.Location = new System.Drawing.Point(0, 308);
-            this.Itemledger.Name = "Itemledger";
-            this.Itemledger.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.Itemledger.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.Itemledger.Size = new System.Drawing.Size(215, 39);
-            this.Itemledger.TabIndex = 17;
-            this.Itemledger.Text = "Item Ledger";
-            this.Itemledger.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Itemledger.Click += new System.EventHandler(this.Form_Click);
             // 
             // Dashboard
             // 

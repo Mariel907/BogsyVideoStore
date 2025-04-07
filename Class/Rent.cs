@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Project.Class
 {
@@ -100,8 +101,7 @@ namespace Project.Class
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 int rentedDays = Convert.ToInt32(row.Cells["LimitDaysRented"].Value);
-                //int EntryNo =AutoIncrementManager.GetNextEntryNo();
-                //string DocumwentNo = AutoIncrementManager.GetNextDocumentNo();
+                int RentalID = AutoIncrementManager.GetNextRentalID();
 
                 SqlParameter[] parameter = new SqlParameter[]
                 {
@@ -112,11 +112,9 @@ namespace Project.Class
                     new SqlParameter("Price", row.Cells["Price"].Value),
                     new SqlParameter("Status", row.Cells["Status"].Value),
                     new SqlParameter("DueDate", DateTime.Now.Date.AddDays(rentedDays)),
-                    //new SqlParameter("DocumentNo", DocumwentNo),
-                    //new SqlParameter("EntryNo", EntryNo),
-                    //new SqlParameter("Title", row.Cells["Title"].Value),
-                    //new SqlParameter("SerialNo", Customer.SerialNo),
-                    //new SqlParameter("Category", row.Cells["Category"].Value),
+                    new SqlParameter("RentalID", RentalID),
+                    new SqlParameter("SerialID", row.Cells["SerialID"].Value),
+                    new SqlParameter("SerialNo", row.Cells["SerialNo"].Value)
                 };
                 dataLoader.ExecuteData("InsertRent", parameter);
             }
@@ -138,7 +136,6 @@ namespace Project.Class
                 _video.Quantity = Convert.ToInt32(row.Cells["Quantity"].Value);
                 _video.DueDate = DateTime.Now.Date.AddDays(rentedDays);
                 _video.Category = row.Cells["Category"].Value.ToString();
-                _video.TotalAmount = Convert.ToDecimal(row.Cells["TotalAmount"].Value);
                 _video.SerialNo = row.Cells["SerialNo"].Value.ToString();
 
                 list.Add(_video);
@@ -151,6 +148,8 @@ namespace Project.Class
         public void Void(DataGridView dataGridView, string customerID)
         {
             int EntryNo = AutoIncrementManager.GetNextEntryNo();
+            int RentalID = AutoIncrementManager.GetNextRentalID();
+            string DocumentNo = AutoIncrementManager.GetNextDocumentNo();
             DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
             SqlParameter[] parameter = new SqlParameter[]
             {
@@ -158,13 +157,13 @@ namespace Project.Class
                 new SqlParameter("RentDate", DateTime.Now.Date),
                 new SqlParameter("Quantity", selectedRow.Cells["Quantity"].Value),
                 new SqlParameter("VideoID", selectedRow.Cells["VideoID"].Value),
-                new SqlParameter("TotalAmount", selectedRow.Cells["TotalAmount"].Value),
                 new SqlParameter("Price", selectedRow.Cells["Price"].Value),
                 new SqlParameter("Title", selectedRow.Cells["Title"].Value),
-                new SqlParameter("DocumentNo", selectedRow.Cells["DocumentNo"].Value),
+                new SqlParameter("DocumentNo", DocumentNo),
                 new SqlParameter("SerialNo", selectedRow.Cells["SerialNo"].Value),
                 new SqlParameter("EntryNo", EntryNo),
-                new SqlParameter("SerialID", selectedRow.Cells["SerialID"].Value)
+                new SqlParameter("SerialID", selectedRow.Cells["SerialID"].Value),
+                new SqlParameter("RentalID", RentalID)
             };
             dataLoader.ExecuteData("Void", parameter);
         }
@@ -176,7 +175,7 @@ namespace Project.Class
                 decimal TotalAmountToSubtract = 0;
                 foreach (DataGridViewRow row in dataGridView.SelectedRows)
                 {
-                    TotalAmountToSubtract += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
+                    TotalAmountToSubtract += Convert.ToDecimal(row.Cells["Price"].Value);
                     dataGridView.Rows.RemoveAt(row.Index);
                 }
                 decimal updateLabel = Convert.ToDecimal(label.Replace("P", "").ToString());
@@ -186,17 +185,18 @@ namespace Project.Class
             }
         }
 
-        public void CheckedOut(VideoProp VideoID)
+        public void CheckedOut(SrchSerial Serial, VideoProp Video)
         {
             int entryNo = AutoIncrementManager.GetNextEntryNo();
+            string DocumentNo = AutoIncrementManager.GetNextDocumentNo();
+
             SqlParameter[] parameter = new SqlParameter[]
             {
-                new SqlParameter("VideoID", VideoID.VideoId),
-                new SqlParameter("DocumentNo", VideoID.DocumentNo),
-                new SqlParameter("SerialNo", VideoID.SerialNo),
+                new SqlParameter("VideoID", Video.VideoId),
+                new SqlParameter("DocumentNo", DocumentNo),
+                new SqlParameter("SerialNo", Serial.SerialNo),
                 new SqlParameter("EntryNo", entryNo),
-                new SqlParameter("SerialID", VideoID.SerialID)
-
+                new SqlParameter("SerialID", Serial.SerialID),
             };
             dataLoader.ExecuteData("CheckedOut", parameter);
         }

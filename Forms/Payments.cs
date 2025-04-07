@@ -20,8 +20,6 @@ namespace Project.Forms
 
         private void Payments_Load(object sender, EventArgs e)
         {
-            this.unpaidTableAdapter.Fill(this.dSReports.Unpaid);
-
             DisplayCustomer();
             DisplayUnpaid();
         }

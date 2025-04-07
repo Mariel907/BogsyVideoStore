@@ -37,13 +37,14 @@ namespace Project.Class
 
         public int LastVideoID()
         {
-            ds.LoadData("LastVideoID", null);
             using(SqlConnection con = new SqlConnection(GlobalConnection.Connection))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("LastVideoID", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                return (int)cmd.ExecuteScalar();
+
+                object result = cmd.ExecuteScalar();
+                return result != null? (int)Convert.ToInt32(result) : 0;
             }
         }
         
@@ -99,6 +100,13 @@ namespace Project.Class
                 {
                     while (reader.Read())
                     {
+                        //if (reader["Title"] == DBNull.Value || 
+                        //    reader["VideoID"] == DBNull.Value || 
+                        //    reader["LimitDaysRented"] == DBNull.Value ||
+                        //    reader["Amount"] == DBNull.Value || 
+                        //    reader["SerialID"] == DBNull.Value)
+                        //    continue; 
+
                         video.Add(new VideoProp
                         {
                             Title = reader["Title"].ToString(),

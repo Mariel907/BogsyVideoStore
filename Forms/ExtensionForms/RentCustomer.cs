@@ -29,7 +29,8 @@ namespace Project.Forms.ExtensionForms
             {
                 MessageBox.Show(ex.Message, "An error occurred.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            DisplaySerial();
+            DisplayVideo();
         }
 
         private bool HasInvalidInput()
@@ -94,6 +95,7 @@ namespace Project.Forms.ExtensionForms
         private void Guna2ButtonAdd_Click(object sender, EventArgs e)
         {
             VideoProp selectedVideo = comboBoxVideo.SelectedItem as VideoProp;
+            SrchSerial selectedSerial = CmbxSerialNo.SelectedItem as SrchSerial;
             try
             {
                 if (selectedVideo != null)
@@ -124,16 +126,15 @@ namespace Project.Forms.ExtensionForms
                     row.Cells["LimitDaysRented"].Value = selectedVideo.LimitDaysRented;
                     row.Cells["Quantity"].Value = 1;
                     row.Cells["Price"].Value = selectedVideo.Price;
-                    row.Cells["TotalAmount"].Value = selectedVideo.Price;
+                    //row.Cells["TotalAmount"].Value = selectedVideo.Price;
                     row.Cells["Category"].Value = selectedVideo.Category;
                     row.Cells["Status"].Value = "Checked Out";
-                    row.Cells["DocumentNo"].Value = selectedVideo.DocumentNo = AutoIncrementManager.GetNextDocumentNo();
-                    row.Cells["SerialNo"].Value = selectedVideo.SerialNo;
-                    row.Cells["SerialID"].Value = selectedVideo.SerialID;
+                    row.Cells["SerialNo"].Value = selectedSerial.SerialNo;
+                    row.Cells["SerialID"].Value = selectedSerial.SerialID;
 
                     int rentedDays = selectedVideo.LimitDaysRented;
                     row.Cells["DueDate"].Value = DateTime.Now.Date.AddDays(rentedDays).ToString("MM/dd/yyyy");
-                    rent.CheckedOut(selectedVideo);
+                    rent.CheckedOut (selectedSerial, selectedVideo);
 
                     //}
                 }
@@ -147,7 +148,7 @@ namespace Project.Forms.ExtensionForms
             rent.UpdateTotal(DGVRent, ref UpdateTotal);
             labelTotal.Text = UpdateTotal;
 
-
+            DisplaySerial();
             DisplayVideo();
         }
 
@@ -204,12 +205,23 @@ namespace Project.Forms.ExtensionForms
 
         private void comboBoxVideo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            CmbxSerialNo.Text = "";
             if (comboBoxVideo.SelectedValue != null)
             {
                 VideoProp vd = comboBoxVideo.SelectedItem as VideoProp;
                 guna2TextBoxVideo.Text = vd.VideoId.ToString();
             }
             DisplaySerial();
+        }
+
+        private void guna2TextBoxVideo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxVideo_Click(object sender, EventArgs e)
+        {
+            CmbxSerialNo.Text = "";
         }
     }
 }

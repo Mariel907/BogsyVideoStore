@@ -116,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSReports.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\DSTransaction.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTransaction.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\PenaltyReceipt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,7 +199,7 @@
     <Compile Include="Model\Receipt.cs" />
     <Compile Include="Model\SearchUnpaid.cs" />
     <Compile Include="Model\SrchSerial.cs" />
-    <Compile Include="Model\Transac.cs" />
+    <Compile Include="Model\MTransac.cs" />
     <Compile Include="Model\UndoRedoAction.cs" />
     <Compile Include="Model\VideoProp.cs" />
     <Compile Include="Program.cs" />
@@ -273,10 +278,21 @@
     <None Include="DataSet\DSReports.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSReports.Designer.cs</LastGenOutput>
+      <LastGenOutput>DSReports1.Designer.cs</LastGenOutput>
     </None>
     <None Include="DataSet\DSReports.xss">
       <DependentUpon>DSReports.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSTransaction.xsc">
+      <DependentUpon>DSTransaction.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSTransaction.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTransaction.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSTransaction.xss">
+      <DependentUpon>DSTransaction.xsd</DependentUpon>
     </None>
     <None Include="DataSet\PenaltyReceipt.xsc">
       <DependentUpon>PenaltyReceipt.xsd</DependentUpon>

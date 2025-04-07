@@ -341,12 +341,12 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVCD.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvVCD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvVCD.Location = new System.Drawing.Point(27, 57);
+            this.dgvVCD.Location = new System.Drawing.Point(13, 57);
             this.dgvVCD.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVCD.Name = "dgvVCD";
             this.dgvVCD.ReadOnly = true;
             this.dgvVCD.RowHeadersVisible = false;
-            this.dgvVCD.Size = new System.Drawing.Size(1046, 377);
+            this.dgvVCD.Size = new System.Drawing.Size(1093, 377);
             this.dgvVCD.TabIndex = 244;
             this.dgvVCD.Tag = "book_id";
             this.dgvVCD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;

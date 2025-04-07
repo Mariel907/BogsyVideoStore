@@ -16,7 +16,7 @@
     <Shape ID="DesignTable:GetAllVideoRent" ZOrder="4" X="145" Y="755" Height="210" Width="241" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:GetAllReturned" ZOrder="3" X="40" Y="20" Height="305" Width="234" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:GetAllItemLedger" ZOrder="2" X="640" Y="777" Height="229" Width="247" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
-    <Shape ID="DesignTable:GetAllRental" ZOrder="1" X="695" Y="76" Height="286" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
+    <Shape ID="DesignTable:GetAllRental" ZOrder="1" X="752" Y="76" Height="286" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

@@ -117,6 +117,8 @@ namespace Project.Forms.ExtensionForms
                 MessageBox.Show(ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             G2DGVAddSave.Rows.Clear();
+            DisplayVideo();
+            UpdateLabel();
         }
 
         private void G2BtnAddSave_KeyDown(object sender, KeyEventArgs e)
@@ -219,15 +221,6 @@ namespace Project.Forms.ExtensionForms
         private void G2DGVAddSave_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.ThrowException = false;
-        }
-
-        private void guna2TextBoxVideo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblLastVideoID_Click(object sender, EventArgs e)
-        {
         }
     }
 }

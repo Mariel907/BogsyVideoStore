@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.Model
 {
-    public class Transac
+    public class MTransac
     {
         public string VideoID { get; set; }
         public string RentalId {  get; set; }
@@ -15,5 +15,10 @@ namespace Project.Model
         public string  SerialNo { get; set; }
         public int EntryNo { get; set; }
         public int SerialID { get; set; }
+        public int CustomerID { get; set; }
+        public string Fullname { get; set; }
+        public string Category { get; set; }
+        public int Qty { get; set; }
+        public DateTime Duedate { get; set; }
     }
 }

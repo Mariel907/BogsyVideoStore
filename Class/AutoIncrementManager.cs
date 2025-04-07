@@ -1,6 +1,7 @@
 ﻿using Project.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace Project.Class
         private static int SerialNoCount;
         private static int currentCounter;
         private static int DocumentNo;
+        private static int RentalCount;
 
         public static int GetNextEntryNo()
         {
@@ -99,6 +101,33 @@ namespace Project.Class
                 MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return SerialNoCount++;
+        }
+
+        public static int GetNextRentalID()
+        {
+            GetNextRentalIDFromDB();
+            return RentalCount;
+        }
+
+        private static int GetNextRentalIDFromDB()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("GetNextRentalID", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    object result = cmd.ExecuteScalar();
+
+                    RentalCount = result != null ? Convert.ToInt32(result) : 99999;
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return RentalCount++;
         }
     }
 }

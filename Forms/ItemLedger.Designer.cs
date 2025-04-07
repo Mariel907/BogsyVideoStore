@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.G2DGVItemLedger = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.getAllItemLedgerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dSReports1 = new Project.DataSet.DSReports();
             this.getAllItemLedgerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dSReports = new Project.DataSet.DSReports();
             this.getAllItemLedgerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getAllItemLedgerTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllItemLedgerTableAdapter();
-            this.dSReports1 = new Project.DataSet.DSReports();
-            this.getAllItemLedgerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.documentNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.videoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,11 +48,11 @@
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.G2DGVItemLedger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReports1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSReports1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // G2DGVItemLedger
@@ -125,6 +125,16 @@
             this.G2DGVItemLedger.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.G2DGVItemLedger.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             // 
+            // getAllItemLedgerBindingSource2
+            // 
+            this.getAllItemLedgerBindingSource2.DataMember = "GetAllItemLedger";
+            this.getAllItemLedgerBindingSource2.DataSource = this.dSReports1;
+            // 
+            // dSReports1
+            // 
+            this.dSReports1.DataSetName = "DSReports";
+            this.dSReports1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // getAllItemLedgerBindingSource1
             // 
             this.getAllItemLedgerBindingSource1.DataMember = "GetAllItemLedger";
@@ -143,16 +153,6 @@
             // getAllItemLedgerTableAdapter
             // 
             this.getAllItemLedgerTableAdapter.ClearBeforeFill = true;
-            // 
-            // dSReports1
-            // 
-            this.dSReports1.DataSetName = "DSReports";
-            this.dSReports1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // getAllItemLedgerBindingSource2
-            // 
-            this.getAllItemLedgerBindingSource2.DataMember = "GetAllItemLedger";
-            this.getAllItemLedgerBindingSource2.DataSource = this.dSReports1;
             // 
             // documentNoDataGridViewTextBoxColumn
             // 
@@ -223,11 +223,11 @@
             this.Text = "ItemLedger";
             this.Load += new System.EventHandler(this.ItemLedger_Load);
             ((System.ComponentModel.ISupportInitialize)(this.G2DGVItemLedger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReports1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReports)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSReports1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllItemLedgerBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }

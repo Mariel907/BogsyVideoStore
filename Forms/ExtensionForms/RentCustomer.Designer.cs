@@ -29,11 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ButtonSave = new Guna.UI2.WinForms.Guna2Button();
             this.DGVRent = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RentalID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SerialID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
@@ -96,15 +107,6 @@
             this.fullnameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.videoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.getAllCustomerRentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSReports = new Project.DataSet.DSReports();
-            this.getAllCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchTxbxRentCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchTxbxRentCustomerTableAdapter = new Project.DataSet.DSReportsTableAdapters.SearchTxbxRentCustomerTableAdapter();
-            this.getAllCustomerTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllCustomerTableAdapter();
-            this.getAllCustomerRentTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllCustomerRentTableAdapter();
-            this.getAllVideoRentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.getAllVideoRentTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllVideoRentTableAdapter();
             this.panel43 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
@@ -123,17 +125,15 @@
             this.panel58 = new System.Windows.Forms.Panel();
             this.panel59 = new System.Windows.Forms.Panel();
             this.CmbxSerialNo = new System.Windows.Forms.ComboBox();
-            this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SerialID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DocumentNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getAllCustomerRentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSReports = new Project.DataSet.DSReports();
+            this.getAllCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchTxbxRentCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchTxbxRentCustomerTableAdapter = new Project.DataSet.DSReportsTableAdapters.SearchTxbxRentCustomerTableAdapter();
+            this.getAllCustomerTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllCustomerTableAdapter();
+            this.getAllCustomerRentTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllCustomerRentTableAdapter();
+            this.getAllVideoRentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getAllVideoRentTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllVideoRentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DGVRent)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -159,11 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullnameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerRentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchTxbxRentCustomerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoRentBindingSource)).BeginInit();
             this.panel43.SuspendLayout();
             this.panel45.SuspendLayout();
             this.panel47.SuspendLayout();
@@ -172,6 +167,11 @@
             this.panel53.SuspendLayout();
             this.panel55.SuspendLayout();
             this.panel58.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerRentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTxbxRentCustomerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoRentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ButtonSave
@@ -196,26 +196,26 @@
             // 
             this.DGVRent.AllowUserToAddRows = false;
             this.DGVRent.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DGVRent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.DGVRent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DGVRent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVRent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVRent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVRent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DGVRent.ColumnHeadersHeight = 35;
             this.DGVRent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DGVRent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SerialNo,
+            this.RentalID,
             this.SerialID,
-            this.DocumentNo,
             this.Title,
             this.VideoID,
             this.Quantity,
@@ -224,14 +224,14 @@
             this.LimitDaysRented,
             this.Status,
             this.Price});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVRent.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVRent.DefaultCellStyle = dataGridViewCellStyle9;
             this.DGVRent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVRent.Location = new System.Drawing.Point(39, 76);
             this.DGVRent.Margin = new System.Windows.Forms.Padding(4);
@@ -262,6 +262,78 @@
             this.DGVRent.ThemeStyle.RowsStyle.Height = 22;
             this.DGVRent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.DGVRent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            // 
+            // SerialNo
+            // 
+            this.SerialNo.HeaderText = "Serial No";
+            this.SerialNo.Name = "SerialNo";
+            this.SerialNo.ReadOnly = true;
+            // 
+            // RentalID
+            // 
+            this.RentalID.HeaderText = "RentalID";
+            this.RentalID.Name = "RentalID";
+            this.RentalID.ReadOnly = true;
+            this.RentalID.Visible = false;
+            // 
+            // SerialID
+            // 
+            this.SerialID.HeaderText = "Serial ID";
+            this.SerialID.Name = "SerialID";
+            this.SerialID.ReadOnly = true;
+            this.SerialID.Visible = false;
+            // 
+            // Title
+            // 
+            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // VideoID
+            // 
+            this.VideoID.HeaderText = "VideoID";
+            this.VideoID.Name = "VideoID";
+            this.VideoID.ReadOnly = true;
+            this.VideoID.Visible = false;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // DueDate
+            // 
+            this.DueDate.HeaderText = "Due Date";
+            this.DueDate.Name = "DueDate";
+            this.DueDate.ReadOnly = true;
+            // 
+            // LimitDaysRented
+            // 
+            this.LimitDaysRented.HeaderText = "LimitDaysRented";
+            this.LimitDaysRented.Name = "LimitDaysRented";
+            this.LimitDaysRented.ReadOnly = true;
+            this.LimitDaysRented.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // label3
             // 
@@ -437,8 +509,9 @@
             this.comboBoxVideo.Location = new System.Drawing.Point(228, 38);
             this.comboBoxVideo.Name = "comboBoxVideo";
             this.comboBoxVideo.Size = new System.Drawing.Size(179, 35);
-            this.comboBoxVideo.TabIndex = 0;
+            this.comboBoxVideo.TabIndex = 2;
             this.comboBoxVideo.SelectedIndexChanged += new System.EventHandler(this.comboBoxVideo_SelectedIndexChanged);
+            this.comboBoxVideo.Click += new System.EventHandler(this.comboBoxVideo_Click);
             // 
             // panel1
             // 
@@ -737,7 +810,7 @@
             this.comboBoxFullname.Location = new System.Drawing.Point(42, 38);
             this.comboBoxFullname.Name = "comboBoxFullname";
             this.comboBoxFullname.Size = new System.Drawing.Size(179, 35);
-            this.comboBoxFullname.TabIndex = 446;
+            this.comboBoxFullname.TabIndex = 1;
             this.comboBoxFullname.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFullname_SelectedIndexChanged);
             // 
             // panel35
@@ -835,7 +908,8 @@
             this.guna2TextBoxVideo.ReadOnly = true;
             this.guna2TextBoxVideo.SelectedText = "";
             this.guna2TextBoxVideo.Size = new System.Drawing.Size(72, 15);
-            this.guna2TextBoxVideo.TabIndex = 0;
+            this.guna2TextBoxVideo.TabIndex = 99;
+            this.guna2TextBoxVideo.TextChanged += new System.EventHandler(this.guna2TextBoxVideo_TextChanged);
             // 
             // labelCustomerName
             // 
@@ -872,47 +946,6 @@
             this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 458;
             this.label1.Text = "Serial No.";
-            // 
-            // getAllCustomerRentBindingSource
-            // 
-            this.getAllCustomerRentBindingSource.DataMember = "GetAllCustomerRent";
-            this.getAllCustomerRentBindingSource.DataSource = this.dSReports;
-            // 
-            // dSReports
-            // 
-            this.dSReports.DataSetName = "DSReports";
-            this.dSReports.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // getAllCustomerBindingSource
-            // 
-            this.getAllCustomerBindingSource.DataMember = "GetAllCustomer";
-            this.getAllCustomerBindingSource.DataSource = this.dSReports;
-            // 
-            // searchTxbxRentCustomerBindingSource
-            // 
-            this.searchTxbxRentCustomerBindingSource.DataMember = "SearchTxbxRentCustomer";
-            this.searchTxbxRentCustomerBindingSource.DataSource = this.dSReports;
-            // 
-            // searchTxbxRentCustomerTableAdapter
-            // 
-            this.searchTxbxRentCustomerTableAdapter.ClearBeforeFill = true;
-            // 
-            // getAllCustomerTableAdapter
-            // 
-            this.getAllCustomerTableAdapter.ClearBeforeFill = true;
-            // 
-            // getAllCustomerRentTableAdapter
-            // 
-            this.getAllCustomerRentTableAdapter.ClearBeforeFill = true;
-            // 
-            // getAllVideoRentBindingSource
-            // 
-            this.getAllVideoRentBindingSource.DataMember = "GetAllVideoRent";
-            this.getAllVideoRentBindingSource.DataSource = this.dSReports;
-            // 
-            // getAllVideoRentTableAdapter
-            // 
-            this.getAllVideoRentTableAdapter.ClearBeforeFill = true;
             // 
             // panel43
             // 
@@ -1069,77 +1102,46 @@
             this.CmbxSerialNo.Size = new System.Drawing.Size(179, 35);
             this.CmbxSerialNo.TabIndex = 446;
             // 
-            // SerialNo
+            // getAllCustomerRentBindingSource
             // 
-            this.SerialNo.HeaderText = "SerialNo";
-            this.SerialNo.Name = "SerialNo";
-            this.SerialNo.ReadOnly = true;
+            this.getAllCustomerRentBindingSource.DataMember = "GetAllCustomerRent";
+            this.getAllCustomerRentBindingSource.DataSource = this.dSReports;
             // 
-            // SerialID
+            // dSReports
             // 
-            this.SerialID.HeaderText = "Serial ID";
-            this.SerialID.Name = "SerialID";
-            this.SerialID.ReadOnly = true;
-            this.SerialID.Visible = false;
+            this.dSReports.DataSetName = "DSReports";
+            this.dSReports.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // DocumentNo
+            // getAllCustomerBindingSource
             // 
-            this.DocumentNo.HeaderText = "DocumentNo";
-            this.DocumentNo.Name = "DocumentNo";
-            this.DocumentNo.ReadOnly = true;
-            this.DocumentNo.Visible = false;
+            this.getAllCustomerBindingSource.DataMember = "GetAllCustomer";
+            this.getAllCustomerBindingSource.DataSource = this.dSReports;
             // 
-            // Title
+            // searchTxbxRentCustomerBindingSource
             // 
-            this.Title.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
+            this.searchTxbxRentCustomerBindingSource.DataMember = "SearchTxbxRentCustomer";
+            this.searchTxbxRentCustomerBindingSource.DataSource = this.dSReports;
             // 
-            // VideoID
+            // searchTxbxRentCustomerTableAdapter
             // 
-            this.VideoID.HeaderText = "VideoID";
-            this.VideoID.Name = "VideoID";
-            this.VideoID.ReadOnly = true;
-            this.VideoID.Visible = false;
+            this.searchTxbxRentCustomerTableAdapter.ClearBeforeFill = true;
             // 
-            // Quantity
+            // getAllCustomerTableAdapter
             // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
+            this.getAllCustomerTableAdapter.ClearBeforeFill = true;
             // 
-            // Category
+            // getAllCustomerRentTableAdapter
             // 
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
+            this.getAllCustomerRentTableAdapter.ClearBeforeFill = true;
             // 
-            // DueDate
+            // getAllVideoRentBindingSource
             // 
-            this.DueDate.HeaderText = "Due Date";
-            this.DueDate.Name = "DueDate";
-            this.DueDate.ReadOnly = true;
+            this.getAllVideoRentBindingSource.DataMember = "GetAllVideoRent";
+            this.getAllVideoRentBindingSource.DataSource = this.dSReports;
             // 
-            // LimitDaysRented
+            // getAllVideoRentTableAdapter
             // 
-            this.LimitDaysRented.HeaderText = "LimitDaysRented";
-            this.LimitDaysRented.Name = "LimitDaysRented";
-            this.LimitDaysRented.ReadOnly = true;
-            this.LimitDaysRented.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.getAllVideoRentTableAdapter.ClearBeforeFill = true;
             // 
             // RentCustomer
             // 
@@ -1226,11 +1228,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullnameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerRentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSReports)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchTxbxRentCustomerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoRentBindingSource)).EndInit();
             this.panel43.ResumeLayout(false);
             this.panel45.ResumeLayout(false);
             this.panel47.ResumeLayout(false);
@@ -1239,6 +1236,11 @@
             this.panel53.ResumeLayout(false);
             this.panel55.ResumeLayout(false);
             this.panel58.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerRentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllCustomerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchTxbxRentCustomerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoRentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1337,8 +1339,8 @@
         private System.Windows.Forms.Panel panel59;
         private System.Windows.Forms.ComboBox CmbxSerialNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn SerialNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RentalID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SerialID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DocumentNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn VideoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;

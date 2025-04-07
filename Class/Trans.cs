@@ -1,4 +1,7 @@
 ﻿using Project.Model;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -8,7 +11,7 @@ namespace Project.Class
     {
         private DataLoader ds = new DataLoader();
 
-        public void Return(Transac transac)
+        public void Return(MTransac transac)
         {
             string DocsNo = AutoIncrementManager.GetNextDocumentNo();
             int EntryNo = AutoIncrementManager.GetNextEntryNo();
