@@ -20,7 +20,7 @@ namespace Project.Class
                     new SqlParameter("VideoID", video.VideoId),
                     new SqlParameter("Title", video.Title),
                     new SqlParameter("Category", video.Category),
-                    new SqlParameter("Out", video.CopiesAvailable),
+                    new SqlParameter("Out", video.LimitDaysRented),
                 };
             else
                 parameter = new SqlParameter[]
@@ -29,7 +29,7 @@ namespace Project.Class
                     new SqlParameter("VideoID", video.VideoId),
                     new SqlParameter("Title", video.Title),
                     new SqlParameter("Category", video.Category),
-                    new SqlParameter("Out", video.CopiesAvailable),
+                    new SqlParameter("Out", video.LimitDaysRented),
                 };
 
             ds.ExecuteData("UpdateVideo", parameter);

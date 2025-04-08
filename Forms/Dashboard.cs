@@ -1,6 +1,8 @@
 ﻿using Guna.UI2.WinForms;
+using Microsoft.Reporting.Map.WebForms.BingMaps;
 using Project.Class;
 using Project.Forms.ExtensionForms;
+using Project.Properties;
 using System;
 using System.Drawing;
 using System.Security.Cryptography;
@@ -65,26 +67,38 @@ namespace Project.Forms
             switch (buttonName)
             {
                 case "DVDVCD":
+                    LblTitle.Text = "Video";
+                    PctrBxDashboard.Image = Resources.icons8_video_64;
                     DVDs_VCDs dVDs_VCDs = new DVDs_VCDs(this);
                     form.OpenForm(dVDs_VCDs, panelDashboard);
                     break;
                 case "Customer":
+                    LblTitle.Text = "Customer";
+                    PctrBxDashboard.Image = Resources.Customer_icon;
                     CustomerForm customer = new CustomerForm();
                     form.OpenForm(customer, panelDashboard);
                     break;
                 case "Transactions":
+                    LblTitle.Text = "Transactions";
+                    PctrBxDashboard.Image = Resources.Transaction_icon;
                     Transaction trans = new Transaction(this);
                     form.OpenForm(trans, panelDashboard);
                     break;
                 case "Reports":
+                    LblTitle.Text = "Reports";
+                    PctrBxDashboard.Image = Resources.Report_Icon;
                     DGVReports reports = new DGVReports();
                     form.OpenForm(reports, panelDashboard);
                     break;
                 case "Payments":
+                    LblTitle.Text = "Payments";
+                    PctrBxDashboard.Image = Resources.Payments_icon;
                     Payments payments = new Payments();
                     form.OpenForm(payments, panelDashboard);
                     break;
                 case "ItemLedger":
+                    LblTitle.Text = "Item Ledger";
+                    PctrBxDashboard.Image = Resources.icons8_ledger_48;
                     ItemLedger item = new ItemLedger();
                     form.OpenForm(item, panelDashboard);
                     break;

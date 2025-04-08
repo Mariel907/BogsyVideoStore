@@ -42,6 +42,7 @@ namespace Project.Class
                 }
             }
         }
+
         public void SearchTxbx(string query, string searchtext, DataGridView dataGridView)
         {
             SqlParameter[] parameters = new SqlParameter[]

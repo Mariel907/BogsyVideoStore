@@ -30,7 +30,6 @@
         {
             this.guna2ComboBoxCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBoxTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxCopiesAvailable = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelBook = new System.Windows.Forms.Label();
             this.guna2ButtonSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,6 +40,8 @@
             this.GBtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.GBtnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.panelEdit = new System.Windows.Forms.Panel();
+            this.G2CmbxLimitDaysRented = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panelEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ComboBoxCategory
@@ -89,30 +90,6 @@
             this.guna2TextBoxTitle.Size = new System.Drawing.Size(377, 36);
             this.guna2TextBoxTitle.TabIndex = 351;
             // 
-            // guna2TextBoxCopiesAvailable
-            // 
-            this.guna2TextBoxCopiesAvailable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxCopiesAvailable.BorderThickness = 2;
-            this.guna2TextBoxCopiesAvailable.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxCopiesAvailable.DefaultText = "";
-            this.guna2TextBoxCopiesAvailable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxCopiesAvailable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxCopiesAvailable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCopiesAvailable.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCopiesAvailable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxCopiesAvailable.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.guna2TextBoxCopiesAvailable.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxCopiesAvailable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCopiesAvailable.Location = new System.Drawing.Point(423, 255);
-            this.guna2TextBoxCopiesAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxCopiesAvailable.Name = "guna2TextBoxCopiesAvailable";
-            this.guna2TextBoxCopiesAvailable.Padding = new System.Windows.Forms.Padding(7);
-            this.guna2TextBoxCopiesAvailable.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxCopiesAvailable.PlaceholderText = "";
-            this.guna2TextBoxCopiesAvailable.SelectedText = "";
-            this.guna2TextBoxCopiesAvailable.Size = new System.Drawing.Size(377, 36);
-            this.guna2TextBoxCopiesAvailable.TabIndex = 349;
-            // 
             // labelBook
             // 
             this.labelBook.AutoSize = true;
@@ -159,9 +136,9 @@
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(426, 229);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 21);
+            this.label5.Size = new System.Drawing.Size(135, 21);
             this.label5.TabIndex = 311;
-            this.label5.Text = "Total Copies";
+            this.label5.Text = "Limit Days Rented";
             // 
             // label2
             // 
@@ -252,10 +229,35 @@
             // 
             // panelEdit
             // 
+            this.panelEdit.Controls.Add(this.G2CmbxLimitDaysRented);
             this.panelEdit.Location = new System.Drawing.Point(334, 12);
             this.panelEdit.Name = "panelEdit";
             this.panelEdit.Size = new System.Drawing.Size(559, 482);
             this.panelEdit.TabIndex = 382;
+            this.panelEdit.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEdit_Paint);
+            // 
+            // G2CmbxLimitDaysRented
+            // 
+            this.G2CmbxLimitDaysRented.BackColor = System.Drawing.Color.Transparent;
+            this.G2CmbxLimitDaysRented.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.G2CmbxLimitDaysRented.BorderThickness = 2;
+            this.G2CmbxLimitDaysRented.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.G2CmbxLimitDaysRented.DropDownHeight = 150;
+            this.G2CmbxLimitDaysRented.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.G2CmbxLimitDaysRented.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.G2CmbxLimitDaysRented.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.G2CmbxLimitDaysRented.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CmbxLimitDaysRented.ForeColor = System.Drawing.Color.Black;
+            this.G2CmbxLimitDaysRented.IntegralHeight = false;
+            this.G2CmbxLimitDaysRented.ItemHeight = 30;
+            this.G2CmbxLimitDaysRented.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.G2CmbxLimitDaysRented.Location = new System.Drawing.Point(89, 241);
+            this.G2CmbxLimitDaysRented.Name = "G2CmbxLimitDaysRented";
+            this.G2CmbxLimitDaysRented.Size = new System.Drawing.Size(377, 36);
+            this.G2CmbxLimitDaysRented.TabIndex = 383;
             // 
             // EditDVD_VCD
             // 
@@ -269,7 +271,6 @@
             this.Controls.Add(this.guna2TextBoxVideoID);
             this.Controls.Add(this.guna2ComboBoxCategory);
             this.Controls.Add(this.guna2TextBoxTitle);
-            this.Controls.Add(this.guna2TextBoxCopiesAvailable);
             this.Controls.Add(this.labelBook);
             this.Controls.Add(this.guna2ButtonSubmit);
             this.Controls.Add(this.label9);
@@ -280,6 +281,7 @@
             this.Name = "EditDVD_VCD";
             this.Text = "EditDVD_VCD";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditDVD_VCD_FormClosing);
+            this.panelEdit.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +290,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBoxCategory;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxTitle;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCopiesAvailable;
         private System.Windows.Forms.Label labelBook;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonSubmit;
         private System.Windows.Forms.Label label9;
@@ -299,5 +300,6 @@
         private Guna.UI2.WinForms.Guna2Button GBtnEdit;
         private Guna.UI2.WinForms.Guna2Button GBtnAdd;
         private System.Windows.Forms.Panel panelEdit;
+        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxLimitDaysRented;
     }
 }

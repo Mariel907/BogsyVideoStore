@@ -13,10 +13,9 @@ namespace Project.Forms.ExtensionForms
             InitializeComponent();
             _video = video;
             guna2TextBoxTitle.Text = _video.Title;
-            guna2TextBoxCopiesAvailable.Text = _video.CopiesAvailable;
+            G2CmbxLimitDaysRented.Text = _video.LimitDaysRented.ToString();
             guna2ComboBoxCategory.Text = _video.Category;
-
-            guna2TextBoxVideoID.Text = Convert.ToInt32(_video.VideoId).ToString();
+            guna2TextBoxVideoID.Text = _video.VideoId.ToString();
         }
 
         private void guna2ButtonSubmit_Click(object sender, EventArgs e)
@@ -25,7 +24,7 @@ namespace Project.Forms.ExtensionForms
             {
                 VideoProp video = new VideoProp();
                 video.Title = guna2TextBoxTitle.Text;
-                video.CopiesAvailable = guna2TextBoxCopiesAvailable.Text;
+                video.LimitDaysRented = int.Parse(G2CmbxLimitDaysRented.Text);
                 video.Category = guna2ComboBoxCategory.Text;
                 video.VideoId = Convert.ToInt16(guna2TextBoxVideoID.Text);
 
@@ -54,6 +53,11 @@ namespace Project.Forms.ExtensionForms
         private void GBtnEdit_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panelEdit_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

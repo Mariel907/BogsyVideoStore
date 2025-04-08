@@ -40,31 +40,31 @@
             this.guna2ButtonEdit = new Guna.UI2.WinForms.Guna2Button();
             this.Guna2ButtonDelete = new Guna.UI2.WinForms.Guna2Button();
             this.dgvDVD = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CopiesAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountToRentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.limitDaysRentedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getAllDVDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSReports = new Project.DataSet.DSReports();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ButtonVCD = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDVD = new Guna.UI2.WinForms.Guna2Button();
             this.dgvVCD = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.getAllVCDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getAllDVDTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllDVDTableAdapter();
+            this.getAllVCDTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllVCDTableAdapter();
+            this.guna2TextBoxDVD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBoxVCD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.VideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CopiesAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountToRentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VCDVideoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VCDTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VCDCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VCDCopiesAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.getAllVCDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.getAllDVDTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllDVDTableAdapter();
-            this.getAllVCDTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllVCDTableAdapter();
-            this.guna2TextBoxDVD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBoxVCD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.VCDLimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDVD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllDVDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
@@ -154,7 +154,7 @@
             this.CopiesAvailable,
             this.outDataGridViewTextBoxColumn,
             this.amountToRentDataGridViewTextBoxColumn,
-            this.limitDaysRentedDataGridViewTextBoxColumn});
+            this.LimitDaysRented});
             this.dgvDVD.DataSource = this.getAllDVDBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -194,56 +194,6 @@
             this.dgvDVD.ThemeStyle.RowsStyle.Height = 22;
             this.dgvDVD.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.dgvDVD.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            // 
-            // VideoID
-            // 
-            this.VideoID.DataPropertyName = "VideoID";
-            this.VideoID.HeaderText = "VideoID";
-            this.VideoID.Name = "VideoID";
-            this.VideoID.ReadOnly = true;
-            this.VideoID.Visible = false;
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.DataPropertyName = "Category";
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // CopiesAvailable
-            // 
-            this.CopiesAvailable.DataPropertyName = "CopiesAvailable";
-            this.CopiesAvailable.HeaderText = "Copies Available";
-            this.CopiesAvailable.Name = "CopiesAvailable";
-            this.CopiesAvailable.ReadOnly = true;
-            // 
-            // outDataGridViewTextBoxColumn
-            // 
-            this.outDataGridViewTextBoxColumn.DataPropertyName = "Out";
-            this.outDataGridViewTextBoxColumn.HeaderText = "Rented";
-            this.outDataGridViewTextBoxColumn.Name = "outDataGridViewTextBoxColumn";
-            this.outDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountToRentDataGridViewTextBoxColumn
-            // 
-            this.amountToRentDataGridViewTextBoxColumn.DataPropertyName = "AmountToRent";
-            this.amountToRentDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.amountToRentDataGridViewTextBoxColumn.Name = "amountToRentDataGridViewTextBoxColumn";
-            this.amountToRentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // limitDaysRentedDataGridViewTextBoxColumn
-            // 
-            this.limitDaysRentedDataGridViewTextBoxColumn.DataPropertyName = "LimitDaysRented";
-            this.limitDaysRentedDataGridViewTextBoxColumn.HeaderText = "Limit Days Rented";
-            this.limitDaysRentedDataGridViewTextBoxColumn.Name = "limitDaysRentedDataGridViewTextBoxColumn";
-            this.limitDaysRentedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // getAllDVDBindingSource
             // 
@@ -330,7 +280,7 @@
             this.VCDCopiesAvailable,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.VCDLimitDaysRented});
             this.dgvVCD.DataSource = this.getAllVCDBindingSource;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
@@ -370,56 +320,6 @@
             this.dgvVCD.ThemeStyle.RowsStyle.Height = 22;
             this.dgvVCD.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.dgvVCD.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            // 
-            // VCDVideoID
-            // 
-            this.VCDVideoID.DataPropertyName = "VideoID";
-            this.VCDVideoID.HeaderText = "VideoID";
-            this.VCDVideoID.Name = "VCDVideoID";
-            this.VCDVideoID.ReadOnly = true;
-            this.VCDVideoID.Visible = false;
-            // 
-            // VCDTitle
-            // 
-            this.VCDTitle.DataPropertyName = "Title";
-            this.VCDTitle.HeaderText = "Title";
-            this.VCDTitle.Name = "VCDTitle";
-            this.VCDTitle.ReadOnly = true;
-            // 
-            // VCDCategory
-            // 
-            this.VCDCategory.DataPropertyName = "Category";
-            this.VCDCategory.HeaderText = "Category";
-            this.VCDCategory.Name = "VCDCategory";
-            this.VCDCategory.ReadOnly = true;
-            // 
-            // VCDCopiesAvailable
-            // 
-            this.VCDCopiesAvailable.DataPropertyName = "CopiesAvailable";
-            this.VCDCopiesAvailable.HeaderText = "Copies Available";
-            this.VCDCopiesAvailable.Name = "VCDCopiesAvailable";
-            this.VCDCopiesAvailable.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Out";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Rented";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "AmountToRent";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Price";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "LimitDaysRented";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Limit Days Rented";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // getAllVCDBindingSource
             // 
@@ -486,6 +386,106 @@
             this.guna2TextBoxVCD.TabIndex = 246;
             this.guna2TextBoxVCD.TextChanged += new System.EventHandler(this.Guna2TextBoxVCD_TextChanged);
             // 
+            // VideoID
+            // 
+            this.VideoID.DataPropertyName = "VideoID";
+            this.VideoID.HeaderText = "VideoID";
+            this.VideoID.Name = "VideoID";
+            this.VideoID.ReadOnly = true;
+            this.VideoID.Visible = false;
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "Category";
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // CopiesAvailable
+            // 
+            this.CopiesAvailable.DataPropertyName = "CopiesAvailable";
+            this.CopiesAvailable.HeaderText = "Copies Available";
+            this.CopiesAvailable.Name = "CopiesAvailable";
+            this.CopiesAvailable.ReadOnly = true;
+            // 
+            // outDataGridViewTextBoxColumn
+            // 
+            this.outDataGridViewTextBoxColumn.DataPropertyName = "Out";
+            this.outDataGridViewTextBoxColumn.HeaderText = "Rented";
+            this.outDataGridViewTextBoxColumn.Name = "outDataGridViewTextBoxColumn";
+            this.outDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountToRentDataGridViewTextBoxColumn
+            // 
+            this.amountToRentDataGridViewTextBoxColumn.DataPropertyName = "AmountToRent";
+            this.amountToRentDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.amountToRentDataGridViewTextBoxColumn.Name = "amountToRentDataGridViewTextBoxColumn";
+            this.amountToRentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // LimitDaysRented
+            // 
+            this.LimitDaysRented.DataPropertyName = "LimitDaysRented";
+            this.LimitDaysRented.HeaderText = "Limit Days Rented";
+            this.LimitDaysRented.Name = "LimitDaysRented";
+            this.LimitDaysRented.ReadOnly = true;
+            // 
+            // VCDVideoID
+            // 
+            this.VCDVideoID.DataPropertyName = "VideoID";
+            this.VCDVideoID.HeaderText = "VideoID";
+            this.VCDVideoID.Name = "VCDVideoID";
+            this.VCDVideoID.ReadOnly = true;
+            this.VCDVideoID.Visible = false;
+            // 
+            // VCDTitle
+            // 
+            this.VCDTitle.DataPropertyName = "Title";
+            this.VCDTitle.HeaderText = "Title";
+            this.VCDTitle.Name = "VCDTitle";
+            this.VCDTitle.ReadOnly = true;
+            // 
+            // VCDCategory
+            // 
+            this.VCDCategory.DataPropertyName = "Category";
+            this.VCDCategory.HeaderText = "Category";
+            this.VCDCategory.Name = "VCDCategory";
+            this.VCDCategory.ReadOnly = true;
+            // 
+            // VCDCopiesAvailable
+            // 
+            this.VCDCopiesAvailable.DataPropertyName = "CopiesAvailable";
+            this.VCDCopiesAvailable.HeaderText = "Copies Available";
+            this.VCDCopiesAvailable.Name = "VCDCopiesAvailable";
+            this.VCDCopiesAvailable.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Out";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Rented";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "AmountToRent";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // VCDLimitDaysRented
+            // 
+            this.VCDLimitDaysRented.DataPropertyName = "LimitDaysRented";
+            this.VCDLimitDaysRented.HeaderText = "Limit Days Rented";
+            this.VCDLimitDaysRented.Name = "VCDLimitDaysRented";
+            this.VCDLimitDaysRented.ReadOnly = true;
+            // 
             // DVDs_VCDs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,21 +531,21 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvVCD;
         private System.Windows.Forms.BindingSource getAllVCDBindingSource;
         private DataSet.DSReportsTableAdapters.GetAllVCDTableAdapter getAllVCDTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VCDVideoID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VCDTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VCDCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VCDCopiesAvailable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxDVD;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxVCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn VideoID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn CopiesAvailable;
         private System.Windows.Forms.DataGridViewTextBoxColumn outDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountToRentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn limitDaysRentedDataGridViewTextBoxColumn;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxDVD;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxVCD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LimitDaysRented;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VCDVideoID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VCDTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VCDCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VCDCopiesAvailable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VCDLimitDaysRented;
     }
 }

@@ -13,7 +13,6 @@ namespace Project.Forms
 {
     public partial class ItemLedger : Form
     {
-        private BindingSource bindingSource = new BindingSource();
         public ItemLedger()
         {
             InitializeComponent();
@@ -21,10 +20,25 @@ namespace Project.Forms
 
         private void ItemLedger_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dSReports1.GetAllItemLedger' table. You can move, or remove it, as needed.
             this.getAllItemLedgerTableAdapter.Fill(this.dSReports1.GetAllItemLedger);
-            //bindingSource.DataSource = Ledger.GetAllItemLedger();
-            //G2DGVItemLedger.DataSource = bindingSource;
+        }
+
+        private void guna2ComboBoxReturned_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void Search()
+        {
+            CItemLedger search = new CItemLedger();
+            string cmbx = G2CmbxLedger.Text;
+            string txbx = G2TxbxLedger.Text;
+            search.SearchDVDTxbxItemLedger(txbx, cmbx, G2DGVItemLedger);
+        }
+
+        private void G2TxbxLedger_TextChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }

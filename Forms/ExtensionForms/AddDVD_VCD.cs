@@ -1,9 +1,7 @@
-﻿using Guna.UI2.WinForms;
-using Project.Class;
+﻿using Project.Class;
 using Project.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -30,20 +28,24 @@ namespace Project.Forms.ExtensionForms
 
         private void AddDVD_VCD_Load(object sender, EventArgs e)
         {
-            AddColumnCMBX("Category", "Category", new List<string> { "DVD", "VCD" });
+            AddColumnCMBX();
+            DisplayVideo();
+            UpdateLabel();
+            LimitDaysRentedCmbxDGV();
+        }
+
+        private void LimitDaysRentedCmbxDGV()
+        {
             DataGridViewComboBoxColumn cmbxClmn = new DataGridViewComboBoxColumn
             {
                 HeaderText = "Limit Days Rented",
                 Name = "LimitDaysRented",
-                DataSource = new List<int> {1, 2, 3 },
+                DataSource = new List<int> { 1, 2, 3 },
             };
             cmbxClmn.DefaultCellStyle.BackColor = Color.White;
             cmbxClmn.FlatStyle = FlatStyle.Flat;
-            G2DGVAddSave.Columns.Add(cmbxClmn); 
-            DisplayVideo();
-            UpdateLabel();
+            G2DGVAddSave.Columns.Add(cmbxClmn);
         }
-
         private void UpdateLabel()
         {
             if (LblLastVideoID == null) return;
@@ -58,13 +60,13 @@ namespace Project.Forms.ExtensionForms
             comboBoxVideo.ValueMember = "VideoID";
         }
 
-        private void AddColumnCMBX(string HdrText, string NmText, List<string> dataSource)
+        private void AddColumnCMBX()
         {
             DataGridViewComboBoxColumn cmbxClmn = new DataGridViewComboBoxColumn
             {
-                HeaderText = HdrText,
-                Name = NmText,
-                DataSource = dataSource,
+                HeaderText = "Category",
+                Name = "Category",
+                DataSource = new List<string> { "DVD", "VCD" },
             };
             cmbxClmn.DefaultCellStyle.BackColor = Color.White;
             cmbxClmn.FlatStyle = FlatStyle.Flat;
@@ -84,7 +86,7 @@ namespace Project.Forms.ExtensionForms
                     currentRow.Cells["Qty"].Value = 1;
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -128,21 +130,17 @@ namespace Project.Forms.ExtensionForms
                 case Keys.C:
                     if (e.Control)
                     {
-                        if (G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+                        if (G2DGVAddSave.SelectedRows.Count > 0 && G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+                        {
                             copiedData = G2DGVAddSave.CurrentRow.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
-                        else if (G2DGVAddSave.CurrentCell != null)
-                            copiedCellValue = G2DGVAddSave.CurrentCell.Value;
+                            copiedCellValue = null;
+                        }
                     }
                     break;
                 case Keys.V:
                     if (e.Control)
                     {
-                        if (copiedCellValue != null && G2DGVAddSave.CurrentCell != null)
-                        {
-                            AddToUndoStackCell();
-                            G2DGVAddSave.CurrentCell.Value = copiedCellValue;
-                        }
-                        else if(copiedData != null)
+                        if (copiedData != null)
                         {
                             AddToUndoStack();
 
@@ -153,12 +151,13 @@ namespace Project.Forms.ExtensionForms
                     }
                     break;
                 case Keys.Delete:
-                    if (G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+                    if (G2DGVAddSave.SelectedRows.Count > 0 && G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+                    {
+                        AddToUndoStack();
                         G2DGVAddSave.Rows.Remove(G2DGVAddSave.CurrentRow);
-                    else if (G2DGVAddSave.CurrentCell != null)
-                        G2DGVAddSave.CurrentCell.Value = null;
-                        break;
-              
+
+                    }
+                    break;
                 default:
                     break;
             }
@@ -166,9 +165,9 @@ namespace Project.Forms.ExtensionForms
 
         private void AddToUndoStack()
         {
-          if(G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
+            if (G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
             {
-               var rowValues = G2DGVAddSave.CurrentRow.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
+                var rowValues = G2DGVAddSave.CurrentRow.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
 
                 undoStack.Push(new UndoRedoAction
                 {
@@ -177,17 +176,38 @@ namespace Project.Forms.ExtensionForms
                 redoStack.Clear();
             }
         }
-         private void AddToUndoStackCell()
-        {
-            if (G2DGVAddSave.CurrentCell != null)
-            {
-                undoStack.Push(new UndoRedoAction
-                {
-                    Cell = G2DGVAddSave.CurrentCell,
-                    PreviousValue = G2DGVAddSave.CurrentCell.Value 
-                });
 
-                redoStack.Clear();
+        private void UndoAction()
+        {
+            if(undoStack.Count > 0)
+            {
+                var lastAction = undoStack.Pop();
+                var rowIndex = G2DGVAddSave.CurrentRow?.Index ?? -1;
+                if (rowIndex >= 0)
+                {
+                    var CurrentRowValues = G2DGVAddSave.Rows[rowIndex].Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
+                    redoStack.Push(new UndoRedoAction { Cells = CurrentRowValues });
+                    for (int i = 0; i < lastAction.Cells.Length; i++)
+                        G2DGVAddSave.Rows[rowIndex].Cells[i].Value = lastAction.Cells[i];
+                }
+            }
+        }
+
+        private void RedoAction()
+        {
+            if (redoStack.Count > 0)
+            {
+                var nextAction = redoStack.Pop();
+                var rowIndex = G2DGVAddSave.CurrentRow?.Index ?? -1;
+
+                if (rowIndex >= 0)
+                {
+                    var currentRowValues = G2DGVAddSave.Rows[rowIndex].Cells.Cast<DataGridViewCell>().Select((cell) => cell.Value).ToArray();
+                    undoStack.Push(new UndoRedoAction { Cells = currentRowValues });
+
+                    for (int i = 0; i < nextAction.Cells.Length; i++)
+                        G2DGVAddSave.Rows[rowIndex].Cells[i].Value = nextAction.Cells[i];
+                }
             }
         }
 

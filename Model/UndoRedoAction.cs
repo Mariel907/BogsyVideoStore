@@ -9,8 +9,9 @@ namespace Project.Model
 {
     class UndoRedoAction
     {
-        public DataGridViewCell Cell { get; set; }
-        public object PreviousValue {  get; set; }
+        public int RowIndex { get; set; }
+        public int CellIndex { get; set; } = -1;
+        public object PreviousCellValue { get; set; }
         public object[] Cells { get; set; }
     }
 }

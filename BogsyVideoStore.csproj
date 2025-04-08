@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\AutoIncrementManager.cs" />
+    <Compile Include="Class\CItemLedger.cs" />
     <Compile Include="Class\CPayments.cs" />
     <Compile Include="Class\CustomerClass.cs" />
     <Compile Include="Class\DataLoader.cs" />
@@ -174,6 +175,18 @@
     <Compile Include="Forms\ExtensionForms\RentCustomer.Designer.cs">
       <DependentUpon>RentCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ExtensionForms\StepByStepRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\StepByStepRent.Designer.cs">
+      <DependentUpon>StepByStepRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\TransSelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\TransSelectCustomer.Designer.cs">
+      <DependentUpon>TransSelectCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ItemLedger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +243,12 @@
       <DependentUpon>RentCustomer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\StepByStepRent.resx">
+      <DependentUpon>StepByStepRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\TransSelectCustomer.resx">
+      <DependentUpon>TransSelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemLedger.resx">
       <DependentUpon>ItemLedger.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +268,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DataSet\DSPayment.xsc">
       <DependentUpon>DSPayment.xsd</DependentUpon>
@@ -326,6 +346,12 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-ledger-48.png" />
+    <None Include="Resources\icons8-video-64.png" />
+    <None Include="Resources\Report.Icon.png" />
+    <None Include="Resources\Transaction.icon.png" />
+    <None Include="Resources\Payments.icon.png" />
+    <None Include="Resources\Customer.icon.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

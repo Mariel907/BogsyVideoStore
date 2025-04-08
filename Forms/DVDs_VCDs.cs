@@ -55,7 +55,7 @@ namespace Project.Forms
                 video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString());
                 video.Title = selectedRow.Cells["Title"].Value.ToString();
                 video.Category = selectedRow.Cells["Category"].Value.ToString();
-                video.CopiesAvailable = selectedRow.Cells["CopiesAvailable"].Value.ToString();
+                video.LimitDaysRented = int.Parse(selectedRow.Cells["LimitDaysRented"].Value.ToString());
             }
             else
             {
@@ -63,7 +63,7 @@ namespace Project.Forms
                 video.VideoId = Convert.ToInt32(selectedRow.Cells["VCDVideoID"].Value.ToString());
                 video.Title = selectedRow.Cells["VCDTitle"].Value.ToString();
                 video.Category = selectedRow.Cells["VCDCategory"].Value.ToString();
-                video.CopiesAvailable = selectedRow.Cells["VCDCopiesAvailable"].Value.ToString();
+                video.LimitDaysRented = int.Parse(selectedRow.Cells["VCDLimitDaysRented"].Value.ToString());
             }
 
             EditDVD_VCD Edit = new EditDVD_VCD(video);

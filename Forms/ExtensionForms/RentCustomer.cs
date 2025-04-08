@@ -9,9 +9,11 @@ namespace Project.Forms.ExtensionForms
     {
         private Rent rent = new Rent();
         public DataGridView DgvRent { get { return DGVRent; } }
-        public RentCustomer()
+        public RentCustomer(Customers customer)
         {
             InitializeComponent();
+            G2TxbxCustomer.Text = customer.Fullname;
+            labelCustomerName.Text = customer.CustomerID;
         }
         private void Guna2ButtonRent_Click(object sender, EventArgs e)
         {
@@ -48,7 +50,7 @@ namespace Project.Forms.ExtensionForms
             return new Customers
             {
                 CustomerID = labelCustomerName.Text,
-                Fullname = comboBoxFullname.Text,
+                Fullname = G2TxbxCustomer.Text,
                 Cash = Convert.ToDecimal(guna2TextBoxCash.Text),
                 Change = Convert.ToDecimal(guna2TextBoxChange.Text),
             };
@@ -66,10 +68,10 @@ namespace Project.Forms.ExtensionForms
         {
             DisplayVideo();
             DisplaySerial();
-            var customers = Rent.Fullname();
-            comboBoxFullname.DataSource = customers;
-            comboBoxFullname.DisplayMember = "Fullname";
-            comboBoxFullname.ValueMember = "CustomerID";
+            //var customers = Rent.Fullname();
+            //comboBoxFullname.DataSource = customers;
+            //comboBoxFullname.DisplayMember = "Fullname";
+            //comboBoxFullname.ValueMember = "CustomerID";
         }
 
         private void DisplayVideo()
@@ -82,7 +84,7 @@ namespace Project.Forms.ExtensionForms
 
         private void DisplaySerial()
         {
-            var serial = Rent.SearchSerial(guna2TextBoxVideo.Text);
+            var serial = Rent.SearchSerial(LblTitle.Text);
             CmbxSerialNo.DataSource = serial;
             CmbxSerialNo.DisplayMember = "SerialNo";
             CmbxSerialNo.ValueMember = "SerialID";
@@ -190,11 +192,11 @@ namespace Project.Forms.ExtensionForms
 
         private void ComboBoxFullname_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxFullname.SelectedValue != null)
-            {
-                Customers customer = comboBoxFullname.SelectedItem as Customers;
-                labelCustomerName.Text = customer.CustomerID;
-            }
+            //if (comboBoxFullname.SelectedValue != null)
+            //{
+            //    Customers customer = comboBoxFullname.SelectedItem as Customers;
+            //    labelCustomerName.Text = customer.CustomerID;
+            //}
         }
 
         private void Guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
@@ -209,19 +211,9 @@ namespace Project.Forms.ExtensionForms
             if (comboBoxVideo.SelectedValue != null)
             {
                 VideoProp vd = comboBoxVideo.SelectedItem as VideoProp;
-                guna2TextBoxVideo.Text = vd.VideoId.ToString();
+                LblTitle.Text = vd.VideoId.ToString();
             }
             DisplaySerial();
-        }
-
-        private void guna2TextBoxVideo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxVideo_Click(object sender, EventArgs e)
-        {
-            CmbxSerialNo.Text = "";
         }
     }
 }
