@@ -2,6 +2,7 @@
 using Project.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -30,7 +31,6 @@ namespace Project.Forms.ExtensionForms
         {
             AddColumnCMBX();
             DisplayVideo();
-            UpdateLabel();
             LimitDaysRentedCmbxDGV();
         }
 
@@ -46,12 +46,7 @@ namespace Project.Forms.ExtensionForms
             cmbxClmn.FlatStyle = FlatStyle.Flat;
             G2DGVAddSave.Columns.Add(cmbxClmn);
         }
-        private void UpdateLabel()
-        {
-            if (LblLastVideoID == null) return;
-            int count = vd.LastVideoID();
-            LblLastVideoID.Text = count.ToString();
-        }
+    
         private void DisplayVideo()
         {
             var Title = VideoLibrary.ShowAllVideo();
@@ -109,6 +104,15 @@ namespace Project.Forms.ExtensionForms
 
         private void G2BtnSave_Click(object sender, EventArgs e)
         {
+            bool hasValidRow = G2DGVAddSave.Rows.Cast<DataGridViewRow>().Any(row => !row.IsNewRow && row.Cells.Cast<DataGridViewCell>().Any(cell => cell.Value != null && !string.IsNullOrEmpty(cell.Value.ToString())));
+
+            if (!hasValidRow)
+            {
+                MessageBox.Show("There is no data to save.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            
             try
             {
                 vd.Insert(G2DGVAddSave);
@@ -120,7 +124,98 @@ namespace Project.Forms.ExtensionForms
             }
             G2DGVAddSave.Rows.Clear();
             DisplayVideo();
-            UpdateLabel();
+        }
+        private void DuplicateSerialNoInDB()
+        {
+
+        }
+        private void G2BtnSaves_Click(object sender, EventArgs e)
+        {
+            // Check if the DataGridView is available.
+            if (G2DGVAddSave == null)
+            {
+                MessageBox.Show("The data grid is not available.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verify the grid has at least one row that contains valid data.
+            bool hasValidRow = G2DGVAddSave.Rows.Cast<DataGridViewRow>()
+                .Any(row => !row.IsNewRow &&
+                            row.Cells.Cast<DataGridViewCell>()
+                                .Any(cell => cell.Value != null && !string.IsNullOrEmpty(cell.Value.ToString())));
+            if (!hasValidRow)
+            {
+                MessageBox.Show("There is no data to save.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check for duplicate SerialNo within the DataGridView.
+            var gridDuplicateSerials = G2DGVAddSave.Rows.Cast<DataGridViewRow>()
+                .Where(row => !row.IsNewRow &&
+                              row.Cells["SerialNo"].Value != null &&
+                              !string.IsNullOrEmpty(row.Cells["SerialNo"].Value.ToString()))
+                .GroupBy(row => row.Cells["SerialNo"].Value.ToString())
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key)
+                .ToList();
+
+            if (gridDuplicateSerials.Any())
+            {
+                string duplicates = string.Join(", ", gridDuplicateSerials);
+                MessageBox.Show($"Duplicate SerialNo(s) found in the grid: {duplicates}. Please correct them before saving.",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Check for duplicate SerialNo in the database.
+            // First, extract distinct SerialNo values from the grid.
+            var serialNumbers = G2DGVAddSave.Rows.Cast<DataGridViewRow>()
+                .Where(row => !row.IsNewRow &&
+                              row.Cells["SerialNo"].Value != null &&
+                              !string.IsNullOrEmpty(row.Cells["SerialNo"].Value.ToString()))
+                .Select(row => row.Cells["SerialNo"].Value.ToString())
+                .Distinct()
+                .ToList();
+
+            List<string> duplicatesInDB = new List<string>();
+
+            // For each SerialNo, check if it already exists in the database.
+            foreach (var serialNo in serialNumbers)
+            {
+                // Adjust the table name "SerialID" as needed.
+                string query = "SELECT COUNT(*) FROM SerialID WHERE SerialNo = @SerialNo";
+                SqlParameter param = new SqlParameter("@SerialNo", serialNo);
+                object countObj = ds.ExecuteScalar(query, param);
+                int count = (countObj == null ? 0 : Convert.ToInt32(countObj));
+
+                if (count > 0)
+                {
+                    duplicatesInDB.Add(serialNo);
+                }
+            }
+
+            // If any duplicates are found in the database, notify the user with their details.
+            if (duplicatesInDB.Any())
+            {
+                string duplicates = string.Join(", ", duplicatesInDB);
+                MessageBox.Show($"The following SerialNo(s) already exist in the database: {duplicates}. Please correct them before saving.",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // If all checks pass, proceed with the insert operation.
+            try
+            {
+                vd.Insert(G2DGVAddSave);
+                MessageBox.Show("Data saved successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            G2DGVAddSave.Rows.Clear();
+            DisplayVideo();
         }
 
         private void G2BtnAddSave_KeyDown(object sender, KeyEventArgs e)
@@ -131,10 +226,7 @@ namespace Project.Forms.ExtensionForms
                     if (e.Control)
                     {
                         if (G2DGVAddSave.SelectedRows.Count > 0 && G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
-                        {
                             copiedData = G2DGVAddSave.CurrentRow.Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
-                            copiedCellValue = null;
-                        }
                     }
                     break;
                 case Keys.V:
@@ -152,11 +244,7 @@ namespace Project.Forms.ExtensionForms
                     break;
                 case Keys.Delete:
                     if (G2DGVAddSave.SelectedRows.Count > 0 && G2DGVAddSave.CurrentRow != null && !G2DGVAddSave.CurrentRow.IsNewRow)
-                    {
-                        AddToUndoStack();
                         G2DGVAddSave.Rows.Remove(G2DGVAddSave.CurrentRow);
-
-                    }
                     break;
                 default:
                     break;
@@ -174,40 +262,6 @@ namespace Project.Forms.ExtensionForms
                     Cells = rowValues
                 });
                 redoStack.Clear();
-            }
-        }
-
-        private void UndoAction()
-        {
-            if(undoStack.Count > 0)
-            {
-                var lastAction = undoStack.Pop();
-                var rowIndex = G2DGVAddSave.CurrentRow?.Index ?? -1;
-                if (rowIndex >= 0)
-                {
-                    var CurrentRowValues = G2DGVAddSave.Rows[rowIndex].Cells.Cast<DataGridViewCell>().Select(cell => cell.Value).ToArray();
-                    redoStack.Push(new UndoRedoAction { Cells = CurrentRowValues });
-                    for (int i = 0; i < lastAction.Cells.Length; i++)
-                        G2DGVAddSave.Rows[rowIndex].Cells[i].Value = lastAction.Cells[i];
-                }
-            }
-        }
-
-        private void RedoAction()
-        {
-            if (redoStack.Count > 0)
-            {
-                var nextAction = redoStack.Pop();
-                var rowIndex = G2DGVAddSave.CurrentRow?.Index ?? -1;
-
-                if (rowIndex >= 0)
-                {
-                    var currentRowValues = G2DGVAddSave.Rows[rowIndex].Cells.Cast<DataGridViewCell>().Select((cell) => cell.Value).ToArray();
-                    undoStack.Push(new UndoRedoAction { Cells = currentRowValues });
-
-                    for (int i = 0; i < nextAction.Cells.Length; i++)
-                        G2DGVAddSave.Rows[rowIndex].Cells[i].Value = nextAction.Cells[i];
-                }
             }
         }
 

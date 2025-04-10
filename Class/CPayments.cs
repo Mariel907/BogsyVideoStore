@@ -31,9 +31,10 @@ namespace Project.Class
                                 Penalty = reader["Penalty"].ToString(),
                                 RentalID = reader["RentalID"].ToString(),
                                 Category = reader["Category"].ToString(),
-                                Qty = reader["Quantity"].ToString(),
+                                Qty = reader["Qty"].ToString(),
                                 Fullname = reader["Fullname"].ToString(),
-                                CustomerID = reader["CustomerID"].ToString()
+                                CustomerID = reader["CustomerID"].ToString(),
+                                SerialNo = reader["SerialNo"].ToString()
                             });
                         }
                     }
@@ -119,7 +120,7 @@ namespace Project.Class
             }
             Label = "P" + totalAmount.ToString("N2");
         }
-        public bool Confirmation(DataGridView dataGridView, string TxtxbxName, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname)
+        public bool Confirmation(DataGridView dataGridView, string TxtxbxName, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname, string ID)
         {
             if (dataGridView.Rows.Count > 0)
             {
@@ -133,10 +134,10 @@ namespace Project.Class
                     return false;
                 }
             }
-            StoreRDLC(dataGridView, TxbxCash, TxbxChange, reportViewer, cmbxFulname);
+            StoreRDLC(dataGridView, TxbxCash, TxbxChange, reportViewer, cmbxFulname, ID);
             return true;
         }
-        public void StoreRDLC(DataGridView datagridView, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname)
+        public void StoreRDLC(DataGridView datagridView, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname, string ID)
         {
             var list = new List<PenaltyReceipt>();
             foreach (DataGridViewRow row in datagridView.Rows)
@@ -148,24 +149,25 @@ namespace Project.Class
                 penalty.Title = row.Cells["Title"].Value.ToString();
                 penalty.Category = row.Cells["Category"].Value.ToString();
                 penalty.Penalty = Convert.ToDecimal(row.Cells["Penalty"].Value);
+                penalty.SerialNo = row.Cells["SerialNo"].Value.ToString();
 
                 list.Add(penalty);
             }
-            ReceiptRDLC(list, TxbxCash, TxbxChange, reportViewer, cmbxFulname);
+            ReceiptRDLC(list, TxbxCash, TxbxChange, reportViewer, cmbxFulname, ID);
             Closed(datagridView);
             datagridView.Rows.Clear();
         }
 
-        public void ReceiptRDLC(List<PenaltyReceipt> list, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname)
+        public void ReceiptRDLC(List<PenaltyReceipt> list, decimal TxbxCash, decimal TxbxChange, ReportViewer reportViewer, string cmbxFulname, string ID)
         {
             PenaltyReceipt penalty = new PenaltyReceipt
             {
                 Cash = TxbxCash,
-                Change = TxbxChange
+                Change = TxbxChange,
             };
 
             PenaltyReceiptGenerator reportGenerator = new PenaltyReceiptGenerator(reportViewer);
-            reportGenerator.GeneratePaymentReceipt(penalty, cmbxFulname, list);
+            reportGenerator.GeneratePaymentReceipt(penalty, cmbxFulname, list, ID);
         }
 
        

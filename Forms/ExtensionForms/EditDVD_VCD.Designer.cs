@@ -37,8 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBoxVideoID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.GBtnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.GBtnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.panelEdit = new System.Windows.Forms.Panel();
             this.G2CmbxLimitDaysRented = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelEdit.SuspendLayout();
@@ -189,44 +187,6 @@
             this.label1.TabIndex = 379;
             this.label1.Text = "Video ID";
             // 
-            // GBtnEdit
-            // 
-            this.GBtnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.GBtnEdit.BorderRadius = 15;
-            this.GBtnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GBtnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.GBtnEdit.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.GBtnEdit.ForeColor = System.Drawing.Color.White;
-            this.GBtnEdit.Location = new System.Drawing.Point(983, 500);
-            this.GBtnEdit.Name = "GBtnEdit";
-            this.GBtnEdit.Size = new System.Drawing.Size(149, 42);
-            this.GBtnEdit.TabIndex = 380;
-            this.GBtnEdit.Text = "Edit";
-            this.GBtnEdit.UseTransparentBackground = true;
-            this.GBtnEdit.Click += new System.EventHandler(this.GBtnEdit_Click);
-            // 
-            // GBtnAdd
-            // 
-            this.GBtnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.GBtnAdd.BorderRadius = 15;
-            this.GBtnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GBtnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.GBtnAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.GBtnAdd.ForeColor = System.Drawing.Color.White;
-            this.GBtnAdd.Location = new System.Drawing.Point(828, 500);
-            this.GBtnAdd.Name = "GBtnAdd";
-            this.GBtnAdd.Size = new System.Drawing.Size(149, 42);
-            this.GBtnAdd.TabIndex = 381;
-            this.GBtnAdd.Text = "Add";
-            this.GBtnAdd.UseTransparentBackground = true;
-            this.GBtnAdd.Click += new System.EventHandler(this.GBtnAdd_Click_1);
-            // 
             // panelEdit
             // 
             this.panelEdit.Controls.Add(this.G2CmbxLimitDaysRented);
@@ -265,8 +225,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1144, 567);
-            this.Controls.Add(this.GBtnAdd);
-            this.Controls.Add(this.GBtnEdit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2TextBoxVideoID);
             this.Controls.Add(this.guna2ComboBoxCategory);
@@ -297,8 +255,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxVideoID;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button GBtnEdit;
-        private Guna.UI2.WinForms.Guna2Button GBtnAdd;
         private System.Windows.Forms.Panel panelEdit;
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxLimitDaysRented;
     }

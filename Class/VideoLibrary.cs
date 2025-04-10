@@ -57,6 +57,11 @@ namespace Project.Class
                 int EntryNo = AutoIncrementManager.GetNextEntryNo();
                 string DocumentNo = AutoIncrementManager.GetNextDocumentNo();
                 int SerialID = AutoIncrementManager.GetNextSerialID();
+                int NextVideoID = AutoIncrementManager.LastVideoID();
+
+                object videoCellValue = row.Cells["VideoID"].Value;
+
+                int VideoID = (videoCellValue != null) ? Convert.ToInt32(videoCellValue) : NextVideoID;
 
                 SqlParameter[] parameters = new SqlParameter[]
                 {
@@ -65,7 +70,7 @@ namespace Project.Class
                     new SqlParameter("Category",  row.Cells["Category"].Value),
                     new SqlParameter("In", row.Cells["Qty"].Value),
                     new SqlParameter("LimitDaysRented", row.Cells["LimitDaysRented"].Value),
-                    new SqlParameter("VideoID", row.Cells["VideoID"].Value),
+                    new SqlParameter("VideoID", VideoID),
                     new SqlParameter("SerialNo", row.Cells["SerialNo"].Value),
                     new SqlParameter("Date", DateTime.Now.Date),
                     new SqlParameter("UpdateDate", DateTime.Now.Date),

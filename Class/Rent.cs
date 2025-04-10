@@ -114,7 +114,6 @@ namespace Project.Class
                     new SqlParameter("DueDate", DateTime.Now.Date.AddDays(rentedDays)),
                     new SqlParameter("RentalID", RentalID),
                     new SqlParameter("SerialID", row.Cells["SerialID"].Value),
-                    new SqlParameter("SerialNo", row.Cells["SerialNo"].Value)
                 };
                 dataLoader.ExecuteData("InsertRent", parameter);
             }

@@ -17,5 +17,7 @@ namespace Project.Model
         public decimal Penalty { get; set; }
         public decimal Change { get; set; }
         public decimal Cash { get; set; }
+        public string SerialNo { get; set; }
+        public string CustomerID { get; set; }
     }
 }

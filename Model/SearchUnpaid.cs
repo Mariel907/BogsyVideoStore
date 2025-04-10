@@ -15,5 +15,6 @@ namespace Project.Model
         public string Penalty { get; set; }
         public string Qty { get; set; }
         public string Category { get; set; }
+        public string SerialNo { get; set; }
     }
 }

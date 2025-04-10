@@ -16,6 +16,7 @@ namespace Project.Class
         private static int currentCounter;
         private static int DocumentNo;
         private static int RentalCount;
+        private static int VideoIDCount;
 
         public static int GetNextEntryNo()
         {
@@ -68,7 +69,7 @@ namespace Project.Class
                             DocumentNo = Convert.ToInt32(resultString);
                     }
                     else
-                        DocumentNo = 999;
+                        DocumentNo = 1000;
                 }
             }
             catch (Exception ex)
@@ -93,7 +94,7 @@ namespace Project.Class
                     SqlCommand cmd = new SqlCommand("GetNextSerialIDFromDB", con);
                     object result = cmd.ExecuteScalar();
 
-                    SerialNoCount = result != null ? Convert.ToInt32(result) : 99;
+                    SerialNoCount = result != null ? Convert.ToInt32(result) : 100;
                 }
             }
             catch (Exception ex)
@@ -120,7 +121,7 @@ namespace Project.Class
                     cmd.CommandType = CommandType.StoredProcedure;
                     object result = cmd.ExecuteScalar();
 
-                    RentalCount = result != null ? Convert.ToInt32(result) : 99999;
+                    RentalCount = result != null ? Convert.ToInt32(result) : 10000;
                 }
             }
             catch(Exception e)
@@ -128,6 +129,32 @@ namespace Project.Class
                 MessageBox.Show(e.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return RentalCount++;
+        }
+
+        public static int LastVideoID()
+        {
+            LastVideo();
+            return VideoIDCount;
+        }
+        public static int LastVideo()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("LastVideoID", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    object result = cmd.ExecuteScalar();
+
+                    VideoIDCount = result != null ? Convert.ToInt32(result) : 1000;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return VideoIDCount++;
         }
     }
 }

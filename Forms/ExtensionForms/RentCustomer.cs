@@ -8,7 +8,7 @@ namespace Project.Forms.ExtensionForms
     public partial class RentCustomer : Form
     {
         private Rent rent = new Rent();
-        public DataGridView DgvRent { get { return DGVRent; } }
+        public DataGridView DgvRent { get { return PctrBoxArrow; } }
         public RentCustomer(Customers customer)
         {
             InitializeComponent();
@@ -23,8 +23,8 @@ namespace Project.Forms.ExtensionForms
 
             try
             {
-                rent._InsertRent(customer, DGVRent);
-                rent.AddReceiptModel(reportViewerRent, customer, DGVRent);
+                rent._InsertRent(customer, PctrBoxArrow);
+                rent.AddReceiptModel(reportViewerRent, customer, PctrBoxArrow);
                 ClearFields();
             }
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace Project.Forms.ExtensionForms
             guna2TextBoxCash.Text = string.Empty;
             guna2TextBoxChange.Text = string.Empty;
             labelTotal.Text = string.Empty;
-            DGVRent.Rows.Clear();
+            PctrBoxArrow.Rows.Clear();
         }
 
         private void RentCustomer_Load(object sender, EventArgs e)
@@ -121,8 +121,8 @@ namespace Project.Forms.ExtensionForms
                     //if (!videoExists)
                     //{
 
-                    int rowIndex = DGVRent.Rows.Add();
-                    DataGridViewRow row = DGVRent.Rows[rowIndex];
+                    int rowIndex = PctrBoxArrow.Rows.Add();
+                    DataGridViewRow row = PctrBoxArrow.Rows[rowIndex];
                     row.Cells["Title"].Value = selectedVideo.Title;
                     row.Cells["VideoID"].Value = selectedVideo.VideoId;
                     row.Cells["LimitDaysRented"].Value = selectedVideo.LimitDaysRented;
@@ -147,7 +147,7 @@ namespace Project.Forms.ExtensionForms
             }
 
             string UpdateTotal = string.Empty;
-            rent.UpdateTotal(DGVRent, ref UpdateTotal);
+            rent.UpdateTotal(PctrBoxArrow, ref UpdateTotal);
             labelTotal.Text = UpdateTotal;
 
             DisplaySerial();
@@ -178,8 +178,8 @@ namespace Project.Forms.ExtensionForms
             try
             {
                 string updateTotal = string.Empty;
-                rent.Void(DGVRent, labelCustomerName.Text);
-                rent.SubtractTotalAmount(DGVRent, labelTotal.Text, ref updateTotal);
+                rent.Void(PctrBoxArrow, labelCustomerName.Text);
+                rent.SubtractTotalAmount(PctrBoxArrow, labelTotal.Text, ref updateTotal);
 
                 labelTotal.Text = updateTotal;
             }
@@ -188,15 +188,6 @@ namespace Project.Forms.ExtensionForms
                 MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             DisplayVideo();
-        }
-
-        private void ComboBoxFullname_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (comboBoxFullname.SelectedValue != null)
-            //{
-            //    Customers customer = comboBoxFullname.SelectedItem as Customers;
-            //    labelCustomerName.Text = customer.CustomerID;
-            //}
         }
 
         private void Guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)

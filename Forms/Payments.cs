@@ -53,7 +53,8 @@ namespace Project.Forms
                 decimal Change = Convert.ToDecimal(guna2TextBoxChange.Text);
                 string fullname = comboBoxFullname.Text;
                 string Txtxname = guna2TextBoxCustomerID.Text;
-                bool NoError = payments.Confirmation(DGVUnpaid, Txtxname, Cash, Change, this.reportViewerPayment, fullname);
+                string ID = guna2TextBoxCustomerID.Text;
+                bool NoError = payments.Confirmation(DGVUnpaid, Txtxname, Cash, Change, this.reportViewerPayment, fullname, ID);
 
                 DisplayCustomer();
                 DisplayUnpaid();
@@ -178,6 +179,7 @@ namespace Project.Forms
             row.Cells["Category"].Value = penalty.Category;
             row.Cells["Penalty"].Value = penalty.Penalty;
             row.Cells["CustomerID"].Value = penalty.CustomerID;
+            row.Cells["SerialNo"].Value = penalty.SerialNo;
             payments.BtnPaid(penalty);
         }
 

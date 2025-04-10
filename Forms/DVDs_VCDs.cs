@@ -3,7 +3,6 @@ using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -27,44 +26,22 @@ namespace Project.Forms
 
         private void DVDs_VCDs_Load(object sender, EventArgs e)
         {
-            GetAllDVD();
+            GetAllVideo();
 
         }
-        private void GetAllDVD()
+        private void GetAllVideo()
         {
-            this.getAllDVDTableAdapter.Fill(this.dSReports.GetAllDVD);
-            dgvVCD.Visible = false;
-            dgvDVD.Visible = true;
-            guna2TextBoxDVD.Visible = true;
-            guna2TextBoxVCD.Visible = false;
+            this.getAllVideoTableAdapter.Fill(this.dSTransaction.GetAllVideo);
         }
-        private void GetAllVCD()
-        {
-            this.getAllVCDTableAdapter.Fill(this.dSReports.GetAllVCD);
-            dgvVCD.Visible = true;
-            dgvDVD.Visible = false;
-            guna2TextBoxDVD.Visible = false;
-            guna2TextBoxVCD.Visible = true;
-        }
+      
         private void Guna2ButtonEdit_Click(object sender, EventArgs e)
         {
             VideoProp video = new VideoProp();
-            if (dgvDVD.Visible)
-            {
-                DataGridViewRow selectedRow = dgvDVD.SelectedRows[0];
-                video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString());
-                video.Title = selectedRow.Cells["Title"].Value.ToString();
-                video.Category = selectedRow.Cells["Category"].Value.ToString();
-                video.LimitDaysRented = int.Parse(selectedRow.Cells["LimitDaysRented"].Value.ToString());
-            }
-            else
-            {
-                DataGridViewRow selectedRow = dgvVCD.SelectedRows[0];
-                video.VideoId = Convert.ToInt32(selectedRow.Cells["VCDVideoID"].Value.ToString());
-                video.Title = selectedRow.Cells["VCDTitle"].Value.ToString();
-                video.Category = selectedRow.Cells["VCDCategory"].Value.ToString();
-                video.LimitDaysRented = int.Parse(selectedRow.Cells["VCDLimitDaysRented"].Value.ToString());
-            }
+            DataGridViewRow selectedRow = dgvVideo.SelectedRows[0];
+            video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString());
+            video.Title = selectedRow.Cells["Title"].Value.ToString();
+            video.Category = selectedRow.Cells["Category"].Value.ToString();
+            video.LimitDaysRented = int.Parse(selectedRow.Cells["LimitDaysRented"].Value.ToString());
 
             EditDVD_VCD Edit = new EditDVD_VCD(video);
             FormManager form = new FormManager();
@@ -78,13 +55,9 @@ namespace Project.Forms
                 VideoLibrary vd = new VideoLibrary();
                 VideoProp video = new VideoProp();
 
-                DataGridViewRow selectedRow = dgvDVD.Visible
-                    ? dgvDVD.SelectedRows[0]
-                    : dgvVCD.SelectedRows[0];
+                DataGridViewRow selectedRow = dgvVideo.SelectedRows[0];
 
-                video.VideoId = dgvDVD.Visible
-                    ? Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString())
-                    : Convert.ToInt32(selectedRow.Cells["VCDVideoID"].Value.ToString());
+                video.VideoId = Convert.ToInt32(selectedRow.Cells["VideoID"].Value.ToString());
 
                 var result = MessageBox.Show("Are you sure you want to delete this video.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -95,8 +68,7 @@ namespace Project.Forms
                 }
                 else
                     return;
-
-                GetAllDVD();
+                GetAllVideo();
             }
             catch (SqlException ex)
             {
@@ -105,19 +77,6 @@ namespace Project.Forms
             }
         }
 
-        private void Guna2ButtonDVD_Click(object sender, EventArgs e)
-        {
-            GetAllDVD();
-            guna2ButtonDVD.FillColor = Color.FromArgb(0, 50, 73);
-            guna2ButtonVCD.FillColor = Color.FromArgb(0, 138, 162);
-        }
-
-        private void Guna2ButtonVCD_Click(object sender, EventArgs e)
-        {
-            GetAllVCD();
-            guna2ButtonDVD.FillColor = Color.FromArgb(0, 138, 162);
-            guna2ButtonVCD.FillColor = Color.FromArgb(0, 50, 73);
-        }
 
         private void DVDs_VCDs_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -126,14 +85,19 @@ namespace Project.Forms
 
         private void Guna2TextBoxDVD_TextChanged(object sender, EventArgs e)
         {
-            string txbx = guna2TextBoxDVD.Text;
-            search.SearchTxbxDVD(txbx, dgvDVD);
+            Search();
         }
 
-        private void Guna2TextBoxVCD_TextChanged(object sender, EventArgs e)
+        private void Search()
         {
-            string txbx = guna2TextBoxVCD.Text;
-            search.SearchTxbxVCD(txbx, dgvVCD);
+            string txbx = guna2TextBoxVideo.Text;
+            string cmbx = G2CmbxVideo.Text;
+            search.SearchCmbxTxbx(txbx, cmbx, dgvVideo);
+        }
+
+        private void G2CmbxVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }
