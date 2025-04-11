@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.PctrBxDashboard = new System.Windows.Forms.PictureBox();
+            this.LblTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -42,14 +44,12 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.LblTitle = new System.Windows.Forms.Label();
-            this.PctrBxDashboard = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -63,6 +63,28 @@
             this.panel6.Size = new System.Drawing.Size(1135, 61);
             this.panel6.TabIndex = 2;
             // 
+            // PctrBxDashboard
+            // 
+            this.PctrBxDashboard.Image = global::Project.Properties.Resources.icons8_video_64;
+            this.PctrBxDashboard.Location = new System.Drawing.Point(7, 5);
+            this.PctrBxDashboard.Name = "PctrBxDashboard";
+            this.PctrBxDashboard.Size = new System.Drawing.Size(48, 50);
+            this.PctrBxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PctrBxDashboard.TabIndex = 1;
+            this.PctrBxDashboard.TabStop = false;
+            // 
+            // LblTitle
+            // 
+            this.LblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LblTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitle.ForeColor = System.Drawing.Color.White;
+            this.LblTitle.Location = new System.Drawing.Point(0, 0);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(1135, 61);
+            this.LblTitle.TabIndex = 0;
+            this.LblTitle.Text = "Video";
+            this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label2);
@@ -74,11 +96,12 @@
             // 
             // label2
             // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1132, 52);
+            this.label2.Size = new System.Drawing.Size(1135, 52);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bogsy Video Store";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,32 +302,11 @@
             // 
             // panelDashboard
             // 
+            this.panelDashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDashboard.Location = new System.Drawing.Point(215, 113);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(1135, 568);
             this.panelDashboard.TabIndex = 0;
-            // 
-            // LblTitle
-            // 
-            this.LblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LblTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitle.ForeColor = System.Drawing.Color.White;
-            this.LblTitle.Location = new System.Drawing.Point(0, 0);
-            this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(1135, 61);
-            this.LblTitle.TabIndex = 0;
-            this.LblTitle.Text = "Video";
-            this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PctrBxDashboard
-            // 
-            this.PctrBxDashboard.Image = global::Project.Properties.Resources.icons8_video_64;
-            this.PctrBxDashboard.Location = new System.Drawing.Point(7, 5);
-            this.PctrBxDashboard.Name = "PctrBxDashboard";
-            this.PctrBxDashboard.Size = new System.Drawing.Size(48, 50);
-            this.PctrBxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PctrBxDashboard.TabIndex = 1;
-            this.PctrBxDashboard.TabStop = false;
             // 
             // Dashboard
             // 
@@ -316,17 +318,18 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelDashboard);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
+            this.Text = "Bogsy Video Store";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).EndInit();
             this.ResumeLayout(false);
 
         }

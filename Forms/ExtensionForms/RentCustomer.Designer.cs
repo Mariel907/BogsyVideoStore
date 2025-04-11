@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ButtonSave = new Guna.UI2.WinForms.Guna2Button();
             this.PctrBoxArrow = new Guna.UI2.WinForms.Guna2DataGridView();
             this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -160,7 +160,7 @@
             this.guna2ButtonSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonSave.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonSave.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonSave.Location = new System.Drawing.Point(786, 430);
+            this.guna2ButtonSave.Location = new System.Drawing.Point(800, 430);
             this.guna2ButtonSave.Name = "guna2ButtonSave";
             this.guna2ButtonSave.Size = new System.Drawing.Size(150, 39);
             this.guna2ButtonSave.TabIndex = 323;
@@ -171,20 +171,20 @@
             // 
             this.PctrBoxArrow.AllowUserToAddRows = false;
             this.PctrBoxArrow.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.PctrBoxArrow.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.PctrBoxArrow.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.PctrBoxArrow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PctrBoxArrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PctrBoxArrow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PctrBoxArrow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.PctrBoxArrow.ColumnHeadersHeight = 35;
             this.PctrBoxArrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.PctrBoxArrow.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -199,21 +199,21 @@
             this.LimitDaysRented,
             this.Status,
             this.Price});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PctrBoxArrow.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PctrBoxArrow.DefaultCellStyle = dataGridViewCellStyle6;
             this.PctrBoxArrow.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.PctrBoxArrow.Location = new System.Drawing.Point(39, 74);
+            this.PctrBoxArrow.Location = new System.Drawing.Point(13, 74);
             this.PctrBoxArrow.Margin = new System.Windows.Forms.Padding(4);
             this.PctrBoxArrow.Name = "PctrBoxArrow";
             this.PctrBoxArrow.ReadOnly = true;
             this.PctrBoxArrow.RowHeadersVisible = false;
-            this.PctrBoxArrow.Size = new System.Drawing.Size(1053, 328);
+            this.PctrBoxArrow.Size = new System.Drawing.Size(1093, 328);
             this.PctrBoxArrow.TabIndex = 375;
             this.PctrBoxArrow.Tag = "book_id";
             this.PctrBoxArrow.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -314,7 +314,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 9);
+            this.label3.Location = new System.Drawing.Point(8, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 21);
             this.label3.TabIndex = 369;
@@ -324,7 +324,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(218, 8);
+            this.label4.Location = new System.Drawing.Point(192, 8);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 21);
             this.label4.TabIndex = 385;
@@ -341,7 +341,7 @@
             this.guna2ButtonAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2ButtonAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAdd.Location = new System.Drawing.Point(942, 430);
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(956, 430);
             this.guna2ButtonAdd.Name = "guna2ButtonAdd";
             this.guna2ButtonAdd.Size = new System.Drawing.Size(150, 39);
             this.guna2ButtonAdd.TabIndex = 387;
@@ -353,7 +353,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 406);
+            this.label5.Location = new System.Drawing.Point(11, 406);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 21);
             this.label5.TabIndex = 388;
@@ -365,7 +365,7 @@
             this.labelTotal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTotal.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(38, 430);
+            this.labelTotal.Location = new System.Drawing.Point(14, 430);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(306, 39);
             this.labelTotal.TabIndex = 99;
@@ -376,7 +376,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(725, 6);
+            this.label2.Location = new System.Drawing.Point(740, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 21);
             this.label2.TabIndex = 426;
@@ -387,7 +387,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(908, 6);
+            this.label6.Location = new System.Drawing.Point(923, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 21);
             this.label6.TabIndex = 428;
@@ -409,7 +409,7 @@
             this.guna2TextBoxChange.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxChange.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxChange.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxChange.Location = new System.Drawing.Point(912, 31);
+            this.guna2TextBoxChange.Location = new System.Drawing.Point(927, 31);
             this.guna2TextBoxChange.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxChange.Name = "guna2TextBoxChange";
             this.guna2TextBoxChange.Padding = new System.Windows.Forms.Padding(5);
@@ -436,7 +436,7 @@
             this.guna2TextBoxCash.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.guna2TextBoxCash.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCash.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCash.Location = new System.Drawing.Point(729, 31);
+            this.guna2TextBoxCash.Location = new System.Drawing.Point(744, 31);
             this.guna2TextBoxCash.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBoxCash.Name = "guna2TextBoxCash";
             this.guna2TextBoxCash.Padding = new System.Windows.Forms.Padding(5);
@@ -459,7 +459,7 @@
             this.guna2ButtonVoid.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonVoid.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonVoid.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonVoid.Location = new System.Drawing.Point(630, 430);
+            this.guna2ButtonVoid.Location = new System.Drawing.Point(644, 430);
             this.guna2ButtonVoid.Name = "guna2ButtonVoid";
             this.guna2ButtonVoid.Size = new System.Drawing.Size(150, 39);
             this.guna2ButtonVoid.TabIndex = 431;
@@ -483,7 +483,7 @@
             this.comboBoxVideo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxVideo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.comboBoxVideo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxVideo.Location = new System.Drawing.Point(227, 36);
+            this.comboBoxVideo.Location = new System.Drawing.Point(201, 36);
             this.comboBoxVideo.Name = "comboBoxVideo";
             this.comboBoxVideo.Size = new System.Drawing.Size(179, 35);
             this.comboBoxVideo.TabIndex = 2;
@@ -493,7 +493,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(222, 31);
+            this.panel1.Location = new System.Drawing.Point(196, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 2);
             this.panel1.TabIndex = 441;
@@ -509,7 +509,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel2.Location = new System.Drawing.Point(223, 66);
+            this.panel2.Location = new System.Drawing.Point(197, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(179, 2);
             this.panel2.TabIndex = 442;
@@ -518,7 +518,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(222, 32);
+            this.panel4.Location = new System.Drawing.Point(196, 32);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(2, 36);
             this.panel4.TabIndex = 443;
@@ -535,7 +535,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(400, 32);
+            this.panel6.Location = new System.Drawing.Point(374, 32);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(2, 36);
             this.panel6.TabIndex = 444;
@@ -552,7 +552,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(224, 61);
+            this.panel8.Location = new System.Drawing.Point(198, 61);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(176, 5);
             this.panel8.TabIndex = 443;
@@ -569,7 +569,7 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(224, 35);
+            this.panel10.Location = new System.Drawing.Point(198, 35);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(176, 5);
             this.panel10.TabIndex = 444;
@@ -586,7 +586,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.panel13);
-            this.panel12.Location = new System.Drawing.Point(222, 68);
+            this.panel12.Location = new System.Drawing.Point(196, 68);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(181, 5);
             this.panel12.TabIndex = 445;
@@ -603,7 +603,7 @@
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.Controls.Add(this.panel15);
-            this.panel14.Location = new System.Drawing.Point(227, 34);
+            this.panel14.Location = new System.Drawing.Point(201, 34);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(2, 32);
             this.panel14.TabIndex = 444;
@@ -620,7 +620,7 @@
             // 
             this.panel16.BackColor = System.Drawing.Color.White;
             this.panel16.Controls.Add(this.panel17);
-            this.panel16.Location = new System.Drawing.Point(402, 34);
+            this.panel16.Location = new System.Drawing.Point(376, 34);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(4, 36);
             this.panel16.TabIndex = 445;
@@ -638,7 +638,7 @@
             this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(39, 429);
+            this.panel35.Location = new System.Drawing.Point(15, 429);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(306, 2);
             this.panel35.TabIndex = 448;
@@ -656,7 +656,7 @@
             this.panel37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel37.Controls.Add(this.panel38);
-            this.panel37.Location = new System.Drawing.Point(38, 429);
+            this.panel37.Location = new System.Drawing.Point(14, 429);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(2, 40);
             this.panel37.TabIndex = 451;
@@ -674,7 +674,7 @@
             this.panel39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel39.Controls.Add(this.panel40);
-            this.panel39.Location = new System.Drawing.Point(39, 467);
+            this.panel39.Location = new System.Drawing.Point(15, 467);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(306, 2);
             this.panel39.TabIndex = 449;
@@ -692,7 +692,7 @@
             this.panel41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel41.Controls.Add(this.panel42);
-            this.panel41.Location = new System.Drawing.Point(343, 430);
+            this.panel41.Location = new System.Drawing.Point(320, 430);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(2, 39);
             this.panel41.TabIndex = 452;
@@ -708,7 +708,7 @@
             // labelCustomerName
             // 
             this.labelCustomerName.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerName.Location = new System.Drawing.Point(151, 11);
+            this.labelCustomerName.Location = new System.Drawing.Point(125, 11);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(67, 15);
             this.labelCustomerName.TabIndex = 456;
@@ -718,7 +718,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(411, 9);
+            this.label1.Location = new System.Drawing.Point(385, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 458;
@@ -728,7 +728,7 @@
             // 
             this.panel43.BackColor = System.Drawing.Color.White;
             this.panel43.Controls.Add(this.panel44);
-            this.panel43.Location = new System.Drawing.Point(590, 34);
+            this.panel43.Location = new System.Drawing.Point(564, 34);
             this.panel43.Name = "panel43";
             this.panel43.Size = new System.Drawing.Size(4, 36);
             this.panel43.TabIndex = 454;
@@ -745,7 +745,7 @@
             // 
             this.panel45.BackColor = System.Drawing.Color.White;
             this.panel45.Controls.Add(this.panel46);
-            this.panel45.Location = new System.Drawing.Point(415, 34);
+            this.panel45.Location = new System.Drawing.Point(389, 34);
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(2, 32);
             this.panel45.TabIndex = 451;
@@ -762,7 +762,7 @@
             // 
             this.panel47.BackColor = System.Drawing.Color.White;
             this.panel47.Controls.Add(this.panel48);
-            this.panel47.Location = new System.Drawing.Point(410, 68);
+            this.panel47.Location = new System.Drawing.Point(384, 68);
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(181, 5);
             this.panel47.TabIndex = 455;
@@ -779,7 +779,7 @@
             // 
             this.panel49.BackColor = System.Drawing.Color.White;
             this.panel49.Controls.Add(this.panel50);
-            this.panel49.Location = new System.Drawing.Point(412, 35);
+            this.panel49.Location = new System.Drawing.Point(386, 35);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(176, 5);
             this.panel49.TabIndex = 452;
@@ -796,7 +796,7 @@
             // 
             this.panel51.BackColor = System.Drawing.Color.White;
             this.panel51.Controls.Add(this.panel52);
-            this.panel51.Location = new System.Drawing.Point(412, 61);
+            this.panel51.Location = new System.Drawing.Point(386, 61);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(176, 5);
             this.panel51.TabIndex = 449;
@@ -813,7 +813,7 @@
             // 
             this.panel53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel53.Controls.Add(this.panel54);
-            this.panel53.Location = new System.Drawing.Point(588, 32);
+            this.panel53.Location = new System.Drawing.Point(562, 32);
             this.panel53.Name = "panel53";
             this.panel53.Size = new System.Drawing.Size(2, 36);
             this.panel53.TabIndex = 453;
@@ -830,7 +830,7 @@
             // 
             this.panel55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel55.Controls.Add(this.panel56);
-            this.panel55.Location = new System.Drawing.Point(410, 32);
+            this.panel55.Location = new System.Drawing.Point(384, 32);
             this.panel55.Name = "panel55";
             this.panel55.Size = new System.Drawing.Size(2, 36);
             this.panel55.TabIndex = 450;
@@ -846,7 +846,7 @@
             // panel57
             // 
             this.panel57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel57.Location = new System.Drawing.Point(411, 66);
+            this.panel57.Location = new System.Drawing.Point(385, 66);
             this.panel57.Name = "panel57";
             this.panel57.Size = new System.Drawing.Size(179, 2);
             this.panel57.TabIndex = 448;
@@ -855,7 +855,7 @@
             // 
             this.panel58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel58.Controls.Add(this.panel59);
-            this.panel58.Location = new System.Drawing.Point(410, 31);
+            this.panel58.Location = new System.Drawing.Point(384, 31);
             this.panel58.Name = "panel58";
             this.panel58.Size = new System.Drawing.Size(179, 2);
             this.panel58.TabIndex = 447;
@@ -874,7 +874,7 @@
             this.CmbxSerialNo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CmbxSerialNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.CmbxSerialNo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CmbxSerialNo.Location = new System.Drawing.Point(415, 36);
+            this.CmbxSerialNo.Location = new System.Drawing.Point(389, 36);
             this.CmbxSerialNo.Name = "CmbxSerialNo";
             this.CmbxSerialNo.Size = new System.Drawing.Size(179, 35);
             this.CmbxSerialNo.TabIndex = 446;
@@ -951,7 +951,7 @@
             this.G2TxbxCustomer.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.G2TxbxCustomer.ForeColor = System.Drawing.Color.Black;
             this.G2TxbxCustomer.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxCustomer.Location = new System.Drawing.Point(39, 32);
+            this.G2TxbxCustomer.Location = new System.Drawing.Point(13, 32);
             this.G2TxbxCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.G2TxbxCustomer.Name = "G2TxbxCustomer";
             this.G2TxbxCustomer.Padding = new System.Windows.Forms.Padding(5);
@@ -966,7 +966,7 @@
             // LblTitle
             // 
             this.LblTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitle.Location = new System.Drawing.Point(260, 11);
+            this.LblTitle.Location = new System.Drawing.Point(227, 11);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(67, 15);
             this.LblTitle.TabIndex = 460;

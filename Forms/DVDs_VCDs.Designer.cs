@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DVDs_VCDs));
             this.guna2ButtonAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonEdit = new Guna.UI2.WinForms.Guna2Button();
@@ -43,6 +43,8 @@
             this.CopiesAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.outDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LimitDaysRented = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getAllVideoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSTransaction = new Project.DataSet.DSTransaction();
             this.getAllDVDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSReports = new Project.DataSet.DSReports();
             this.getAllVCDBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -50,15 +52,13 @@
             this.getAllVCDTableAdapter = new Project.DataSet.DSReportsTableAdapters.GetAllVCDTableAdapter();
             this.guna2TextBoxVideo = new Guna.UI2.WinForms.Guna2TextBox();
             this.G2CmbxVideo = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.dSTransaction = new Project.DataSet.DSTransaction();
-            this.getAllVideoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getAllVideoTableAdapter = new Project.DataSet.DSTransactionTableAdapters.GetAllVideoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllDVDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReports)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllVCDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSTransaction)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ButtonAdd
@@ -72,7 +72,7 @@
             this.guna2ButtonAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonAdd.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonAdd.Location = new System.Drawing.Point(725, 468);
+            this.guna2ButtonAdd.Location = new System.Drawing.Point(726, 468);
             this.guna2ButtonAdd.Name = "guna2ButtonAdd";
             this.guna2ButtonAdd.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonAdd.TabIndex = 213;
@@ -90,7 +90,7 @@
             this.guna2ButtonEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonEdit.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonEdit.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonEdit.Location = new System.Drawing.Point(854, 468);
+            this.guna2ButtonEdit.Location = new System.Drawing.Point(855, 468);
             this.guna2ButtonEdit.Name = "guna2ButtonEdit";
             this.guna2ButtonEdit.Size = new System.Drawing.Size(123, 46);
             this.guna2ButtonEdit.TabIndex = 214;
@@ -108,7 +108,7 @@
             this.Guna2ButtonDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.Guna2ButtonDelete.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guna2ButtonDelete.ForeColor = System.Drawing.Color.White;
-            this.Guna2ButtonDelete.Location = new System.Drawing.Point(983, 468);
+            this.Guna2ButtonDelete.Location = new System.Drawing.Point(984, 468);
             this.Guna2ButtonDelete.Name = "Guna2ButtonDelete";
             this.Guna2ButtonDelete.Size = new System.Drawing.Size(123, 46);
             this.Guna2ButtonDelete.TabIndex = 217;
@@ -119,21 +119,21 @@
             // 
             this.dgvVideo.AllowUserToAddRows = false;
             this.dgvVideo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvVideo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvVideo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVideo.AutoGenerateColumns = false;
             this.dgvVideo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVideo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVideo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVideo.ColumnHeadersHeight = 35;
             this.dgvVideo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvVideo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -144,14 +144,14 @@
             this.outDataGridViewTextBoxColumn,
             this.LimitDaysRented});
             this.dgvVideo.DataSource = this.getAllVideoBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVideo.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVideo.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVideo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvVideo.Location = new System.Drawing.Point(14, 56);
             this.dgvVideo.Margin = new System.Windows.Forms.Padding(4);
@@ -226,6 +226,16 @@
             this.LimitDaysRented.Name = "LimitDaysRented";
             this.LimitDaysRented.ReadOnly = true;
             // 
+            // getAllVideoBindingSource
+            // 
+            this.getAllVideoBindingSource.DataMember = "GetAllVideo";
+            this.getAllVideoBindingSource.DataSource = this.dSTransaction;
+            // 
+            // dSTransaction
+            // 
+            this.dSTransaction.DataSetName = "DSTransaction";
+            this.dSTransaction.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // getAllDVDBindingSource
             // 
             this.getAllDVDBindingSource.DataMember = "GetAllDVD";
@@ -266,12 +276,12 @@
             this.guna2TextBoxVideo.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxVideo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxVideo.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxVideo.IconLeft")));
-            this.guna2TextBoxVideo.Location = new System.Drawing.Point(178, 13);
+            this.guna2TextBoxVideo.Location = new System.Drawing.Point(148, 13);
             this.guna2TextBoxVideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxVideo.Name = "guna2TextBoxVideo";
             this.guna2TextBoxVideo.PlaceholderText = "";
             this.guna2TextBoxVideo.SelectedText = "";
-            this.guna2TextBoxVideo.Size = new System.Drawing.Size(929, 36);
+            this.guna2TextBoxVideo.Size = new System.Drawing.Size(959, 36);
             this.guna2TextBoxVideo.TabIndex = 245;
             this.guna2TextBoxVideo.TextChanged += new System.EventHandler(this.Guna2TextBoxDVD_TextChanged);
             // 
@@ -294,19 +304,9 @@
             "VCD"});
             this.G2CmbxVideo.Location = new System.Drawing.Point(14, 13);
             this.G2CmbxVideo.Name = "G2CmbxVideo";
-            this.G2CmbxVideo.Size = new System.Drawing.Size(156, 36);
+            this.G2CmbxVideo.Size = new System.Drawing.Size(127, 36);
             this.G2CmbxVideo.TabIndex = 248;
             this.G2CmbxVideo.SelectedIndexChanged += new System.EventHandler(this.G2CmbxVideo_SelectedIndexChanged);
-            // 
-            // dSTransaction
-            // 
-            this.dSTransaction.DataSetName = "DSTransaction";
-            this.dSTransaction.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // getAllVideoBindingSource
-            // 
-            this.getAllVideoBindingSource.DataMember = "GetAllVideo";
-            this.getAllVideoBindingSource.DataSource = this.dSTransaction;
             // 
             // getAllVideoTableAdapter
             // 
@@ -330,11 +330,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DVDs_VCDs_FormClosing);
             this.Load += new System.EventHandler(this.DVDs_VCDs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSTransaction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllDVDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReports)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllVCDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSTransaction)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getAllVideoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

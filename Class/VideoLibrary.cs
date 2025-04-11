@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
 
 namespace Project.Class
@@ -82,6 +84,35 @@ namespace Project.Class
             }
         }
 
+        public List<string> DuplicateSerialNo(DataGridView DGV)
+        {
+            List<string> duplicatesInDB = new List<string>();
+
+            var serialNumbers = DGV.Rows.Cast<DataGridViewRow>()
+            .Where(row => !row.IsNewRow &&
+                          row.Cells["SerialNo"].Value != null &&
+                          !string.IsNullOrEmpty(row.Cells["SerialNo"].Value.ToString()))
+            .Select(row => row.Cells["SerialNo"].Value.ToString())
+            .Distinct()
+            .ToList();
+            using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            {
+                con.Open();
+                foreach (var serialNo in serialNumbers)
+                {
+                    SqlCommand cmd = new SqlCommand("ReadSerialNo", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("SerialNo", serialNo);
+                    object result = cmd.ExecuteScalar();
+                    int count = result == null ? 0 : Convert.ToInt32(result); 
+
+                    if (count > 0)
+                        duplicatesInDB.Add(serialNo);
+                }
+            }
+            return duplicatesInDB;
+        }
+    
         public void Delete(VideoProp video)
         {
             SqlParameter[] parameter = new SqlParameter[]
@@ -105,13 +136,6 @@ namespace Project.Class
                 {
                     while (reader.Read())
                     {
-                        //if (reader["Title"] == DBNull.Value || 
-                        //    reader["VideoID"] == DBNull.Value || 
-                        //    reader["LimitDaysRented"] == DBNull.Value ||
-                        //    reader["Amount"] == DBNull.Value || 
-                        //    reader["SerialID"] == DBNull.Value)
-                        //    continue; 
-
                         video.Add(new VideoProp
                         {
                             Title = reader["Title"].ToString(),
@@ -127,5 +151,6 @@ namespace Project.Class
             }
             return video;
         }
+      
     }
 }

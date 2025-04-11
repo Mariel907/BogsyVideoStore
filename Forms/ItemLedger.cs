@@ -20,7 +20,7 @@ namespace Project.Forms
 
         private void ItemLedger_Load(object sender, EventArgs e)
         {
-            this.getAllItemLedgerTableAdapter.Fill(this.dSReports1.GetAllItemLedger);
+            DTPEndDate.Value = DateTime.Now.Date;
         }
 
         private void guna2ComboBoxReturned_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,10 +33,28 @@ namespace Project.Forms
             CItemLedger search = new CItemLedger();
             string cmbx = G2CmbxLedger.Text;
             string txbx = G2TxbxLedger.Text;
-            search.SearchDVDTxbxItemLedger(txbx, cmbx, G2DGVItemLedger);
+            string cmbxType = G2CmbxType.Text;
+            string DateEnd = DTPEndDate.Text;
+            string DateStart = DTPStartDate.Text;
+            search.SearchDVDTxbxItemLedger(txbx, cmbx, G2DGVItemLedger, cmbxType, DateEnd, DateStart);
         }
 
         private void G2TxbxLedger_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void G2CmbxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void DTPEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void DTPStartDate_ValueChanged(object sender, EventArgs e)
         {
             Search();
         }

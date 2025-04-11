@@ -68,7 +68,11 @@ namespace Project.Forms
                 }
                 else
                     return;
-                GetAllVideo();
+
+                if(!string.IsNullOrEmpty(G2CmbxVideo.Text) || !string.IsNullOrEmpty(guna2TextBoxVideo.Text))
+                    Search();
+                else
+                    GetAllVideo();
             }
             catch (SqlException ex)
             {

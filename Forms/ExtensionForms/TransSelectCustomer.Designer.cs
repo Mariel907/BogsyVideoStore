@@ -64,12 +64,12 @@
             this.guna2TextBoxCustomer.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxCustomer.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxCustomer.IconLeft")));
-            this.guna2TextBoxCustomer.Location = new System.Drawing.Point(163, 20);
+            this.guna2TextBoxCustomer.Location = new System.Drawing.Point(13, 13);
             this.guna2TextBoxCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxCustomer.Name = "guna2TextBoxCustomer";
             this.guna2TextBoxCustomer.PlaceholderText = "";
             this.guna2TextBoxCustomer.SelectedText = "";
-            this.guna2TextBoxCustomer.Size = new System.Drawing.Size(829, 36);
+            this.guna2TextBoxCustomer.Size = new System.Drawing.Size(1093, 36);
             this.guna2TextBoxCustomer.TabIndex = 244;
             this.guna2TextBoxCustomer.TextChanged += new System.EventHandler(this.guna2TextBoxCustomer_TextChanged);
             // 
@@ -108,12 +108,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.G2DGVCustomer.DefaultCellStyle = dataGridViewCellStyle3;
             this.G2DGVCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.G2DGVCustomer.Location = new System.Drawing.Point(163, 64);
+            this.G2DGVCustomer.Location = new System.Drawing.Point(13, 57);
             this.G2DGVCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.G2DGVCustomer.Name = "G2DGVCustomer";
             this.G2DGVCustomer.ReadOnly = true;
             this.G2DGVCustomer.RowHeadersVisible = false;
-            this.G2DGVCustomer.Size = new System.Drawing.Size(829, 350);
+            this.G2DGVCustomer.Size = new System.Drawing.Size(1093, 357);
             this.G2DGVCustomer.TabIndex = 243;
             this.G2DGVCustomer.Tag = "book_id";
             this.G2DGVCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -186,7 +186,7 @@
             this.GBtnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.GBtnAdd.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.GBtnAdd.ForeColor = System.Drawing.Color.White;
-            this.GBtnAdd.Location = new System.Drawing.Point(843, 421);
+            this.GBtnAdd.Location = new System.Drawing.Point(957, 421);
             this.GBtnAdd.Name = "GBtnAdd";
             this.GBtnAdd.Size = new System.Drawing.Size(149, 42);
             this.GBtnAdd.TabIndex = 382;

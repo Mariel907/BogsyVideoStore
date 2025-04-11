@@ -111,8 +111,16 @@ namespace Project.Forms.ExtensionForms
                 MessageBox.Show("There is no data to save.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            var duplicatesInDB = vd.DuplicateSerialNo(G2DGVAddSave);
 
-            
+            if (duplicatesInDB.Any())
+            {
+                string duplicates = string.Join(", ", duplicatesInDB);
+                MessageBox.Show($"The following SerialNo(s) already exist in the database: {duplicates}. Please correct them before saving.",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 vd.Insert(G2DGVAddSave);
@@ -122,98 +130,6 @@ namespace Project.Forms.ExtensionForms
             {
                 MessageBox.Show(ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            G2DGVAddSave.Rows.Clear();
-            DisplayVideo();
-        }
-        private void DuplicateSerialNoInDB()
-        {
-
-        }
-        private void G2BtnSaves_Click(object sender, EventArgs e)
-        {
-            // Check if the DataGridView is available.
-            if (G2DGVAddSave == null)
-            {
-                MessageBox.Show("The data grid is not available.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Verify the grid has at least one row that contains valid data.
-            bool hasValidRow = G2DGVAddSave.Rows.Cast<DataGridViewRow>()
-                .Any(row => !row.IsNewRow &&
-                            row.Cells.Cast<DataGridViewCell>()
-                                .Any(cell => cell.Value != null && !string.IsNullOrEmpty(cell.Value.ToString())));
-            if (!hasValidRow)
-            {
-                MessageBox.Show("There is no data to save.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Check for duplicate SerialNo within the DataGridView.
-            var gridDuplicateSerials = G2DGVAddSave.Rows.Cast<DataGridViewRow>()
-                .Where(row => !row.IsNewRow &&
-                              row.Cells["SerialNo"].Value != null &&
-                              !string.IsNullOrEmpty(row.Cells["SerialNo"].Value.ToString()))
-                .GroupBy(row => row.Cells["SerialNo"].Value.ToString())
-                .Where(g => g.Count() > 1)
-                .Select(g => g.Key)
-                .ToList();
-
-            if (gridDuplicateSerials.Any())
-            {
-                string duplicates = string.Join(", ", gridDuplicateSerials);
-                MessageBox.Show($"Duplicate SerialNo(s) found in the grid: {duplicates}. Please correct them before saving.",
-                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Check for duplicate SerialNo in the database.
-            // First, extract distinct SerialNo values from the grid.
-            var serialNumbers = G2DGVAddSave.Rows.Cast<DataGridViewRow>()
-                .Where(row => !row.IsNewRow &&
-                              row.Cells["SerialNo"].Value != null &&
-                              !string.IsNullOrEmpty(row.Cells["SerialNo"].Value.ToString()))
-                .Select(row => row.Cells["SerialNo"].Value.ToString())
-                .Distinct()
-                .ToList();
-
-            List<string> duplicatesInDB = new List<string>();
-
-            // For each SerialNo, check if it already exists in the database.
-            foreach (var serialNo in serialNumbers)
-            {
-                // Adjust the table name "SerialID" as needed.
-                string query = "SELECT COUNT(*) FROM SerialID WHERE SerialNo = @SerialNo";
-                SqlParameter param = new SqlParameter("@SerialNo", serialNo);
-                object countObj = ds.ExecuteScalar(query, param);
-                int count = (countObj == null ? 0 : Convert.ToInt32(countObj));
-
-                if (count > 0)
-                {
-                    duplicatesInDB.Add(serialNo);
-                }
-            }
-
-            // If any duplicates are found in the database, notify the user with their details.
-            if (duplicatesInDB.Any())
-            {
-                string duplicates = string.Join(", ", duplicatesInDB);
-                MessageBox.Show($"The following SerialNo(s) already exist in the database: {duplicates}. Please correct them before saving.",
-                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // If all checks pass, proceed with the insert operation.
-            try
-            {
-                vd.Insert(G2DGVAddSave);
-                MessageBox.Show("Data saved successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "An Error Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
             G2DGVAddSave.Rows.Clear();
             DisplayVideo();
         }
@@ -295,6 +211,11 @@ namespace Project.Forms.ExtensionForms
         private void G2DGVAddSave_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.ThrowException = false;
+        }
+
+        private void guna2TextBoxVideo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

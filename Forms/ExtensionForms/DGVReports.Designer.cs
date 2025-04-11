@@ -86,12 +86,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridViewReports.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridViewReports.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridViewReports.Location = new System.Drawing.Point(13, 69);
+            this.guna2DataGridViewReports.Location = new System.Drawing.Point(13, 57);
             this.guna2DataGridViewReports.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridViewReports.Name = "guna2DataGridViewReports";
             this.guna2DataGridViewReports.ReadOnly = true;
             this.guna2DataGridViewReports.RowHeadersVisible = false;
-            this.guna2DataGridViewReports.Size = new System.Drawing.Size(1090, 406);
+            this.guna2DataGridViewReports.Size = new System.Drawing.Size(1090, 418);
             this.guna2DataGridViewReports.TabIndex = 226;
             this.guna2DataGridViewReports.Tag = "book_id";
             this.guna2DataGridViewReports.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -180,7 +180,7 @@
             this.guna2ComboBoxReports.Items.AddRange(new object[] {
             "DVD",
             "VCD"});
-            this.guna2ComboBoxReports.Location = new System.Drawing.Point(13, 25);
+            this.guna2ComboBoxReports.Location = new System.Drawing.Point(13, 13);
             this.guna2ComboBoxReports.Name = "guna2ComboBoxReports";
             this.guna2ComboBoxReports.Size = new System.Drawing.Size(177, 36);
             this.guna2ComboBoxReports.TabIndex = 244;
@@ -203,7 +203,7 @@
             this.guna2TextBoxReports.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxReports.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxReports.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxReports.IconLeft")));
-            this.guna2TextBoxReports.Location = new System.Drawing.Point(197, 25);
+            this.guna2TextBoxReports.Location = new System.Drawing.Point(197, 13);
             this.guna2TextBoxReports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxReports.Name = "guna2TextBoxReports";
             this.guna2TextBoxReports.PlaceholderText = "";
