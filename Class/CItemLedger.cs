@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project.Class
 {
     public class CItemLedger
     {
-        private DataLoader Dl = new DataLoader();
 
         public void SearchDVDTxbxItemLedger(string txbx, string cmbx, DataGridView DGV, string cmbxType, string EndDate, string StartDate)
         {
@@ -26,7 +21,7 @@ namespace Project.Class
                 (string.IsNullOrEmpty(txbx) ? "empty" : "filled") + "-" +
                 (string.IsNullOrEmpty(cmbxType) ? "empty" : "filled");
 
-            switch(key)
+            switch (key)
             {
                 case "filled-empty-empty":
                     query = "SearchDVDItemLedger";
@@ -38,7 +33,7 @@ namespace Project.Class
                     break;
                 case "filled-filled-empty":
                     query = "SearchDVDTxbxItemLedger";
-                    parameters.Add(new SqlParameter("Category",cmbx));
+                    parameters.Add(new SqlParameter("Category", cmbx));
                     parameters.Add(new SqlParameter("SearchText", txbx));
                     break;
                 case "empty-empty-empty":
@@ -62,6 +57,7 @@ namespace Project.Class
                 default:
                     throw new InvalidOperationException("Unexpected state for cmbx and txbx.");
             }
+            DataLoader Dl = new DataLoader();
             Dl.LoadData(query, DGV, parameters.ToArray());
         }
     }

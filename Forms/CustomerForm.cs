@@ -126,5 +126,10 @@ namespace Project.Forms
             guna2TextBoxEditLastname.Text = selectedRow.Cells["LastName"].Value.ToString();
             guna2TextBoxID.Text = selectedRow.Cells["CustomerID"].Value.ToString();
         }
+
+        private void panelEdit_Paint(object sender, PaintEventArgs e)
+        {
+             
+        }
     }
 }

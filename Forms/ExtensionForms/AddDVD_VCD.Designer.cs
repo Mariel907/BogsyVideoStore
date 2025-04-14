@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelEditBook = new System.Windows.Forms.Panel();
             this.G2BtnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBoxVideo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -91,9 +91,10 @@
             this.panelEditBook.Controls.Add(this.G2BtnSave);
             this.panelEditBook.Controls.Add(this.G2DGVAddSave);
             this.panelEditBook.Controls.Add(this.labelBook);
+            this.panelEditBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEditBook.Location = new System.Drawing.Point(0, 0);
             this.panelEditBook.Name = "panelEditBook";
-            this.panelEditBook.Size = new System.Drawing.Size(1132, 567);
+            this.panelEditBook.Size = new System.Drawing.Size(1144, 567);
             this.panelEditBook.TabIndex = 65;
             // 
             // G2BtnAdd
@@ -320,7 +321,7 @@
             this.G2BtnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.G2BtnSave.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
             this.G2BtnSave.ForeColor = System.Drawing.Color.White;
-            this.G2BtnSave.Location = new System.Drawing.Point(995, 519);
+            this.G2BtnSave.Location = new System.Drawing.Point(1007, 519);
             this.G2BtnSave.Name = "G2BtnSave";
             this.G2BtnSave.Size = new System.Drawing.Size(125, 36);
             this.G2BtnSave.TabIndex = 363;
@@ -331,18 +332,18 @@
             // G2DGVAddSave
             // 
             this.G2DGVAddSave.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.G2DGVAddSave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.G2DGVAddSave.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.G2DGVAddSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.G2DGVAddSave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.G2DGVAddSave.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.G2DGVAddSave.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.G2DGVAddSave.ColumnHeadersHeight = 35;
             this.G2DGVAddSave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.G2DGVAddSave.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -351,16 +352,16 @@
             this.Title,
             this.Qty,
             this.Price});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.G2DGVAddSave.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.G2DGVAddSave.DefaultCellStyle = dataGridViewCellStyle3;
             this.G2DGVAddSave.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.G2DGVAddSave.Location = new System.Drawing.Point(12, 93);
+            this.G2DGVAddSave.Location = new System.Drawing.Point(18, 93);
             this.G2DGVAddSave.Margin = new System.Windows.Forms.Padding(4);
             this.G2DGVAddSave.Name = "G2DGVAddSave";
             this.G2DGVAddSave.RowHeadersVisible = false;

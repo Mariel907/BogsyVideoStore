@@ -28,28 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel6 = new System.Windows.Forms.Panel();
-            this.PctrBxDashboard = new System.Windows.Forms.PictureBox();
             this.LblTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.TransTimer = new System.Windows.Forms.Timer(this.components);
+            this.PctrBxDashboard = new System.Windows.Forms.PictureBox();
             this.Itemledger = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonReports = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonPayments = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonTransactions = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDVDVCD = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.G2BtnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
+            this.FlwLytTranContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.GBtnReturnCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.GBtnRentCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ButtonTransactions = new Guna.UI2.WinForms.Guna2Button();
             this.panelDashboard = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            this.FlwLytTranContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -63,16 +70,6 @@
             this.panel6.Size = new System.Drawing.Size(1135, 61);
             this.panel6.TabIndex = 2;
             // 
-            // PctrBxDashboard
-            // 
-            this.PctrBxDashboard.Image = global::Project.Properties.Resources.icons8_video_64;
-            this.PctrBxDashboard.Location = new System.Drawing.Point(7, 5);
-            this.PctrBxDashboard.Name = "PctrBxDashboard";
-            this.PctrBxDashboard.Size = new System.Drawing.Size(48, 50);
-            this.PctrBxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PctrBxDashboard.TabIndex = 1;
-            this.PctrBxDashboard.TabStop = false;
-            // 
             // LblTitle
             // 
             this.LblTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,7 +79,7 @@
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(1135, 61);
             this.LblTitle.TabIndex = 0;
-            this.LblTitle.Text = "Video";
+            this.LblTitle.Text = "Dashboard";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
@@ -105,6 +102,7 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Bogsy Video Store";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel4
             // 
@@ -112,15 +110,41 @@
             this.panel4.Controls.Add(this.Itemledger);
             this.panel4.Controls.Add(this.guna2ButtonReports);
             this.panel4.Controls.Add(this.guna2ButtonPayments);
-            this.panel4.Controls.Add(this.guna2ButtonTransactions);
+            this.panel4.Controls.Add(this.FlwLytTranContainer);
             this.panel4.Controls.Add(this.guna2ButtonCustomer);
             this.panel4.Controls.Add(this.guna2ButtonDVDVCD);
+            this.panel4.Controls.Add(this.G2BtnDashboard);
             this.panel4.Controls.Add(this.guna2Panel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(215, 681);
             this.panel4.TabIndex = 0;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.guna2Panel3.Controls.Add(this.rjCircularPictureBox1);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(215, 113);
+            this.guna2Panel3.TabIndex = 6;
+            // 
+            // TransTimer
+            // 
+            this.TransTimer.Tick += new System.EventHandler(this.TransTimer_Tick);
+            // 
+            // PctrBxDashboard
+            // 
+            this.PctrBxDashboard.Image = global::Project.Properties.Resources.icons8_dashboard_96;
+            this.PctrBxDashboard.Location = new System.Drawing.Point(7, 5);
+            this.PctrBxDashboard.Name = "PctrBxDashboard";
+            this.PctrBxDashboard.Size = new System.Drawing.Size(48, 50);
+            this.PctrBxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PctrBxDashboard.TabIndex = 1;
+            this.PctrBxDashboard.TabStop = false;
             // 
             // Itemledger
             // 
@@ -138,7 +162,7 @@
             this.Itemledger.Image = ((System.Drawing.Image)(resources.GetObject("Itemledger.Image")));
             this.Itemledger.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Itemledger.ImageSize = new System.Drawing.Size(30, 30);
-            this.Itemledger.Location = new System.Drawing.Point(0, 308);
+            this.Itemledger.Location = new System.Drawing.Point(0, 347);
             this.Itemledger.Name = "Itemledger";
             this.Itemledger.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.Itemledger.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
@@ -163,7 +187,7 @@
             this.guna2ButtonReports.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonReports.Image")));
             this.guna2ButtonReports.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonReports.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonReports.Location = new System.Drawing.Point(0, 269);
+            this.guna2ButtonReports.Location = new System.Drawing.Point(0, 308);
             this.guna2ButtonReports.Name = "guna2ButtonReports";
             this.guna2ButtonReports.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.guna2ButtonReports.Size = new System.Drawing.Size(215, 39);
@@ -187,7 +211,7 @@
             this.guna2ButtonPayments.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonPayments.Image")));
             this.guna2ButtonPayments.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonPayments.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonPayments.Location = new System.Drawing.Point(0, 230);
+            this.guna2ButtonPayments.Location = new System.Drawing.Point(0, 269);
             this.guna2ButtonPayments.Name = "guna2ButtonPayments";
             this.guna2ButtonPayments.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.guna2ButtonPayments.Size = new System.Drawing.Size(215, 39);
@@ -195,30 +219,6 @@
             this.guna2ButtonPayments.Text = "Payments";
             this.guna2ButtonPayments.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonPayments.Click += new System.EventHandler(this.Form_Click);
-            // 
-            // guna2ButtonTransactions
-            // 
-            this.guna2ButtonTransactions.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ButtonTransactions.BorderThickness = 1;
-            this.guna2ButtonTransactions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonTransactions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2ButtonTransactions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2ButtonTransactions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2ButtonTransactions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2ButtonTransactions.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonTransactions.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ButtonTransactions.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonTransactions.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonTransactions.Image")));
-            this.guna2ButtonTransactions.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonTransactions.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonTransactions.Location = new System.Drawing.Point(0, 191);
-            this.guna2ButtonTransactions.Name = "guna2ButtonTransactions";
-            this.guna2ButtonTransactions.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.guna2ButtonTransactions.Size = new System.Drawing.Size(215, 39);
-            this.guna2ButtonTransactions.TabIndex = 2;
-            this.guna2ButtonTransactions.Text = "Transactions";
-            this.guna2ButtonTransactions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2ButtonTransactions.Click += new System.EventHandler(this.Form_Click);
             // 
             // guna2ButtonCustomer
             // 
@@ -235,7 +235,7 @@
             this.guna2ButtonCustomer.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonCustomer.Image")));
             this.guna2ButtonCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonCustomer.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonCustomer.Location = new System.Drawing.Point(0, 152);
+            this.guna2ButtonCustomer.Location = new System.Drawing.Point(0, 191);
             this.guna2ButtonCustomer.Name = "guna2ButtonCustomer";
             this.guna2ButtonCustomer.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.guna2ButtonCustomer.PressedColor = System.Drawing.Color.Azure;
@@ -248,21 +248,21 @@
             // guna2ButtonDVDVCD
             // 
             this.guna2ButtonDVDVCD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2ButtonDVDVCD.BorderColor = System.Drawing.Color.White;
+            this.guna2ButtonDVDVCD.BorderColor = System.Drawing.Color.Transparent;
             this.guna2ButtonDVDVCD.BorderThickness = 1;
             this.guna2ButtonDVDVCD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonDVDVCD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonDVDVCD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2ButtonDVDVCD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2ButtonDVDVCD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2ButtonDVDVCD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.guna2ButtonDVDVCD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.guna2ButtonDVDVCD.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
             this.guna2ButtonDVDVCD.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonDVDVCD.ForeColor = System.Drawing.Color.White;
             this.guna2ButtonDVDVCD.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonDVDVCD.Image")));
             this.guna2ButtonDVDVCD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonDVDVCD.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonDVDVCD.Location = new System.Drawing.Point(0, 113);
+            this.guna2ButtonDVDVCD.Location = new System.Drawing.Point(0, 152);
             this.guna2ButtonDVDVCD.Name = "guna2ButtonDVDVCD";
             this.guna2ButtonDVDVCD.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.guna2ButtonDVDVCD.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
@@ -273,16 +273,31 @@
             this.guna2ButtonDVDVCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonDVDVCD.Click += new System.EventHandler(this.Form_Click);
             // 
-            // guna2Panel3
+            // G2BtnDashboard
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.guna2Panel3.Controls.Add(this.rjCircularPictureBox1);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(215, 113);
-            this.guna2Panel3.TabIndex = 6;
+            this.G2BtnDashboard.BorderColor = System.Drawing.Color.White;
+            this.G2BtnDashboard.BorderThickness = 1;
+            this.G2BtnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2BtnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2BtnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.G2BtnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.G2BtnDashboard.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.G2BtnDashboard.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F);
+            this.G2BtnDashboard.ForeColor = System.Drawing.Color.White;
+            this.G2BtnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("G2BtnDashboard.Image")));
+            this.G2BtnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.G2BtnDashboard.ImageSize = new System.Drawing.Size(30, 30);
+            this.G2BtnDashboard.Location = new System.Drawing.Point(0, 113);
+            this.G2BtnDashboard.Name = "G2BtnDashboard";
+            this.G2BtnDashboard.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.G2BtnDashboard.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.G2BtnDashboard.Size = new System.Drawing.Size(215, 39);
+            this.G2BtnDashboard.TabIndex = 7;
+            this.G2BtnDashboard.Text = "Dashboard";
+            this.G2BtnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.G2BtnDashboard.Click += new System.EventHandler(this.Form_Click);
             // 
             // rjCircularPictureBox1
             // 
@@ -300,9 +315,96 @@
             this.rjCircularPictureBox1.TabIndex = 0;
             this.rjCircularPictureBox1.TabStop = false;
             // 
+            // FlwLytTranContainer
+            // 
+            this.FlwLytTranContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(173)))), ((int)(((byte)(203)))));
+            this.FlwLytTranContainer.Controls.Add(this.guna2ButtonTransactions);
+            this.FlwLytTranContainer.Controls.Add(this.GBtnRentCustomer);
+            this.FlwLytTranContainer.Controls.Add(this.GBtnReturnCustomer);
+            this.FlwLytTranContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FlwLytTranContainer.Location = new System.Drawing.Point(0, 230);
+            this.FlwLytTranContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.FlwLytTranContainer.Name = "FlwLytTranContainer";
+            this.FlwLytTranContainer.Size = new System.Drawing.Size(215, 39);
+            this.FlwLytTranContainer.TabIndex = 3;
+            // 
+            // GBtnReturnCustomer
+            // 
+            this.GBtnReturnCustomer.BorderColor = System.Drawing.Color.Transparent;
+            this.GBtnReturnCustomer.BorderThickness = 1;
+            this.GBtnReturnCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnReturnCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnReturnCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GBtnReturnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GBtnReturnCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(173)))), ((int)(((byte)(203)))));
+            this.GBtnReturnCustomer.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBtnReturnCustomer.ForeColor = System.Drawing.Color.White;
+            this.GBtnReturnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("GBtnReturnCustomer.Image")));
+            this.GBtnReturnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GBtnReturnCustomer.ImageSize = new System.Drawing.Size(30, 30);
+            this.GBtnReturnCustomer.Location = new System.Drawing.Point(0, 78);
+            this.GBtnReturnCustomer.Margin = new System.Windows.Forms.Padding(0);
+            this.GBtnReturnCustomer.Name = "GBtnReturnCustomer";
+            this.GBtnReturnCustomer.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.GBtnReturnCustomer.Size = new System.Drawing.Size(215, 39);
+            this.GBtnReturnCustomer.TabIndex = 4;
+            this.GBtnReturnCustomer.Text = "Return Video";
+            this.GBtnReturnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GBtnReturnCustomer.Click += new System.EventHandler(this.Form_Click);
+            // 
+            // GBtnRentCustomer
+            // 
+            this.GBtnRentCustomer.BorderColor = System.Drawing.Color.Transparent;
+            this.GBtnRentCustomer.BorderThickness = 1;
+            this.GBtnRentCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnRentCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnRentCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GBtnRentCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GBtnRentCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GBtnRentCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(173)))), ((int)(((byte)(203)))));
+            this.GBtnRentCustomer.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBtnRentCustomer.ForeColor = System.Drawing.Color.White;
+            this.GBtnRentCustomer.Image = ((System.Drawing.Image)(resources.GetObject("GBtnRentCustomer.Image")));
+            this.GBtnRentCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GBtnRentCustomer.ImageSize = new System.Drawing.Size(30, 30);
+            this.GBtnRentCustomer.Location = new System.Drawing.Point(0, 39);
+            this.GBtnRentCustomer.Margin = new System.Windows.Forms.Padding(0);
+            this.GBtnRentCustomer.Name = "GBtnRentCustomer";
+            this.GBtnRentCustomer.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.GBtnRentCustomer.Size = new System.Drawing.Size(215, 39);
+            this.GBtnRentCustomer.TabIndex = 3;
+            this.GBtnRentCustomer.Text = "Rent Video";
+            this.GBtnRentCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.GBtnRentCustomer.Click += new System.EventHandler(this.Form_Click);
+            // 
+            // guna2ButtonTransactions
+            // 
+            this.guna2ButtonTransactions.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ButtonTransactions.BorderThickness = 1;
+            this.guna2ButtonTransactions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonTransactions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2ButtonTransactions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2ButtonTransactions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2ButtonTransactions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2ButtonTransactions.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.guna2ButtonTransactions.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ButtonTransactions.ForeColor = System.Drawing.Color.White;
+            this.guna2ButtonTransactions.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonTransactions.Image")));
+            this.guna2ButtonTransactions.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonTransactions.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ButtonTransactions.Location = new System.Drawing.Point(0, 0);
+            this.guna2ButtonTransactions.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2ButtonTransactions.Name = "guna2ButtonTransactions";
+            this.guna2ButtonTransactions.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.guna2ButtonTransactions.Size = new System.Drawing.Size(215, 39);
+            this.guna2ButtonTransactions.TabIndex = 2;
+            this.guna2ButtonTransactions.Text = "Transactions";
+            this.guna2ButtonTransactions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2ButtonTransactions.Click += new System.EventHandler(this.Form_Click);
+            // 
             // panelDashboard
             // 
-            this.panelDashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(215, 113);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(1135, 568);
@@ -314,10 +416,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 681);
+            this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panelDashboard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -325,11 +427,12 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            this.FlwLytTranContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -340,16 +443,21 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonTransactions;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonDVDVCD;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Panel panelDashboard;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonPayments;
         private Guna.UI2.WinForms.Guna2Button guna2ButtonReports;
         private CustomControls.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private Guna.UI2.WinForms.Guna2Button Itemledger;
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.PictureBox PctrBxDashboard;
+        private Guna.UI2.WinForms.Guna2Button G2BtnDashboard;
+        private System.Windows.Forms.Timer TransTimer;
+        private System.Windows.Forms.FlowLayoutPanel FlwLytTranContainer;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonTransactions;
+        private Guna.UI2.WinForms.Guna2Button GBtnRentCustomer;
+        private Guna.UI2.WinForms.Guna2Button GBtnReturnCustomer;
+        private System.Windows.Forms.Panel panelDashboard;
     }
 }

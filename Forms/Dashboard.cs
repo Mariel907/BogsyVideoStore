@@ -1,11 +1,10 @@
 ﻿using Guna.UI2.WinForms;
-using Microsoft.Reporting.Map.WebForms.BingMaps;
 using Project.Class;
 using Project.Forms.ExtensionForms;
+using Project.Model;
 using Project.Properties;
 using System;
 using System.Drawing;
-using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Project.Forms
@@ -13,6 +12,7 @@ namespace Project.Forms
     public partial class Dashboard : Form
     {
         private FormManager form = new FormManager();
+        private bool menuExpand = false;
 
         public Panel Panel { get { return panelDashboard; } }
 
@@ -39,27 +39,39 @@ namespace Project.Forms
             guna2ButtonReports.Name = "Reports";
             guna2ButtonPayments.Name = "Payments";
             Itemledger.Name = "ItemLedger";
+            G2BtnDashboard.Name = "Dashboard";
+            GBtnReturnCustomer.Name = "Return";
+            GBtnRentCustomer.Name = "Rent";
         }
 
         private void UpdateButtonColors(string ActiveButton)
         {
             Color ActiveColor = Color.FromArgb(0, 50, 73);
             Color InActiveColor = Color.FromArgb(0, 138, 162);
-            Color BorderActive = Color.White; 
+            
+            Color BorderActive = Color.White;
             Color BorderInActive = Color.Transparent;
 
-            guna2ButtonDVDVCD.FillColor = ActiveButton == "DVDVCD"? ActiveColor : InActiveColor;
-            guna2ButtonDVDVCD.BorderColor = ActiveButton == "DVDVCD"? BorderActive : BorderInActive;
+            Color InActiveExpand = Color.FromArgb(1, 173, 203);
+
+            guna2ButtonDVDVCD.FillColor = ActiveButton == "DVDVCD" ? ActiveColor : InActiveColor;
+            guna2ButtonDVDVCD.BorderColor = ActiveButton == "DVDVCD" ? BorderActive : BorderInActive;
             guna2ButtonCustomer.FillColor = ActiveButton == "Customer" ? ActiveColor : InActiveColor;
             guna2ButtonCustomer.BorderColor = ActiveButton == "Customer" ? BorderActive : BorderInActive;
-            guna2ButtonTransactions.FillColor = ActiveButton == "Transactions" ? ActiveColor :InActiveColor;
+            guna2ButtonTransactions.FillColor = ActiveButton == "Transactions" ? ActiveColor : InActiveColor;
             guna2ButtonTransactions.BorderColor = ActiveButton == "Transactions" ? BorderActive : BorderInActive;
-            guna2ButtonReports.FillColor = ActiveButton == "Reports" ? ActiveColor :InActiveColor;
+            guna2ButtonReports.FillColor = ActiveButton == "Reports" ? ActiveColor : InActiveColor;
             guna2ButtonReports.BorderColor = ActiveButton == "Reports" ? BorderActive : BorderInActive;
-            guna2ButtonPayments.FillColor = ActiveButton == "Payments" ? ActiveColor :InActiveColor;
+            guna2ButtonPayments.FillColor = ActiveButton == "Payments" ? ActiveColor : InActiveColor;
             guna2ButtonPayments.BorderColor = ActiveButton == "Payments" ? BorderActive : BorderInActive;
             Itemledger.FillColor = ActiveButton == "ItemLedger" ? ActiveColor : InActiveColor;
-            Itemledger.BorderColor = ActiveButton == "ItemLedger" ? BorderActive: BorderInActive;
+            Itemledger.BorderColor = ActiveButton == "ItemLedger" ? BorderActive : BorderInActive;
+            G2BtnDashboard.FillColor = ActiveButton == "Dashboard" ? ActiveColor : InActiveColor;
+            G2BtnDashboard.BorderColor = ActiveButton == "Dashboard" ? BorderActive : BorderInActive;
+            GBtnReturnCustomer.FillColor = ActiveButton == "Return" ? ActiveColor : InActiveExpand;
+            GBtnReturnCustomer.BorderColor = ActiveButton == "Return" ? BorderActive : BorderInActive;
+            GBtnRentCustomer.FillColor = ActiveButton == "Rent" ? ActiveColor : InActiveExpand;
+            GBtnRentCustomer.BorderColor = ActiveButton == "Rent" ? BorderActive : BorderInActive;
         }
 
         private void OpenCorrespondingForm(string buttonName)
@@ -83,6 +95,7 @@ namespace Project.Forms
                     PctrBxDashboard.Image = Resources.Transaction_icon;
                     Transaction trans = new Transaction(this);
                     form.OpenForm(trans, panelDashboard);
+                    TransTimer.Start();
                     break;
                 case "Reports":
                     LblTitle.Text = "Reports";
@@ -102,21 +115,60 @@ namespace Project.Forms
                     ItemLedger item = new ItemLedger();
                     form.OpenForm(item, panelDashboard);
                     break;
+                case "Dashboard":
+                    LblTitle.Text = "Dashboard";
+                    PctrBxDashboard.Image = Resources.icons8_dashboard_96;
+                    FDashboard dashboard = new FDashboard();
+                    form.OpenForm(dashboard, panelDashboard);
+                    break;
+                case "Return":
+                   FReturn fReturn = new FReturn();
+                    form.OpenForm(fReturn, panelDashboard);
+                    break;
+                case "Rent":
+                    Customers customers = new Customers();
+                    RentCustomer rent = new RentCustomer(customers);
+                    form.OpenForm(rent, panelDashboard);
+                    break;
                 default:
                     break;
             }
         }
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            DVDs_VCDs video = new DVDs_VCDs(this);
-            FormManager form = new FormManager();
-            form.OpenForm(video, panelDashboard);
-            guna2ButtonDVDVCD.FillColor = Color.FromArgb(0, 50, 73);
+            FDashboard dashboard = new FDashboard();
+            form.OpenForm(dashboard, panelDashboard);
         }
 
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TransTimer_Tick(object sender, EventArgs e)
+        {
+            if(menuExpand == false)
+            {
+                FlwLytTranContainer.Height += 40;
+                if (FlwLytTranContainer.Height >= 100)
+                {
+                    TransTimer.Stop();
+                    menuExpand = true ;
+                }
+            }
+            else
+            {
+                FlwLytTranContainer.Height -= 40;
+                if (FlwLytTranContainer.Height <= 39)
+                {
+                    TransTimer.Stop();
+                    menuExpand = false;
+                }
+            }
         }
     }
 }

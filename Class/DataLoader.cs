@@ -1,4 +1,5 @@
 ﻿using Project.Model;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -50,6 +51,21 @@ namespace Project.Class
                 new SqlParameter("Searchtext", searchtext)
             };
             LoadData(query, dataGridView, parameters);
+        }
+        public int LblUpdate(string query, SqlParameter[] parameters = null)
+        {
+            using (SqlConnection connection = new SqlConnection(GlobalConnection.Connection))
+            {
+                connection.Open();
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    if (parameters != null) cmd.Parameters.AddRange(parameters);
+
+                    object result = cmd.ExecuteScalar();
+                    return Convert.ToInt32(result);
+                }
+            }
         }
     }
 }

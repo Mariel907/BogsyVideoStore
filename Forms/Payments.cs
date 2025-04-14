@@ -235,5 +235,10 @@ namespace Project.Forms
             guna2TextBoxPenalty.Text = string.Empty;
             guna2TextBoxRentalID.Text = string.Empty;
         }
+
+        private void guna2TextBoxCash_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

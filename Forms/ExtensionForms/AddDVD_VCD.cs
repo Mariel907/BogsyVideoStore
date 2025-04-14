@@ -16,7 +16,6 @@ namespace Project.Forms.ExtensionForms
         private Stack<UndoRedoAction> undoStack = new Stack<UndoRedoAction>();
         private Stack<UndoRedoAction> redoStack = new Stack<UndoRedoAction>();
         private VideoLibrary vd = new VideoLibrary();
-
         public AddDVD_VCD()
         {
             InitializeComponent();
@@ -132,6 +131,7 @@ namespace Project.Forms.ExtensionForms
             }
             G2DGVAddSave.Rows.Clear();
             DisplayVideo();
+          
         }
 
         private void G2BtnAddSave_KeyDown(object sender, KeyEventArgs e)
