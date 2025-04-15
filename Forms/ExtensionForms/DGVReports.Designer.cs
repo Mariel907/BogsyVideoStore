@@ -182,7 +182,7 @@
             "VCD"});
             this.guna2ComboBoxReports.Location = new System.Drawing.Point(13, 13);
             this.guna2ComboBoxReports.Name = "guna2ComboBoxReports";
-            this.guna2ComboBoxReports.Size = new System.Drawing.Size(177, 36);
+            this.guna2ComboBoxReports.Size = new System.Drawing.Size(127, 36);
             this.guna2ComboBoxReports.TabIndex = 244;
             this.guna2ComboBoxReports.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBoxReports_SelectedIndexChanged);
             // 
@@ -203,12 +203,12 @@
             this.guna2TextBoxReports.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxReports.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBoxReports.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxReports.IconLeft")));
-            this.guna2TextBoxReports.Location = new System.Drawing.Point(197, 13);
+            this.guna2TextBoxReports.Location = new System.Drawing.Point(147, 13);
             this.guna2TextBoxReports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBoxReports.Name = "guna2TextBoxReports";
             this.guna2TextBoxReports.PlaceholderText = "";
             this.guna2TextBoxReports.SelectedText = "";
-            this.guna2TextBoxReports.Size = new System.Drawing.Size(906, 36);
+            this.guna2TextBoxReports.Size = new System.Drawing.Size(956, 36);
             this.guna2TextBoxReports.TabIndex = 243;
             this.guna2TextBoxReports.TextChanged += new System.EventHandler(this.guna2TextBoxReports_TextChanged);
             // 

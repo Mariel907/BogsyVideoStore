@@ -29,6 +29,7 @@ namespace Project.Forms
         private void FDashboard_Load(object sender, EventArgs e)
         {
             Updatelabel();
+            ChangedColorDue();
         }
 
         private void Updatelabel()
@@ -53,6 +54,27 @@ namespace Project.Forms
 
             lbl.Return(ref update);
             LblReturned.Text = update;
+
+        }
+
+        private void ChangedColorDue()
+        {
+            Color colorRed = Color.FromArgb(192, 0, 0);
+            Color colorBlue = Color.FromArgb(0, 138, 162);
+            if (lblOverdueRent.Text == "0")
+            {
+                PnlOverdueRent.BackColor = colorBlue;
+                LblTitleDue.BackColor = colorBlue;
+                PctrDue.BackColor = colorBlue;
+                lblOverdueRent.BackColor = colorBlue;
+            }
+            else
+            {
+                PnlOverdueRent.BackColor = colorRed;
+                LblTitleDue.BackColor = colorRed;
+                PctrDue.BackColor = colorRed;
+                lblOverdueRent.BackColor = colorRed;
+            }
         }
     }
 }

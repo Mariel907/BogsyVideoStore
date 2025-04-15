@@ -26,7 +26,7 @@ namespace Project.Class
             };
             ds.ExecuteData("UpdateReturn", parameter);
         }
-       
+
         public void RefreshSearchCMBXTxbxRented(string SDate, string EDate, string cmbx, string Txbx, DataGridView dt)
         {
             string query = string.Empty;
@@ -38,6 +38,36 @@ namespace Project.Class
                 new SqlParameter("Category", cmbx)
             };
             ds.LoadData("GetAllRentedTxbxDVD", dt, parameter);
+        }
+
+        public static List<SrchSerial> SearchSerialReturn()
+        {
+            List<SrchSerial> search = new List<SrchSerial>();
+            using(SqlConnection con = new SqlConnection(GlobalConnection.Connection))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("SearchSerialReturn", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using(SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        search.Add(new SrchSerial
+                        {
+                            Title = reader["Title"].ToString(),
+                            SerialID = reader["SerialID"].ToString(),
+                            SerialNo = reader["SerialNo"].ToString(),
+                            VideoID = int.Parse(reader["VideoID"].ToString()),
+                            Category = reader["Category"].ToString(),
+                            Fullname = reader["Fullname"].ToString(),
+                            RentalID = int.Parse(reader["RentalID"].ToString())
+                        });
+                    }
+                }
+            }
+            return search;
         }
     }
 }

@@ -12,5 +12,8 @@ namespace Project.Model
         public string SerialNo { get; set; }
         public int VideoID { get; set; }
         public string Title { get; set; }
+        public string Category { get; set; }
+        public string  Fullname { get; set; }
+        public int RentalID { get; set; }
     }
 }

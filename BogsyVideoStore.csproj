@@ -164,6 +164,12 @@
     <Compile Include="Forms\ExtensionForms\EditDVD_VCD.Designer.cs">
       <DependentUpon>EditDVD_VCD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ExtensionForms\EFEarnings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFEarnings.Designer.cs">
+      <DependentUpon>EFEarnings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExtensionForms\PrintReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,7 @@
     <Compile Include="Model\GlobalConnection.cs" />
     <Compile Include="Model\MFDashboard.cs" />
     <Compile Include="Model\MLedger.cs" />
+    <Compile Include="Model\MSearchFieldRented.cs" />
     <Compile Include="Model\PenaltyReceipt.cs" />
     <Compile Include="Model\Receipt.cs" />
     <Compile Include="Model\SearchUnpaid.cs" />
@@ -249,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\EditDVD_VCD.resx">
       <DependentUpon>EditDVD_VCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EFEarnings.resx">
+      <DependentUpon>EFEarnings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\PrintReceipt.resx">
       <DependentUpon>PrintReceipt.cs</DependentUpon>

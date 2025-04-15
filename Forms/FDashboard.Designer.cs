@@ -35,10 +35,10 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.LblReturned = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.PnlOverdueRent = new System.Windows.Forms.Panel();
+            this.PctrDue = new System.Windows.Forms.PictureBox();
             this.lblOverdueRent = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.LblTitleDue = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.LblTotalVideo = new System.Windows.Forms.Label();
@@ -59,8 +59,8 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.PnlOverdueRent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrDue)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -88,7 +88,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.panel7, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.PnlOverdueRent, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
@@ -152,29 +152,29 @@
             this.label12.Text = "Returned";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel6
+            // PnlOverdueRent
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.lblOverdueRent);
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(742, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(373, 119);
-            this.panel6.TabIndex = 4;
+            this.PnlOverdueRent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PnlOverdueRent.Controls.Add(this.PctrDue);
+            this.PnlOverdueRent.Controls.Add(this.lblOverdueRent);
+            this.PnlOverdueRent.Controls.Add(this.LblTitleDue);
+            this.PnlOverdueRent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlOverdueRent.Location = new System.Drawing.Point(742, 0);
+            this.PnlOverdueRent.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.PnlOverdueRent.Name = "PnlOverdueRent";
+            this.PnlOverdueRent.Size = new System.Drawing.Size(373, 119);
+            this.PnlOverdueRent.TabIndex = 4;
             // 
-            // pictureBox5
+            // PctrDue
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(89, 88);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 16;
-            this.pictureBox5.TabStop = false;
+            this.PctrDue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PctrDue.Image = ((System.Drawing.Image)(resources.GetObject("PctrDue.Image")));
+            this.PctrDue.Location = new System.Drawing.Point(0, 0);
+            this.PctrDue.Name = "PctrDue";
+            this.PctrDue.Size = new System.Drawing.Size(89, 88);
+            this.PctrDue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PctrDue.TabIndex = 16;
+            this.PctrDue.TabStop = false;
             // 
             // lblOverdueRent
             // 
@@ -189,18 +189,18 @@
             this.lblOverdueRent.Text = "0";
             this.lblOverdueRent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label10
+            // LblTitleDue
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(95, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 25);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Overdue Rent";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblTitleDue.AutoSize = true;
+            this.LblTitleDue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblTitleDue.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitleDue.ForeColor = System.Drawing.Color.White;
+            this.LblTitleDue.Location = new System.Drawing.Point(95, 29);
+            this.LblTitleDue.Name = "LblTitleDue";
+            this.LblTitleDue.Size = new System.Drawing.Size(128, 25);
+            this.LblTitleDue.TabIndex = 10;
+            this.LblTitleDue.Text = "Overdue Rent";
+            this.LblTitleDue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -418,9 +418,9 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.PnlOverdueRent.ResumeLayout(false);
+            this.PnlOverdueRent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrDue)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -461,9 +461,9 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label LblReturned;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel PnlOverdueRent;
+        private System.Windows.Forms.PictureBox PctrDue;
         private System.Windows.Forms.Label lblOverdueRent;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label LblTitleDue;
     }
 }

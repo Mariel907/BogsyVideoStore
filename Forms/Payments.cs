@@ -47,6 +47,9 @@ namespace Project.Forms
                 MessageBox.Show("Customer does not exist in the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (IsSufficient()) return;
+
             try
             {
                 decimal Cash = Convert.ToDecimal(guna2TextBoxCash.Text);
@@ -82,10 +85,11 @@ namespace Project.Forms
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    string totalAmountText = labelTotal.Text.Replace("P", "").Trim();
-                    decimal totalAmount = Convert.ToDecimal(totalAmountText);
+                    if (IsSufficient()) return;
+
+                    decimal totalAmountText = Convert.ToDecimal(labelTotal.Text.Replace("P", "").Trim());
                     decimal _cash = Convert.ToDecimal(guna2TextBoxCash.Text);
-                    decimal Change = CalculateAndFormatChange(totalAmount, _cash);
+                    decimal Change = CalculateAndFormatChange(totalAmountText, _cash);
 
                     UpdateCahsAndChangeFields(_cash, Change);
                     e.SuppressKeyPress = true;
@@ -95,6 +99,19 @@ namespace Project.Forms
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool IsSufficient()
+        {
+            decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+            decimal totalAmountText = Convert.ToDecimal(labelTotal.Text.Replace("P", "").Trim());
+
+            if(cash< totalAmountText )
+            {
+                MessageBox.Show("Insufficient cash amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return false;
         }
 
         private decimal CalculateAndFormatChange(decimal totalAmount, decimal cash)

@@ -40,8 +40,6 @@ namespace Project.Forms
             guna2ButtonPayments.Name = "Payments";
             Itemledger.Name = "ItemLedger";
             G2BtnDashboard.Name = "Dashboard";
-            GBtnReturnCustomer.Name = "Return";
-            GBtnRentCustomer.Name = "Rent";
         }
 
         private void UpdateButtonColors(string ActiveButton)
@@ -68,10 +66,6 @@ namespace Project.Forms
             Itemledger.BorderColor = ActiveButton == "ItemLedger" ? BorderActive : BorderInActive;
             G2BtnDashboard.FillColor = ActiveButton == "Dashboard" ? ActiveColor : InActiveColor;
             G2BtnDashboard.BorderColor = ActiveButton == "Dashboard" ? BorderActive : BorderInActive;
-            GBtnReturnCustomer.FillColor = ActiveButton == "Return" ? ActiveColor : InActiveExpand;
-            GBtnReturnCustomer.BorderColor = ActiveButton == "Return" ? BorderActive : BorderInActive;
-            GBtnRentCustomer.FillColor = ActiveButton == "Rent" ? ActiveColor : InActiveExpand;
-            GBtnRentCustomer.BorderColor = ActiveButton == "Rent" ? BorderActive : BorderInActive;
         }
 
         private void OpenCorrespondingForm(string buttonName)
@@ -122,7 +116,9 @@ namespace Project.Forms
                     form.OpenForm(dashboard, panelDashboard);
                     break;
                 case "Return":
-                   FReturn fReturn = new FReturn();
+                    MSearchFieldRented MSF = new MSearchFieldRented();
+                    Transaction _trans = new Transaction(this);
+                    FReturn fReturn = new FReturn(MSF, _trans);
                     form.OpenForm(fReturn, panelDashboard);
                     break;
                 case "Rent":
@@ -148,27 +144,6 @@ namespace Project.Forms
         private void label2_Click(object sender, EventArgs e)
         {
 
-        }
-        private void TransTimer_Tick(object sender, EventArgs e)
-        {
-            if(menuExpand == false)
-            {
-                FlwLytTranContainer.Height += 40;
-                if (FlwLytTranContainer.Height >= 100)
-                {
-                    TransTimer.Stop();
-                    menuExpand = true ;
-                }
-            }
-            else
-            {
-                FlwLytTranContainer.Height -= 40;
-                if (FlwLytTranContainer.Height <= 39)
-                {
-                    TransTimer.Stop();
-                    menuExpand = false;
-                }
-            }
         }
     }
 }

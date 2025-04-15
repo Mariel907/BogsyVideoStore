@@ -31,32 +31,28 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.PctrBxDashboard = new System.Windows.Forms.PictureBox();
             this.LblTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.TransTimer = new System.Windows.Forms.Timer(this.components);
-            this.PctrBxDashboard = new System.Windows.Forms.PictureBox();
             this.Itemledger = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonReports = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonPayments = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ButtonDVDVCD = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
-            this.FlwLytTranContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.GBtnReturnCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.GBtnRentCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ButtonTransactions = new Guna.UI2.WinForms.Guna2Button();
+            this.TransTimer = new System.Windows.Forms.Timer(this.components);
             this.panelDashboard = new System.Windows.Forms.Panel();
+            this.guna2ButtonTransactions = new Guna.UI2.WinForms.Guna2Button();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
-            this.FlwLytTranContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -69,6 +65,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1135, 61);
             this.panel6.TabIndex = 2;
+            // 
+            // PctrBxDashboard
+            // 
+            this.PctrBxDashboard.Image = global::Project.Properties.Resources.icons8_dashboard_96;
+            this.PctrBxDashboard.Location = new System.Drawing.Point(7, 5);
+            this.PctrBxDashboard.Name = "PctrBxDashboard";
+            this.PctrBxDashboard.Size = new System.Drawing.Size(48, 50);
+            this.PctrBxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PctrBxDashboard.TabIndex = 1;
+            this.PctrBxDashboard.TabStop = false;
             // 
             // LblTitle
             // 
@@ -110,7 +116,7 @@
             this.panel4.Controls.Add(this.Itemledger);
             this.panel4.Controls.Add(this.guna2ButtonReports);
             this.panel4.Controls.Add(this.guna2ButtonPayments);
-            this.panel4.Controls.Add(this.FlwLytTranContainer);
+            this.panel4.Controls.Add(this.guna2ButtonTransactions);
             this.panel4.Controls.Add(this.guna2ButtonCustomer);
             this.panel4.Controls.Add(this.guna2ButtonDVDVCD);
             this.panel4.Controls.Add(this.G2BtnDashboard);
@@ -120,31 +126,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(215, 681);
             this.panel4.TabIndex = 0;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.guna2Panel3.Controls.Add(this.rjCircularPictureBox1);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(215, 113);
-            this.guna2Panel3.TabIndex = 6;
-            // 
-            // TransTimer
-            // 
-            this.TransTimer.Tick += new System.EventHandler(this.TransTimer_Tick);
-            // 
-            // PctrBxDashboard
-            // 
-            this.PctrBxDashboard.Image = global::Project.Properties.Resources.icons8_dashboard_96;
-            this.PctrBxDashboard.Location = new System.Drawing.Point(7, 5);
-            this.PctrBxDashboard.Name = "PctrBxDashboard";
-            this.PctrBxDashboard.Size = new System.Drawing.Size(48, 50);
-            this.PctrBxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PctrBxDashboard.TabIndex = 1;
-            this.PctrBxDashboard.TabStop = false;
             // 
             // Itemledger
             // 
@@ -299,6 +280,17 @@
             this.G2BtnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.G2BtnDashboard.Click += new System.EventHandler(this.Form_Click);
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.guna2Panel3.Controls.Add(this.rjCircularPictureBox1);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(215, 113);
+            this.guna2Panel3.TabIndex = 6;
+            // 
             // rjCircularPictureBox1
             // 
             this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -315,67 +307,16 @@
             this.rjCircularPictureBox1.TabIndex = 0;
             this.rjCircularPictureBox1.TabStop = false;
             // 
-            // FlwLytTranContainer
+            // TransTimer
             // 
-            this.FlwLytTranContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(173)))), ((int)(((byte)(203)))));
-            this.FlwLytTranContainer.Controls.Add(this.guna2ButtonTransactions);
-            this.FlwLytTranContainer.Controls.Add(this.GBtnRentCustomer);
-            this.FlwLytTranContainer.Controls.Add(this.GBtnReturnCustomer);
-            this.FlwLytTranContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FlwLytTranContainer.Location = new System.Drawing.Point(0, 230);
-            this.FlwLytTranContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.FlwLytTranContainer.Name = "FlwLytTranContainer";
-            this.FlwLytTranContainer.Size = new System.Drawing.Size(215, 39);
-            this.FlwLytTranContainer.TabIndex = 3;
             // 
-            // GBtnReturnCustomer
+            // panelDashboard
             // 
-            this.GBtnReturnCustomer.BorderColor = System.Drawing.Color.Transparent;
-            this.GBtnReturnCustomer.BorderThickness = 1;
-            this.GBtnReturnCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnReturnCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnReturnCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GBtnReturnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnReturnCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(173)))), ((int)(((byte)(203)))));
-            this.GBtnReturnCustomer.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBtnReturnCustomer.ForeColor = System.Drawing.Color.White;
-            this.GBtnReturnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("GBtnReturnCustomer.Image")));
-            this.GBtnReturnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GBtnReturnCustomer.ImageSize = new System.Drawing.Size(30, 30);
-            this.GBtnReturnCustomer.Location = new System.Drawing.Point(0, 78);
-            this.GBtnReturnCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.GBtnReturnCustomer.Name = "GBtnReturnCustomer";
-            this.GBtnReturnCustomer.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.GBtnReturnCustomer.Size = new System.Drawing.Size(215, 39);
-            this.GBtnReturnCustomer.TabIndex = 4;
-            this.GBtnReturnCustomer.Text = "Return Video";
-            this.GBtnReturnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GBtnReturnCustomer.Click += new System.EventHandler(this.Form_Click);
-            // 
-            // GBtnRentCustomer
-            // 
-            this.GBtnRentCustomer.BorderColor = System.Drawing.Color.Transparent;
-            this.GBtnRentCustomer.BorderThickness = 1;
-            this.GBtnRentCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnRentCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnRentCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GBtnRentCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnRentCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GBtnRentCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(173)))), ((int)(((byte)(203)))));
-            this.GBtnRentCustomer.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBtnRentCustomer.ForeColor = System.Drawing.Color.White;
-            this.GBtnRentCustomer.Image = ((System.Drawing.Image)(resources.GetObject("GBtnRentCustomer.Image")));
-            this.GBtnRentCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GBtnRentCustomer.ImageSize = new System.Drawing.Size(30, 30);
-            this.GBtnRentCustomer.Location = new System.Drawing.Point(0, 39);
-            this.GBtnRentCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.GBtnRentCustomer.Name = "GBtnRentCustomer";
-            this.GBtnRentCustomer.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.GBtnRentCustomer.Size = new System.Drawing.Size(215, 39);
-            this.GBtnRentCustomer.TabIndex = 3;
-            this.GBtnRentCustomer.Text = "Rent Video";
-            this.GBtnRentCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GBtnRentCustomer.Click += new System.EventHandler(this.Form_Click);
+            this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDashboard.Location = new System.Drawing.Point(215, 113);
+            this.panelDashboard.Name = "panelDashboard";
+            this.panelDashboard.Size = new System.Drawing.Size(1135, 568);
+            this.panelDashboard.TabIndex = 0;
             // 
             // guna2ButtonTransactions
             // 
@@ -392,7 +333,7 @@
             this.guna2ButtonTransactions.Image = ((System.Drawing.Image)(resources.GetObject("guna2ButtonTransactions.Image")));
             this.guna2ButtonTransactions.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonTransactions.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ButtonTransactions.Location = new System.Drawing.Point(0, 0);
+            this.guna2ButtonTransactions.Location = new System.Drawing.Point(0, 230);
             this.guna2ButtonTransactions.Margin = new System.Windows.Forms.Padding(0);
             this.guna2ButtonTransactions.Name = "guna2ButtonTransactions";
             this.guna2ButtonTransactions.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
@@ -401,14 +342,6 @@
             this.guna2ButtonTransactions.Text = "Transactions";
             this.guna2ButtonTransactions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2ButtonTransactions.Click += new System.EventHandler(this.Form_Click);
-            // 
-            // panelDashboard
-            // 
-            this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDashboard.Location = new System.Drawing.Point(215, 113);
-            this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1135, 568);
-            this.panelDashboard.TabIndex = 0;
             // 
             // Dashboard
             // 
@@ -427,12 +360,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PctrBxDashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
-            this.FlwLytTranContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -454,10 +386,7 @@
         private System.Windows.Forms.PictureBox PctrBxDashboard;
         private Guna.UI2.WinForms.Guna2Button G2BtnDashboard;
         private System.Windows.Forms.Timer TransTimer;
-        private System.Windows.Forms.FlowLayoutPanel FlwLytTranContainer;
-        private Guna.UI2.WinForms.Guna2Button guna2ButtonTransactions;
-        private Guna.UI2.WinForms.Guna2Button GBtnRentCustomer;
-        private Guna.UI2.WinForms.Guna2Button GBtnReturnCustomer;
         private System.Windows.Forms.Panel panelDashboard;
+        private Guna.UI2.WinForms.Guna2Button guna2ButtonTransactions;
     }
 }

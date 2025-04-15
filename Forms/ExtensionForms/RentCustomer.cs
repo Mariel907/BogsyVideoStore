@@ -18,6 +18,7 @@ namespace Project.Forms.ExtensionForms
         private void Guna2ButtonRent_Click(object sender, EventArgs e)
         {
             if (HasInvalidInput()) return;
+            if(IsSufficientCash()) return;
 
             var customer = CreateCustomer();
 
@@ -156,23 +157,40 @@ namespace Project.Forms.ExtensionForms
 
         private void TxtbxCash_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode != Keys.Enter) return;
-
-            if (!decimal.TryParse(labelTotal.Text.Replace("P", "").Trim(), out decimal totalAmount))
+            try
             {
-                MessageBox.Show("Invalid total amount format.");
-                return;
+                if (e.KeyCode != Keys.Enter) return;
+
+                if (IsSufficientCash()) return;
+
+                decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+                decimal TotalAmount = Convert.ToDecimal(labelTotal.Text.Replace("P", "").Trim());
+                string Change = string.Empty;
+
+                rent.CalculateChange(TotalAmount, Convert.ToDecimal(guna2TextBoxCash.Text), ref Change);
+
+                guna2TextBoxCash.Text = cash.ToString("N2");
+                guna2TextBoxChange.Text = Change;
+                e.SuppressKeyPress = true;
             }
-            decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
-            string Change = string.Empty;
-
-            rent.CalculateChange(totalAmount, Convert.ToDecimal(guna2TextBoxCash.Text), ref Change);
-
-            guna2TextBoxCash.Text = cash.ToString("N2");
-            guna2TextBoxChange.Text = Change;
-            e.SuppressKeyPress = true;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        private bool IsSufficientCash()
+        {
+            decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+            decimal TotalAmount = Convert.ToDecimal(labelTotal.Text.Replace("P", "").Trim());
+
+            if (cash < TotalAmount)
+            {
+                MessageBox.Show("Insufficient cash amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return false;
+        }
         private void Guna2ButtonVoid_Click(object sender, EventArgs e)
         {
             try
