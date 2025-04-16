@@ -1,4 +1,5 @@
 ﻿using Project.Class;
+using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
 using System.Collections.Generic;
@@ -21,10 +22,12 @@ namespace Project.Forms
         public string TotalVideoLbl { get { return LblTotalVideo.Text; } }
         public string Returnedlbl { get { return LblReturned.Text; } }
 
-
-        public FDashboard()
+        private FormManager form = new FormManager();
+        private Dashboard _dashboard = new Dashboard();
+        public FDashboard(Dashboard dashboard)
         {
             InitializeComponent();
+            _dashboard = dashboard;
         }
         private void FDashboard_Load(object sender, EventArgs e)
         {
@@ -75,6 +78,17 @@ namespace Project.Forms
                 PctrDue.BackColor = colorRed;
                 lblOverdueRent.BackColor = colorRed;
             }
+        }
+
+        private void PnlBackEarnings_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void PnlBackEarnings_Click(object sender, EventArgs e)
+        {
+            EFEarnings earnings = new EFEarnings();
+            form.OpenForm(earnings, _dashboard.Panel);
         }
     }
 }

@@ -59,6 +59,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="SATAUiFramework, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SATAUiFramework.1.1.3\lib\net40\SATAUiFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -66,6 +69,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\AutoIncrementManager.cs" />
+    <Compile Include="Class\CEFEarnings.cs" />
     <Compile Include="Class\CItemLedger.cs" />
     <Compile Include="Class\CPayments.cs" />
     <Compile Include="Class\CustomerClass.cs" />
@@ -226,6 +231,7 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GlobalConnection.cs" />
+    <Compile Include="Model\MEarnings.cs" />
     <Compile Include="Model\MFDashboard.cs" />
     <Compile Include="Model\MLedger.cs" />
     <Compile Include="Model\MSearchFieldRented.cs" />
@@ -357,6 +363,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Project.DataSet.DSReceipt.datasource" />
+    <None Include="Properties\DataSources\Project.Model.MEarnings.datasource" />
     <None Include="Properties\DataSources\Project.Model.PenaltyReceipt.datasource" />
     <None Include="Properties\DataSources\Project.Model.Receipt.datasource" />
     <None Include="Properties\Settings.settings">

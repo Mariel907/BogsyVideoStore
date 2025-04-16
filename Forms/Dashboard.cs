@@ -112,7 +112,7 @@ namespace Project.Forms
                 case "Dashboard":
                     LblTitle.Text = "Dashboard";
                     PctrBxDashboard.Image = Resources.icons8_dashboard_96;
-                    FDashboard dashboard = new FDashboard();
+                    FDashboard dashboard = new FDashboard(this);
                     form.OpenForm(dashboard, panelDashboard);
                     break;
                 case "Return":
@@ -132,7 +132,7 @@ namespace Project.Forms
         }
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            FDashboard dashboard = new FDashboard();
+            FDashboard dashboard = new FDashboard(this);
             form.OpenForm(dashboard, panelDashboard);
         }
 

@@ -115,3 +115,4 @@ C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionFo
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.FDashboard.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.FReturn.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.EFEarnings.resources
+C:\Users\Mariel\source\repos\BogsyVideoStore\bin\Debug\SATAUiFramework.dll

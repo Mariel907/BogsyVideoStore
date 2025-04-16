@@ -63,7 +63,7 @@ namespace Project.Class
                     if (parameters != null) cmd.Parameters.AddRange(parameters);
 
                     object result = cmd.ExecuteScalar();
-                    return Convert.ToInt32(result);
+                    return result != null && result != DBNull.Value ? Convert.ToInt32(result) : 0;
                 }
             }
         }

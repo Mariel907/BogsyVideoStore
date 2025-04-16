@@ -51,7 +51,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblAvailableVideo = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PnlBackEarnings = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblEarnings = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.PnlBackEarnings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +92,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.PnlBackEarnings, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -352,18 +352,20 @@
             this.label8.Text = "Available Video";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // PnlBackEarnings
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.lblEarnings);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(361, 119);
-            this.panel2.TabIndex = 0;
+            this.PnlBackEarnings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.PnlBackEarnings.Controls.Add(this.pictureBox1);
+            this.PnlBackEarnings.Controls.Add(this.lblEarnings);
+            this.PnlBackEarnings.Controls.Add(this.label1);
+            this.PnlBackEarnings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlBackEarnings.Location = new System.Drawing.Point(0, 0);
+            this.PnlBackEarnings.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.PnlBackEarnings.Name = "PnlBackEarnings";
+            this.PnlBackEarnings.Size = new System.Drawing.Size(361, 119);
+            this.PnlBackEarnings.TabIndex = 0;
+            this.PnlBackEarnings.Click += new System.EventHandler(this.PnlBackEarnings_Click);
+            this.PnlBackEarnings.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlBackEarnings_Paint);
             // 
             // pictureBox1
             // 
@@ -430,8 +432,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.PnlBackEarnings.ResumeLayout(false);
+            this.PnlBackEarnings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -441,7 +443,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PnlBackEarnings;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEarnings;
         private System.Windows.Forms.PictureBox pictureBox1;
