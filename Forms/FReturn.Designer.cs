@@ -496,7 +496,7 @@
             this.guna2Buttonreturn.Name = "guna2Buttonreturn";
             this.guna2Buttonreturn.Size = new System.Drawing.Size(123, 46);
             this.guna2Buttonreturn.TabIndex = 231;
-            this.guna2Buttonreturn.Text = "Save";
+            this.guna2Buttonreturn.Text = "Returned";
             this.guna2Buttonreturn.Click += new System.EventHandler(this.guna2Buttonreturn_Click);
             // 
             // FReturn

@@ -37,20 +37,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel42 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblGrandTotal = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblGrandTotal = new System.Windows.Forms.Label();
             this.panel43 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblPenalty = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblPenalty = new System.Windows.Forms.Label();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.DTPEndEarnings = new System.Windows.Forms.DateTimePicker();
             this.panel55 = new System.Windows.Forms.Panel();
             this.panel54 = new System.Windows.Forms.Panel();
@@ -103,21 +100,21 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.penaltyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEarningsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGVEarnings)).BeginInit();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel42.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel43.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel44.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel54.SuspendLayout();
             this.panel52.SuspendLayout();
@@ -143,6 +140,7 @@
             this.panel39.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel37.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mEarningsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,7 +165,9 @@
             this.DGVEarnings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.amountDataGridViewTextBoxColumn,
             this.rentDateDataGridViewTextBoxColumn,
-            this.penaltyDataGridViewTextBoxColumn});
+            this.penaltyDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn});
             this.DGVEarnings.DataSource = this.mEarningsBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -184,7 +184,7 @@
             this.DGVEarnings.Name = "DGVEarnings";
             this.DGVEarnings.ReadOnly = true;
             this.DGVEarnings.RowHeadersVisible = false;
-            this.DGVEarnings.Size = new System.Drawing.Size(466, 346);
+            this.DGVEarnings.Size = new System.Drawing.Size(981, 279);
             this.DGVEarnings.TabIndex = 378;
             this.DGVEarnings.Tag = "book_id";
             this.DGVEarnings.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -211,15 +211,13 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.DGVEarnings);
-            this.panel3.Location = new System.Drawing.Point(525, 68);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(10, 135);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(486, 366);
+            this.panel3.Size = new System.Drawing.Size(1001, 299);
             this.panel3.TabIndex = 516;
             // 
             // tableLayoutPanel4
@@ -230,7 +228,7 @@
             this.tableLayoutPanel4.Controls.Add(this.panel43, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.panel44, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 10);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(10);
@@ -238,45 +236,34 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(515, 424);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(491, 125);
             this.tableLayoutPanel4.TabIndex = 518;
             // 
             // panel42
             // 
             this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(73)))));
-            this.panel42.Controls.Add(this.panel1);
-            this.panel42.Controls.Add(this.pictureBox4);
             this.panel42.Controls.Add(this.label8);
+            this.panel42.Controls.Add(this.pictureBox4);
+            this.panel42.Controls.Add(this.lblGrandTotal);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel42.Location = new System.Drawing.Point(10, 278);
+            this.panel42.Location = new System.Drawing.Point(10, 80);
             this.panel42.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(495, 126);
+            this.panel42.Size = new System.Drawing.Size(471, 25);
             this.panel42.TabIndex = 5;
             // 
-            // panel1
+            // label8
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.lblGrandTotal);
-            this.panel1.Location = new System.Drawing.Point(160, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(335, 126);
-            this.panel1.TabIndex = 17;
-            // 
-            // lblGrandTotal
-            // 
-            this.lblGrandTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lblGrandTotal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblGrandTotal.Font = new System.Drawing.Font("Franklin Gothic Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrandTotal.ForeColor = System.Drawing.Color.White;
-            this.lblGrandTotal.Location = new System.Drawing.Point(10, 10);
-            this.lblGrandTotal.Name = "lblGrandTotal";
-            this.lblGrandTotal.Size = new System.Drawing.Size(315, 106);
-            this.lblGrandTotal.TabIndex = 17;
-            this.lblGrandTotal.Text = "0";
-            this.lblGrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(65, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 25);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Grand ToTal";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -285,60 +272,49 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(65, 126);
+            this.pictureBox4.Size = new System.Drawing.Size(65, 25);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
             // 
-            // label8
+            // lblGrandTotal
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(68, 54);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 21);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Grand ToTal";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGrandTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrandTotal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblGrandTotal.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrandTotal.ForeColor = System.Drawing.Color.White;
+            this.lblGrandTotal.Location = new System.Drawing.Point(156, 0);
+            this.lblGrandTotal.Name = "lblGrandTotal";
+            this.lblGrandTotal.Size = new System.Drawing.Size(315, 25);
+            this.lblGrandTotal.TabIndex = 17;
+            this.lblGrandTotal.Text = "0";
+            this.lblGrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel43
             // 
             this.panel43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel43.Controls.Add(this.panel2);
-            this.panel43.Controls.Add(this.pictureBox5);
             this.panel43.Controls.Add(this.label10);
+            this.panel43.Controls.Add(this.pictureBox5);
+            this.panel43.Controls.Add(this.lblPenalty);
             this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel43.Location = new System.Drawing.Point(10, 144);
+            this.panel43.Location = new System.Drawing.Point(10, 45);
             this.panel43.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(495, 124);
+            this.panel43.Size = new System.Drawing.Size(471, 25);
             this.panel43.TabIndex = 4;
             // 
-            // panel2
+            // label10
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.lblPenalty);
-            this.panel2.Location = new System.Drawing.Point(139, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(356, 121);
-            this.panel2.TabIndex = 18;
-            // 
-            // lblPenalty
-            // 
-            this.lblPenalty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.lblPenalty.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPenalty.Font = new System.Drawing.Font("Franklin Gothic Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPenalty.ForeColor = System.Drawing.Color.White;
-            this.lblPenalty.Location = new System.Drawing.Point(10, 10);
-            this.lblPenalty.Name = "lblPenalty";
-            this.lblPenalty.Size = new System.Drawing.Size(336, 101);
-            this.lblPenalty.TabIndex = 17;
-            this.lblPenalty.Text = "0";
-            this.lblPenalty.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(65, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 25);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Penalty";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
             // 
@@ -347,60 +323,50 @@
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(65, 124);
+            this.pictureBox5.Size = new System.Drawing.Size(65, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
             // 
-            // label10
+            // lblPenalty
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(68, 51);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 21);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Penalty";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPenalty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.lblPenalty.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblPenalty.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPenalty.ForeColor = System.Drawing.Color.White;
+            this.lblPenalty.Location = new System.Drawing.Point(135, 0);
+            this.lblPenalty.Name = "lblPenalty";
+            this.lblPenalty.Size = new System.Drawing.Size(336, 25);
+            this.lblPenalty.TabIndex = 17;
+            this.lblPenalty.Text = "0";
+            this.lblPenalty.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel44
             // 
             this.panel44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel44.Controls.Add(this.panel4);
-            this.panel44.Controls.Add(this.pictureBox6);
             this.panel44.Controls.Add(this.label12);
+            this.panel44.Controls.Add(this.pictureBox6);
+            this.panel44.Controls.Add(this.lblAmount);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(10, 10);
             this.panel44.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(495, 124);
+            this.panel44.Size = new System.Drawing.Size(471, 25);
             this.panel44.TabIndex = 3;
             // 
-            // panel4
+            // label12
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.lblAmount);
-            this.panel4.Location = new System.Drawing.Point(139, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(10);
-            this.panel4.Size = new System.Drawing.Size(356, 124);
-            this.panel4.TabIndex = 18;
-            // 
-            // lblAmount
-            // 
-            this.lblAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.lblAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAmount.Font = new System.Drawing.Font("Franklin Gothic Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.ForeColor = System.Drawing.Color.White;
-            this.lblAmount.Location = new System.Drawing.Point(10, 10);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(336, 104);
-            this.lblAmount.TabIndex = 17;
-            this.lblAmount.Text = "0";
-            this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.AutoEllipsis = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Franklin Gothic Medium", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(65, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 25);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Amount";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox6
             // 
@@ -409,30 +375,30 @@
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(65, 124);
+            this.pictureBox6.Size = new System.Drawing.Size(65, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
             // 
-            // label12
+            // lblAmount
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.label12.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(68, 53);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 21);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Amount";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.lblAmount.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblAmount.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.Color.White;
+            this.lblAmount.Location = new System.Drawing.Point(135, 0);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(336, 25);
+            this.lblAmount.TabIndex = 17;
+            this.lblAmount.Text = "0";
+            this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // DTPEndEarnings
             // 
             this.DTPEndEarnings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTPEndEarnings.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPEndEarnings.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPEndEarnings.Location = new System.Drawing.Point(747, 28);
+            this.DTPEndEarnings.Location = new System.Drawing.Point(875, 67);
             this.DTPEndEarnings.Name = "DTPEndEarnings";
             this.DTPEndEarnings.Size = new System.Drawing.Size(127, 26);
             this.DTPEndEarnings.TabIndex = 519;
@@ -452,7 +418,7 @@
             this.panel54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel54.Controls.Add(this.panel55);
-            this.panel54.Location = new System.Drawing.Point(747, 23);
+            this.panel54.Location = new System.Drawing.Point(875, 62);
             this.panel54.Name = "panel54";
             this.panel54.Size = new System.Drawing.Size(127, 2);
             this.panel54.TabIndex = 520;
@@ -470,7 +436,7 @@
             this.panel52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel52.Controls.Add(this.panel53);
-            this.panel52.Location = new System.Drawing.Point(748, 57);
+            this.panel52.Location = new System.Drawing.Point(876, 96);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(127, 2);
             this.panel52.TabIndex = 521;
@@ -480,7 +446,7 @@
             this.DTPStartEarnings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTPStartEarnings.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPStartEarnings.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPStartEarnings.Location = new System.Drawing.Point(578, 28);
+            this.DTPStartEarnings.Location = new System.Drawing.Point(875, 21);
             this.DTPStartEarnings.Name = "DTPStartEarnings";
             this.DTPStartEarnings.Size = new System.Drawing.Size(127, 26);
             this.DTPStartEarnings.TabIndex = 528;
@@ -500,7 +466,7 @@
             this.panel50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel50.Controls.Add(this.panel51);
-            this.panel50.Location = new System.Drawing.Point(747, 23);
+            this.panel50.Location = new System.Drawing.Point(875, 62);
             this.panel50.Name = "panel50";
             this.panel50.Size = new System.Drawing.Size(2, 36);
             this.panel50.TabIndex = 525;
@@ -518,7 +484,7 @@
             this.panel31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel31.Controls.Add(this.panel49);
-            this.panel31.Location = new System.Drawing.Point(578, 23);
+            this.panel31.Location = new System.Drawing.Point(875, 16);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(127, 2);
             this.panel31.TabIndex = 530;
@@ -536,7 +502,7 @@
             this.panel20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel20.Controls.Add(this.panel30);
-            this.panel20.Location = new System.Drawing.Point(873, 23);
+            this.panel20.Location = new System.Drawing.Point(1001, 62);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(2, 36);
             this.panel20.TabIndex = 526;
@@ -554,7 +520,7 @@
             this.panel18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel18.Controls.Add(this.panel19);
-            this.panel18.Location = new System.Drawing.Point(578, 23);
+            this.panel18.Location = new System.Drawing.Point(875, 16);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(2, 36);
             this.panel18.TabIndex = 535;
@@ -572,7 +538,7 @@
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.panel17);
-            this.panel8.Location = new System.Drawing.Point(749, 27);
+            this.panel8.Location = new System.Drawing.Point(877, 66);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(124, 2);
             this.panel8.TabIndex = 522;
@@ -590,7 +556,7 @@
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(704, 23);
+            this.panel15.Location = new System.Drawing.Point(1001, 16);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(2, 36);
             this.panel15.TabIndex = 537;
@@ -608,7 +574,7 @@
             this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Location = new System.Drawing.Point(580, 27);
+            this.panel13.Location = new System.Drawing.Point(877, 20);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(124, 2);
             this.panel13.TabIndex = 531;
@@ -626,7 +592,7 @@
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(749, 53);
+            this.panel9.Location = new System.Drawing.Point(877, 92);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(124, 2);
             this.panel9.TabIndex = 524;
@@ -644,7 +610,7 @@
             this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(578, 23);
+            this.panel35.Location = new System.Drawing.Point(875, 16);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(127, 2);
             this.panel35.TabIndex = 544;
@@ -662,7 +628,7 @@
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(580, 53);
+            this.panel11.Location = new System.Drawing.Point(877, 46);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(124, 2);
             this.panel11.TabIndex = 534;
@@ -680,7 +646,7 @@
             this.panel33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(578, 23);
+            this.panel33.Location = new System.Drawing.Point(875, 16);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(2, 36);
             this.panel33.TabIndex = 547;
@@ -698,7 +664,7 @@
             this.panel21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel21.Controls.Add(this.panel22);
-            this.panel21.Location = new System.Drawing.Point(578, 57);
+            this.panel21.Location = new System.Drawing.Point(875, 50);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(127, 2);
             this.panel21.TabIndex = 523;
@@ -716,7 +682,7 @@
             this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel29.Controls.Add(this.panel32);
-            this.panel29.Location = new System.Drawing.Point(704, 23);
+            this.panel29.Location = new System.Drawing.Point(1001, 16);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(2, 36);
             this.panel29.TabIndex = 548;
@@ -734,7 +700,7 @@
             this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel27.BackColor = System.Drawing.Color.White;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Location = new System.Drawing.Point(580, 27);
+            this.panel27.Location = new System.Drawing.Point(877, 20);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(124, 2);
             this.panel27.TabIndex = 545;
@@ -752,7 +718,7 @@
             this.panel47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel47.Controls.Add(this.panel48);
-            this.panel47.Location = new System.Drawing.Point(747, 23);
+            this.panel47.Location = new System.Drawing.Point(875, 62);
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(127, 2);
             this.panel47.TabIndex = 529;
@@ -762,7 +728,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(527, 33);
+            this.label2.Location = new System.Drawing.Point(824, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 21);
             this.label2.TabIndex = 539;
@@ -781,7 +747,7 @@
             this.panel45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel45.Controls.Add(this.panel46);
-            this.panel45.Location = new System.Drawing.Point(748, 57);
+            this.panel45.Location = new System.Drawing.Point(876, 96);
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(127, 2);
             this.panel45.TabIndex = 533;
@@ -799,7 +765,7 @@
             this.panel25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.Controls.Add(this.panel26);
-            this.panel25.Location = new System.Drawing.Point(580, 53);
+            this.panel25.Location = new System.Drawing.Point(877, 46);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(124, 2);
             this.panel25.TabIndex = 546;
@@ -817,7 +783,7 @@
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(747, 23);
+            this.panel6.Location = new System.Drawing.Point(875, 62);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(2, 36);
             this.panel6.TabIndex = 538;
@@ -827,7 +793,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(715, 31);
+            this.label3.Location = new System.Drawing.Point(824, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 21);
             this.label3.TabIndex = 543;
@@ -846,7 +812,7 @@
             this.panel41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel41.Controls.Add(this.panel5);
-            this.panel41.Location = new System.Drawing.Point(873, 23);
+            this.panel41.Location = new System.Drawing.Point(1001, 62);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(2, 36);
             this.panel41.TabIndex = 540;
@@ -864,7 +830,7 @@
             this.panel39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel39.BackColor = System.Drawing.Color.White;
             this.panel39.Controls.Add(this.panel40);
-            this.panel39.Location = new System.Drawing.Point(749, 27);
+            this.panel39.Location = new System.Drawing.Point(877, 66);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(124, 2);
             this.panel39.TabIndex = 532;
@@ -882,7 +848,7 @@
             this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
             this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(578, 57);
+            this.panel23.Location = new System.Drawing.Point(875, 50);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(127, 2);
             this.panel23.TabIndex = 541;
@@ -900,10 +866,19 @@
             this.panel37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel37.BackColor = System.Drawing.Color.White;
             this.panel37.Controls.Add(this.panel38);
-            this.panel37.Location = new System.Drawing.Point(749, 53);
+            this.panel37.Location = new System.Drawing.Point(877, 92);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(124, 2);
             this.panel37.TabIndex = 536;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tableLayoutPanel4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1001, 125);
+            this.panel1.TabIndex = 549;
             // 
             // amountDataGridViewTextBoxColumn
             // 
@@ -926,6 +901,20 @@
             this.penaltyDataGridViewTextBoxColumn.HeaderText = "Penalty";
             this.penaltyDataGridViewTextBoxColumn.Name = "penaltyDataGridViewTextBoxColumn";
             this.penaltyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mEarningsBindingSource
             // 
@@ -965,8 +954,8 @@
             this.Controls.Add(this.panel52);
             this.Controls.Add(this.panel54);
             this.Controls.Add(this.DTPEndEarnings);
-            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EFEarnings";
             this.Padding = new System.Windows.Forms.Padding(10);
@@ -976,16 +965,10 @@
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel43.ResumeLayout(false);
-            this.panel43.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel44.ResumeLayout(false);
-            this.panel44.PerformLayout();
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel54.ResumeLayout(false);
             this.panel52.ResumeLayout(false);
@@ -1011,6 +994,7 @@
             this.panel39.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel37.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mEarningsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1019,12 +1003,8 @@
 
         #endregion
         private System.Windows.Forms.DataGridViewTextBoxColumn totalAmountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource mEarningsBindingSource;
         private Guna.UI2.WinForms.Guna2DataGridView DGVEarnings;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rentDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn penaltyDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -1036,10 +1016,7 @@
         private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPenalty;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.DateTimePicker DTPEndEarnings;
         private System.Windows.Forms.Panel panel55;
@@ -1093,5 +1070,12 @@
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.BindingSource mEarningsBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rentDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn penaltyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

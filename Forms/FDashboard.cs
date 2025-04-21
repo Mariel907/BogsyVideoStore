@@ -1,4 +1,5 @@
 ﻿using Project.Class;
+using Project.Forms.DashboardForms;
 using Project.Forms.ExtensionForms;
 using Project.Model;
 using System;
@@ -90,5 +91,37 @@ namespace Project.Forms
             EFEarnings earnings = new EFEarnings();
             form.OpenForm(earnings, _dashboard.Panel);
         }
+
+        private void PnlAvailableVideo_Click(object sender, EventArgs e)
+        {
+            EFAvailableVideo eFAvailableVideo = new EFAvailableVideo();
+            form.OpenForm(eFAvailableVideo, _dashboard.Panel);
+        }
+
+        private void PnlOverdueRent_Click(object sender, EventArgs e)
+        {
+            EFDueRent dueRent = new EFDueRent();
+            form.OpenForm(dueRent, _dashboard.Panel);
+        }
+
+        private void PnlRented_Click(object sender, EventArgs e)
+        {
+            EFRented eFrented = new EFRented();
+            form.OpenForm(eFrented, _dashboard.Panel);
+        }
+
+        private void PnlTotalVideo_Click(object sender, EventArgs e)
+        {
+            EFTotalVideo totalVideo = new EFTotalVideo();
+            form.OpenForm(totalVideo, _dashboard.Panel);
+        }
+
+        private void PnlReturned_Click(object sender, EventArgs e)
+        {
+            EFReturned eFReturned = new EFReturned();
+            form.OpenForm(eFReturned, _dashboard.Panel);
+        }
+
+      
     }
 }

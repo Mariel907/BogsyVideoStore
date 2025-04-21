@@ -14,7 +14,7 @@ namespace Project.Forms.ExtensionForms
 {
     public partial class EFEarnings : Form
     {
-        private CEFEarnings _CEFEarnings = new CEFEarnings();
+        private CEFDashboard _CEFEarnings = new CEFDashboard();
         private string SDate;
         private string EDate;
         public EFEarnings()
@@ -30,7 +30,6 @@ namespace Project.Forms.ExtensionForms
         }
         private void CalendarValue()
         {
-            DTPStartEarnings.Value = DateTime.Now.Date;
             DTPEndEarnings.Value = DateTime.Now.Date;
         }
         private void UpdateLable()
@@ -53,7 +52,7 @@ namespace Project.Forms.ExtensionForms
         {
             SDate = DTPStartEarnings.Value.ToString();
             EDate = DTPEndEarnings.Value.ToString();
-            DGVEarnings.DataSource = CEFEarnings.GetAllEarnings(SDate, EDate);
+            DGVEarnings.DataSource = CEFDashboard.GetAllEarnings(SDate, EDate);
         }
 
         private void DTPEndReturned_ValueChanged(object sender, EventArgs e)

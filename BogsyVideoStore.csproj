@@ -82,7 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\AutoIncrementManager.cs" />
-    <Compile Include="Class\CEFEarnings.cs" />
+    <Compile Include="Class\CEFDashboard.cs" />
+    <Compile Include="Class\CEFRented.cs" />
     <Compile Include="Class\CItemLedger.cs" />
     <Compile Include="Class\CPayments.cs" />
     <Compile Include="Class\CustomerClass.cs" />
@@ -145,6 +146,36 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DashboardForms\EFAvailableVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFAvailableVideo.Designer.cs">
+      <DependentUpon>EFAvailableVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFDueRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFDueRent.Designer.cs">
+      <DependentUpon>EFDueRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFRented.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFRented.Designer.cs">
+      <DependentUpon>EFRented.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFReturned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFReturned.Designer.cs">
+      <DependentUpon>EFReturned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFTotalVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\EFTotalVideo.Designer.cs">
+      <DependentUpon>EFTotalVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DVDs_VCDs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,10 +200,10 @@
     <Compile Include="Forms\ExtensionForms\EditDVD_VCD.Designer.cs">
       <DependentUpon>EditDVD_VCD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ExtensionForms\EFEarnings.cs">
+    <Compile Include="Forms\DashboardForms\EFEarnings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ExtensionForms\EFEarnings.Designer.cs">
+    <Compile Include="Forms\DashboardForms\EFEarnings.Designer.cs">
       <DependentUpon>EFEarnings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ExtensionForms\PrintReceipt.cs">
@@ -231,10 +262,15 @@
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\GlobalConnection.cs" />
+    <Compile Include="Model\MAvailableVideo.cs" />
+    <Compile Include="Model\MDueRent.cs" />
     <Compile Include="Model\MEarnings.cs" />
     <Compile Include="Model\MFDashboard.cs" />
     <Compile Include="Model\MLedger.cs" />
+    <Compile Include="Model\MRented.cs" />
+    <Compile Include="Model\MReturned.cs" />
     <Compile Include="Model\MSearchFieldRented.cs" />
+    <Compile Include="Model\MTotalVideo.cs" />
     <Compile Include="Model\PenaltyReceipt.cs" />
     <Compile Include="Model\Receipt.cs" />
     <Compile Include="Model\SearchUnpaid.cs" />
@@ -251,6 +287,21 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\EFAvailableVideo.resx">
+      <DependentUpon>EFAvailableVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\EFDueRent.resx">
+      <DependentUpon>EFDueRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\EFRented.resx">
+      <DependentUpon>EFRented.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\EFReturned.resx">
+      <DependentUpon>EFReturned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\EFTotalVideo.resx">
+      <DependentUpon>EFTotalVideo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DVDs_VCDs.resx">
       <DependentUpon>DVDs_VCDs.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,7 +314,7 @@
     <EmbeddedResource Include="Forms\ExtensionForms\EditDVD_VCD.resx">
       <DependentUpon>EditDVD_VCD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ExtensionForms\EFEarnings.resx">
+    <EmbeddedResource Include="Forms\DashboardForms\EFEarnings.resx">
       <DependentUpon>EFEarnings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\PrintReceipt.resx">
@@ -363,7 +414,12 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Project.DataSet.DSReceipt.datasource" />
+    <None Include="Properties\DataSources\Project.Model.MAvailableVideo.datasource" />
+    <None Include="Properties\DataSources\Project.Model.MDueRent.datasource" />
     <None Include="Properties\DataSources\Project.Model.MEarnings.datasource" />
+    <None Include="Properties\DataSources\Project.Model.MRented.datasource" />
+    <None Include="Properties\DataSources\Project.Model.MReturned.datasource" />
+    <None Include="Properties\DataSources\Project.Model.MTotalVideo.datasource" />
     <None Include="Properties\DataSources\Project.Model.PenaltyReceipt.datasource" />
     <None Include="Properties\DataSources\Project.Model.Receipt.datasource" />
     <None Include="Properties\Settings.settings">

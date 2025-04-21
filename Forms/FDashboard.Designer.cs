@@ -31,43 +31,43 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.PnlReturned = new System.Windows.Forms.Panel();
             this.LblReturned = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.PnlOverdueRent = new System.Windows.Forms.Panel();
-            this.PctrDue = new System.Windows.Forms.PictureBox();
             this.lblOverdueRent = new System.Windows.Forms.Label();
             this.LblTitleDue = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PnlTotalVideo = new System.Windows.Forms.Panel();
             this.LblTotalVideo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PnlRented = new System.Windows.Forms.Panel();
             this.lblRented = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.PnlAvailableVideo = new System.Windows.Forms.Panel();
             this.lblAvailableVideo = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.PnlBackEarnings = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblEarnings = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.PctrDue = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.PnlReturned.SuspendLayout();
             this.PnlOverdueRent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrDue)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.PnlTotalVideo.SuspendLayout();
+            this.PnlRented.SuspendLayout();
+            this.PnlAvailableVideo.SuspendLayout();
             this.PnlBackEarnings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrDue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,11 +87,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.panel7, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PnlReturned, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.PnlOverdueRent, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.PnlTotalVideo, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PnlRented, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PnlAvailableVideo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.PnlBackEarnings, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
@@ -102,29 +102,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1115, 258);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // panel7
+            // PnlReturned
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Controls.Add(this.LblReturned);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(742, 129);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(373, 119);
-            this.panel7.TabIndex = 5;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(89, 88);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 16;
-            this.pictureBox6.TabStop = false;
+            this.PnlReturned.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.PnlReturned.Controls.Add(this.pictureBox6);
+            this.PnlReturned.Controls.Add(this.LblReturned);
+            this.PnlReturned.Controls.Add(this.label12);
+            this.PnlReturned.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlReturned.Location = new System.Drawing.Point(742, 129);
+            this.PnlReturned.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.PnlReturned.Name = "PnlReturned";
+            this.PnlReturned.Size = new System.Drawing.Size(373, 119);
+            this.PnlReturned.TabIndex = 5;
+            this.PnlReturned.Click += new System.EventHandler(this.PnlReturned_Click);
             // 
             // LblReturned
             // 
@@ -164,17 +154,7 @@
             this.PnlOverdueRent.Name = "PnlOverdueRent";
             this.PnlOverdueRent.Size = new System.Drawing.Size(373, 119);
             this.PnlOverdueRent.TabIndex = 4;
-            // 
-            // PctrDue
-            // 
-            this.PctrDue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PctrDue.Image = ((System.Drawing.Image)(resources.GetObject("PctrDue.Image")));
-            this.PctrDue.Location = new System.Drawing.Point(0, 0);
-            this.PctrDue.Name = "PctrDue";
-            this.PctrDue.Size = new System.Drawing.Size(89, 88);
-            this.PctrDue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PctrDue.TabIndex = 16;
-            this.PctrDue.TabStop = false;
+            this.PnlOverdueRent.Click += new System.EventHandler(this.PnlOverdueRent_Click);
             // 
             // lblOverdueRent
             // 
@@ -202,29 +182,19 @@
             this.LblTitleDue.Text = "Overdue Rent";
             this.LblTitleDue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel5
+            // PnlTotalVideo
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Controls.Add(this.LblTotalVideo);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(371, 129);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(361, 119);
-            this.panel5.TabIndex = 3;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(89, 88);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
+            this.PnlTotalVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.PnlTotalVideo.Controls.Add(this.pictureBox3);
+            this.PnlTotalVideo.Controls.Add(this.LblTotalVideo);
+            this.PnlTotalVideo.Controls.Add(this.label6);
+            this.PnlTotalVideo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlTotalVideo.Location = new System.Drawing.Point(371, 129);
+            this.PnlTotalVideo.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.PnlTotalVideo.Name = "PnlTotalVideo";
+            this.PnlTotalVideo.Size = new System.Drawing.Size(361, 119);
+            this.PnlTotalVideo.TabIndex = 3;
+            this.PnlTotalVideo.Click += new System.EventHandler(this.PnlTotalVideo_Click);
             // 
             // LblTotalVideo
             // 
@@ -252,29 +222,19 @@
             this.label6.Text = "Total Video";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel4
+            // PnlRented
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.lblRented);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 129);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(361, 119);
-            this.panel4.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(89, 88);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
+            this.PnlRented.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.PnlRented.Controls.Add(this.pictureBox2);
+            this.PnlRented.Controls.Add(this.lblRented);
+            this.PnlRented.Controls.Add(this.label4);
+            this.PnlRented.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlRented.Location = new System.Drawing.Point(0, 129);
+            this.PnlRented.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.PnlRented.Name = "PnlRented";
+            this.PnlRented.Size = new System.Drawing.Size(361, 119);
+            this.PnlRented.TabIndex = 2;
+            this.PnlRented.Click += new System.EventHandler(this.PnlRented_Click);
             // 
             // lblRented
             // 
@@ -302,29 +262,19 @@
             this.label4.Text = "Rented";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
+            // PnlAvailableVideo
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.lblAvailableVideo);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(371, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(361, 119);
-            this.panel3.TabIndex = 1;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(89, 88);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
+            this.PnlAvailableVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.PnlAvailableVideo.Controls.Add(this.pictureBox4);
+            this.PnlAvailableVideo.Controls.Add(this.lblAvailableVideo);
+            this.PnlAvailableVideo.Controls.Add(this.label8);
+            this.PnlAvailableVideo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlAvailableVideo.Location = new System.Drawing.Point(371, 0);
+            this.PnlAvailableVideo.Margin = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.PnlAvailableVideo.Name = "PnlAvailableVideo";
+            this.PnlAvailableVideo.Size = new System.Drawing.Size(361, 119);
+            this.PnlAvailableVideo.TabIndex = 1;
+            this.PnlAvailableVideo.Click += new System.EventHandler(this.PnlAvailableVideo_Click);
             // 
             // lblAvailableVideo
             // 
@@ -367,17 +317,6 @@
             this.PnlBackEarnings.Click += new System.EventHandler(this.PnlBackEarnings_Click);
             this.PnlBackEarnings.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlBackEarnings_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 88);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblEarnings
             // 
             this.lblEarnings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -404,6 +343,72 @@
             this.label1.Text = "Earnings";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(89, 88);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 16;
+            this.pictureBox6.TabStop = false;
+            // 
+            // PctrDue
+            // 
+            this.PctrDue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PctrDue.Image = ((System.Drawing.Image)(resources.GetObject("PctrDue.Image")));
+            this.PctrDue.Location = new System.Drawing.Point(0, 0);
+            this.PctrDue.Name = "PctrDue";
+            this.PctrDue.Size = new System.Drawing.Size(89, 88);
+            this.PctrDue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PctrDue.TabIndex = 16;
+            this.PctrDue.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(89, 88);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(89, 88);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(89, 88);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // FDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,23 +422,23 @@
             this.Load += new System.EventHandler(this.FDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.PnlReturned.ResumeLayout(false);
+            this.PnlReturned.PerformLayout();
             this.PnlOverdueRent.ResumeLayout(false);
             this.PnlOverdueRent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrDue)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.PnlTotalVideo.ResumeLayout(false);
+            this.PnlTotalVideo.PerformLayout();
+            this.PnlRented.ResumeLayout(false);
+            this.PnlRented.PerformLayout();
+            this.PnlAvailableVideo.ResumeLayout(false);
+            this.PnlAvailableVideo.PerformLayout();
             this.PnlBackEarnings.ResumeLayout(false);
             this.PnlBackEarnings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrDue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -447,19 +452,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEarnings;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel PnlAvailableVideo;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblAvailableVideo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel PnlTotalVideo;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label LblTotalVideo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel PnlRented;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblRented;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel PnlReturned;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label LblReturned;
         private System.Windows.Forms.Label label12;

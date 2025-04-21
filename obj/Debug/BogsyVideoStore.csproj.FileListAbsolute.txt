@@ -116,3 +116,8 @@ C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.FDashboard.
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.FReturn.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.ExtensionForms.EFEarnings.resources
 C:\Users\Mariel\source\repos\BogsyVideoStore\bin\Debug\SATAUiFramework.dll
+C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.DashboardForms.EFAvailableVideo.resources
+C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.DashboardForms.EFDueRent.resources
+C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.DashboardForms.EFRented.resources
+C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.DashboardForms.EFTotalVideo.resources
+C:\Users\Mariel\source\repos\BogsyVideoStore\obj\Debug\Project.Forms.DashboardForms.EFReturned.resources

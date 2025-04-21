@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Project.Model
 {
-    public class MEarnings
+    public class MTotalVideo
     {
-        public string Amount { get; set; }
-        public DateTime RentDate { get; set; }
-        public string Penalty { get; set; }
         public string Title { get; set; }
         public string Category { get; set; }
+        public int Out { get; set; }
     }
 }
